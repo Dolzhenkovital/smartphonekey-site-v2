@@ -55,4 +55,6 @@ Evidence files are in [`qa/`](qa/): `odoo-tests.txt`, `concurrency.txt`, `hallma
 
 ## Static review copy (GitHub Pages)
 
+Published by the `Publish test preview` workflow and checked on the live URL https://dolzhenkovital.github.io/smartphonekey-site-v2/ on 27 October 2026: all 25 page URLs, the CSS, scripts, images and a certificate PDF answer 200; an unknown URL answers 404 with the 2.0 not-found page; pages carry `noindex, nofollow` and the preview banner; the home setup tool updates in place and General Sans loads.
+
 Built from the same Odoo templates with `spk_website_v2.preview_mode` on: banner, `noindex` on every page, `Disallow: /`, and a contact form that runs its checks but never sends (button disabled without JavaScript; with it, a "test preview" message instead of sending). Limits of static hosting: redirects are noindex refresh pages instead of 301s, the setup result needs JavaScript (the server-rendered no-JS result exists only in Odoo), and links to the instruction site and portal go to the current Odoo host, spkey.odoo.com.
