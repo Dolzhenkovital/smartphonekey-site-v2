@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <!-- Compatibility rows as reviewed on 2026-10-26. Content records: changing a
+    <!-- Compatibility rows as reviewed on 2026-10-26; the reader Thread roles row
+         follows the owner's instruction of 2026-10-27. Content records: changing a
          technical field sends a published row back to review (see the model). The
-         last two rows document claims that are not cleared for publication; they
-         stay off the site until their evidence arrives. -->
+         last row documents a claim that is not cleared for publication (no range
+         figure); it stays off the site until its evidence arrives. -->
     <data noupdate="1">
         <record id="compat_mifare_classic" model="spk.website.compatibility">
             <field name="sequence">10</field>
@@ -118,13 +119,14 @@
         <record id="compat_reader_thread_roles" model="spk.website.compatibility">
             <field name="sequence">40</field>
             <field name="category">network</field>
-            <field name="name">Reader Matter and Thread roles</field>
+            <field name="name">Reader Thread roles</field>
             <field name="operation">connect</field>
-            <field name="capabilities">Matter controller or server, Thread router and Thread Border Router functions of the reader.</field>
-            <field name="limitations">Needs a hardware-role matrix per reader revision and firmware before publication.</field>
-            <field name="evidence_ref">P01, P09, S10</field>
+            <field name="capabilities">Every SmartphoneKey reader can act as a Thread Border Router and as a router in the Thread mesh. No separate firmware version is needed for either role.</field>
+            <field name="limitations">Mesh coverage and the route to the internet depend on placement, power and the building. Matter controller functions are confirmed for each project.</field>
+            <field name="evidence_ref">P01, owner instruction 2026-10-27</field>
             <field name="claim_id" ref="claim_c13"/>
-            <field name="state">review</field>
+            <field name="state">published</field>
+            <field name="verified_at">2026-10-27</field>
         </record>
         <record id="compat_reader_link_distance" model="spk.website.compatibility">
             <field name="sequence">50</field>

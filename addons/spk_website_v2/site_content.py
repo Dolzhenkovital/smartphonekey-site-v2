@@ -177,7 +177,7 @@ ROUTES = {
                        "and check the exact model each one covers.",
         "label": "Certifications",
         "kind": "webpage",
-        "crumbs": ("/security",),
+        "crumbs": ("/products/readers",),
     },
     "/apps-and-chatbot": {
         "template": "spk_website_v2.page_apps",
@@ -219,7 +219,11 @@ POST_PREFIX = "/post/"
 TEAM_PREFIX = "/team/"
 
 # Served by the ``smartphonekey`` module (the instruction site). They stay
-# where they are, in their languages; the marketing site only links to them.
+# where they are, in their own languages; the marketing site links to them
+# (Odoo adds the visitor's language prefix, which the instruction site honours).
+# The existing installation and connection guide (served by ``smartphonekey``,
+# in every site language): the site's "Instructions" link, as on the old site.
+INSTALLATION_GUIDE = "/guide-for-usage-and-installation"
 INSTRUCTION_PATHS = {
     "/guide-for-usage-and-installation": "Installation and connection guide",
     "/instructions/admin-guide": "Admin Panel user guide",
@@ -227,6 +231,23 @@ INSTRUCTION_PATHS = {
     "/instructions/mobile-app-guide": "Mobile app user guide",
     "/instructions/mobile-app": "Mobile app walkthrough",
 }
+
+# --- Languages ------------------------------------------------------------
+# (url code, Odoo language code, native name). English is the default and
+# lives at the root; the others under /fr/, /de/, /es/, /uk/ (Odoo's own
+# website language prefixes). Never chosen by IP address.
+SITE_LANGS = (
+    ("en", "en_US", "English"),
+    ("fr", "fr_FR", "Français"),
+    ("de", "de_DE", "Deutsch"),
+    ("es", "es_ES", "Español"),
+    ("uk", "uk_UA", "Українська"),
+)
+DEFAULT_LANG = "en"
+OG_LOCALES = {"en": "en_GB", "fr": "fr_FR", "de": "de_DE", "es": "es_ES", "uk": "uk_UA"}
+# Pages kept in English in every language: legal text needs a reviewed
+# translation, and the archived articles are historical.
+ENGLISH_ONLY = ("/privacy-policy", "/terms-of-service")
 
 # --- Navigation and calls to action ---------------------------------------
 NAV = (
@@ -243,9 +264,11 @@ NAV = (
     ("Products", (
         ("Readers", "/products/readers"),
         ("Compatibility", "/compatibility"),
+        ("Certifications", "/certifications"),
     )),
     ("Resources", (
         ("Guides", "/resources#guides"),
+        ("Instructions", INSTALLATION_GUIDE),
         ("Insights", "/resources#insights"),
         ("Security and trust", "/security"),
     )),
@@ -257,18 +280,19 @@ FOOTER = (
         ("Automation", "/platform/automation"),
         ("Visitor access", "/platform/visitor-access"),
     )),
-    ("Solutions and products", (
-        ("Property managers", "/solutions/property-managers"),
-        ("Integrators", "/solutions/integrators"),
+    ("Products", (
         ("Readers", "/products/readers"),
         ("Compatibility", "/compatibility"),
-    )),
-    ("Resources", (
-        ("Guides", "/resources#guides"),
-        ("Find your setup", "/find-your-setup"),
-        ("Security and trust", "/security"),
         ("Certifications", "/certifications"),
         ("Apps", "/apps-and-chatbot"),
+        ("Find your setup", "/find-your-setup"),
+    )),
+    ("Instructions", tuple((label, path) for path, label in INSTRUCTION_PATHS.items())),
+    ("Resources", (
+        ("Guides", "/resources#guides"),
+        ("Property managers", "/solutions/property-managers"),
+        ("Integrators", "/solutions/integrators"),
+        ("Security and trust", "/security"),
     )),
     ("Company", (
         ("About", "/about"),
@@ -485,3 +509,75 @@ def canonical_url(path):
 def public_paths():
     """Indexable 2.0 routes with their own templates (for the sitemap and crawlers)."""
     return [path for path, route in ROUTES.items() if route.get("index", True)]
+
+
+def lang_url(path, url_code):
+    """``path`` in the language ``url_code`` (English has no prefix)."""
+    if url_code == DEFAULT_LANG:
+        return path
+    return "/" + url_code + ("" if path == "/" else path)
+
+
+def translatable_strings():
+    """Every English string of this module the pages show, for the catalogues.
+
+    The ``.po`` files carry them as Python code terms; tests check that each
+    language translates every one of them."""
+    strings = []
+    for route in ROUTES.values():
+        strings += [route["title"], route["description"], route["label"]]
+    for group, links in NAV + FOOTER:
+        strings.append(group)
+        strings += [label for label, _path in links]
+    strings += [label for label, _path in CTA.values()]
+    strings += list(INSTRUCTION_PATHS.values())
+    for choices in (ENQUIRY_TYPES, ROLES, SITES, DOORS, CONNECTIONS, INTERESTS, HOME_SITE_CHOICES):
+        strings += [label for _key, label in choices]
+    strings += list(SETUP_CONNECTION_ADVICE.values())
+    strings += [rule["item"] for rule in SETUP_RULES]
+    strings += [label for label, _path in SETUP_LINKS.values()]
+    strings += list(HOME_SITE_COPY.values()) + list(HOME_CONNECTION_COPY.values())
+    strings += list(EXTRA_STRINGS)
+    seen, unique = set(), []
+    for text in strings:
+        if text not in seen:
+            seen.add(text)
+            unique.append(text)
+    return unique
+
+
+# The groups of the Guides section on /resources.
+GUIDE_GROUPS = (
+    ("getting_started", "Getting started"),
+    ("cards_devices", "Cards and devices"),
+    ("networks_automation", "Networks and automation"),
+    ("operating", "Operating your system"),
+)
+
+# Strings built in Python outside the tables above.
+EXTRA_STRINGS = (
+    "Home",
+    "Page not found",
+    "Getting started",
+    "Cards and devices",
+    "Networks and automation",
+    "Operating your system",
+    "Page not found | SmartphoneKey",
+    "The page you asked for is not on the SmartphoneKey website.",
+    "%(name)s, %(job)s | SmartphoneKey",
+    "%(name)s is %(job)s at SmartphoneKey.",
+    "Read",
+    "Program",
+    "Control",
+    "Connect",
+    "Manage",
+    "Enter your name, between 2 and 120 characters.",
+    "Enter a valid email address.",
+    "Choose what you would like help with.",
+    "Use 160 characters or fewer for the company.",
+    "Use 100 characters or fewer for the country or region.",
+    "Use 4,000 characters or fewer for the project details.",
+    "Enter a phone number using digits, spaces and + ( ) - only, up to 40 characters.",
+    "Choose one of the listed options.",
+    "This form has expired. Reload the page and send it again.",
+)

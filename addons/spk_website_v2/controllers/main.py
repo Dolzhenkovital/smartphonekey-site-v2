@@ -22,13 +22,22 @@ from odoo.addons.spk_website.controllers.main import SpkWebsite, SpkWebsiteHome,
 
 from .. import setup_guide
 from .. import site_content as content
-from ..rendering import booking_url, is_noindex_environment, is_v2_enabled, json_for_script, prepare_body, render_page
+from ..rendering import (
+    booking_url, current_lang, is_noindex_environment, is_v2_enabled, json_for_script, prepare_body, render_page,
+    translator,
+)
 
 # Private or transactional routes crawlers have no reason to fetch. Robots is
 # not access control: these routes keep their own authentication. The asset
 # bundles under /web/assets stay crawlable so pages render for search engines.
 PRIVATE_PREFIXES = ("/my", "/odoo", "/web/login", "/web/signup", "/web/reset_password",
                     "/website/spk/", "/spk-website/")
+
+
+def _lang():
+    """(url code, translator) of the current request."""
+    (url_code, odoo_code, _name), _supported = current_lang()
+    return url_code, translator(odoo_code)
 
 
 def _require_v2():
@@ -73,7 +82,8 @@ class SpkWebsiteV2Home(SpkWebsiteHome):
         if not is_v2_enabled(request.env) or not is_homepage_enabled(request.env) \
                 or (homepage_url and homepage_url != "/"):
             return super().index(**kw)
-        return render_page("/", setup_rules=json_for_script(setup_guide.rules_for_script()))
+        url_code, t = _lang()
+        return render_page("/", setup_rules=json_for_script(setup_guide.rules_for_script(t, url_code)))
 
     @http.route()
     def robots(self, **kwargs):
@@ -100,17 +110,24 @@ class SpkWebsiteV2Home(SpkWebsiteHome):
         if not is_v2_enabled(request.env):
             return super().sitemap_xml_index(**kwargs)
         root = (request.website.domain or request.httprequest.url_root).rstrip("/")
+        codes = [code for code, _odoo, _name in content.SITE_LANGS]
         entries = []
+
+        def add(path, lastmod, translated=True):
+            # Every language copy is listed; English-only pages once.
+            for code in (codes if translated else [content.DEFAULT_LANG]):
+                entries.append((content.lang_url(path, code), lastmod))
+
         for path in content.public_paths():
             route = content.ROUTES[path]
-            entries.append((path, route.get("lastmod", content.EDITORIAL_DATE)))
+            add(path, route.get("lastmod", content.EDITORIAL_DATE), path not in content.ENGLISH_ONLY)
         Resource = request.env["spk.website.resource"]
         for kind in ("guide", "post"):
             for resource in Resource._public_list(kind):
                 modified = resource["modified_on"] or resource["published_on"]
-                entries.append((resource["path"], modified.isoformat()))
+                add(resource["path"], modified.isoformat(), kind == "guide")
         for member in request.env["spk.website.team.member"]._public_list():
-            entries.append((content.TEAM_PREFIX + member["slug"], None))
+            add(content.TEAM_PREFIX + member["slug"], None, translated=False)
         if request.env["ir.module.module"].sudo().search_count(
                 [("name", "=", "smartphonekey"), ("state", "=", "installed")]):
             entries += [(path, None) for path in content.INSTRUCTION_PATHS]
@@ -148,7 +165,7 @@ class SpkWebsiteV2Legacy(SpkWebsite):
         article = request.env["spk.website.resource"]._public_resource("post", slug)
         if not article:
             raise NotFound()
-        return _render_article(article, ("/resources",))
+        return _render_article(article, ("/resources",), english_only=True)
 
     @http.route(sitemap=False)
     def team_member(self, slug, **kw):
@@ -157,15 +174,17 @@ class SpkWebsiteV2Legacy(SpkWebsite):
         member = request.env["spk.website.team.member"]._public_member(slug)
         if not member:
             raise NotFound()
+        _url_code, t = _lang()
         route = {
             "template": "spk_website_v2.page_team_member",
-            "title": "%s, %s | SmartphoneKey" % (member["name"], member["job_title"]),
-            "description": "%s is %s at SmartphoneKey." % (member["name"], member["job_title"]),
+            "title": t("%(name)s, %(job)s | SmartphoneKey", name=member["name"], job=member["job_title"]),
+            "description": t("%(name)s is %(job)s at SmartphoneKey.", name=member["name"], job=member["job_title"]),
             "label": member["name"],
             "kind": "webpage",
             "crumbs": ("/about",),
         }
-        return render_page(content.TEAM_PREFIX + slug, route=route, member=member)
+        # The biographies are kept in English; the About page lists translated roles.
+        return render_page(content.TEAM_PREFIX + slug, route=route, member=member, english_only=True)
 
     @http.route()
     def page_not_found(self, **kw):
@@ -175,11 +194,12 @@ class SpkWebsiteV2Legacy(SpkWebsite):
 
 
 def render_not_found():
+    _url_code, t = _lang()
     route = {
         "template": "spk_website_v2.page_404",
-        "title": "Page not found | SmartphoneKey",
-        "description": "The page you asked for is not on the SmartphoneKey website.",
-        "label": "Page not found",
+        "title": t("Page not found | SmartphoneKey"),
+        "description": t("The page you asked for is not on the SmartphoneKey website."),
+        "label": t("Page not found"),
         "kind": "webpage",
         "index": False,
         "crumbs": (),
@@ -187,7 +207,7 @@ def render_not_found():
     return render_page(request.httprequest.path, route=route, status=404)
 
 
-def _render_article(article, parents):
+def _render_article(article, parents, english_only=False):
     route = {
         "template": "spk_website_v2.page_article",
         "title": article["seo_title"],
@@ -198,7 +218,7 @@ def _render_article(article, parents):
     }
     body, contents = prepare_body(article["body"])
     article = dict(article, body=body, contents=contents)
-    return render_page(article["path"], route=route, article=article, resource=article)
+    return render_page(article["path"], route=route, article=article, resource=article, english_only=english_only)
 
 
 class SpkWebsiteV2(http.Controller):
@@ -231,12 +251,12 @@ class SpkWebsiteV2(http.Controller):
     @http.route("/resources", type="http", auth="public", website=True, sitemap=False)
     def resources(self, **kw):
         _require_v2()
+        _url_code, t = _lang()
         Resource = request.env["spk.website.resource"]
         guides = Resource._public_list("guide")
         groups = []
-        for key, label in (("getting_started", "Getting started"), ("cards_devices", "Cards and devices"),
-                           ("networks_automation", "Networks and automation"), ("operating", "Operating your system")):
-            groups.append((key, label, [guide for guide in guides if guide["category"] == key]))
+        for key, label in content.GUIDE_GROUPS:
+            groups.append((key, t(label), [guide for guide in guides if guide["category"] == key]))
         return render_page("/resources", guide_groups=groups, posts=Resource._public_list("post"))
 
     @http.route("/resources/<string:slug>", type="http", auth="public", website=True, sitemap=False)
@@ -250,14 +270,15 @@ class SpkWebsiteV2(http.Controller):
     @http.route("/find-your-setup", type="http", auth="public", website=True, sitemap=False)
     def find_your_setup(self, **kw):
         _require_v2()
+        url_code, t = _lang()
         args = request.httprequest.args
         selection = setup_guide.clean_selection(args, args.getlist("interests"))
         if "connection" not in selection and args.get("site") in content.HOME_SITE_TO_SETUP:
             # The home hero's compact tool hands over its two choices.
             selection = setup_guide.clean_selection(
                 dict(content.HOME_SITE_TO_SETUP[args["site"]], connection=args.get("connection")), ())
-        return render_page("/find-your-setup", selection=selection, result=setup_guide.result_for(selection),
-                           setup_rules=json_for_script(setup_guide.rules_for_script()),
+        return render_page("/find-your-setup", selection=selection, result=setup_guide.result_for(selection, t),
+                           setup_rules=json_for_script(setup_guide.rules_for_script(t, url_code)),
                            setup_fields=setup_guide.FIELDS)
 
     @http.route("/thank-you", type="http", auth="public", website=True, sitemap=False)

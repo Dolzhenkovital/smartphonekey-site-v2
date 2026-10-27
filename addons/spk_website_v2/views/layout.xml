@@ -3,11 +3,13 @@
     <!-- The 2.0 shell: a bare web.layout document like the baseline's, so Odoo's
          website builder styles and scripts never mix with the site's, and the
          site's bundle never reaches the portal, the login or the guides. Every
-         page gets its metadata from rendering.page_values(). -->
+         page gets its metadata from rendering.page_values(). Links written as
+         site paths get the visitor's language prefix from Odoo's website
+         rendering; the language switcher opts out (data-no-post-process). -->
 
     <template id="layout" name="SmartphoneKey 2.0: layout">
         <t t-call="web.layout">
-            <t t-set="html_data" t-value="{'lang': 'en', 'class': 'spk-site-v2'}"/>
+            <t t-set="html_data" t-value="{'lang': lang_code, 'class': 'spk-site-v2'}"/>
             <t t-set="x_icon" t-value="'/spk_website_v2/static/src/img/favicon-32.png'"/>
             <t t-set="body_classname" t-value="'spk-body'"/>
             <t t-set="head">
@@ -15,9 +17,11 @@
                 <meta name="description" t-att-content="page_description"/>
                 <meta t-if="robots" name="robots" t-att-content="robots"/>
                 <link rel="canonical" t-att-href="canonical"/>
+                <link t-foreach="alternates" t-as="alternate" rel="alternate" t-att-hreflang="alternate[0]" t-att-href="alternate[1]"/>
                 <link rel="apple-touch-icon" href="/spk_website_v2/static/src/img/apple-touch-icon.png"/>
                 <meta property="og:type" t-att-content="'article' if route.get('kind') == 'article' else 'website'"/>
                 <meta property="og:site_name" content="SmartphoneKey"/>
+                <meta property="og:locale" t-att-content="og_locale"/>
                 <meta property="og:title" t-att-content="title"/>
                 <meta property="og:description" t-att-content="page_description"/>
                 <meta property="og:url" t-att-content="canonical"/>
@@ -27,9 +31,12 @@
                 <meta property="og:image:alt" t-att-content="og_image['alt']"/>
                 <meta name="twitter:card" content="summary_large_image"/>
                 <!-- General Sans (ITF Free Font License) from Fontshare, as in the design
-                     reference; the font stack falls back to the system sans. -->
-                <link rel="preconnect" href="https://api.fontshare.com" crossorigin=""/>
-                <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&amp;display=swap"/>
+                     reference. It has no Cyrillic, so Ukrainian pages use the system sans
+                     (see the font token in site.scss). -->
+                <t t-if="lang_code != 'uk'">
+                    <link rel="preconnect" href="https://api.fontshare.com" crossorigin=""/>
+                    <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&amp;display=swap"/>
+                </t>
                 <t t-call-assets="spk_website_v2.assets_site" t-js="false"/>
                 <script type="application/ld+json" t-out="jsonld"/>
                 <script t-attf-src="/spk_website_v2/static/src/js/navigation.js?v=#{v2_asset_version}" defer="defer"/>
@@ -41,10 +48,23 @@
             </p>
             <t t-call="spk_website_v2.header"/>
             <main id="main" tabindex="-1">
+                <div t-if="english_only" class="container">
+                    <p class="note english-only">This page is available in English only.</p>
+                </div>
                 <t t-out="0"/>
             </main>
             <t t-call="spk_website_v2.footer"/>
         </t>
+    </template>
+
+    <!-- The language switcher: every language copy of the current page. -->
+    <template id="language_links" name="SmartphoneKey 2.0: language links">
+        <ul class="lang-list">
+            <li t-foreach="lang_switch" t-as="option">
+                <a t-att-href="option[1]" t-att-hreflang="option[2]" t-att-lang="option[2]" data-no-post-process="1"
+                   t-att-aria-current="'true' if option[3] else None" t-out="option[0]"/>
+            </li>
+        </ul>
     </template>
 
     <template id="header" name="SmartphoneKey 2.0: header">
@@ -69,8 +89,15 @@
                     </ul>
                 </nav>
                 <div class="header-actions">
+                    <a t-att-href="content.INSTALLATION_GUIDE">Instructions</a>
                     <a href="/adminpanel">Admin Panel</a>
                     <a href="/find-your-setup" class="header-action" t-att-aria-current="'page' if nav_current == '/find-your-setup' else None">Find your setup</a>
+                    <details class="menu-group lang-switch" data-spk-menu="">
+                        <summary><span class="visually-hidden">Language: </span><t t-out="current_lang_name"/></summary>
+                        <div class="menu-panel lang-panel">
+                            <t t-call="spk_website_v2.language_links"/>
+                        </div>
+                    </details>
                 </div>
                 <details class="mobile-nav" data-spk-mobile-menu="">
                     <summary>Menu</summary>
@@ -85,8 +112,13 @@
                         </div>
                         <ul class="mobile-actions">
                             <li><a href="/find-your-setup">Find your setup</a></li>
+                            <li><a t-att-href="content.INSTALLATION_GUIDE">Instructions</a></li>
                             <li><a href="/adminpanel">Admin Panel</a></li>
                         </ul>
+                        <div class="mobile-group mobile-langs">
+                            <p class="mobile-title">Language</p>
+                            <t t-call="spk_website_v2.language_links"/>
+                        </div>
                     </nav>
                 </details>
             </div>
@@ -115,6 +147,9 @@
                         </div>
                     </nav>
                 </div>
+                <nav class="footer-langs" aria-label="Language">
+                    <t t-call="spk_website_v2.language_links"/>
+                </nav>
             </div>
         </footer>
     </template>

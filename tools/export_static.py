@@ -55,8 +55,16 @@ def page_paths(odoo):
         raise SystemExit("sitemap.xml answered %s" % status)
     namespace = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9"}
     paths = [urlsplit(loc).path or "/" for loc in etree.fromstring(body).xpath("//s:loc/text()", namespaces=namespace)]
-    exported = [path for path in paths if path not in content.INSTRUCTION_PATHS]
-    return exported + list(EXTRA_PAGES)
+    codes = [code for code, _odoo, _name in content.SITE_LANGS]
+    pages = []
+    for path in paths + list(EXTRA_PAGES):
+        if path in content.INSTRUCTION_PATHS:
+            continue
+        # English-only pages are listed once in the sitemap, but every language's
+        # navigation links to its own copy of them: export those too.
+        variants = [path] if path.split("/")[1:2] and path.split("/")[1] in codes else             [content.lang_url(path, code) for code in codes]
+        pages += [variant for variant in variants if variant not in pages]
+    return pages
 
 
 class Rewriter:
@@ -72,6 +80,10 @@ class Rewriter:
         parts = urlsplit(value)
         path = parts.path or "/"
         suffix = ("?" + parts.query if parts.query else "") + ("#" + parts.fragment if parts.fragment else "")
+        if path == "/" + content.DEFAULT_LANG or path.startswith("/%s/" % content.DEFAULT_LANG):
+            # The switcher's English link (/en/...): the static copy has no
+            # language memory to reset, so it links the plain page.
+            path = path[len(content.DEFAULT_LANG) + 1:] or "/"
         if path in self.pages or path == "/":
             return self.base + (path if path == "/" else path + "/") + suffix
         if path.startswith("/spk_website_v2/static/"):
@@ -82,7 +94,14 @@ class Rewriter:
             return self.base + "/assets/site.css"
         if path == "/website/spk/enquiry":
             return self.base + "/contact/"
-        # Routes another module serves (instruction site, portal entry, legacy noindex page).
+        # Routes another module serves (instruction site, portal entry, legacy noindex
+        # page). That host may not have the same website languages: drop the prefix
+        # and hand the instruction site its language as ?lang= instead.
+        code, _sep, rest = path[1:].partition("/")
+        if code in {lang for lang, _odoo, _name in content.SITE_LANGS} and rest:
+            path = "/" + rest
+            if path in content.INSTRUCTION_PATHS:
+                suffix = "?lang=" + code + ("#" + parts.fragment if parts.fragment else "")
         return self.external + path + suffix
 
     def page(self, body):

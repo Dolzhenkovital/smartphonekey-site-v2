@@ -48,6 +48,13 @@ html.spk-site-v2 {
   background: var(--color-paper);
 }
 
+/* General Sans has no Cyrillic: Ukrainian pages use one system face throughout
+   rather than mixing two faces in a line. Recorded as a design deviation. */
+html.spk-site-v2[lang="uk"] {
+  --font-display: ui-sans-serif, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --tracking-display: -0.02em;
+}
+
 @media (max-width: 60rem) {
   html.spk-site-v2 { --gutter: 24px; --section-gap-s: 80px; --section-gap: 96px; --section-gap-l: 120px; }
 }
@@ -77,7 +84,10 @@ html.spk-site-v2 {
   h1, h2, h3 {
     margin: 0; font-family: var(--font-display); font-weight: var(--display-weight); font-synthesis: none;
     letter-spacing: var(--tracking-display); line-height: 1.05; overflow-wrap: break-word; min-width: 0; text-wrap: balance;
+    hyphens: auto;
   }
+  /* German and Ukrainian compounds: hyphenate body copy rather than overflow. */
+  &[lang="de"] p, &[lang="uk"] p, &[lang="de"] li, &[lang="uk"] li, &[lang="de"] td, &[lang="uk"] td { hyphens: auto; }
   h1 { max-width: 20ch; font-size: var(--text-display); }
   h2 { max-width: 30ch; font-size: var(--text-section); }
   h3 { max-width: 40ch; font-size: var(--text-title); line-height: 1.2; }
@@ -126,6 +136,18 @@ html.spk-site-v2 {
   .header-actions a { text-decoration: none; }
   .header-actions a:hover { text-decoration: underline; text-decoration-color: var(--color-accent-2); }
   .header-action { font-weight: 500; }
+  .lang-switch { position: relative; }
+  .lang-switch > summary { padding-inline: var(--space-sm); }
+  .lang-panel { left: auto; right: 0; min-width: 12rem; }
+  .lang-list { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--space-2xs); }
+  .lang-panel .lang-list a, .mobile-langs .lang-list a { display: block; padding: var(--space-xs) var(--space-sm); text-decoration: none; border-radius: var(--radius-input); }
+  .lang-panel .lang-list a:hover, .mobile-langs .lang-list a:hover { background: var(--color-paper-2); }
+  .lang-list a[aria-current="true"] { font-weight: 600; }
+  .footer-langs { margin-top: var(--space-2xl); padding-top: var(--space-lg); border-top: 1px solid var(--color-rule); }
+  .footer-langs .lang-list { display: flex; flex-wrap: wrap; gap: var(--space-xs) var(--space-lg); }
+  .footer-langs a { color: var(--color-ink-2); text-decoration: none; }
+  .footer-langs a:hover { text-decoration: underline; }
+  .english-only { margin-top: var(--space-lg); }
   .mobile-nav { display: none; }
   .menu-group:not([open]) .menu-panel, .mobile-nav:not([open]) .mobile-panel { display: none; }
 
@@ -133,10 +155,10 @@ html.spk-site-v2 {
   .footer-main { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 3fr); gap: var(--space-2xl); }
   .footer-brand { display: grid; gap: var(--space-xs); align-content: start; }
   .footer-name { font-size: var(--text-lg); font-weight: 600; }
-  .footer-nav { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--gap-columns); }
+  .footer-nav { display: grid; grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr)); gap: var(--space-xl) var(--gap-columns); }
   .footer-title { font-weight: 600; margin-bottom: var(--space-sm); }
   .footer-nav ul { list-style: none; padding: 0; display: grid; gap: var(--space-xs); }
-  .footer-nav a { text-decoration: none; color: var(--color-ink-2); }
+  .footer-nav a { text-decoration: none; color: var(--color-ink-2); overflow-wrap: break-word; hyphens: auto; }
   .footer-nav a:hover { text-decoration: underline; }
 
   /* Buttons and links ------------------------------------------------------ */
@@ -296,6 +318,9 @@ html.spk-site-v2 {
   .resource-group li, .article-list li { display: grid; gap: var(--space-2xs); }
   .resource-group li a, .article-list li a { font-size: var(--text-lg); font-weight: 500; }
   .article-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-xl) var(--gap-columns); }
+  .instruction-list { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-xl) var(--gap-columns); }
+  .instruction-list li { display: grid; gap: var(--space-2xs); align-content: start; border-top: 1px solid var(--color-rule-2); padding-top: var(--space-lg); }
+  .instruction-list a { font-size: var(--text-lg); font-weight: 500; }
 
   .team-list { list-style: none; padding: 0; margin-top: var(--space-2xl); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-2xl) var(--gap-columns); }
   .team-list li { display: grid; gap: var(--space-2xs); align-content: start; }
@@ -350,11 +375,16 @@ html.spk-site-v2 {
   .contact-aside h2:first-child { margin-top: 0; }
 
   /* Responsive ------------------------------------------------------------- */
-  @media (max-width: 75rem) {
+  .header-actions a, .menu-group > summary { white-space: nowrap; }
+  @media (max-width: 85rem) {
+    .header-inner { gap: var(--space-md); }
+    .menu { gap: 0; }
     .menu-group > summary { padding-inline: var(--space-xs); }
     .header-actions { gap: var(--space-md); }
   }
-  @media (max-width: 60rem) {
+  /* Four menus and four header actions need about 1200px in the longer
+     languages; below that the header becomes the Menu disclosure. */
+  @media (max-width: 75rem) {
     .desktop-nav, .header-actions { display: none; }
     .mobile-nav { display: block; }
     .mobile-nav[open] .mobile-panel {
@@ -363,10 +393,13 @@ html.spk-site-v2 {
       box-shadow: var(--edge-stock), var(--cast-stock); display: grid; gap: var(--space-lg);
       max-height: calc(100svh - 96px); overflow-y: auto;
     }
+    .mobile-panel { grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr)); }
     .mobile-panel ul { list-style: none; padding: 0; display: grid; gap: var(--space-2xs); }
     .mobile-title { font-weight: 600; padding-inline: var(--space-sm); }
     .mobile-actions { border-top: 1px solid var(--color-rule); padding-top: var(--space-md) !important; }
     .site-header .container { position: relative; }
+  }
+  @media (max-width: 60rem) {
     .hero { gap: var(--space-xl); min-height: auto; }
     .hero h1 { font-size: var(--text-display-s); }
     .setup { padding: var(--space-lg); }
@@ -374,7 +407,6 @@ html.spk-site-v2 {
     .workflow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .reader img { height: 360px; }
     .footer-main { grid-template-columns: minmax(0, 1fr); }
-    .footer-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .split { grid-template-columns: minmax(0, 1fr); gap: var(--space-lg); }
     .columns-3, .steps-4, .phases { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .diagram-grid { grid-template-columns: minmax(0, 1fr); }
@@ -391,7 +423,7 @@ html.spk-site-v2 {
     .hero h1 { font-size: var(--text-display); max-width: 12ch; }
     .intro-copy { gap: var(--space-lg); }
     .section-head, .audiences, .reader, .scenario-list div, .next-links, .faq-list, .columns-2, .columns-3, .steps-4, .phases,
-    .resource-groups, .article-list, .field-grid, .member-body, .workflow-3 { grid-template-columns: minmax(0, 1fr); }
+    .resource-groups, .article-list, .field-grid, .member-body, .workflow-3, .instruction-list { grid-template-columns: minmax(0, 1fr); }
     .section-head { gap: var(--space-lg); margin-bottom: var(--space-xl); }
     .audiences, .reader { gap: var(--space-xl); }
     .scenario-list div { gap: var(--space-sm); }

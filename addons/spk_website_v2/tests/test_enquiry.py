@@ -93,7 +93,7 @@ class TestEnquiry(SiteCase):
             "company": "Example Properties", "region": "Example region", "details": "Synthetic test enquiry.",
             "phone": "", "role": "property_manager", "sites": "two_to_ten", "doors": "six_to_twentyfive",
             "connection": "wifi", "interests": [], "source_path": "/find-your-setup",
-            "submission_id": data["submission_id"],
+            "submission_id": data["submission_id"], "lang": "en_US",
         }
         website = self.env["website"].get_current_website()
         Lead = self.env["crm.lead"]

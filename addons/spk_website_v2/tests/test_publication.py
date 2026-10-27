@@ -35,14 +35,14 @@ class TestPublication(SiteCase):
         self.assertIn("Reviewed %d " % self.row.verified_at.day, body)
 
     def test_rows_of_ungated_claims_cannot_be_published(self):
-        roles = self.env.ref("spk_website_v2.compat_reader_thread_roles")
         distance = self.env.ref("spk_website_v2.compat_reader_link_distance")
-        for row in (roles, distance):
-            with self.assertRaises(UserError):
-                row.with_user(self.publisher).action_publish()
+        with self.assertRaises(UserError):
+            distance.with_user(self.publisher).action_publish()
         body = self.get("/compatibility").content
         self.assertNotIn(b"Distance between readers", body)
-        self.assertNotIn(b"Thread Border Router functions of the reader", body)
+        # C13, published on the owner's instruction of 2026-10-27.
+        self.assertIn(b"Reader Thread roles", body)
+        self.assertIn(b"No separate firmware version is needed for either role.", body)
 
     def test_private_evidence_never_reaches_the_page(self):
         body = self.get("/compatibility").content

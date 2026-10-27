@@ -3,6 +3,7 @@
 
 from odoo import api, fields, models
 from odoo.exceptions import AccessError
+from odoo.tools.translate import html_translate
 
 PUBLIC_FIELDS = ("slug", "name", "job_title", "bio", "linkedin_url", "photo", "photo_alt", "is_advisor")
 
@@ -15,12 +16,12 @@ class SpkWebsiteTeamMember(models.Model):
     sequence = fields.Integer(default=10)
     slug = fields.Char(required=True)
     name = fields.Char(required=True)
-    job_title = fields.Char(required=True)
+    job_title = fields.Char(required=True, translate=True)
     is_advisor = fields.Boolean("Advisor")
-    bio = fields.Html(sanitize=True)
+    bio = fields.Html(sanitize=True, translate=html_translate)
     linkedin_url = fields.Char("LinkedIn profile")
     photo = fields.Char(help="Path of a photo shipped with the module.")
-    photo_alt = fields.Char("Photo description")
+    photo_alt = fields.Char("Photo description", translate=True)
     role_checked_on = fields.Date(
         "Role confirmed on", help="Set when the current role has been confirmed with the person. "
                                   "Internal; shown in the release checklist, not on the site.")

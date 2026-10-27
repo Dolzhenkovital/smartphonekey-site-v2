@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <!-- Resources: the index, and one article template for the buyer guides
-         (/resources/<slug>) and the archived blog articles (/post/<slug>). -->
+    <!-- Resources: the index (buyer guides, instructions, insights), and one
+         article template for the buyer guides (/resources/<slug>) and the
+         archived blog articles (/post/<slug>). -->
 
     <template id="page_resources" name="SmartphoneKey 2.0: resources">
         <t t-call="spk_website_v2.layout">
@@ -10,12 +11,18 @@
                     <t t-set="heading">Practical guidance for your access system.</t>
                     <t t-set="intro">Find installation guidance, operating instructions and answers to the questions that matter when choosing a setup.</t>
                 </t>
+                <nav class="contents" aria-label="On this page">
+                    <ul>
+                        <li><a href="#guides">Guides</a></li>
+                        <li><a href="#instructions">Instructions</a></li>
+                        <li><a href="#insights">Insights</a></li>
+                    </ul>
+                </nav>
             </div>
 
             <section class="section container" id="guides" aria-labelledby="guides-title">
                 <h2 id="guides-title">Guides.</h2>
                 <div class="resource-groups">
-                    <t t-set="instruction" t-value="content.INSTRUCTION_PATHS"/>
                     <div t-foreach="guide_groups" t-as="group" class="resource-group">
                         <h3 t-out="group[1]"/>
                         <ul>
@@ -25,7 +32,6 @@
                             </li>
                             <t t-if="group[0] == 'getting_started'">
                                 <li><a href="/find-your-setup">Find your setup</a><span class="muted">A planning checklist for your sites, doors and connection, without contact details.</span></li>
-                                <li><a href="/guide-for-usage-and-installation" t-out="instruction['/guide-for-usage-and-installation']"/><span class="muted">Physical connection, package contents and specifications, in ten languages.</span></li>
                             </t>
                             <t t-if="group[0] == 'cards_devices'">
                                 <li><a href="/compatibility">Card and device compatibility</a><span class="muted">Documented card programming, digital credentials, Matter capabilities and network roles.</span></li>
@@ -33,26 +39,57 @@
                             <t t-if="group[0] == 'networks_automation'">
                                 <li><a href="/platform/automation">Automation with connected devices</a><span class="muted">Example scenarios and the capability limits behind them.</span></li>
                             </t>
-                            <t t-if="group[0] == 'operating'">
-                                <li><a href="/instructions/admin-guide" t-out="instruction['/instructions/admin-guide']"/><span class="muted">Every Admin Panel screen, step by step.</span></li>
-                                <li><a href="/instructions/admin-panel" t-out="instruction['/instructions/admin-panel']"/><span class="muted">A guided tour of the Admin Panel.</span></li>
-                                <li><a href="/instructions/mobile-app-guide" t-out="instruction['/instructions/mobile-app-guide']"/><span class="muted">Using the SmartphoneKey mobile app.</span></li>
-                                <li><a href="/instructions/mobile-app" t-out="instruction['/instructions/mobile-app']"/><span class="muted">A guided tour of the mobile app.</span></li>
-                                <li><a href="/apps-and-chatbot">SmartphoneKey apps</a><span class="muted">Download links for Android and iPhone, and the app in ChatGPT.</span></li>
-                            </t>
                         </ul>
                     </div>
                 </div>
             </section>
 
+            <section class="section container" id="instructions" aria-labelledby="instructions-title">
+                <div class="section-head">
+                    <h2 id="instructions-title">Instructions.</h2>
+                    <p>Step-by-step instructions for installing SmartphoneKey readers and for working in the Admin Panel and the mobile app.</p>
+                </div>
+                <t t-set="instruction" t-value="content.INSTRUCTION_PATHS"/>
+                <ul class="instruction-list">
+                    <li>
+                        <a href="/guide-for-usage-and-installation" t-out="instruction['/guide-for-usage-and-installation']"/>
+                        <span class="muted">Package contents, physical connection, network setup and specifications of the reader.</span>
+                    </li>
+                    <li>
+                        <a href="/instructions/admin-guide" t-out="instruction['/instructions/admin-guide']"/>
+                        <span class="muted">Every Admin Panel screen, step by step.</span>
+                    </li>
+                    <li>
+                        <a href="/instructions/admin-panel" t-out="instruction['/instructions/admin-panel']"/>
+                        <span class="muted">A guided tour of the Admin Panel.</span>
+                    </li>
+                    <li>
+                        <a href="/instructions/mobile-app-guide" t-out="instruction['/instructions/mobile-app-guide']"/>
+                        <span class="muted">Using the SmartphoneKey mobile app.</span>
+                    </li>
+                    <li>
+                        <a href="/instructions/mobile-app" t-out="instruction['/instructions/mobile-app']"/>
+                        <span class="muted">A guided tour of the mobile app.</span>
+                    </li>
+                    <li>
+                        <a href="/apps-and-chatbot">SmartphoneKey apps</a>
+                        <span class="muted">Download links for Android and iPhone, and the app in ChatGPT.</span>
+                    </li>
+                    <li>
+                        <a href="/certifications">Certifications and documents</a>
+                        <span class="muted">Regulatory records, conformity documents and platform certificates for the readers.</span>
+                    </li>
+                </ul>
+            </section>
+
             <section class="section container" id="insights" aria-labelledby="insights-title">
                 <div class="section-head">
                     <h2 id="insights-title">Insights.</h2>
-                    <p>Articles from our earlier blog, kept with their original dates. They describe the product as it was presented then.</p>
+                    <p>Articles from our earlier blog, kept in English with their original dates. They describe the product as it was presented then.</p>
                 </div>
                 <ul class="article-list">
                     <li t-foreach="posts" t-as="post">
-                        <a t-att-href="post['path']" t-out="post['name']"/>
+                        <a t-att-href="post['path']" t-att-hreflang="'en'" t-out="post['name']"/>
                         <span class="muted">Published <t t-out="format_day(post['published_on'])"/></span>
                     </li>
                 </ul>
@@ -61,8 +98,9 @@
             <t t-call="spk_website_v2.next_step">
                 <t t-set="next_title">Need help with an installed system?</t>
                 <t t-set="next_text">Sign in to the Admin Panel, or email the team with your site and reader details. Please do not send passwords or access codes.</t>
-                <t t-set="next_primary" t-value="False"/>
-                <t t-set="next_links" t-value="[('Admin Panel', '/adminpanel'), ('Email ' + contact_email, 'mailto:' + contact_email), ('Discuss a new project', '/contact?interest=project')]"/>
+                <a href="/adminpanel">Admin Panel</a>
+                <a t-attf-href="mailto:#{contact_email}" t-out="contact_email"/>
+                <a href="/contact?interest=project">Discuss a new project</a>
             </t>
         </t>
     </template>
@@ -75,7 +113,7 @@
                     <h1 id="article-title" t-out="resource['name']"/>
                     <div class="meta">
                         <t t-if="resource['kind'] == 'guide'">
-                            <p>By the <t t-out="resource['author_name']"/></p>
+                            <p>By the SmartphoneKey product team</p>
                             <p>Published <t t-out="format_day(resource['published_on'])"/></p>
                             <p t-if="resource['modified_on']">Updated <t t-out="format_day(resource['modified_on'])"/></p>
                             <p t-if="resource['reviewed_on']">Product facts checked <t t-out="format_day(resource['reviewed_on'])"/></p>
@@ -100,7 +138,7 @@
                         <li t-foreach="resource['contents']" t-as="entry"><a t-att-href="'#' + entry[0]" t-out="entry[1]"/></li>
                     </ul>
                 </nav>
-                <div class="spk-prose" t-out="resource['body']"/>
+                <div class="spk-prose" t-att-lang="'en' if resource['kind'] == 'post' else None" t-out="resource['body']"/>
                 <section t-if="resource['sources']" class="references" aria-labelledby="references-title">
                     <h2 id="references-title">References</h2>
                     <ul>
@@ -111,14 +149,15 @@
 
             <t t-if="resource['related']" t-call="spk_website_v2.related_links">
                 <t t-set="related_title">Related pages</t>
-                <t t-set="related" t-value="resource['related']"/>
+                <li t-foreach="resource['related']" t-as="link"><a t-att-href="link[1]" t-out="t(link[0])"/></li>
             </t>
 
             <t t-call="spk_website_v2.next_step">
                 <t t-set="next_title">Plan your next step.</t>
                 <t t-set="next_text">Work through a planning checklist on your own, or bring your questions to the team.</t>
-                <t t-set="next_primary" t-value="False"/>
-                <t t-set="next_links" t-value="[('Find your setup', '/find-your-setup'), ('Check compatibility', '/compatibility'), ('Discuss your project', '/contact?interest=project')]"/>
+                <a href="/find-your-setup">Find your setup</a>
+                <a href="/compatibility">Check compatibility</a>
+                <a href="/contact?interest=project">Discuss your project</a>
             </t>
         </t>
     </template>

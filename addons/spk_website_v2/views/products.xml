@@ -38,9 +38,10 @@
             </section>
 
             <section class="section container split" aria-labelledby="connected-title">
-                <h2 id="connected-title">Plan the connected-device configuration.</h2>
+                <h2 id="connected-title">Every reader is a Thread router and Border Router.</h2>
                 <div class="split-copy">
-                    <p>Discuss supported Matter and Thread roles for the reader revision you intend to install. A mesh deployment depends on node roles, placement, power and the available route to the internet.</p>
+                    <p>Each SmartphoneKey reader can act as a Thread Border Router and as a router in the Thread mesh. You do not need a separate firmware version for either role, so readers on a site can form one mesh and link it to your IP network.</p>
+                    <p>A mesh deployment still depends on placement, power and the available route to the internet. Matter controller functions are confirmed for each project.</p>
                     <p class="note">Coverage depends on the building, placement and radio conditions. We help plan the network for your site.</p>
                     <a href="/resources/matter-thread-access-control">Matter and Thread for access control</a>
                 </div>
@@ -61,19 +62,31 @@
             </section>
 
             <t t-call="spk_website_v2.faq">
-                <t t-set="faqs" t-value="[
-                    ('How do LTE and Wi-Fi readers differ?', 'They provide different internet connection options. LTE requires suitable cellular service; Wi-Fi requires suitable network coverage and configuration. Confirm the model and installation requirements for your site.'),
-                    ('Can one reader provide connectivity for other readers?', 'Supported hub and reader configurations can use a shared network path. The exact uplink, Thread roles and topology must be confirmed for the installed hardware and firmware. Do not assume every reader is a Border Router or provides failover.'),
-                    ('How far apart can readers be installed?', 'Coverage depends on the radio environment, obstacles, placement and hardware configuration. Plan and verify coverage at the site; a universal distance cannot describe every installation.'),
-                    ('Can I keep existing locks or cameras?', 'Compatibility must be checked against the exact hardware, electrical interface and camera or service requirements. Send model details to the team before assuming an existing installation can be reused.'),
-                ]"/>
+                <div class="faq-item">
+                    <h3>How do LTE and Wi-Fi readers differ?</h3>
+                    <p>They provide different internet connection options. LTE requires suitable cellular service; Wi-Fi requires suitable network coverage and configuration. Confirm the model and installation requirements for your site.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can one reader provide connectivity for other readers?</h3>
+                    <p>Yes. Every reader can act as a Thread router and as a Border Router, so readers can share a Thread mesh and reach the internet through a reader that has a connection. How many readers share that path, and what happens if it drops, depend on the installation; we plan the topology with you. Automatic failover is not implied.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How far apart can readers be installed?</h3>
+                    <p>Coverage depends on the radio environment, obstacles, placement and hardware configuration. Plan and verify coverage at the site; a universal distance cannot describe every installation.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I keep existing locks or cameras?</h3>
+                    <p>Compatibility must be checked against the exact hardware, electrical interface and camera or service requirements. Send model details to the team before assuming an existing installation can be reused.</p>
+                </div>
             </t>
 
             <t t-call="spk_website_v2.next_step">
                 <t t-set="next_title">Choose your reader with confidence.</t>
                 <t t-set="next_text">Check what your site needs, then ask about availability for your installation.</t>
-                <t t-set="next_primary" t-value="('Find your setup', '/find-your-setup')"/>
-                <t t-set="next_links" t-value="[('Check compatibility', '/compatibility'), ('View installation guide', '/guide-for-usage-and-installation'), ('Discuss reader availability', '/contact?interest=project')]"/>
+                <a class="button" href="/find-your-setup">Find your setup</a>
+                <a href="/compatibility">Check compatibility</a>
+                <a href="/guide-for-usage-and-installation">View installation guide</a>
+                <a href="/contact?interest=project">Discuss reader availability</a>
             </t>
         </t>
     </template>
@@ -98,7 +111,7 @@
                             <span t-if="row['revision']" class="cell-note">Revision <t t-out="row['revision']"/></span>
                             <span t-if="row['firmware_scope']" class="cell-note">Firmware <t t-out="row['firmware_scope']"/></span>
                         </th>
-                        <td t-out="row['operation_label']"/>
+                        <td t-out="t(row['operation_label'])"/>
                         <td t-out="row['capabilities']"/>
                         <td>
                             <t t-out="row['limitations']"/>
@@ -165,7 +178,7 @@
             <section class="section container" id="networks" aria-labelledby="networks-title">
                 <div class="section-head">
                     <h2 id="networks-title">Networks.</h2>
-                    <p>Thread mesh participation, Border Router functions, Matter control and internet uplink are separate roles. Confirm which roles the proposed hardware and firmware provide.</p>
+                    <p>Thread mesh participation, Border Router functions, Matter control and internet uplink are separate roles. Every SmartphoneKey reader can act as a Thread Border Router and as a router in the mesh, without a separate firmware version; Matter control and the route to the internet are planned for each installation.</p>
                 </div>
                 <t t-call="spk_website_v2.compatibility_table">
                     <t t-set="table_label">Networks</t>
@@ -175,17 +188,21 @@
             </section>
 
             <t t-call="spk_website_v2.faq">
-                <t t-set="faqs" t-value="[
-                    ('Which physical cards can be programmed?', 'The documented workflows support MIFARE Classic and MIFARE DESFire EV3 using compatible programming hardware and firmware. Confirm the exact card variant and credential format before ordering.'),
-                    ('Does SmartphoneKey work with every Matter device?', 'Compatibility depends on the device type, exposed capabilities, firmware and configuration. Check the functions required by your workflow instead of assuming every Matter device supports them.'),
-                ]"/>
+                <div class="faq-item">
+                    <h3>Which physical cards can be programmed?</h3>
+                    <p>The documented workflows support MIFARE Classic and MIFARE DESFire EV3 using compatible programming hardware and firmware. Confirm the exact card variant and credential format before ordering.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Does SmartphoneKey work with every Matter device?</h3>
+                    <p>Compatibility depends on the device type, exposed capabilities, firmware and configuration. Check the functions required by your workflow instead of assuming every Matter device supports them.</p>
+                </div>
             </t>
 
             <t t-call="spk_website_v2.next_step">
                 <t t-set="next_title">Need a specific check?</t>
                 <t t-set="next_text">Tell us the reader model, firmware and device or card details. Do not send keys, passwords or credentials through the contact form.</t>
-                <t t-set="next_primary" t-value="('Ask about compatibility', '/contact?interest=compatibility')"/>
-                <t t-set="next_links" t-value="[('Find your setup', '/find-your-setup')]"/>
+                <a class="button" href="/contact?interest=compatibility">Ask about compatibility</a>
+                <a href="/find-your-setup">Find your setup</a>
             </t>
         </t>
     </template>

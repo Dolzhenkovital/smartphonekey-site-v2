@@ -52,8 +52,9 @@
             <t t-call="spk_website_v2.next_step">
                 <t t-set="next_title">Start with your portfolio.</t>
                 <t t-set="next_text">See a planning starting point without sharing contact details, or talk to us about your buildings.</t>
-                <t t-set="next_primary" t-value="('Find your setup', '/find-your-setup')"/>
-                <t t-set="next_links" t-value="[('Explore access management', '/platform/access-management'), ('Discuss your property portfolio', '/contact?interest=project')]"/>
+                <a class="button" href="/find-your-setup">Find your setup</a>
+                <a href="/platform/access-management">Explore access management</a>
+                <a href="/contact?interest=project">Discuss your property portfolio</a>
             </t>
         </t>
     </template>
@@ -92,7 +93,7 @@
             <section class="section container split" aria-labelledby="variant-title">
                 <h2 id="variant-title">Choose the reader configuration.</h2>
                 <div class="split-copy">
-                    <p>LTE and Wi-Fi readers share the same platform. The connection the site can support decides which one fits; power and compatible door hardware are needed either way.</p>
+                    <p>LTE and Wi-Fi readers share the same platform. The connection the site can support decides which one fits; power and compatible door hardware are needed either way. Every reader can also act as a Thread Border Router and as a router in the Thread mesh, with the same firmware.</p>
                     <a href="/resources/lte-vs-wifi-access-control">LTE or Wi-Fi: what fits your site?</a>
                     <a href="/guide-for-usage-and-installation">Installation and connection guide</a>
                 </div>
@@ -108,8 +109,9 @@
             <t t-call="spk_website_v2.next_step">
                 <t t-set="next_title">Work with SmartphoneKey.</t>
                 <t t-set="next_text">Read the installation guidance and compare readers on your own, or start a partnership conversation.</t>
-                <t t-set="next_primary" t-value="('Become a partner', '/contact?interest=partner')"/>
-                <t t-set="next_links" t-value="[('Read installation guidance', '/guide-for-usage-and-installation'), ('Compare readers', '/products/readers')]"/>
+                <a class="button" href="/contact?interest=partner">Become a partner</a>
+                <a href="/guide-for-usage-and-installation">Read installation guidance</a>
+                <a href="/products/readers">Compare readers</a>
             </t>
         </t>
     </template>

@@ -47,12 +47,12 @@ class SpkWebsiteCompatibility(models.Model):
 
     sequence = fields.Integer(default=10)
     category = fields.Selection(CATEGORIES, required=True)
-    name = fields.Char("Family or model", required=True)
+    name = fields.Char("Family or model", required=True, translate=True)
     revision = fields.Char()
     firmware_scope = fields.Char()
     operation = fields.Selection(OPERATIONS, required=True)
-    capabilities = fields.Text("What it covers", required=True)
-    limitations = fields.Text("Conditions and limits", required=True)
+    capabilities = fields.Text("What it covers", required=True, translate=True)
+    limitations = fields.Text("Conditions and limits", required=True, translate=True)
     verified_at = fields.Date("Verified on", readonly=True)
     evidence_ref = fields.Char(
         "Evidence reference", groups="spk_website_v2.group_spk_website_editor",

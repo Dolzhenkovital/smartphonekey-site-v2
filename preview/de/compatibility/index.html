@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="de" class="spk-site-v2">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Kompatibilität von Karten und Matter-Geräten | SmartphoneKey</title>
+        <link type="image/x-icon" rel="shortcut icon" href="/smartphonekey-site-v2/spk_website_v2/static/src/img/favicon-32.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+                <meta name="description" content="Prüfen Sie die dokumentierte Programmierung von MIFARE Classic und DESFire EV3, Matter-Funktionen und die Konfigurationsdetails, die für Ihren Standort erforderlich sind.">
+                <meta name="robots" content="noindex, nofollow">
+                <link rel="canonical" href="https://smartphonekey.com/de/compatibility">
+                
+                <link rel="apple-touch-icon" href="/smartphonekey-site-v2/spk_website_v2/static/src/img/apple-touch-icon.png">
+                <meta property="og:type" content="website">
+                <meta property="og:site_name" content="SmartphoneKey">
+                <meta property="og:locale" content="de_DE">
+                <meta property="og:title" content="Kompatibilität von Karten und Matter-Geräten | SmartphoneKey">
+                <meta property="og:description" content="Prüfen Sie die dokumentierte Programmierung von MIFARE Classic und DESFire EV3, Matter-Funktionen und die Konfigurationsdetails, die für Ihren Standort erforderlich sind.">
+                <meta property="og:url" content="https://smartphonekey.com/de/compatibility">
+                <meta property="og:image" content="https://smartphonekey.com/spk_website_v2/static/src/img/og-default.png">
+                <meta property="og:image:width" content="1200">
+                <meta property="og:image:height" content="630">
+                <meta property="og:image:alt" content="SmartphoneKey reader beside the SmartphoneKey key logo">
+                <meta name="twitter:card" content="summary_large_image">
+                
+                    <link rel="preconnect" href="https://api.fontshare.com" crossorigin="">
+                    <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&amp;display=swap">
+                <link type="text/css" rel="stylesheet" href="/smartphonekey-site-v2/assets/site.css">
+                <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://smartphonekey.com/de/compatibility#webpage","url":"https://smartphonekey.com/de/compatibility","name":"Kompatibilität von Karten und Matter-Geräten | SmartphoneKey","description":"Prüfen Sie die dokumentierte Programmierung von MIFARE Classic und DESFire EV3, Matter-Funktionen und die Konfigurationsdetails, die für Ihren Standort erforderlich sind.","inLanguage":"de","isPartOf":{"@id":"https://smartphonekey.com/#website"},"breadcrumb":{"@id":"https://smartphonekey.com/de/compatibility#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://smartphonekey.com/de/compatibility#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Startseite","item":"https://smartphonekey.com/de"},{"@type":"ListItem","position":2,"name":"Kompatibilität","item":"https://smartphonekey.com/de/compatibility"}]}]}</script>
+                <script defer src="/smartphonekey-site-v2/spk_website_v2/static/src/js/navigation.js?v=18.0.2.1.0"></script>
+                
+            
+    </head>
+    <body class="spk-body">
+        
+            <a class="skip" href="#main">Zum Inhalt springen</a>
+            <p class="preview-banner" role="note">
+                Test­vor­schau der SmartphoneKey-Website 2.0. Dies ist nicht die Live-Website, und hier eingegebene Daten werden weder gesendet noch gespeichert.
+            </p>
+        <header class="site-header">
+            <div class="container header-inner">
+                <a class="brand" href="/smartphonekey-site-v2/de/">
+                    <img src="/smartphonekey-site-v2/spk_website_v2/static/src/img/brand-mark.png" width="32" height="32" alt="" loading="lazy">
+                    <span>SmartphoneKey</span>
+                </a>
+                <nav class="desktop-nav" aria-label="Haupt­na­vi­ga­tion">
+                    <ul class="menu">
+                        <li>
+                            <details class="menu-group" data-spk-menu="">
+                                <summary>Plattform</summary>
+                                <ul class="menu-panel">
+                                    <li>
+                                        <a href="/smartphonekey-site-v2/de/platform/">Überblick</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/de/platform/access-management/">Zutrittsmanagement</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/de/platform/automation/">Automatisierung</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/de/platform/visitor-access/">Besucherzutritt</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li><li>
+                            <details class="menu-group" data-spk-menu="">
+                                <summary>Lösungen</summary>
+                                <ul class="menu-panel">
+                                    <li>
+                                        <a href="/smartphonekey-site-v2/de/solutions/property-managers/">Hausverwaltungen</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/de/solutions/integrators/">Integratoren</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li><li>
+                            <details class="menu-group" data-spk-menu="">
+                                <summary>Produkte</summary>
+                                <ul class="menu-panel">
+                                    <li>
+                                        <a href="/smartphonekey-site-v2/de/products/readers/">Leser</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/de/compatibility/" aria-current="page">Kompatibilität</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/de/certifications/">Zertifizierungen</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li><li>
+                            <details class="menu-group" data-spk-menu="">
+                                <summary>Ressourcen</summary>
+                                <ul class="menu-panel">
+                                    <li>
+                                        <a href="/smartphonekey-site-v2/de/resources/#guides">Ratgeber</a>
+                                    </li><li>
+                                        <a href="https://spkey.odoo.com/guide-for-usage-and-installation?lang=de">Anleitungen</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/de/resources/#insights">Beiträge</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/de/security/">Sicherheit und Vertrauen</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="https://spkey.odoo.com/guide-for-usage-and-installation?lang=de">Anleitungen</a>
+                    <a href="https://spkey.odoo.com/adminpanel">Admin Panel</a>
+                    <a href="/smartphonekey-site-v2/de/find-your-setup/" class="header-action">Ihre Konfiguration finden</a>
+                    <details class="menu-group lang-switch" data-spk-menu="">
+                        <summary><span class="visually-hidden">Sprache: </span>Deutsch</summary>
+                        <div class="menu-panel lang-panel">
+        <ul class="lang-list">
+            <li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/compatibility/" hreflang="en" lang="en">English</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/fr/compatibility/" hreflang="fr" lang="fr">Français</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/de/compatibility/" hreflang="de" lang="de" aria-current="true">Deutsch</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/es/compatibility/" hreflang="es" lang="es">Español</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/uk/compatibility/" hreflang="uk" lang="uk">Українська</a>
+            </li>
+        </ul>
+                        </div>
+                    </details>
+                </div>
+                <details class="mobile-nav" data-spk-mobile-menu="">
+                    <summary>Menü</summary>
+                    <nav class="mobile-panel" aria-label="Mobile Navigation">
+                        <div class="mobile-group">
+                            <p class="mobile-title">Plattform</p>
+                            <ul>
+                                <li>
+                                    <a href="/smartphonekey-site-v2/de/platform/">Überblick</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/de/platform/access-management/">Zutrittsmanagement</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/de/platform/automation/">Automatisierung</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/de/platform/visitor-access/">Besucherzutritt</a>
+                                </li>
+                            </ul>
+                        </div><div class="mobile-group">
+                            <p class="mobile-title">Lösungen</p>
+                            <ul>
+                                <li>
+                                    <a href="/smartphonekey-site-v2/de/solutions/property-managers/">Hausverwaltungen</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/de/solutions/integrators/">Integratoren</a>
+                                </li>
+                            </ul>
+                        </div><div class="mobile-group">
+                            <p class="mobile-title">Produkte</p>
+                            <ul>
+                                <li>
+                                    <a href="/smartphonekey-site-v2/de/products/readers/">Leser</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/de/compatibility/" aria-current="page">Kompatibilität</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/de/certifications/">Zertifizierungen</a>
+                                </li>
+                            </ul>
+                        </div><div class="mobile-group">
+                            <p class="mobile-title">Ressourcen</p>
+                            <ul>
+                                <li>
+                                    <a href="/smartphonekey-site-v2/de/resources/#guides">Ratgeber</a>
+                                </li><li>
+                                    <a href="https://spkey.odoo.com/guide-for-usage-and-installation?lang=de">Anleitungen</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/de/resources/#insights">Beiträge</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/de/security/">Sicherheit und Vertrauen</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="mobile-actions">
+                            <li><a href="/smartphonekey-site-v2/de/find-your-setup/">Ihre Konfiguration finden</a></li>
+                            <li><a href="https://spkey.odoo.com/guide-for-usage-and-installation?lang=de">Anleitungen</a></li>
+                            <li><a href="https://spkey.odoo.com/adminpanel">Admin Panel</a></li>
+                        </ul>
+                        <div class="mobile-group mobile-langs">
+                            <p class="mobile-title">Sprache</p>
+        <ul class="lang-list">
+            <li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/compatibility/" hreflang="en" lang="en">English</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/fr/compatibility/" hreflang="fr" lang="fr">Français</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/de/compatibility/" hreflang="de" lang="de" aria-current="true">Deutsch</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/es/compatibility/" hreflang="es" lang="es">Español</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/uk/compatibility/" hreflang="uk" lang="uk">Українська</a>
+            </li>
+        </ul>
+                        </div>
+                    </nav>
+                </details>
+            </div>
+        </header>
+            <main id="main" tabindex="-1">
+                
+            <div class="container">
+        <div class="page-intro">
+        <nav class="breadcrumb" aria-label="Brot­krü­mel­na­vi­ga­tion">
+            <ol>
+                <li>
+                    <a href="/smartphonekey-site-v2/de/">Startseite</a>
+                </li><li>
+                    <span aria-current="page">Kompatibilität</span>
+                </li>
+            </ol>
+        </nav>
+            <h1>Finden Sie die passenden Details.</h1>
+            <p class="lead">Die Kom­pa­ti­bi­li­tät hängt von Leser­re­vi­sion, Firmware, Zutritts­da­ten­for­mat und Gerä­te­funk­ti­o­nen ab. Nutzen Sie die folgenden Hinweise, um die Prüfung zu beginnen; bestätigen Sie die Kon­fi­gu­ra­tion für Ihr Projekt vor der Bestellung.</p>
+            
+                    <p class="meta">Geprüft 27 Oktober 2026</p>
+                
+        </div>
+                <nav class="contents" aria-label="Auf dieser Seite">
+                    <ul>
+                        <li><a href="#cards">Pro­gram­mie­rung physischer Karten</a></li>
+                        <li><a href="#digital">Digitale Zutritts­me­dien</a></li>
+                        <li><a href="#matter">Matter-Geräte</a></li>
+                        <li><a href="#networks">Netzwerke</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <section class="section container" id="cards" aria-labelledby="cards-title">
+                <div class="section-head">
+                    <h2 id="cards-title">Pro­gram­mie­rung physischer Karten.</h2>
+                    <p>Doku­men­tierte Workflows: MIFARE Classic und MIFARE DESFire EV3. Der Name einer Kar­ten­fa­mi­lie ist keine Garantie für jede Spei­cher­größe, jedes Zutritts­da­ten­for­mat oder jede Karte von Drit­t­an­bie­tern. Das Auslesen einer Kar­ten­ken­nung und das Bereit­stel­len von Zutritts­da­ten sind unter­schied­li­che Vorgänge.</p>
+                </div>
+        <div class="spk-table" role="region" tabindex="0" aria-label="Pro­gram­mie­rung physischer Karten">
+            <table>
+                <caption>Pro­gram­mie­rung physischer Karten</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Familie oder Modell</th>
+                        <th scope="col">Vorgang</th>
+                        <th scope="col">Was abgedeckt ist</th>
+                        <th scope="col">Bedingungen und Ein­schrän­kun­gen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">
+                            MIFARE Classic
+                        </th>
+                        <td>Programmieren</td>
+                        <td>Pro­gram­mie­rung von Zutritts­me­dien über den Workflow im Admin Panel mit einem kompatiblen SmartphoneKey-Pro­gram­mier­ge­rät, ein­schließ­lich des im Leser inte­grier­ten Pro­gram­mier­ge­räts, sofern verfügbar.</td>
+                        <td>
+                            Bestätigen Sie vor der Bestellung die Spei­cher­größe und das Zutritts­da­ten­for­mat der Karte. Das Auslesen einer Kar­ten­ken­nung ist ein anderer Vorgang als das Bereit­stel­len von Zutritts­da­ten.
+                        </td>
+                    </tr><tr>
+                        <th scope="row">
+                            MIFARE DESFire EV3
+                        </th>
+                        <td>Programmieren</td>
+                        <td>Pro­gram­mie­rung von Zutritts­me­dien über den Workflow im Admin Panel mit einem kompatiblen SmartphoneKey-Pro­gram­mier­ge­rät, ein­schließ­lich des im Leser inte­grier­ten Pro­gram­mier­ge­räts, sofern verfügbar.</td>
+                        <td>
+                            Der doku­men­tierte Workflow nennt DESFire EV3. Andere DESFire-Gene­ra­ti­o­nen und Spei­cher­grö­ßen müssen bestätigt werden, bevor sie eingeplant werden.
+                            <a class="cell-note" rel="noopener" href="https://www.nxp.com/products/MF3DHx3">Infor­ma­ti­o­nen des Herstellers oder zum Standard</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+            </section>
+
+            <section class="section container" id="digital" aria-labelledby="digital-title">
+                <div class="section-head">
+                    <h2 id="digital-title">Digitale Zutritts­me­dien.</h2>
+                    <p>Unter­stützte Workflows für Wallet und mobilen Zutritt hängen vom Gerät, der Plattform und der Kon­to­kon­fi­gu­ra­tion ab. Bestätigen Sie die Anfor­de­run­gen an Smartphone, Betriebs­sys­tem und Zutritts­me­dien; setzen Sie nicht bei jedem Smartphone eine Gangreserve-Funktion voraus.</p>
+                </div>
+        <div class="spk-table" role="region" tabindex="0" aria-label="Digitale Zutritts­me­dien">
+            <table>
+                <caption>Digitale Zutritts­me­dien</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Familie oder Modell</th>
+                        <th scope="col">Vorgang</th>
+                        <th scope="col">Was abgedeckt ist</th>
+                        <th scope="col">Bedingungen und Ein­schrän­kun­gen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">
+                            Wallet-Zugangsmedien
+                        </th>
+                        <td>Verwalten</td>
+                        <td>Stellen Sie unter­stützte Wallet-Zugangs­me­dien für Personen und Türen im Admin Panel aus und entziehen Sie sie.</td>
+                        <td>
+                            Hängt vom Smartphone, seinem Betriebs­sys­tem und der Kon­to­kon­fi­gu­ra­tion ab. Gehen Sie nicht von demselben Verhalten aus, wenn der Akku eines Smartphones schwach oder leer ist.
+                        </td>
+                    </tr><tr>
+                        <th scope="row">
+                            Physische NFC-Schlüssel
+                        </th>
+                        <td>Verwalten</td>
+                        <td>Weisen Sie physische NFC-Schlüssel neben digitalen Zutritts­me­dien zu, prüfen und entziehen Sie sie.</td>
+                        <td>
+                            Zum Pro­gram­mie­ren einer neuen Karte sind eine unter­stützte Kar­ten­fa­mi­lie und ein unter­stütz­tes Pro­gram­mier­ge­rät erfor­der­lich.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+            </section>
+
+            <section class="section container" id="matter" aria-labelledby="matter-title">
+                <div class="section-head">
+                    <h2 id="matter-title">Matter-Geräte.</h2>
+                    <p>Die Unter­stüt­zung basiert auf Funktionen. Ein Gerät kann Ein/Aus, Kontakt, Temperatur, Schloss, Ventil oder andere Funktionen bereit­stel­len; die verfügbaren Vorgänge hängen davon ab, was es meldet und was das kon­fi­gu­rierte System unterstützt. Bestimmte Modelle von Drit­t­an­bie­tern erscheinen erst nach Kom­pa­ti­bi­li­täts­tests.</p>
+                </div>
+        <div class="spk-table" role="region" tabindex="0" aria-label="Matter-Geräte">
+            <table>
+                <caption>Matter-Geräte</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Familie oder Modell</th>
+                        <th scope="col">Vorgang</th>
+                        <th scope="col">Was abgedeckt ist</th>
+                        <th scope="col">Bedingungen und Ein­schrän­kun­gen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">
+                            Matter-Geräte nach Funktion
+                        </th>
+                        <td>Steuern</td>
+                        <td>Geräte, die unter­stützte Funktionen melden, etwa Ein/Aus, Kontakt, Temperatur, Schloss oder Ventil, können in Betrieb genommen und in der Gerä­te­ver­wal­tung und in Szenarien verwendet werden.</td>
+                        <td>
+                            Welche Vorgänge verfügbar sind, hängt davon ab, was das Gerät meldet, von seiner Firmware und vom kon­fi­gu­rier­ten System. Die Inbe­trieb­nahme eines Geräts beweist nicht, dass jeder Befehl funk­tio­niert. Bestimmte Modelle von Drit­t­an­bie­tern werden erst nach Kom­pa­ti­bi­li­täts­tests aufgeführt.
+                            <a class="cell-note" rel="noopener" href="https://csa-iot.org/all-solutions/matter/">Infor­ma­ti­o­nen des Herstellers oder zum Standard</a>
+                        </td>
+                    </tr><tr>
+                        <th scope="row">
+                            Scenario Builder
+                        </th>
+                        <td>Steuern</td>
+                        <td>Einfache und erweiterte Szenarien kombinieren unter­stützte Auslöser, Bedingungen und Aktionen.</td>
+                        <td>
+                            Jedes aktuelle Szenario gehört zu einem Hub und dessen in Betrieb genommenen Geräten. Ein bea­r­bei­te­tes Szenario ersetzt die Version auf dem Hub erst, wenn der Hub es übernommen hat.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+            </section>
+
+            <section class="section container" id="networks" aria-labelledby="networks-title">
+                <div class="section-head">
+                    <h2 id="networks-title">Netzwerke.</h2>
+                    <p>Teilnahme am Thread-Mesh, Funktionen als Border Router, Matter-Steuerung und Internet-Uplink sind getrennte Rollen. Jeder SmartphoneKey-Leser kann als Thread Border Router und als Router im Mesh fungieren, ohne separate Firmware-Version; Matter-Steuerung und der Weg ins Internet werden für jede Instal­la­tion geplant.</p>
+                </div>
+        <div class="spk-table" role="region" tabindex="0" aria-label="Netzwerke">
+            <table>
+                <caption>Netzwerke</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Familie oder Modell</th>
+                        <th scope="col">Vorgang</th>
+                        <th scope="col">Was abgedeckt ist</th>
+                        <th scope="col">Bedingungen und Ein­schrän­kun­gen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">
+                            Verbindung des LTE-Lesers
+                        </th>
+                        <td>Verbinden</td>
+                        <td>Inter­net­ver­bin­dung über Mobilfunk.</td>
+                        <td>
+                            Erfordert Mobil­funkab­de­ckung an der Leser­po­si­tion sowie eine geeignete SIM-Karte und einen geeigneten Mobil­funk­dienst. Dies impliziert keinen auto­ma­ti­schen Wechsel zu Wi-Fi.
+                        </td>
+                    </tr><tr>
+                        <th scope="row">
+                            Verbindung des Wi-Fi-Lesers
+                        </th>
+                        <td>Verbinden</td>
+                        <td>Inter­net­ver­bin­dung über das Wi-Fi-Netzwerk des Standorts.</td>
+                        <td>
+                            Erfordert eine geeignete Wi-Fi-Abdeckung an der Leser­po­si­tion und die in der Instal­la­ti­ons­an­lei­tung angegebene Netz­werk­kon­fi­gu­ra­tion.
+                        </td>
+                    </tr><tr>
+                        <th scope="row">
+                            Leser über einen Matter-Hub
+                        </th>
+                        <td>Verbinden</td>
+                        <td>Unter­stützte Leser­kon­fi­gu­ra­ti­o­nen können sich über einen Matter-Hub verbinden.</td>
+                        <td>
+                            Hängt vom Lesermodell und der Firmware ab. Dies ist keine Garantie für Funk­reich­weite oder Failover.
+                        </td>
+                    </tr><tr>
+                        <th scope="row">
+                            Thread-Rollen der Leser
+                        </th>
+                        <td>Verbinden</td>
+                        <td>Jeder SmartphoneKey-Leser kann als Thread Border Router und als Router im Thread-Mesh fungieren. Für keine der beiden Rollen ist eine separate Firmware-Version erfor­der­lich.</td>
+                        <td>
+                            Mesh-Abdeckung und der Weg ins Internet hängen von Platzierung, Strom­ver­sor­gung und dem Gebäude ab. Matter-Controller-Funktionen werden für jedes Projekt bestätigt.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+                <p class="section-note"><a href="/smartphonekey-site-v2/de/resources/matter-thread-access-control/">Wie sich die Rollen von Matter und Thread unter­schei­den</a></p>
+            </section>
+
+        <section class="section container faq" aria-labelledby="faq-title">
+            <h2 id="faq-title">Fragen</h2>
+            <div class="faq-list">
+                
+                <div class="faq-item">
+                    <h3>Welche physischen Karten können pro­gram­miert werden?</h3>
+                    <p>Die doku­men­tier­ten Workflows unter­stüt­zen MIFARE Classic und MIFARE DESFire EV3 mit kompatibler Programmier-Hardware und Firmware. Bestätigen Sie vor der Bestellung die genaue Kar­ten­va­ri­a­nte und das Zutritts­da­ten­for­mat.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Funk­tio­niert SmartphoneKey mit jedem Matter-Gerät?</h3>
+                    <p>Die Kom­pa­ti­bi­li­tät hängt vom Gerätetyp, den bereit­ge­stell­ten Funktionen, der Firmware und der Kon­fi­gu­ra­tion ab. Prüfen Sie die Funktionen, die Ihr Workflow erfordert, statt anzunehmen, dass jedes Matter-Gerät sie unterstützt.</p>
+                </div>
+            
+            </div>
+        </section>
+
+        <section class="section container next-steps" aria-labelledby="next-title">
+            <h2 id="next-title">Benötigen Sie eine bestimmte Prüfung?</h2>
+            <p>Nennen Sie uns Lesermodell, Firmware und Angaben zu Gerät oder Karte. Senden Sie keine Schlüssel, Passwörter oder Zugangs­da­ten über das Kon­takt­for­mu­lar.</p>
+            <div class="next-actions">
+                
+                <a class="button" href="/smartphonekey-site-v2/de/contact/?interest=compatibility">Nach Kom­pa­ti­bi­li­tät fragen</a>
+                <a href="/smartphonekey-site-v2/de/find-your-setup/">Ihre Konfiguration finden</a>
+            
+            </div>
+        </section>
+        
+            </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <p class="footer-name">SmartphoneKey</p>
+                        <p>Ihr Schlüssel zur Zutritts­kon­trolle.</p>
+                        <p class="muted">Verwalten Sie Standorte, Personen, Zutritts­me­dien und vernetzte Geräte.</p>
+                        <p><a href="mailto:info@smartphonekey.com">info@smartphonekey.com</a></p>
+                        <p><a href="https://spkey.odoo.com/adminpanel">Admin Panel</a></p>
+                    </div>
+                    <nav class="footer-nav" aria-label="Fußzeile">
+                        <div>
+                            <p class="footer-title">Plattform</p>
+                            <ul>
+                                <li>
+                                    <a href="/smartphonekey-site-v2/de/platform/">Überblick</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/de/platform/access-management/">Zutrittsmanagement</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/de/platform/automation/">Automatisierung</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/de/platform/visitor-access/">Besucherzutritt</a>
+                                </li>
+                            </ul>
+                        </div><div>
+                            <p class="footer-title">Produkte</p>
+                            <ul>
+                                <li>
+                                    <a href="/smartphonekey-site-v2/de/products/readers/">Leser</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/de/compatibility/">Kompatibilität</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/de/certifications/">Zertifizierungen</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/de/apps-and-chatbot/">Apps</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/de/find-your-setup/">Ihre Konfiguration finden</a>
+                                </li>
+                            </ul>
+                        </div><div>
+                            <p class="footer-title">Anleitungen</p>
+                            <ul>
+                                <li>
+                                    <a href="https://spkey.odoo.com/guide-for-usage-and-installation?lang=de">Installations- und Anschlussanleitung</a>
+                                </li><li>
+                                    <a href="https://spkey.odoo.com/instructions/admin-guide?lang=de">Benutzerhandbuch für das Admin Panel</a>
+                                </li><li>
+                                    <a href="https://spkey.odoo.com/instructions/admin-panel?lang=de">Geführte Tour durch das Admin Panel</a>
+                                </li><li>
+                                    <a href="https://spkey.odoo.com/instructions/mobile-app-guide?lang=de">Benutzerhandbuch für die mobile App</a>
+                                </li><li>
+                                    <a href="https://spkey.odoo.com/instructions/mobile-app?lang=de">Geführte Tour durch die mobile App</a>
+                                </li>
+                            </ul>
+                        </div><div>
+                            <p class="footer-title">Ressourcen</p>
+                            <ul>
+                                <li>
+                                    <a href="/smartphonekey-site-v2/de/resources/#guides">Ratgeber</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/de/solutions/property-managers/">Hausverwaltungen</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/de/solutions/integrators/">Integratoren</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/de/security/">Sicherheit und Vertrauen</a>
+                                </li>
+                            </ul>
+                        </div><div>
+                            <p class="footer-title">Unternehmen</p>
+                            <ul>
+                                <li>
+                                    <a href="/smartphonekey-site-v2/de/about/">Über uns</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/de/contact/">Kontakt</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/de/contact/?interest=partner">Partner werden</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/de/privacy-policy/">Datenschutzerklärung</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/de/terms-of-service/">Nutzungsbedingungen</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <nav class="footer-langs" aria-label="Sprache">
+        <ul class="lang-list">
+            <li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/compatibility/" hreflang="en" lang="en">English</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/fr/compatibility/" hreflang="fr" lang="fr">Français</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/de/compatibility/" hreflang="de" lang="de" aria-current="true">Deutsch</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/es/compatibility/" hreflang="es" lang="es">Español</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/uk/compatibility/" hreflang="uk" lang="uk">Українська</a>
+            </li>
+        </ul>
+                </nav>
+            </div>
+        </footer>
+        
+    </body>
+</html>

@@ -10,6 +10,7 @@ import re
 
 from odoo import api, fields, models
 from odoo.exceptions import AccessError, ValidationError
+from odoo.tools.translate import html_translate
 
 from ..site_content import POST_PREFIX, RESOURCE_PREFIX, ROUTES
 
@@ -37,14 +38,14 @@ class SpkWebsiteResource(models.Model):
     sequence = fields.Integer(default=10)
     kind = fields.Selection(KINDS, required=True, default="guide")
     slug = fields.Char(required=True)
-    name = fields.Char("Title", required=True)
-    seo_title = fields.Char("SEO title", required=True)
-    description = fields.Char("Meta description", required=True)
-    direct_answer = fields.Text(help="The 50-80 word answer shown first on the page.")
-    body = fields.Html(sanitize=True)
+    name = fields.Char("Title", required=True, translate=True)
+    seo_title = fields.Char("SEO title", required=True, translate=True)
+    description = fields.Char("Meta description", required=True, translate=True)
+    direct_answer = fields.Text(translate=True, help="The 50-80 word answer shown first on the page.")
+    body = fields.Html(sanitize=True, translate=html_translate)
     category = fields.Selection(CATEGORIES, required=True)
     hero_image = fields.Char(help="Path of an image shipped with the module.")
-    hero_alt = fields.Char("Image description")
+    hero_alt = fields.Char("Image description", translate=True)
     related_paths = fields.Char(help="Comma-separated site paths shown as related pages.")
     source_links = fields.Text(help="One reference per line: label | https://...")
     author_name = fields.Char("Attribution", required=True, default="SmartphoneKey product team")

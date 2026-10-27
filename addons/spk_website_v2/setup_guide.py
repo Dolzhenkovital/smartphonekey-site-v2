@@ -40,21 +40,29 @@ def _matches(rule, selection):
     return True
 
 
-def result_for(selection):
-    """The planning starting point, or None until a connection is chosen."""
+def _identity(text, **kwargs):
+    return text % kwargs if kwargs else text
+
+
+def result_for(selection, t=_identity):
+    """The planning starting point, or None until a connection is chosen.
+
+    ``t`` translates the texts (rendering.translator); link paths stay
+    language-neutral because the page adds the language prefix itself."""
     connection = selection.get("connection")
     if not connection:
         return None
     items, links, seen = [], [], set()
     for rule in content.SETUP_RULES:
         if _matches(rule, selection):
-            items.append(rule["item"])
+            items.append(t(rule["item"]))
             for key in rule["links"]:
                 if key not in seen:
                     seen.add(key)
-                    links.append(content.SETUP_LINKS[key])
+                    label, path = content.SETUP_LINKS[key]
+                    links.append((t(label), path))
     return {
-        "advice": content.SETUP_CONNECTION_ADVICE[connection],
+        "advice": t(content.SETUP_CONNECTION_ADVICE[connection]),
         "items": items,
         "links": links,
         "contact_href": contact_href(selection),
@@ -69,15 +77,18 @@ def contact_href(selection):
     return "/contact?" + urlencode(params)
 
 
-def rules_for_script():
+def rules_for_script(t=_identity, url_code=content.DEFAULT_LANG):
+    """The rules for setup_guide.js, in the visitor's language. Links in a
+    script are not rewritten by Odoo, so they carry the language prefix."""
     return {
-        "advice": content.SETUP_CONNECTION_ADVICE,
+        "advice": {key: t(text) for key, text in content.SETUP_CONNECTION_ADVICE.items()},
         "rules": [{"when": {field: list(values) for field, values in rule["when"].items()},
-                   "item": rule["item"], "links": list(rule["links"])} for rule in content.SETUP_RULES],
-        "links": {key: list(link) for key, link in content.SETUP_LINKS.items()},
+                   "item": t(rule["item"]), "links": list(rule["links"])} for rule in content.SETUP_RULES],
+        "links": {key: [t(label), content.lang_url(path, url_code)]
+                  for key, (label, path) in content.SETUP_LINKS.items()},
         "home": {
-            "site": content.HOME_SITE_COPY,
-            "connection": content.HOME_CONNECTION_COPY,
+            "site": {key: t(text) for key, text in content.HOME_SITE_COPY.items()},
+            "connection": {key: t(text) for key, text in content.HOME_CONNECTION_COPY.items()},
             "toSetup": content.HOME_SITE_TO_SETUP,
         },
     }

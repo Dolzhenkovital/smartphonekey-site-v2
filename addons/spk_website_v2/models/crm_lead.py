@@ -109,6 +109,8 @@ class CrmLead(models.Model):
             lines.append("Interests: %s" % ", ".join(interest_labels[key] for key in payload["interests"]))
         if payload.get("region"):
             lines.append("Country or region: %s" % payload["region"])
+        lang = self.env["res.lang"]._get_data(code=payload.get("lang") or "en_US")
+        lines.append("Website language: %s" % (lang.name or payload.get("lang")))
         lines.append("Page: %s" % payload["source_path"])
         if payload.get("details"):
             lines += ["", payload["details"]]
@@ -140,6 +142,9 @@ class CrmLead(models.Model):
             "spk_submission_id": payload["submission_id"],
             "spk_submission_digest": digest,
         }
+        if lang.id:
+            # Replies go out in the language the visitor used.
+            values["lang_id"] = lang.id
         medium = self.env.ref("utm.utm_medium_website", raise_if_not_found=False)
         if medium:
             values["medium_id"] = medium.id

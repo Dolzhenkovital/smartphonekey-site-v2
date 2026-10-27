@@ -20,19 +20,17 @@
     var status = form.querySelector("[data-spk-status]");
     var success = document.querySelector("[data-spk-success]");
     var aside = document.querySelector(".contact-aside");
-    var sendError = form.getAttribute("data-send-error");
     var idleLabel = submit.textContent;
     var pending = false;
     var reported = {};
-    var messages = {
-        name: "Enter your name, between 2 and 120 characters.",
-        email: "Enter a valid email address.",
-        enquiry_type: "Choose what you would like help with.",
-    };
-    var formMessages = {
-        conflict: "This form was already sent with different details. Reload the page to send a new enquiry.",
-        preview: "This is a test preview: enquiries are not sent or stored. Please email info@smartphonekey.com to reach the team.",
-    };
+    // Every message comes from the page, in the visitor's language.
+    var text = {};
+    form.querySelectorAll("[data-spk-messages] [data-key]").forEach(function (node) {
+        text[node.getAttribute("data-key")] = node.textContent.trim();
+    });
+    var sendError = text.send;
+    var messages = {name: text.name, email: text.email, enquiry_type: text.enquiry_type};
+    var formMessages = {conflict: text.conflict, preview: text.preview};
 
     // Prefill from enum query parameters when the server could not (the static preview).
     var params = new URLSearchParams(window.location.search);
@@ -152,8 +150,8 @@
     function setPending(on) {
         pending = on;
         submit.disabled = on;
-        submit.textContent = on ? submit.getAttribute("data-pending-label") : idleLabel;
-        status.textContent = on ? submit.getAttribute("data-pending-label") : "";
+        submit.textContent = on ? text.pending : idleLabel;
+        status.textContent = on ? text.pending : "";
     }
 
     function received(answer) {
@@ -193,7 +191,7 @@
         clearErrors();
         var errors = localErrors();
         if (Object.keys(errors).length) {
-            showErrors("Please check the highlighted fields.", errors);
+            showErrors(text.check, errors);
             return;
         }
         if (preview) {
@@ -222,7 +220,7 @@
             }
             if (answer.error === "invalid" && answer.fields) {
                 var fields = answer.fields;
-                var title = fields.form || "Please check the highlighted fields.";
+                var title = fields.form || text.check;
                 delete fields.form;
                 showErrors(title, fields);
                 return;

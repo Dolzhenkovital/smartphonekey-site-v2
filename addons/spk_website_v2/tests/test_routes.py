@@ -75,6 +75,23 @@ class TestRoutes(SiteCase):
         _response, doc = self.page("/find-your-setup?site=partner&connection=wifi")
         self.assertIn("Plan the installation, the customer handover", doc.text_content())
 
+    def test_certifications_and_instructions_are_reachable(self):
+        """Every page links the certificates and the instructions from its navigation."""
+        _response, doc = self.page("/")
+        self.assertTrue(doc.xpath("//nav[@aria-label='Main']//a[@href='/certifications']"))
+        self.assertTrue(doc.xpath("//nav[@aria-label='Main']//a[@href='/guide-for-usage-and-installation']"))
+        # The existing instruction page, linked from the header of every page.
+        self.assertTrue(doc.xpath("//div[@class='header-actions']/a[@href='/guide-for-usage-and-installation']"))
+        for path in content.INSTRUCTION_PATHS:
+            self.assertTrue(doc.xpath("//footer//a[@href='%s']" % path), path)
+        _response, doc = self.page("/resources")
+        section = doc.xpath("//section[@id='instructions']")[0]
+        for path in list(content.INSTRUCTION_PATHS) + ["/certifications", "/apps-and-chatbot"]:
+            self.assertTrue(section.xpath(".//a[@href='%s']" % path), path)
+        _response, doc = self.page("/certifications")
+        self.assertEqual(len(doc.xpath("//table")), 2)
+        self.assertTrue(doc.xpath("//a[contains(@href, '/spk_website_v2/static/src/files/')]"))
+
     def test_contact_prefill_takes_enums_only(self):
         _response, doc = self.page("/contact?interest=visitor&role=owner&sites=nonsense&name=Mallory")
         self.assertEqual(doc.xpath("//select[@name='enquiry_type']/option[@selected]/@value"), ["project"])

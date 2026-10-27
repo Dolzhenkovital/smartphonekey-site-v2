@@ -1,6 +1,6 @@
 {
     'name': 'SmartphoneKey Website 2.0',
-    'version': '18.0.2.0.0',
+    'version': '18.0.2.1.0',
     'summary': 'smartphonekey.com 2.0: the access control management platform site, '
                'setup guide, compatibility centre and CRM enquiries',
     'category': 'Website/Website',
@@ -35,6 +35,7 @@
         'views/backend_content.xml',
         'views/crm_lead_views.xml',
     ],
+    'post_init_hook': 'post_init_hook',
     'assets': {
         # CSS only, like the baseline: the pages are bare web.layout documents
         # and load their three small scripts as raw deferred <script> tags.

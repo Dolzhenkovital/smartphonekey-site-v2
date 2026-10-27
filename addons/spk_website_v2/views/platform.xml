@@ -61,6 +61,7 @@
                             <p class="diagram-title">In the building</p>
                             <ul>
                                 <li>LTE and Wi-Fi readers with an integrated controller</li>
+                                <li>A Thread mesh of readers, each able to act as a Border Router</li>
                                 <li>Hubs and supported Matter devices</li>
                                 <li>Locks, power and wiring</li>
                             </ul>
@@ -85,22 +86,32 @@
 
             <t t-call="spk_website_v2.related_links">
                 <t t-set="related_title">Explore the platform</t>
-                <t t-set="related" t-value="[('Access management', '/platform/access-management'), ('Readers', '/products/readers'), ('Automation', '/platform/automation'), ('Visitor access', '/platform/visitor-access')]"/>
+                <li><a href="/platform/access-management">Access management</a></li>
+                <li><a href="/products/readers">Readers</a></li>
+                <li><a href="/platform/automation">Automation</a></li>
+                <li><a href="/platform/visitor-access">Visitor access</a></li>
             </t>
 
             <t t-call="spk_website_v2.faq">
-                <t t-set="faqs" t-value="[
-                    ('What is SmartphoneKey?', 'SmartphoneKey is an access control management platform. It combines the Admin Panel, supported credentials, SmartphoneKey readers and connected-device workflows to help teams manage access across their sites.'),
-                    ('Is SmartphoneKey only a reader?', 'The readers are part of the system. The platform also provides site, user and credential management, supported device workflows and operational visibility.'),
-                    ('Do I need a demo to learn more?', 'No. Explore the platform, check compatibility and use the setup guide without sharing contact details. Contact the team when you want a project discussion, technical answer, partnership conversation or walkthrough.'),
-                ]"/>
+                <div class="faq-item">
+                    <h3>What is SmartphoneKey?</h3>
+                    <p>SmartphoneKey is an access control management platform. It combines the Admin Panel, supported credentials, SmartphoneKey readers and connected-device workflows to help teams manage access across their sites.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is SmartphoneKey only a reader?</h3>
+                    <p>The readers are part of the system. The platform also provides site, user and credential management, supported device workflows and operational visibility.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do I need a demo to learn more?</h3>
+                    <p>No. Explore the platform, check compatibility and use the setup guide without sharing contact details. Contact the team when you want a project discussion, technical answer, partnership conversation or walkthrough.</p>
+                </div>
             </t>
 
             <t t-call="spk_website_v2.next_step">
                 <t t-set="next_title">What are you managing?</t>
                 <t t-set="next_text">Explore a setup for your site or discuss the details with our team.</t>
-                <t t-set="next_primary" t-value="('Find your setup', '/find-your-setup')"/>
-                <t t-set="next_links" t-value="[('Discuss your project', '/contact?interest=project')]"/>
+                <a class="button" href="/find-your-setup">Find your setup</a>
+                <a href="/contact?interest=project">Discuss your project</a>
             </t>
         </t>
     </template>
@@ -162,17 +173,22 @@
             </section>
 
             <t t-call="spk_website_v2.faq">
-                <t t-set="faqs" t-value="[
-                    ('Can I manage more than one site?', 'The Admin Panel organises customer installations as sites, called Entities, and supports site-scoped management. The available actions depend on account permissions and configured services.'),
-                    ('What happens to a key change while a reader is offline?', 'Some key changes remain pending until the reader reconnects. Check the delivery result; an offline revocation should not be treated as already enforced.'),
-                ]"/>
+                <div class="faq-item">
+                    <h3>Can I manage more than one site?</h3>
+                    <p>The Admin Panel organises customer installations as sites, called Entities, and supports site-scoped management. The available actions depend on account permissions and configured services.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What happens to a key change while a reader is offline?</h3>
+                    <p>Some key changes remain pending until the reader reconnects. Check the delivery result; an offline revocation should not be treated as already enforced.</p>
+                </div>
             </t>
 
             <t t-call="spk_website_v2.next_step">
                 <t t-set="next_title">Take the next step.</t>
                 <t t-set="next_text">Read how the Admin Panel works, or bring your sites and doors to a conversation.</t>
-                <t t-set="next_primary" t-value="('Read the Admin Panel guide', '/instructions/admin-guide')"/>
-                <t t-set="next_links" t-value="[('Understand offline behaviour', '/resources/access-control-when-offline'), ('Discuss your project', '/contact?interest=project')]"/>
+                <a class="button" href="/instructions/admin-guide">Read the Admin Panel guide</a>
+                <a href="/resources/access-control-when-offline">Understand offline behaviour</a>
+                <a href="/contact?interest=project">Discuss your project</a>
             </t>
         </t>
     </template>
@@ -223,16 +239,18 @@
             </section>
 
             <t t-call="spk_website_v2.faq">
-                <t t-set="faqs" t-value="[
-                    ('Does SmartphoneKey work with every Matter device?', 'Compatibility depends on the device type, exposed capabilities, firmware and configuration. Check the functions required by your workflow instead of assuming every Matter device supports them.'),
-                ]"/>
+                <div class="faq-item">
+                    <h3>Does SmartphoneKey work with every Matter device?</h3>
+                    <p>Compatibility depends on the device type, exposed capabilities, firmware and configuration. Check the functions required by your workflow instead of assuming every Matter device supports them.</p>
+                </div>
             </t>
 
             <t t-call="spk_website_v2.next_step">
                 <t t-set="next_title">Plan your workflows.</t>
                 <t t-set="next_text">Check the devices you have in mind, then talk to us about the workflow.</t>
-                <t t-set="next_primary" t-value="('Check compatibility', '/compatibility')"/>
-                <t t-set="next_links" t-value="[('Understand Matter and Thread', '/resources/matter-thread-access-control'), ('Discuss an automation project', '/contact?interest=automation')]"/>
+                <a class="button" href="/compatibility">Check compatibility</a>
+                <a href="/resources/matter-thread-access-control">Understand Matter and Thread</a>
+                <a href="/contact?interest=automation">Discuss an automation project</a>
             </t>
         </t>
     </template>
@@ -273,16 +291,17 @@
             </section>
 
             <t t-call="spk_website_v2.faq">
-                <t t-set="faqs" t-value="[
-                    ('Is AI Concierge available for my building?', 'Ask the team about the version, rollout status and requirements for your site. Availability should be confirmed before it becomes part of your deployment plan.'),
-                ]"/>
+                <div class="faq-item">
+                    <h3>Is AI Concierge available for my building?</h3>
+                    <p>Ask the team about the version, rollout status and requirements for your site. Availability should be confirmed before it becomes part of your deployment plan.</p>
+                </div>
             </t>
 
             <t t-call="spk_website_v2.next_step">
                 <t t-set="next_title">Plan visitor access.</t>
                 <t t-set="next_text">Read the guidance, then ask about the visitor workflow and AI Concierge availability for your site.</t>
-                <t t-set="next_primary" t-value="('Discuss visitor access', '/contact?interest=visitor')"/>
-                <t t-set="next_links" t-value="[('Read visitor guidance', '/resources#guides')]"/>
+                <a class="button" href="/contact?interest=visitor">Discuss visitor access</a>
+                <a href="/resources#guides">Read visitor guidance</a>
             </t>
         </t>
     </template>

@@ -19,7 +19,7 @@
 
             <div class="container contact-layout">
                 <form class="enquiry" action="/website/spk/enquiry" method="post" novalidate="novalidate"
-                      data-spk-enquiry="" t-att-data-preview="'1' if preview_mode else None" t-att-data-send-error="send_error" aria-labelledby="enquiry-title">
+                      data-spk-enquiry="" t-att-data-preview="'1' if preview_mode else None" aria-labelledby="enquiry-title">
                     <h2 id="enquiry-title" class="visually-hidden">Project enquiry</h2>
                     <div class="error-summary" tabindex="-1" role="alert" data-spk-error-summary="" t-att-hidden="None if errors else 'hidden'">
                         <t t-if="errors">
@@ -143,9 +143,19 @@
                     <p class="privacy-note">We’ll use these details to respond to your enquiry. Read our <a href="/privacy-policy">Privacy Policy</a>.</p>
                     <p t-if="preview_mode" class="note" data-spk-preview-note="">This is a test preview: the form shows its checks, but sending is turned off and nothing is stored.</p>
                     <div class="form-actions">
-                        <button type="submit" class="button" data-spk-submit="" data-pending-label="Sending…" t-att-disabled="'disabled' if preview_mode else None">Send enquiry</button>
+                        <button type="submit" class="button" data-spk-submit="" t-att-disabled="'disabled' if preview_mode else None">Send enquiry</button>
                     </div>
                     <p class="form-status" role="status" aria-live="polite" data-spk-status=""/>
+                    <div hidden="hidden" data-spk-messages="">
+                        <p data-key="name">Enter your name, between 2 and 120 characters.</p>
+                        <p data-key="email">Enter a valid email address.</p>
+                        <p data-key="enquiry_type">Choose what you would like help with.</p>
+                        <p data-key="check">Please check the highlighted fields.</p>
+                        <p data-key="conflict">This form was already sent with different details. Reload the page to send a new enquiry.</p>
+                        <p data-key="preview">This is a test preview: enquiries are not sent or stored. Please email info@smartphonekey.com to reach the team.</p>
+                        <p data-key="pending">Sending…</p>
+                        <p data-key="send"><t t-out="send_error"/></p>
+                    </div>
                 </form>
 
                 <section class="enquiry-success" tabindex="-1" hidden="hidden" data-spk-success="" aria-labelledby="success-title">

@@ -26,8 +26,8 @@
             <t t-call="spk_website_v2.next_step">
                 <t t-set="next_title">See what we build.</t>
                 <t t-set="next_text">Start with the platform, or tell us about your site.</t>
-                <t t-set="next_primary" t-value="('Explore the platform', '/platform')"/>
-                <t t-set="next_links" t-value="[('Contact the team', '/contact')]"/>
+                <a class="button" href="/platform">Explore the platform</a>
+                <a href="/contact">Contact the team</a>
             </t>
         </t>
     </template>
@@ -51,8 +51,8 @@
             <t t-call="spk_website_v2.next_step">
                 <t t-set="next_title">Meet the rest of the team.</t>
                 <t t-set="next_text" t-value="False"/>
-                <t t-set="next_primary" t-value="False"/>
-                <t t-set="next_links" t-value="[('About SmartphoneKey', '/about'), ('Contact', '/contact')]"/>
+                <a href="/about">About SmartphoneKey</a>
+                <a href="/contact">Contact</a>
             </t>
         </t>
     </template>
@@ -99,8 +99,9 @@
             <t t-call="spk_website_v2.next_step">
                 <t t-set="next_title">Review the evidence for your project.</t>
                 <t t-set="next_text" t-value="False"/>
-                <t t-set="next_primary" t-value="('Discuss technical requirements', '/contact?interest=technical')"/>
-                <t t-set="next_links" t-value="[('View certifications', '/certifications'), ('Read installation guidance', '/guide-for-usage-and-installation')]"/>
+                <a class="button" href="/contact?interest=technical">Discuss technical requirements</a>
+                <a href="/certifications">View certifications</a>
+                <a href="/guide-for-usage-and-installation">Read installation guidance</a>
             </t>
         </t>
     </template>
@@ -110,8 +111,8 @@
         <t t-call="spk_website_v2.layout">
             <div class="container">
                 <t t-call="spk_website_v2.page_intro">
-                    <t t-set="heading">Documents for your review.</t>
-                    <t t-set="intro">The regulatory records and platform documents published for SmartphoneKey readers. Each one applies only to the model, version and scope it names, so check those before relying on it for your project.</t>
+                    <t t-set="heading">Certifications and documents.</t>
+                    <t t-set="intro">The regulatory records, conformity documents and platform certificates published for SmartphoneKey readers. Each one applies only to the model, version and scope it names, so check those before relying on it for your project.</t>
                 </t>
             </div>
 
@@ -148,7 +149,7 @@
             </section>
 
             <section class="section container" aria-labelledby="documents-title">
-                <h2 id="documents-title">Documents.</h2>
+                <h2 id="documents-title">Certificates and conformity documents.</h2>
                 <div class="spk-table" role="region" tabindex="0" aria-label="Product documents">
                     <table>
                         <caption>Product documents</caption>
@@ -189,8 +190,9 @@
             <t t-call="spk_website_v2.next_step">
                 <t t-set="next_title">Assess the installation as a whole.</t>
                 <t t-set="next_text">Documents cover a product. Your project also depends on permissions, credentials, networks and operating practice.</t>
-                <t t-set="next_primary" t-value="False"/>
-                <t t-set="next_links" t-value="[('Security and trust', '/security'), ('Discuss technical requirements', '/contact?interest=technical')]"/>
+                <a href="/security">Security and trust</a>
+                <a href="/guide-for-usage-and-installation">Installation and connection guide</a>
+                <a href="/contact?interest=technical">Discuss technical requirements</a>
             </t>
         </t>
     </template>
@@ -228,8 +230,8 @@
             <t t-call="spk_website_v2.next_step">
                 <t t-set="next_title">Learn the app.</t>
                 <t t-set="next_text" t-value="False"/>
-                <t t-set="next_primary" t-value="False"/>
-                <t t-set="next_links" t-value="[('Mobile app user guide', '/instructions/mobile-app-guide'), ('Mobile app walkthrough', '/instructions/mobile-app')]"/>
+                <a href="/instructions/mobile-app-guide">Mobile app user guide</a>
+                <a href="/instructions/mobile-app">Mobile app walkthrough</a>
             </t>
         </t>
     </template>

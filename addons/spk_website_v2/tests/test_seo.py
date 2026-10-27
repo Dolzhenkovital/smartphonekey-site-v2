@@ -22,7 +22,7 @@ FORBIDDEN = (
     (re.compile(r"unlimited|any complexity", re.I), "unlimited scenarios"),
     (re.compile(r"generally available|available now", re.I), "Concierge availability"),
     (re.compile(r"bank-grade|unhackable|uncopyable|non-copyable|fully compliant", re.I), "an umbrella security claim"),
-    (re.compile(r"automatic failover", re.I), "failover"),
+    (re.compile(r"(?<!no )automatic failover(?! is not)", re.I), "failover"),
     (re.compile(r"\$\s?\d|€\s?\d|£\s?\d|\bprice\b", re.I), "a price"),
     (re.compile(r"book a demo|request a demo", re.I), "a demo funnel"),
 )
@@ -45,6 +45,8 @@ class TestDiscovery(SiteCase):
         for path in paths:
             if path.startswith(("/guide-for", "/instructions/")):
                 continue
+            # A fresh visitor each time: Odoo remembers the last language in a cookie.
+            self.opener.cookies.clear()
             self.assertEqual(self.get(path).status_code, 200, path)
 
     def test_robots_keeps_search_and_training_decisions_separate(self):
@@ -129,6 +131,11 @@ class TestDiscovery(SiteCase):
         self.assertIn("A revocation made while a reader is offline is pending, not enforced.", text)
         _response, doc = self.page("/platform/visitor-access")
         self.assertIn("Confirm availability and the required setup with our team.", doc.text_content())
+        # Owner instruction of 2026-10-27: every reader is a Thread router and Border Router.
+        _response, doc = self.page("/products/readers")
+        text = " ".join(doc.text_content().split())
+        self.assertIn("Each SmartphoneKey reader can act as a Thread Border Router and as a router in the Thread mesh.", text)
+        self.assertNotIn("Do not assume every reader is a Border Router", text)
 
     def test_open_graph(self):
         for path in ("/", "/platform", "/products/readers"):

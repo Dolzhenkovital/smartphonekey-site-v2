@@ -1,6 +1,6 @@
 # Implementation status
 
-Last update: 27 October 2026. State: **ready for review**, not deployed. All six phases are implemented and checked in a local Odoo 18 test instance; the static review copy is published separately on GitHub Pages.
+Last update: 27 October 2026 (owner changes: reader roles, five languages, certificates and instructions). State: **ready for review**, not deployed. All six phases are implemented and checked in a local Odoo 18 test instance; the static review copy is published separately on GitHub Pages.
 
 ## Where the work lives
 
@@ -39,11 +39,17 @@ To ship it, copy `addons/spk_website_v2` into spk-odoo `addons/` on a branch nam
 
 `llms.txt` (optional P1) was **not** added: the brief allows it only once the core has passed, and the core has not yet been accepted on a deployed environment (A20).
 
+## Changes of 27 October 2026 (owner instructions)
+
+* **Reader roles.** Every reader can act as a Thread Border Router and as a router in the Thread mesh, without a separate firmware version. Claim C13 is now published (C14, the shared uplink, follows with its limits kept); readers, compatibility, integrators, the Matter and Thread guide, the comparison table, the readers FAQ and the platform diagram were updated together. Matter controller functions still read "confirmed for each project", and no distance, node count or failover is stated.
+* **Languages.** French, German, Spanish and Ukrainian beside English (see README). Legal pages, archived articles and team biographies stay English with a note.
+* **Certificates and instructions.** Every page's header has an "Instructions" link to the existing instruction page, `/guide-for-usage-and-installation` (spkey.odoo.com today), which is not changed; it opens in the visitor's language. Certifications is in the main menu (Products) and the footer; the Resources page has its own Instructions section with the installation guide, the Admin Panel guide and walkthrough, the mobile app guide and walkthrough, the apps and the certificates; the footer has an Instructions column on every page.
+
 ## Fallbacks in effect
 
 * No range report: no distance anywhere; "coverage depends on the building, placement and radio conditions".
-* No hardware-role matrix: "confirm model and firmware" for Matter and Thread roles; the role row stays in review.
-* Shared uplink: FAQ wording with "confirmed for the installed hardware"; the Matter guide topology is labelled as an example.
+* Matter controller role: "confirmed for each project" (the owner's instruction covers the Thread roles only).
+* Shared uplink: published as a consequence of the Thread roles, without failover, node or hop figures; the Matter guide topology is labelled as an example.
 * AI Concierge v2: availability-enquiry wording.
 * Certifications: document links with what each document states; no badges.
 * No booking URL configured: no booking link (the option appears only for an HTTPS URL on an allowed host, set in `spk_website_v2.booking_url`).
@@ -53,8 +59,9 @@ To ship it, copy `addons/spk_website_v2` into spk-odoo `addons/` on a branch nam
 ## Open items (owner role)
 
 1. Design owner: confirm the long-document reading of Hallmark rule 58 for deep pages, or supply shorter copy (QA D1).
-2. Hardware/firmware: reader role matrix (C13), uplink topology (C14), range report (C15), FCC/ISED record check (C20).
-3. Product owner: AI Concierge v2 release status (C17); ChatGPT app description; referral programme keep or retire.
-4. Marketing: archived article review; current team roles; analytics loader and consent decision; font licence for self-hosting.
-5. Operations: who receives website leads (website sales team and salesperson in Website settings).
-6. Engineering: merge into spk-odoo, run its gates and `make test` on Odoo.sh, verify on stage, then the release checklist.
+2. Hardware/firmware: Matter controller role per reader (C13 covers Thread only), uplink loss behaviour (C14), range report (C15), FCC/ISED record check (C20).
+3. Marketing: native-speaker review of the French, German, Spanish and Ukrainian copy (translated in this task, not yet reviewed by a person); a reviewed translation of the legal pages if they should not stay English; a licensed font with Cyrillic for Ukrainian if the system font is not wanted.
+4. Product owner: AI Concierge v2 release status (C17); ChatGPT app description; referral programme keep or retire.
+5. Marketing: archived article review; current team roles; analytics loader and consent decision; font licence for self-hosting.
+6. Operations: who receives website leads (website sales team and salesperson in Website settings).
+7. Engineering: merge into spk-odoo, run its gates and `make test` on Odoo.sh, verify on stage, then the release checklist.

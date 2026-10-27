@@ -63,6 +63,19 @@ await shoot('contact-errors-1440', '/contact', {
   width: 1440, height: 900,
   before: async (page) => { await page.click('[data-spk-submit]'); await new Promise((resolve) => setTimeout(resolve, 300)); },
 });
+// The four translated languages: first screens on desktop and phone, plus the
+// pages with the longest headings.
+for (const lang of ['fr', 'de', 'es', 'uk']) {
+  await shoot(`${lang}-home-1440x900`, `/${lang}`, { width: 1440, height: 900 });
+  await shoot(`${lang}-home-390x844`, `/${lang}`, { width: 390, height: 844 });
+  await shoot(`${lang}-home-320-full`, `/${lang}`, { width: 320, height: 800, full: true });
+  await shoot(`${lang}-readers-390-full`, `/${lang}/products/readers`, { width: 390, height: 844, full: true });
+  await shoot(`${lang}-resources-1440-full`, `/${lang}/resources`, { width: 1440, height: 900, full: true });
+}
+await shoot('de-lang-menu-1440', '/de/platform', {
+  width: 1440, height: 900,
+  before: async (page) => { await page.click('.lang-switch summary'); await new Promise((resolve) => setTimeout(resolve, 200)); },
+});
 await shoot('menu-open-390', '/compatibility', {
   width: 390, height: 844,
   before: async (page) => { await page.click('.mobile-nav summary'); await new Promise((resolve) => setTimeout(resolve, 200)); },

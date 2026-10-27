@@ -343,5 +343,6 @@
       "origin": "retained Webflow team page",
       "local_status": 200
     }
-  ]
+  ],
+  "languages": "Every indexable route also exists under /fr, /de, /es and /uk (Odoo website language prefixes), with its own canonical URL and hreflang alternates. English-only in every language (canonical = English URL): /privacy-policy, /terms-of-service, /post/*, /team/*."
 }

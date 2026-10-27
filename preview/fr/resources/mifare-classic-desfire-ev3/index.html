@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="fr" class="spk-site-v2">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Programmation MIFARE Classic et DESFire EV3 | SmartphoneKey</title>
+        <link type="image/x-icon" rel="shortcut icon" href="/smartphonekey-site-v2/spk_website_v2/static/src/img/favicon-32.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+                <meta name="description" content="Consultez les processus documentés de programmation des cartes physiques et comprenez pourquoi les variantes de cartes, les formats d'identifiant et le firmware doivent être vérifiés.">
+                <meta name="robots" content="noindex, nofollow">
+                <link rel="canonical" href="https://smartphonekey.com/fr/resources/mifare-classic-desfire-ev3">
+                
+                <link rel="apple-touch-icon" href="/smartphonekey-site-v2/spk_website_v2/static/src/img/apple-touch-icon.png">
+                <meta property="og:type" content="article">
+                <meta property="og:site_name" content="SmartphoneKey">
+                <meta property="og:locale" content="fr_FR">
+                <meta property="og:title" content="Programmation MIFARE Classic et DESFire EV3 | SmartphoneKey">
+                <meta property="og:description" content="Consultez les processus documentés de programmation des cartes physiques et comprenez pourquoi les variantes de cartes, les formats d'identifiant et le firmware doivent être vérifiés.">
+                <meta property="og:url" content="https://smartphonekey.com/fr/resources/mifare-classic-desfire-ev3">
+                <meta property="og:image" content="https://smartphonekey.com/spk_website_v2/static/src/img/og-default.png">
+                <meta property="og:image:width" content="1200">
+                <meta property="og:image:height" content="630">
+                <meta property="og:image:alt" content="SmartphoneKey reader beside the SmartphoneKey key logo">
+                <meta name="twitter:card" content="summary_large_image">
+                
+                    <link rel="preconnect" href="https://api.fontshare.com" crossorigin="">
+                    <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&amp;display=swap">
+                <link type="text/css" rel="stylesheet" href="/smartphonekey-site-v2/assets/site.css">
+                <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://smartphonekey.com/fr/resources/mifare-classic-desfire-ev3#webpage","url":"https://smartphonekey.com/fr/resources/mifare-classic-desfire-ev3","name":"Programmation MIFARE Classic et DESFire EV3 | SmartphoneKey","description":"Consultez les processus documentés de programmation des cartes physiques et comprenez pourquoi les variantes de cartes, les formats d'identifiant et le firmware doivent être vérifiés.","inLanguage":"fr","isPartOf":{"@id":"https://smartphonekey.com/#website"},"breadcrumb":{"@id":"https://smartphonekey.com/fr/resources/mifare-classic-desfire-ev3#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://smartphonekey.com/fr/resources/mifare-classic-desfire-ev3#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://smartphonekey.com/fr"},{"@type":"ListItem","position":2,"name":"Ressources","item":"https://smartphonekey.com/fr/resources"},{"@type":"ListItem","position":3,"name":"Quelles cartes NFC SmartphoneKey peut-il programmer ?","item":"https://smartphonekey.com/fr/resources/mifare-classic-desfire-ev3"}]},{"@type":"Article","@id":"https://smartphonekey.com/fr/resources/mifare-classic-desfire-ev3#article","headline":"Quelles cartes NFC SmartphoneKey peut-il programmer ?","description":"Consultez les processus documentés de programmation des cartes physiques et comprenez pourquoi les variantes de cartes, les formats d'identifiant et le firmware doivent être vérifiés.","datePublished":"2026-10-27","dateModified":"2026-10-27","author":{"@type":"Organization","name":"SmartphoneKey product team","url":"https://smartphonekey.com/about"},"publisher":{"@id":"https://smartphonekey.com/#organization"},"mainEntityOfPage":{"@id":"https://smartphonekey.com/fr/resources/mifare-classic-desfire-ev3#webpage"},"inLanguage":"fr"}]}</script>
+                <script defer src="/smartphonekey-site-v2/spk_website_v2/static/src/js/navigation.js?v=18.0.2.1.0"></script>
+                
+            
+    </head>
+    <body class="spk-body">
+        
+            <a class="skip" href="#main">Aller au contenu</a>
+            <p class="preview-banner" role="note">
+                Aperçu de test du site web SmartphoneKey 2.0. Ce n'est pas le site en ligne, et rien de ce qui est saisi ici n'est envoyé ni enregistré.
+            </p>
+        <header class="site-header">
+            <div class="container header-inner">
+                <a class="brand" href="/smartphonekey-site-v2/fr/">
+                    <img src="/smartphonekey-site-v2/spk_website_v2/static/src/img/brand-mark.png" width="32" height="32" alt="" loading="lazy">
+                    <span>SmartphoneKey</span>
+                </a>
+                <nav class="desktop-nav" aria-label="Principal">
+                    <ul class="menu">
+                        <li>
+                            <details class="menu-group" data-spk-menu="">
+                                <summary>Plateforme</summary>
+                                <ul class="menu-panel">
+                                    <li>
+                                        <a href="/smartphonekey-site-v2/fr/platform/">Vue d'ensemble</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/fr/platform/access-management/">Gestion des accès</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/fr/platform/automation/">Automatisation</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/fr/platform/visitor-access/">Accès visiteurs</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li><li>
+                            <details class="menu-group" data-spk-menu="">
+                                <summary>Solutions</summary>
+                                <ul class="menu-panel">
+                                    <li>
+                                        <a href="/smartphonekey-site-v2/fr/solutions/property-managers/">Gestionnaires immobiliers</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/fr/solutions/integrators/">Intégrateurs</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li><li>
+                            <details class="menu-group" data-spk-menu="">
+                                <summary>Produits</summary>
+                                <ul class="menu-panel">
+                                    <li>
+                                        <a href="/smartphonekey-site-v2/fr/products/readers/">Lecteurs</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/fr/compatibility/">Compatibilité</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/fr/certifications/">Certifications</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li><li>
+                            <details class="menu-group" data-spk-menu="">
+                                <summary>Ressources</summary>
+                                <ul class="menu-panel">
+                                    <li>
+                                        <a href="/smartphonekey-site-v2/fr/resources/#guides">Guides</a>
+                                    </li><li>
+                                        <a href="https://spkey.odoo.com/guide-for-usage-and-installation?lang=fr">Instructions</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/fr/resources/#insights">Articles</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/fr/security/">Sécurité et confiance</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="https://spkey.odoo.com/guide-for-usage-and-installation?lang=fr">Instructions</a>
+                    <a href="https://spkey.odoo.com/adminpanel">Admin Panel</a>
+                    <a href="/smartphonekey-site-v2/fr/find-your-setup/" class="header-action">Trouver votre configuration</a>
+                    <details class="menu-group lang-switch" data-spk-menu="">
+                        <summary><span class="visually-hidden">Langue : </span>Français</summary>
+                        <div class="menu-panel lang-panel">
+        <ul class="lang-list">
+            <li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/resources/mifare-classic-desfire-ev3/" hreflang="en" lang="en">English</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/fr/resources/mifare-classic-desfire-ev3/" hreflang="fr" lang="fr" aria-current="true">Français</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/de/resources/mifare-classic-desfire-ev3/" hreflang="de" lang="de">Deutsch</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/es/resources/mifare-classic-desfire-ev3/" hreflang="es" lang="es">Español</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/uk/resources/mifare-classic-desfire-ev3/" hreflang="uk" lang="uk">Українська</a>
+            </li>
+        </ul>
+                        </div>
+                    </details>
+                </div>
+                <details class="mobile-nav" data-spk-mobile-menu="">
+                    <summary>Menu</summary>
+                    <nav class="mobile-panel" aria-label="Mobile">
+                        <div class="mobile-group">
+                            <p class="mobile-title">Plateforme</p>
+                            <ul>
+                                <li>
+                                    <a href="/smartphonekey-site-v2/fr/platform/">Vue d'ensemble</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/fr/platform/access-management/">Gestion des accès</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/fr/platform/automation/">Automatisation</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/fr/platform/visitor-access/">Accès visiteurs</a>
+                                </li>
+                            </ul>
+                        </div><div class="mobile-group">
+                            <p class="mobile-title">Solutions</p>
+                            <ul>
+                                <li>
+                                    <a href="/smartphonekey-site-v2/fr/solutions/property-managers/">Gestionnaires immobiliers</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/fr/solutions/integrators/">Intégrateurs</a>
+                                </li>
+                            </ul>
+                        </div><div class="mobile-group">
+                            <p class="mobile-title">Produits</p>
+                            <ul>
+                                <li>
+                                    <a href="/smartphonekey-site-v2/fr/products/readers/">Lecteurs</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/fr/compatibility/">Compatibilité</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/fr/certifications/">Certifications</a>
+                                </li>
+                            </ul>
+                        </div><div class="mobile-group">
+                            <p class="mobile-title">Ressources</p>
+                            <ul>
+                                <li>
+                                    <a href="/smartphonekey-site-v2/fr/resources/#guides">Guides</a>
+                                </li><li>
+                                    <a href="https://spkey.odoo.com/guide-for-usage-and-installation?lang=fr">Instructions</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/fr/resources/#insights">Articles</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/fr/security/">Sécurité et confiance</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="mobile-actions">
+                            <li><a href="/smartphonekey-site-v2/fr/find-your-setup/">Trouver votre configuration</a></li>
+                            <li><a href="https://spkey.odoo.com/guide-for-usage-and-installation?lang=fr">Instructions</a></li>
+                            <li><a href="https://spkey.odoo.com/adminpanel">Admin Panel</a></li>
+                        </ul>
+                        <div class="mobile-group mobile-langs">
+                            <p class="mobile-title">Langue</p>
+        <ul class="lang-list">
+            <li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/resources/mifare-classic-desfire-ev3/" hreflang="en" lang="en">English</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/fr/resources/mifare-classic-desfire-ev3/" hreflang="fr" lang="fr" aria-current="true">Français</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/de/resources/mifare-classic-desfire-ev3/" hreflang="de" lang="de">Deutsch</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/es/resources/mifare-classic-desfire-ev3/" hreflang="es" lang="es">Español</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/uk/resources/mifare-classic-desfire-ev3/" hreflang="uk" lang="uk">Українська</a>
+            </li>
+        </ul>
+                        </div>
+                    </nav>
+                </details>
+            </div>
+        </header>
+            <main id="main" tabindex="-1">
+                
+            <article class="container spk-document" aria-labelledby="article-title">
+                <div class="page-intro">
+        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+            <ol>
+                <li>
+                    <a href="/smartphonekey-site-v2/fr/">Accueil</a>
+                </li><li>
+                    <a href="/smartphonekey-site-v2/fr/resources/">Ressources</a>
+                </li><li>
+                    <span aria-current="page">Quelles cartes NFC SmartphoneKey peut-il programmer ?</span>
+                </li>
+            </ol>
+        </nav>
+                    <h1 id="article-title">Quelles cartes NFC SmartphoneKey peut-il programmer ?</h1>
+                    <div class="meta">
+                            <p>Par l'équipe produit SmartphoneKey</p>
+                            <p>Publié 27 octobre 2026</p>
+                            <p>Informations produit vérifiées le 26 octobre 2026</p>
+                    </div>
+                    <p class="lead answer">Les processus de programmation documentés mentionnent MIFARE Classic et MIFARE DESFire EV3. Un programmateur compatible ou le programmateur intégré au lecteur pris en charge écrit l'identifiant d'accès via le processus de l'Admin Panel. Confirmez la configuration exacte des cartes et du firmware avant de commander. Les autres générations, tailles de mémoire et formats d'identifiant tiers ne sont pas couverts par le processus documenté.</p>
+                </div>
+                <nav class="contents" aria-label="Sur cette page">
+                    <p class="contents-title">Sur cette page</p>
+                    <ul>
+                        <li><a href="#operations">Lecture, pro­gram­ma­tion et attribution des accès</a></li><li><a href="#families">Les deux familles de cartes documentées</a></li><li><a href="#operator-flow">Comment un opérateur programme une carte</a></li><li><a href="#other-cards">Pourquoi les autres générations et tailles nécessitent une confirmation</a></li>
+                    </ul>
+                </nav>
+                <div class="spk-prose"><div>
+                    <h2 id="operations">Lecture, pro­gram­ma­tion et attribution des accès</h2>
+                    <p>Trois opérations différentes concernent une carte, et elles sont faciles à confondre :</p>
+                    <ul>
+                        <li><strong>Lecture</strong> : un lecteur détecte la carte et son identifiant.</li>
+                        <li><strong>Pro­gram­ma­tion</strong> : un appareil de pro­gram­ma­tion pris en charge écrit un identifiant d'accès SmartphoneKey sur une carte prise en charge.</li>
+                        <li><strong>Attribution des accès</strong> : l'Admin Panel associe cet identifiant d'accès à une personne et aux portes qu'elle peut ouvrir.</li>
+                    </ul>
+                    <p>Une carte qu'un lecteur peut détecter n'est pas auto­ma­ti­que­ment une carte que SmartphoneKey peut programmer.</p>
+                    <h2 id="families">Les deux familles de cartes documentées</h2>
+                    <div class="spk-table" role="region" tabindex="0" aria-label="Processus documentés de pro­gram­ma­tion des cartes"><table>
+                        <caption>Processus documentés de pro­gram­ma­tion des cartes</caption>
+                        <thead>
+                            <tr><th scope="col">Famille de cartes</th><th scope="col">Processus documenté</th><th scope="col">À vérifier avant de commander</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><th scope="row">MIFARE Classic</th><td>Pro­gram­ma­tion via l'Admin Panel avec un appareil de pro­gram­ma­tion compatible, y compris le pro­gram­ma­teur intégré du lecteur lorsqu'il est disponible</td><td>Taille de mémoire et format d'identifiant existant éventuel</td></tr>
+                            <tr><th scope="row">MIFARE DESFire EV3</th><td>Pro­gram­ma­tion via l'Admin Panel avec un appareil de pro­gram­ma­tion compatible, y compris le pro­gram­ma­teur intégré du lecteur lorsqu'il est disponible</td><td>Les autres générations et tailles de mémoire DESFire nécessitent une confirmation</td></tr>
+                        </tbody>
+                    </table>
+                    </div><h2 id="operator-flow">Comment un opérateur programme une carte</h2>
+                    <ol>
+                        <li>Choisissez le site, la serrure et la personne à qui la carte est destinée.</li>
+                        <li>Choisissez l'appareil de pro­gram­ma­tion et le type de carte.</li>
+                        <li>Approchez la carte du pro­gram­ma­teur.</li>
+                        <li>Vérifiez le résultat dans l'Admin Panel avant de remettre la carte.</li>
+                    </ol>
+                    <p>Le <a href="https://spkey.odoo.com/instructions/admin-guide">Guide d'utilisation de l'Admin Panel</a> décrit chaque écran de ce processus.</p>
+                    <h2 id="other-cards">Pourquoi les autres générations et tailles nécessitent une confirmation</h2>
+                    <p>Les cartes d'une même famille partagent une base commune, mais la com­pa­ti­bi­lité au niveau de la puce n'est pas la preuve que le processus de pro­gram­ma­tion de SmartphoneKey prend en charge chaque génération, taille de mémoire ou format d'identifiant. Il en va de même pour les autres types de cartes et pour les cartes qui portent déjà les identifiants d'accès d'un autre système.</p>
+                    <p>Avant de commander, envoyez-nous la référence exacte de la carte, sa taille de mémoire et tout format d'identifiant déjà présent. Merci de ne pas envoyer de clés ni de secrets de carte.</p>
+                </div>
+            </div>
+                <section class="references" aria-labelledby="references-title">
+                    <h2 id="references-title">Références</h2>
+                    <ul>
+                        <li><a rel="noopener" href="https://www.nxp.com/products/MF3DHx3">NXP: MIFARE DESFire EV3 product information</a></li>
+                    </ul>
+                </section>
+            </article>
+
+        <nav class="section container related" aria-labelledby="related-title">
+            <h2 id="related-title" class="related-title">Pages associées</h2>
+            <ul class="next-links">
+                
+                <li><a href="/smartphonekey-site-v2/fr/compatibility/">Compatibilité</a></li><li><a href="/smartphonekey-site-v2/fr/products/readers/">Lecteurs</a></li><li><a href="/smartphonekey-site-v2/fr/platform/access-management/">Gestion des accès</a></li>
+            
+            </ul>
+        </nav>
+
+        <section class="section container next-steps" aria-labelledby="next-title">
+            <h2 id="next-title">Planifiez votre prochaine étape.</h2>
+            <p>Parcourez une liste de vérification de pla­ni­fi­ca­tion par vous-même, ou soumettez vos questions à l'équipe.</p>
+            <div class="next-actions">
+                
+                <a href="/smartphonekey-site-v2/fr/find-your-setup/">Trouver votre configuration</a>
+                <a href="/smartphonekey-site-v2/fr/compatibility/">Vérifier la compatibilité</a>
+                <a href="/smartphonekey-site-v2/fr/contact/?interest=project">Parler de votre projet</a>
+            
+            </div>
+        </section>
+        
+            </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <p class="footer-name">SmartphoneKey</p>
+                        <p>Votre clé du contrôle d'accès.</p>
+                        <p class="muted">Gérez les sites, les personnes, les identifiants d'accès et les appareils connectés.</p>
+                        <p><a href="mailto:info@smartphonekey.com">info@smartphonekey.com</a></p>
+                        <p><a href="https://spkey.odoo.com/adminpanel">Admin Panel</a></p>
+                    </div>
+                    <nav class="footer-nav" aria-label="Pied de page">
+                        <div>
+                            <p class="footer-title">Plateforme</p>
+                            <ul>
+                                <li>
+                                    <a href="/smartphonekey-site-v2/fr/platform/">Vue d'ensemble</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/fr/platform/access-management/">Gestion des accès</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/fr/platform/automation/">Automatisation</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/fr/platform/visitor-access/">Accès visiteurs</a>
+                                </li>
+                            </ul>
+                        </div><div>
+                            <p class="footer-title">Produits</p>
+                            <ul>
+                                <li>
+                                    <a href="/smartphonekey-site-v2/fr/products/readers/">Lecteurs</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/fr/compatibility/">Compatibilité</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/fr/certifications/">Certifications</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/fr/apps-and-chatbot/">Applications</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/fr/find-your-setup/">Trouver votre configuration</a>
+                                </li>
+                            </ul>
+                        </div><div>
+                            <p class="footer-title">Instructions</p>
+                            <ul>
+                                <li>
+                                    <a href="https://spkey.odoo.com/guide-for-usage-and-installation?lang=fr">Guide d'installation et de raccordement</a>
+                                </li><li>
+                                    <a href="https://spkey.odoo.com/instructions/admin-guide?lang=fr">Guide d'utilisation de l'Admin Panel</a>
+                                </li><li>
+                                    <a href="https://spkey.odoo.com/instructions/admin-panel?lang=fr">Présentation guidée de l'Admin Panel</a>
+                                </li><li>
+                                    <a href="https://spkey.odoo.com/instructions/mobile-app-guide?lang=fr">Guide d'utilisation de l'application mobile</a>
+                                </li><li>
+                                    <a href="https://spkey.odoo.com/instructions/mobile-app?lang=fr">Présentation guidée de l'application mobile</a>
+                                </li>
+                            </ul>
+                        </div><div>
+                            <p class="footer-title">Ressources</p>
+                            <ul>
+                                <li>
+                                    <a href="/smartphonekey-site-v2/fr/resources/#guides">Guides</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/fr/solutions/property-managers/">Gestionnaires immobiliers</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/fr/solutions/integrators/">Intégrateurs</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/fr/security/">Sécurité et confiance</a>
+                                </li>
+                            </ul>
+                        </div><div>
+                            <p class="footer-title">Entreprise</p>
+                            <ul>
+                                <li>
+                                    <a href="/smartphonekey-site-v2/fr/about/">À propos</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/fr/contact/">Contact</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/fr/contact/?interest=partner">Devenir partenaire</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/fr/privacy-policy/">Politique de confidentialité</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/fr/terms-of-service/">Conditions d'utilisation</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <nav class="footer-langs" aria-label="Langue">
+        <ul class="lang-list">
+            <li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/resources/mifare-classic-desfire-ev3/" hreflang="en" lang="en">English</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/fr/resources/mifare-classic-desfire-ev3/" hreflang="fr" lang="fr" aria-current="true">Français</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/de/resources/mifare-classic-desfire-ev3/" hreflang="de" lang="de">Deutsch</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/es/resources/mifare-classic-desfire-ev3/" hreflang="es" lang="es">Español</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/uk/resources/mifare-classic-desfire-ev3/" hreflang="uk" lang="uk">Українська</a>
+            </li>
+        </ul>
+                </nav>
+            </div>
+        </footer>
+        
+    </body>
+</html>

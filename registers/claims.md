@@ -2,6 +2,8 @@
 
 Baseline: the handoff register reviewed 2026-10-26. The same 20 records ship as `spk.website.claim` data (`addons/spk_website_v2/data/website_claims.xml`) so editors maintain them in Odoo. Evidence references (P01–P18, S10) point to the internal source register, which is not part of this repository.
 
+**Change of 27 October 2026.** The owner stated that every reader can act as a Thread Border Router and as an element of the Thread mesh, without separate firmware versions. C13 was moved from fallback to published, C14 (shared uplink) follows from it with its limits kept, and every page, table, FAQ and guide that used the old fallback was updated in the same change.
+
 Publication states: **public_scoped** (published with its limits), **fallback_only** (only the fallback sentence), **omit_numeric** (no number anywhere), **availability_enquiry** (ask-about-availability wording), **document_links_only** (documents, no badge).
 
 | ID | Capability | Evidence | Publication | What the site says, and where | Gate still open |
@@ -18,8 +20,8 @@ Publication states: **public_scoped** (published with its limits), **fallback_on
 | C10 | Matter capabilities | code-supported | public_scoped | Capability-based; commissioning does not prove every command: /compatibility, /platform/automation, Matter guide | Third-party model list after testing |
 | C11 | Scenario Builder | code-supported | public_scoped | "Current scenarios use one hub and its commissioned devices": home, /platform/automation, /compatibility, setup rule | None |
 | C12 | Hub-mediated reader connection | documented | public_scoped | "Supported reader configurations can connect through a Matter hub"; not a range or failover guarantee: /compatibility | None |
-| C13 | Reader Matter/Thread roles | owner-stated | fallback_only | Only "confirm model and firmware" / "discuss supported Matter and Thread roles": /products/readers, /compatibility. The role row exists in review state and cannot be published (tested) | Hardware-role matrix per revision and firmware |
-| C14 | Shared internet uplink | owner-stated | fallback_only | FAQ: "Supported hub and reader configurations can use a shared network path ... confirmed for the installed hardware". Matter guide topology labelled "Example topology. Deployment depends on configuration." | Topology test: gateway loss, node limits, multi-hop |
+| C13 | Reader Thread roles | owner-stated (owner instruction, 27 Oct 2026) | public_scoped | "Every SmartphoneKey reader can act as a Thread Border Router and as a router in the Thread mesh, without a separate firmware version": /products/readers (section and comparison table), /compatibility (text and published row), /solutions/integrators, Matter and Thread guide, platform diagram | Matter controller/server role still "confirmed per project"; no distance, node-count or failover figure |
+| C14 | Shared internet uplink | owner-stated, follows from C13 | public_scoped | Readers FAQ: readers "can share a Thread mesh and reach the internet through a reader that has a connection"; how many share it and what happens when it drops "depend on the installation"; "Automatic failover is not implied." Matter guide topology still labelled as an example | Node limits, hop count and loss behaviour not published |
 | C15 | Up to 80 m link distance | owner-stated | omit_numeric | No number anywhere (tested); "Coverage depends on the building, placement and radio conditions" | Reproducible model-specific range report |
 | C16 | QR intercom | documented | public_scoped | Scan, follow guest instructions, contact, outcome; marketing site is not a door interface: /platform/visitor-access | None |
 | C17 | AI Concierge v2 | release-gated | availability_enquiry | "Ask about the version and availability"; "features and rollout status vary by deployment": /platform/visitor-access | Versioned production release and acceptance |

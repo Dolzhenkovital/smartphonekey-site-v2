@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="uk" class="spk-site-v2">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Підбір конфігурації контролю доступу для вашого об'єкта | SmartphoneKey</title>
+        <link type="image/x-icon" rel="shortcut icon" href="/smartphonekey-site-v2/spk_website_v2/static/src/img/favicon-32.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+                <meta name="description" content="Ознайомтеся з чек-листом планування контролю доступу для ваших об'єктів, дверей і варіантів підключення. Переглядайте результати, не надсилаючи контактних даних.">
+                <meta name="robots" content="noindex, nofollow">
+                <link rel="canonical" href="https://smartphonekey.com/uk/find-your-setup">
+                
+                <link rel="apple-touch-icon" href="/smartphonekey-site-v2/spk_website_v2/static/src/img/apple-touch-icon.png">
+                <meta property="og:type" content="website">
+                <meta property="og:site_name" content="SmartphoneKey">
+                <meta property="og:locale" content="uk_UA">
+                <meta property="og:title" content="Підбір конфігурації контролю доступу для вашого об'єкта | SmartphoneKey">
+                <meta property="og:description" content="Ознайомтеся з чек-листом планування контролю доступу для ваших об'єктів, дверей і варіантів підключення. Переглядайте результати, не надсилаючи контактних даних.">
+                <meta property="og:url" content="https://smartphonekey.com/uk/find-your-setup">
+                <meta property="og:image" content="https://smartphonekey.com/spk_website_v2/static/src/img/og-default.png">
+                <meta property="og:image:width" content="1200">
+                <meta property="og:image:height" content="630">
+                <meta property="og:image:alt" content="SmartphoneKey reader beside the SmartphoneKey key logo">
+                <meta name="twitter:card" content="summary_large_image">
+                
+                <link type="text/css" rel="stylesheet" href="/smartphonekey-site-v2/assets/site.css">
+                <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://smartphonekey.com/uk/find-your-setup#webpage","url":"https://smartphonekey.com/uk/find-your-setup","name":"Підбір конфігурації контролю доступу для вашого об'єкта | SmartphoneKey","description":"Ознайомтеся з чек-листом планування контролю доступу для ваших об'єктів, дверей і варіантів підключення. Переглядайте результати, не надсилаючи контактних даних.","inLanguage":"uk","isPartOf":{"@id":"https://smartphonekey.com/#website"},"breadcrumb":{"@id":"https://smartphonekey.com/uk/find-your-setup#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://smartphonekey.com/uk/find-your-setup#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Головна","item":"https://smartphonekey.com/uk"},{"@type":"ListItem","position":2,"name":"Підібрати конфігурацію","item":"https://smartphonekey.com/uk/find-your-setup"}]}]}</script>
+                <script defer src="/smartphonekey-site-v2/spk_website_v2/static/src/js/navigation.js?v=18.0.2.1.0"></script>
+                
+                <script type="application/json" id="spk-setup-rules">{"advice": {"wifi": "Почніть із перевірки покриття Wi-Fi та вимог до мережі в кожному запланованому місці встановлення зчитувача.", "cellular": "Обговоріть покриття LTE, забезпечення SIM-картками та модель зчитувача для вашої інсталяції.", "both": "Ми допоможемо порівняти варіанти підключення та вимоги об'єкта.", "unsure": "Ми допоможемо порівняти варіанти підключення та вимоги об'єкта."}, "rules": [{"when": {}, "item": "Складіть перелік дверей, зазначивши для кожних наявну запірну фурнітуру, джерело живлення та заплановане місце встановлення зчитувача.", "links": []}, {"when": {"connection": ["wifi", "both", "unsure"]}, "item": "Перевірте покриття Wi-Fi і мережеві налаштування, які знадобляться зчитувачу, у кожному запланованому місці.", "links": ["lte_wifi"]}, {"when": {"connection": ["cellular", "both", "unsure"]}, "item": "Перевірте покриття мобільного зв'язку в кожному запланованому місці та з'ясуйте, хто надаватиме SIM-картку й послугу зв'язку.", "links": ["lte_wifi", "readers"]}, {"when": {"sites": ["two_to_ten", "eleven_plus"]}, "item": "Визначте, як буде організовано кожен об'єкт і хто керуватиме ним локально.", "links": ["access_management"]}, {"when": {"doors": ["six_to_twentyfive", "twentysix_plus"]}, "item": "Згрупуйте двері за будівлями та мережевими зонами, перш ніж обирати підключення для кожного місця.", "links": ["offline"]}, {"when": {"role": ["property_manager"]}, "item": "Зіставте групи мешканців, персоналу та підрядників із дверима, які їм потрібні.", "links": ["property_managers"]}, {"when": {"role": ["owner"]}, "item": "Визначте, хто щодня видаватиме та відкликатиме доступ на вашому об'єкті.", "links": ["access_management"]}, {"when": {"role": ["integrator"]}, "item": "Сплануйте монтаж, передання клієнтові та те, хто підтримуватиме об'єкт після цього.", "links": ["integrators", "installation"]}, {"when": {"interests": ["cards"]}, "item": "Підтвердьте сімейство карток і формат ідентифікатора доступу. Задокументовані процеси програмування охоплюють MIFARE Classic і MIFARE DESFire EV3.", "links": ["cards"]}, {"when": {"interests": ["wallets"]}, "item": "Перевірте вимоги до телефона, операційної системи та облікового запису для ключів у Wallet.", "links": ["compatibility"]}, {"when": {"interests": ["visitors"]}, "item": "Визначте шлях зв'язку, яким має скористатися відвідувач біля кожного входу.", "links": ["visitors"]}, {"when": {"interests": ["automation"]}, "item": "Складіть перелік пристроїв, потрібних для кожного робочого процесу, і можливостей, про які вони повідомляють. Поточні сценарії використовують один хаб і підключені до нього пристрої.", "links": ["automation", "matter"]}], "links": {"lte_wifi": ["LTE чи Wi-Fi: що підходить для вашого об'єкта?", "/smartphonekey-site-v2/uk/resources/lte-vs-wifi-access-control/"], "readers": ["Порівняти конфігурації зчитувачів", "/smartphonekey-site-v2/uk/products/readers/"], "access_management": ["Керування доступом на різних об'єктах", "/smartphonekey-site-v2/uk/platform/access-management/"], "property_managers": ["Контроль доступу для команд, що керують нерухомістю", "/smartphonekey-site-v2/uk/solutions/property-managers/"], "integrators": ["Процес для монтажників та інтеграторів", "/smartphonekey-site-v2/uk/solutions/integrators/"], "installation": ["Інструкція з монтажу та підключення", "https://spkey.odoo.com/guide-for-usage-and-installation?lang=uk"], "cards": ["Які NFC-картки може програмувати SmartphoneKey?", "/smartphonekey-site-v2/uk/resources/mifare-classic-desfire-ev3/"], "compatibility": ["Сумісність карток і пристроїв", "/smartphonekey-site-v2/uk/compatibility/"], "visitors": ["Доступ відвідувачів", "/smartphonekey-site-v2/uk/platform/visitor-access/"], "automation": ["Автоматизація з підключеними пристроями", "/smartphonekey-site-v2/uk/platform/automation/"], "matter": ["Matter і Thread для контролю доступу", "/smartphonekey-site-v2/uk/resources/matter-thread-access-control/"], "offline": ["Що відбувається, коли зчитувач переходить в офлайн-режим?", "/smartphonekey-site-v2/uk/resources/access-control-when-offline/"]}, "home": {"site": {"property": "Організуйте людей і дозволи на своєму об'єкті нерухомості.", "portfolio": "Упорядкуйте кожен об'єкт і його локальні обов'язки.", "partner": "Плануйте монтаж, передання клієнтові та подальшу підтримку."}, "connection": {"wifi": "Почніть із покриття Wi-Fi у кожному місці встановлення зчитувача.", "cellular": "Перевірте покриття LTE та забезпечення SIM-картками для інсталяції.", "both": "Порівняйте готовність Wi-Fi з покриттям LTE, перш ніж обирати обладнання.", "unsure": "Перегляньте варіанти підключення та вимоги об'єкта, перш ніж обирати обладнання."}, "toSetup": {"property": {"sites": "one"}, "portfolio": {"sites": "two_to_ten"}, "partner": {"role": "integrator"}}}}</script>
+                <script defer src="/smartphonekey-site-v2/spk_website_v2/static/src/js/setup_guide.js?v=18.0.2.1.0"></script>
+            
+            
+    </head>
+    <body class="spk-body">
+        
+            <a class="skip" href="#main">Перейти до вмісту</a>
+            <p class="preview-banner" role="note">
+                Тестовий попередній перегляд вебсайту SmartphoneKey 2.0. Це не робочий сайт, і нічого з введеного тут не надсилається й не зберігається.
+            </p>
+        <header class="site-header">
+            <div class="container header-inner">
+                <a class="brand" href="/smartphonekey-site-v2/uk/">
+                    <img src="/smartphonekey-site-v2/spk_website_v2/static/src/img/brand-mark.png" width="32" height="32" alt="" loading="lazy">
+                    <span>SmartphoneKey</span>
+                </a>
+                <nav class="desktop-nav" aria-label="Основна навігація">
+                    <ul class="menu">
+                        <li>
+                            <details class="menu-group" data-spk-menu="">
+                                <summary>Платформа</summary>
+                                <ul class="menu-panel">
+                                    <li>
+                                        <a href="/smartphonekey-site-v2/uk/platform/">Огляд</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/uk/platform/access-management/">Керування доступом</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/uk/platform/automation/">Автоматизація</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/uk/platform/visitor-access/">Доступ відвідувачів</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li><li>
+                            <details class="menu-group" data-spk-menu="">
+                                <summary>Рішення</summary>
+                                <ul class="menu-panel">
+                                    <li>
+                                        <a href="/smartphonekey-site-v2/uk/solutions/property-managers/">Керуючі компанії</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/uk/solutions/integrators/">Інтегратори</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li><li>
+                            <details class="menu-group" data-spk-menu="">
+                                <summary>Продукти</summary>
+                                <ul class="menu-panel">
+                                    <li>
+                                        <a href="/smartphonekey-site-v2/uk/products/readers/">Зчитувачі</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/uk/compatibility/">Сумісність</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/uk/certifications/">Сертифікати</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li><li>
+                            <details class="menu-group" data-spk-menu="">
+                                <summary>Ресурси</summary>
+                                <ul class="menu-panel">
+                                    <li>
+                                        <a href="/smartphonekey-site-v2/uk/resources/#guides">Посібники</a>
+                                    </li><li>
+                                        <a href="https://spkey.odoo.com/guide-for-usage-and-installation?lang=uk">Інструкції</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/uk/resources/#insights">Статті</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/uk/security/">Безпека і довіра</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="https://spkey.odoo.com/guide-for-usage-and-installation?lang=uk">Інструкції</a>
+                    <a href="https://spkey.odoo.com/adminpanel">Admin Panel</a>
+                    <a href="/smartphonekey-site-v2/uk/find-your-setup/" class="header-action" aria-current="page">Підібрати конфігурацію</a>
+                    <details class="menu-group lang-switch" data-spk-menu="">
+                        <summary><span class="visually-hidden">Мова: </span>Українська</summary>
+                        <div class="menu-panel lang-panel">
+        <ul class="lang-list">
+            <li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/find-your-setup/" hreflang="en" lang="en">English</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/fr/find-your-setup/" hreflang="fr" lang="fr">Français</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/de/find-your-setup/" hreflang="de" lang="de">Deutsch</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/es/find-your-setup/" hreflang="es" lang="es">Español</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/uk/find-your-setup/" hreflang="uk" lang="uk" aria-current="true">Українська</a>
+            </li>
+        </ul>
+                        </div>
+                    </details>
+                </div>
+                <details class="mobile-nav" data-spk-mobile-menu="">
+                    <summary>Меню</summary>
+                    <nav class="mobile-panel" aria-label="Мобільна навігація">
+                        <div class="mobile-group">
+                            <p class="mobile-title">Платформа</p>
+                            <ul>
+                                <li>
+                                    <a href="/smartphonekey-site-v2/uk/platform/">Огляд</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/platform/access-management/">Керування доступом</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/platform/automation/">Автоматизація</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/platform/visitor-access/">Доступ відвідувачів</a>
+                                </li>
+                            </ul>
+                        </div><div class="mobile-group">
+                            <p class="mobile-title">Рішення</p>
+                            <ul>
+                                <li>
+                                    <a href="/smartphonekey-site-v2/uk/solutions/property-managers/">Керуючі компанії</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/solutions/integrators/">Інтегратори</a>
+                                </li>
+                            </ul>
+                        </div><div class="mobile-group">
+                            <p class="mobile-title">Продукти</p>
+                            <ul>
+                                <li>
+                                    <a href="/smartphonekey-site-v2/uk/products/readers/">Зчитувачі</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/compatibility/">Сумісність</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/certifications/">Сертифікати</a>
+                                </li>
+                            </ul>
+                        </div><div class="mobile-group">
+                            <p class="mobile-title">Ресурси</p>
+                            <ul>
+                                <li>
+                                    <a href="/smartphonekey-site-v2/uk/resources/#guides">Посібники</a>
+                                </li><li>
+                                    <a href="https://spkey.odoo.com/guide-for-usage-and-installation?lang=uk">Інструкції</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/resources/#insights">Статті</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/security/">Безпека і довіра</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="mobile-actions">
+                            <li><a href="/smartphonekey-site-v2/uk/find-your-setup/">Підібрати конфігурацію</a></li>
+                            <li><a href="https://spkey.odoo.com/guide-for-usage-and-installation?lang=uk">Інструкції</a></li>
+                            <li><a href="https://spkey.odoo.com/adminpanel">Admin Panel</a></li>
+                        </ul>
+                        <div class="mobile-group mobile-langs">
+                            <p class="mobile-title">Мова</p>
+        <ul class="lang-list">
+            <li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/find-your-setup/" hreflang="en" lang="en">English</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/fr/find-your-setup/" hreflang="fr" lang="fr">Français</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/de/find-your-setup/" hreflang="de" lang="de">Deutsch</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/es/find-your-setup/" hreflang="es" lang="es">Español</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/uk/find-your-setup/" hreflang="uk" lang="uk" aria-current="true">Українська</a>
+            </li>
+        </ul>
+                        </div>
+                    </nav>
+                </details>
+            </div>
+        </header>
+            <main id="main" tabindex="-1">
+                
+            <div class="container">
+        <div class="page-intro">
+        <nav class="breadcrumb" aria-label="Навігаційний ланцюжок">
+            <ol>
+                <li>
+                    <a href="/smartphonekey-site-v2/uk/">Головна</a>
+                </li><li>
+                    <span aria-current="page">Підібрати конфігурацію</span>
+                </li>
+            </ol>
+        </nav>
+            <h1>Підберіть конфігурацію для своєї будівлі.</h1>
+            <p class="lead">Оберіть варіанти, що описують ваш проєкт. Ви можете переглянути результат, не надаючи контактних даних. Це орієнтир для планування, а не остаточний проєкт обладнання чи комерційна пропозиція.</p>
+            
+                
+        </div>
+            </div>
+
+            <div class="container setup-guide">
+                <form class="setup setup-full" action="/smartphonekey-site-v2/uk/find-your-setup/" method="get" data-spk-setup-guide="" aria-labelledby="guide-form-title">
+                    <h2 id="guide-form-title" class="visually-hidden">Ваш проєкт</h2>
+                    <fieldset>
+                        <legend>Ваша роль</legend>
+                        <div class="choices">
+                            <label class="choice">
+                                <input type="radio" name="role" value="property_manager">
+                                <span>Керуюча компанія</span>
+                            </label><label class="choice">
+                                <input type="radio" name="role" value="integrator">
+                                <span>Монтажник або інтегратор</span>
+                            </label><label class="choice">
+                                <input type="radio" name="role" value="owner">
+                                <span>Власник будівлі</span>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Кількість об'єктів</legend>
+                        <div class="choices">
+                            <label class="choice">
+                                <input type="radio" name="sites" value="one">
+                                <span>1 об'єкт</span>
+                            </label><label class="choice">
+                                <input type="radio" name="sites" value="two_to_ten">
+                                <span>Від 2 до 10 об'єктів</span>
+                            </label><label class="choice">
+                                <input type="radio" name="sites" value="eleven_plus">
+                                <span>11 і більше об'єктів</span>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Кількість дверей</legend>
+                        <div class="choices">
+                            <label class="choice">
+                                <input type="radio" name="doors" value="one_to_five">
+                                <span>Від 1 до 5 дверей</span>
+                            </label><label class="choice">
+                                <input type="radio" name="doors" value="six_to_twentyfive">
+                                <span>Від 6 до 25 дверей</span>
+                            </label><label class="choice">
+                                <input type="radio" name="doors" value="twentysix_plus">
+                                <span>26 і більше дверей</span>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <fieldset aria-describedby="connection-help">
+                        <legend>Доступне підключення</legend>
+                        <p id="connection-help" class="field-help">Потрібно для рекомендації. Усі інші варіанти необов'язкові.</p>
+                        <div class="choices">
+                            <label class="choice">
+                                <input type="radio" name="connection" value="wifi">
+                                <span>Wi-Fi</span>
+                            </label><label class="choice">
+                                <input type="radio" name="connection" value="cellular">
+                                <span>Мобільний зв'язок</span>
+                            </label><label class="choice">
+                                <input type="radio" name="connection" value="both">
+                                <span>Обидва</span>
+                            </label><label class="choice">
+                                <input type="radio" name="connection" value="unsure">
+                                <span>Ще не визначилися</span>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Чим ви хотіли б керувати?</legend>
+                        <div class="choices">
+                            <label class="choice">
+                                <input type="checkbox" name="interests" value="cards">
+                                <span>Фізичні картки</span>
+                            </label><label class="choice">
+                                <input type="checkbox" name="interests" value="wallets">
+                                <span>Ключі у Wallet</span>
+                            </label><label class="choice">
+                                <input type="checkbox" name="interests" value="visitors">
+                                <span>Доступ відвідувачів</span>
+                            </label><label class="choice">
+                                <input type="checkbox" name="interests" value="automation">
+                                <span>Автоматизація</span>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <div class="form-actions">
+                        <button type="submit" class="button">Показати мою відправну точку</button>
+                        <a href="/smartphonekey-site-v2/uk/find-your-setup/" class="text-link" data-spk-setup-reset="">Почати знову</a>
+                    </div>
+                </form>
+
+                <section class="setup-result" id="setup-result" aria-labelledby="result-title" tabindex="-1" data-spk-setup-result="">
+                    <h2 id="result-title">Ваша відправна точка для планування</h2>
+                        <p class="lead" data-spk-result-advice="">Оберіть доступне підключення, щоб побачити свою відправну точку.</p>
+                        <ul class="checklist" data-spk-result-items="" hidden="hidden"></ul>
+                        <p class="result-subtitle" hidden="hidden" data-spk-result-links-title="">Читайте далі</p>
+                        <ul class="plain-list" data-spk-result-links="" hidden="hidden"></ul>
+                    <div class="result-actions">
+                        <a href="/smartphonekey-site-v2/uk/platform/">Продовжити огляд</a>
+                        <a href="/smartphonekey-site-v2/uk/compatibility/">Перевірити сумісність</a>
+                        <a data-spk-result-contact="" href="/smartphonekey-site-v2/uk/contact/?interest=project">Обговорити цю конфігурацію</a>
+                    </div>
+                </section>
+            </div>
+
+            <section class="section container" aria-labelledby="basics-title">
+                <div class="section-head">
+                    <h2 id="basics-title">Основи підключення.</h2>
+                    <p>Який би зчитувач ви не обрали, йому потрібні живлення, сумісна запірна фурнітура та підключення, що працює біля дверей.</p>
+                </div>
+                <dl class="workflow workflow-3">
+                    <div>
+                        <dt>Wi-Fi</dt>
+                        <dd>Почніть із перевірки покриття Wi-Fi та вимог до мережі в кожному запланованому місці встановлення зчитувача.</dd>
+                    </div>
+                    <div>
+                        <dt>Мобільний зв'язок</dt>
+                        <dd>Обговоріть покриття LTE, забезпечення SIM-картками та модель зчитувача для вашої інсталяції.</dd>
+                    </div>
+                    <div>
+                        <dt>Обидва або не впевнені</dt>
+                        <dd>Ми допоможемо порівняти варіанти підключення та вимоги об'єкта.</dd>
+                    </div>
+                </dl>
+                <p class="section-note"><a href="/smartphonekey-site-v2/uk/resources/lte-vs-wifi-access-control/">LTE чи Wi-Fi: що підходить для вашого об'єкта?</a></p>
+            </section>
+        
+            </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <p class="footer-name">SmartphoneKey</p>
+                        <p>Ваш ключ до контролю доступу.</p>
+                        <p class="muted">Керуйте об'єктами, людьми, іде­н­ти­фі­ка­то­рами доступу та підключеними пристроями.</p>
+                        <p><a href="mailto:info@smartphonekey.com">info@smartphonekey.com</a></p>
+                        <p><a href="https://spkey.odoo.com/adminpanel">Admin Panel</a></p>
+                    </div>
+                    <nav class="footer-nav" aria-label="Нижня навігація">
+                        <div>
+                            <p class="footer-title">Платформа</p>
+                            <ul>
+                                <li>
+                                    <a href="/smartphonekey-site-v2/uk/platform/">Огляд</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/platform/access-management/">Керування доступом</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/platform/automation/">Автоматизація</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/platform/visitor-access/">Доступ відвідувачів</a>
+                                </li>
+                            </ul>
+                        </div><div>
+                            <p class="footer-title">Продукти</p>
+                            <ul>
+                                <li>
+                                    <a href="/smartphonekey-site-v2/uk/products/readers/">Зчитувачі</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/compatibility/">Сумісність</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/certifications/">Сертифікати</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/apps-and-chatbot/">Застосунки</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/find-your-setup/">Підібрати конфігурацію</a>
+                                </li>
+                            </ul>
+                        </div><div>
+                            <p class="footer-title">Інструкції</p>
+                            <ul>
+                                <li>
+                                    <a href="https://spkey.odoo.com/guide-for-usage-and-installation?lang=uk">Інструкція з монтажу та підключення</a>
+                                </li><li>
+                                    <a href="https://spkey.odoo.com/instructions/admin-guide?lang=uk">Посібник користувача Admin Panel</a>
+                                </li><li>
+                                    <a href="https://spkey.odoo.com/instructions/admin-panel?lang=uk">Огляд-демонстрація Admin Panel</a>
+                                </li><li>
+                                    <a href="https://spkey.odoo.com/instructions/mobile-app-guide?lang=uk">Посібник користувача мобільного застосунку</a>
+                                </li><li>
+                                    <a href="https://spkey.odoo.com/instructions/mobile-app?lang=uk">Огляд-демонстрація мобільного застосунку</a>
+                                </li>
+                            </ul>
+                        </div><div>
+                            <p class="footer-title">Ресурси</p>
+                            <ul>
+                                <li>
+                                    <a href="/smartphonekey-site-v2/uk/resources/#guides">Посібники</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/solutions/property-managers/">Керуючі компанії</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/solutions/integrators/">Інтегратори</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/security/">Безпека і довіра</a>
+                                </li>
+                            </ul>
+                        </div><div>
+                            <p class="footer-title">Компанія</p>
+                            <ul>
+                                <li>
+                                    <a href="/smartphonekey-site-v2/uk/about/">Про нас</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/contact/">Контакти</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/contact/?interest=partner">Стати партнером</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/privacy-policy/">Політика конфіденційності</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/terms-of-service/">Умови надання послуг</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <nav class="footer-langs" aria-label="Мова">
+        <ul class="lang-list">
+            <li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/find-your-setup/" hreflang="en" lang="en">English</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/fr/find-your-setup/" hreflang="fr" lang="fr">Français</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/de/find-your-setup/" hreflang="de" lang="de">Deutsch</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/es/find-your-setup/" hreflang="es" lang="es">Español</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/uk/find-your-setup/" hreflang="uk" lang="uk" aria-current="true">Українська</a>
+            </li>
+        </ul>
+                </nav>
+            </div>
+        </footer>
+        
+    </body>
+</html>

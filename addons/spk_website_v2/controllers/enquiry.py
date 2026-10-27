@@ -18,7 +18,7 @@ from odoo.tools import email_normalize
 from .. import site_content as content
 from ..models.crm_lead import CONFLICT, CREATED, DUPLICATE
 from ..rendering import is_preview, is_v2_enabled
-from .main import render_contact
+from .main import _lang, render_contact
 
 _logger = logging.getLogger(__name__)
 
@@ -55,50 +55,52 @@ def _text(params, key):
     return value.strip() if isinstance(value, str) else ""
 
 
-def validate_enquiry(params, interests):
+def validate_enquiry(params, interests, t=lambda text: text, lang="en_US"):
     """Return ``(payload, errors, display)``: the allowlisted payload for the
-    lead, field errors keyed by field name, and the values to show again."""
+    lead, field errors keyed by field name (in the visitor's language, ``t``),
+    and the values to show again."""
     limits = content.FIELD_LIMITS
+    messages = {key: t(text) for key, text in MESSAGES.items()}
     errors = {}
     payload = {}
 
     name = _text(params, "name")
     if not 2 <= len(name) <= limits["name"]:
-        errors["name"] = MESSAGES["name"]
+        errors["name"] = messages["name"]
     payload["name"] = name
 
     email = _text(params, "email")
     normalized = email_normalize(email) if email and len(email) <= limits["email"] else False
     if not normalized or "," in email:
-        errors["email"] = MESSAGES["email"]
+        errors["email"] = messages["email"]
     payload["email"] = email
 
     enquiry_type = _text(params, "enquiry_type")
     if enquiry_type not in dict(content.ENQUIRY_TYPES):
-        errors["enquiry_type"] = MESSAGES["enquiry_type"]
+        errors["enquiry_type"] = messages["enquiry_type"]
     payload["enquiry_type"] = enquiry_type
 
     for key in ("company", "region", "details"):
         value = _text(params, key)
         if len(value) > limits[key]:
-            errors[key] = MESSAGES[key]
+            errors[key] = messages[key]
         payload[key] = value
 
     phone = _text(params, "phone")
     if len(phone) > limits["phone"] or not PHONE_RE.match(phone):
-        errors["phone"] = MESSAGES["phone"]
+        errors["phone"] = messages["phone"]
     payload["phone"] = phone
 
     for key, choices in (("role", content.ROLES), ("sites", content.SITES), ("doors", content.DOORS),
                          ("connection", content.CONNECTIONS)):
         value = _text(params, key)
         if value and value not in dict(choices):
-            errors[key] = MESSAGES["choice"]
+            errors[key] = messages["choice"]
         payload[key] = value
 
     allowed_interests = [key for key, _label in content.INTERESTS]
     if any(value not in allowed_interests for value in interests):
-        errors["interests"] = MESSAGES["choice"]
+        errors["interests"] = messages["choice"]
     payload["interests"] = [key for key in allowed_interests if key in set(interests)]
 
     source_path = _text(params, "source_path")
@@ -108,8 +110,9 @@ def validate_enquiry(params, interests):
 
     submission_id = _text(params, "submission_id")
     if not SUBMISSION_ID_RE.match(submission_id):
-        errors["form"] = "This form has expired. Reload the page and send it again."
+        errors["form"] = t("This form has expired. Reload the page and send it again.")
     payload["submission_id"] = submission_id
+    payload["lang"] = lang
 
     display = dict(payload)
     return payload, errors, display
@@ -130,7 +133,8 @@ class SpkWebsiteEnquiry(http.Controller):
             return self._failure(wants_json, 413, "too_large", {}, None)
 
         form = request.httprequest.form
-        payload, errors, display = validate_enquiry(post, form.getlist("interests"))
+        _url_code, t = _lang()
+        payload, errors, display = validate_enquiry(post, form.getlist("interests"), t, request.env.lang or "en_US")
         if form.get(HONEYPOT_FIELD):
             _logger.info("Website enquiry rejected: honeypot field filled")
             return self._failure(wants_json, 400, "rejected", {}, display)

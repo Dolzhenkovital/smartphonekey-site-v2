@@ -137,25 +137,25 @@
         </record>
         <record id="claim_c13" model="spk.website.claim">
             <field name="code">C13</field>
-            <field name="name">Reader Matter/Thread roles</field>
+            <field name="name">Reader Thread roles</field>
             <field name="evidence_level">owner_stated</field>
-            <field name="publication">fallback_only</field>
-            <field name="allowed_copy">Discuss supported Matter and Thread roles for your reader revision and firmware.</field>
-            <field name="limitations">Confirm controller/server, commissioner, router and Border Router separately.</field>
-            <field name="internal_source">P01, P09, S10</field>
+            <field name="publication">public_scoped</field>
+            <field name="allowed_copy">Every SmartphoneKey reader can act as a Thread Border Router and as a router in the Thread mesh, without a separate firmware version.</field>
+            <field name="limitations">Owner instruction of 2026-10-27. Mesh coverage and the route to the internet still depend on placement, power and the building; Matter controller functions are confirmed per project. No distance, node-count or failover figure.</field>
+            <field name="internal_source">P01, owner instruction 2026-10-27</field>
             <field name="owner_role">hardware_firmware</field>
-            <field name="reviewed_at">2026-10-26</field>
+            <field name="reviewed_at">2026-10-27</field>
         </record>
         <record id="claim_c14" model="spk.website.claim">
             <field name="code">C14</field>
             <field name="name">Shared internet uplink</field>
             <field name="evidence_level">owner_stated</field>
-            <field name="publication">fallback_only</field>
-            <field name="allowed_copy">A shared network path depends on the installed hardware, firmware and topology.</field>
-            <field name="limitations">Illustrative topology only until verified; no redundancy or unlimited nodes.</field>
-            <field name="internal_source">P01, P16</field>
+            <field name="publication">public_scoped</field>
+            <field name="allowed_copy">Because every reader can act as a Thread router and Border Router, readers can share a Thread mesh and reach the internet through a reader that has a connection.</field>
+            <field name="limitations">Follows from the C13 owner instruction of 2026-10-27. How many readers share a connection and what happens when it drops depend on the installation; no automatic failover, hop count or node limit is promised.</field>
+            <field name="internal_source">P01, P16, owner instruction 2026-10-27</field>
             <field name="owner_role">hardware_firmware</field>
-            <field name="reviewed_at">2026-10-26</field>
+            <field name="reviewed_at">2026-10-27</field>
         </record>
         <record id="claim_c15" model="spk.website.claim">
             <field name="code">C15</field>

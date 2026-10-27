@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="uk" class="spk-site-v2">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Контроль доступу, коли зчитувач офлайн | SmartphoneKey</title>
+        <link type="image/x-icon" rel="shortcut icon" href="/smartphonekey-site-v2/spk_website_v2/static/src/img/favicon-32.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+                <meta name="description" content="Розберіться в змінах ключів, що очікують, підтвердженні доставки та різниці між локальним доступом і віддаленим керуванням під час перебою зв'язку.">
+                <meta name="robots" content="noindex, nofollow">
+                <link rel="canonical" href="https://smartphonekey.com/uk/resources/access-control-when-offline">
+                
+                <link rel="apple-touch-icon" href="/smartphonekey-site-v2/spk_website_v2/static/src/img/apple-touch-icon.png">
+                <meta property="og:type" content="article">
+                <meta property="og:site_name" content="SmartphoneKey">
+                <meta property="og:locale" content="uk_UA">
+                <meta property="og:title" content="Контроль доступу, коли зчитувач офлайн | SmartphoneKey">
+                <meta property="og:description" content="Розберіться в змінах ключів, що очікують, підтвердженні доставки та різниці між локальним доступом і віддаленим керуванням під час перебою зв'язку.">
+                <meta property="og:url" content="https://smartphonekey.com/uk/resources/access-control-when-offline">
+                <meta property="og:image" content="https://smartphonekey.com/spk_website_v2/static/src/img/og-default.png">
+                <meta property="og:image:width" content="1200">
+                <meta property="og:image:height" content="630">
+                <meta property="og:image:alt" content="SmartphoneKey reader beside the SmartphoneKey key logo">
+                <meta name="twitter:card" content="summary_large_image">
+                
+                <link type="text/css" rel="stylesheet" href="/smartphonekey-site-v2/assets/site.css">
+                <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://smartphonekey.com/uk/resources/access-control-when-offline#webpage","url":"https://smartphonekey.com/uk/resources/access-control-when-offline","name":"Контроль доступу, коли зчитувач офлайн | SmartphoneKey","description":"Розберіться в змінах ключів, що очікують, підтвердженні доставки та різниці між локальним доступом і віддаленим керуванням під час перебою зв'язку.","inLanguage":"uk","isPartOf":{"@id":"https://smartphonekey.com/#website"},"breadcrumb":{"@id":"https://smartphonekey.com/uk/resources/access-control-when-offline#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://smartphonekey.com/uk/resources/access-control-when-offline#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Головна","item":"https://smartphonekey.com/uk"},{"@type":"ListItem","position":2,"name":"Ресурси","item":"https://smartphonekey.com/uk/resources"},{"@type":"ListItem","position":3,"name":"Що відбувається, коли зчитувач переходить в офлайн-режим?","item":"https://smartphonekey.com/uk/resources/access-control-when-offline"}]},{"@type":"Article","@id":"https://smartphonekey.com/uk/resources/access-control-when-offline#article","headline":"Що відбувається, коли зчитувач переходить в офлайн-режим?","description":"Розберіться в змінах ключів, що очікують, підтвердженні доставки та різниці між локальним доступом і віддаленим керуванням під час перебою зв'язку.","datePublished":"2026-10-27","dateModified":"2026-10-27","author":{"@type":"Organization","name":"SmartphoneKey product team","url":"https://smartphonekey.com/about"},"publisher":{"@id":"https://smartphonekey.com/#organization"},"mainEntityOfPage":{"@id":"https://smartphonekey.com/uk/resources/access-control-when-offline#webpage"},"inLanguage":"uk"}]}</script>
+                <script defer src="/smartphonekey-site-v2/spk_website_v2/static/src/js/navigation.js?v=18.0.2.1.0"></script>
+                
+            
+    </head>
+    <body class="spk-body">
+        
+            <a class="skip" href="#main">Перейти до вмісту</a>
+            <p class="preview-banner" role="note">
+                Тестовий попередній перегляд вебсайту SmartphoneKey 2.0. Це не робочий сайт, і нічого з введеного тут не надсилається й не зберігається.
+            </p>
+        <header class="site-header">
+            <div class="container header-inner">
+                <a class="brand" href="/smartphonekey-site-v2/uk/">
+                    <img src="/smartphonekey-site-v2/spk_website_v2/static/src/img/brand-mark.png" width="32" height="32" alt="" loading="lazy">
+                    <span>SmartphoneKey</span>
+                </a>
+                <nav class="desktop-nav" aria-label="Основна навігація">
+                    <ul class="menu">
+                        <li>
+                            <details class="menu-group" data-spk-menu="">
+                                <summary>Платформа</summary>
+                                <ul class="menu-panel">
+                                    <li>
+                                        <a href="/smartphonekey-site-v2/uk/platform/">Огляд</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/uk/platform/access-management/">Керування доступом</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/uk/platform/automation/">Автоматизація</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/uk/platform/visitor-access/">Доступ відвідувачів</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li><li>
+                            <details class="menu-group" data-spk-menu="">
+                                <summary>Рішення</summary>
+                                <ul class="menu-panel">
+                                    <li>
+                                        <a href="/smartphonekey-site-v2/uk/solutions/property-managers/">Керуючі компанії</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/uk/solutions/integrators/">Інтегратори</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li><li>
+                            <details class="menu-group" data-spk-menu="">
+                                <summary>Продукти</summary>
+                                <ul class="menu-panel">
+                                    <li>
+                                        <a href="/smartphonekey-site-v2/uk/products/readers/">Зчитувачі</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/uk/compatibility/">Сумісність</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/uk/certifications/">Сертифікати</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li><li>
+                            <details class="menu-group" data-spk-menu="">
+                                <summary>Ресурси</summary>
+                                <ul class="menu-panel">
+                                    <li>
+                                        <a href="/smartphonekey-site-v2/uk/resources/#guides">Посібники</a>
+                                    </li><li>
+                                        <a href="https://spkey.odoo.com/guide-for-usage-and-installation?lang=uk">Інструкції</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/uk/resources/#insights">Статті</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/uk/security/">Безпека і довіра</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="https://spkey.odoo.com/guide-for-usage-and-installation?lang=uk">Інструкції</a>
+                    <a href="https://spkey.odoo.com/adminpanel">Admin Panel</a>
+                    <a href="/smartphonekey-site-v2/uk/find-your-setup/" class="header-action">Підібрати конфігурацію</a>
+                    <details class="menu-group lang-switch" data-spk-menu="">
+                        <summary><span class="visually-hidden">Мова: </span>Українська</summary>
+                        <div class="menu-panel lang-panel">
+        <ul class="lang-list">
+            <li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/resources/access-control-when-offline/" hreflang="en" lang="en">English</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/fr/resources/access-control-when-offline/" hreflang="fr" lang="fr">Français</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/de/resources/access-control-when-offline/" hreflang="de" lang="de">Deutsch</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/es/resources/access-control-when-offline/" hreflang="es" lang="es">Español</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/uk/resources/access-control-when-offline/" hreflang="uk" lang="uk" aria-current="true">Українська</a>
+            </li>
+        </ul>
+                        </div>
+                    </details>
+                </div>
+                <details class="mobile-nav" data-spk-mobile-menu="">
+                    <summary>Меню</summary>
+                    <nav class="mobile-panel" aria-label="Мобільна навігація">
+                        <div class="mobile-group">
+                            <p class="mobile-title">Платформа</p>
+                            <ul>
+                                <li>
+                                    <a href="/smartphonekey-site-v2/uk/platform/">Огляд</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/platform/access-management/">Керування доступом</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/platform/automation/">Автоматизація</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/platform/visitor-access/">Доступ відвідувачів</a>
+                                </li>
+                            </ul>
+                        </div><div class="mobile-group">
+                            <p class="mobile-title">Рішення</p>
+                            <ul>
+                                <li>
+                                    <a href="/smartphonekey-site-v2/uk/solutions/property-managers/">Керуючі компанії</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/solutions/integrators/">Інтегратори</a>
+                                </li>
+                            </ul>
+                        </div><div class="mobile-group">
+                            <p class="mobile-title">Продукти</p>
+                            <ul>
+                                <li>
+                                    <a href="/smartphonekey-site-v2/uk/products/readers/">Зчитувачі</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/compatibility/">Сумісність</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/certifications/">Сертифікати</a>
+                                </li>
+                            </ul>
+                        </div><div class="mobile-group">
+                            <p class="mobile-title">Ресурси</p>
+                            <ul>
+                                <li>
+                                    <a href="/smartphonekey-site-v2/uk/resources/#guides">Посібники</a>
+                                </li><li>
+                                    <a href="https://spkey.odoo.com/guide-for-usage-and-installation?lang=uk">Інструкції</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/resources/#insights">Статті</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/security/">Безпека і довіра</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="mobile-actions">
+                            <li><a href="/smartphonekey-site-v2/uk/find-your-setup/">Підібрати конфігурацію</a></li>
+                            <li><a href="https://spkey.odoo.com/guide-for-usage-and-installation?lang=uk">Інструкції</a></li>
+                            <li><a href="https://spkey.odoo.com/adminpanel">Admin Panel</a></li>
+                        </ul>
+                        <div class="mobile-group mobile-langs">
+                            <p class="mobile-title">Мова</p>
+        <ul class="lang-list">
+            <li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/resources/access-control-when-offline/" hreflang="en" lang="en">English</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/fr/resources/access-control-when-offline/" hreflang="fr" lang="fr">Français</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/de/resources/access-control-when-offline/" hreflang="de" lang="de">Deutsch</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/es/resources/access-control-when-offline/" hreflang="es" lang="es">Español</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/uk/resources/access-control-when-offline/" hreflang="uk" lang="uk" aria-current="true">Українська</a>
+            </li>
+        </ul>
+                        </div>
+                    </nav>
+                </details>
+            </div>
+        </header>
+            <main id="main" tabindex="-1">
+                
+            <article class="container spk-document" aria-labelledby="article-title">
+                <div class="page-intro">
+        <nav class="breadcrumb" aria-label="Навігаційний ланцюжок">
+            <ol>
+                <li>
+                    <a href="/smartphonekey-site-v2/uk/">Головна</a>
+                </li><li>
+                    <a href="/smartphonekey-site-v2/uk/resources/">Ресурси</a>
+                </li><li>
+                    <span aria-current="page">Що відбувається, коли зчитувач переходить в офлайн-режим?</span>
+                </li>
+            </ol>
+        </nav>
+                    <h1 id="article-title">Що відбувається, коли зчитувач переходить в офлайн-режим?</h1>
+                    <div class="meta">
+                            <p>Автор: продуктова команда SmartphoneKey</p>
+                            <p>Опубліковано 27 жовтня 2026</p>
+                            <p>Факти про продукт перевірено 26 жовтня 2026</p>
+                    </div>
+                    <p class="lead answer">Розрізняйте локальний доступ і віддалені зміни. У задокументованому процесі керування SmartphoneKey деякі зміни ключів можуть чекати в черзі, доки зчитувач знову не підключиться. Зміна, що очікує, не є доказом того, що вона дійшла до зчитувача; поведінка локального доступу залежить від його конфігурації. Перевірте статус доставки, перш ніж покладатися на зміну, особливо на відкликання.</p>
+                </div>
+                <nav class="contents" aria-label="На цій сторінці">
+                    <p class="contents-title">На цій сторінці</p>
+                    <ul>
+                        <li><a href="#states">Чотири стани зміни</a></li><li><a href="#revocation">Що це означає для відкликання</a></li><li><a href="#checks">Що має перевірити оператор</a></li><li><a href="#local">Локальний доступ та інші сервіси</a></li><li><a href="#recovery">Відновлення та підтримка</a></li>
+                    </ul>
+                </nav>
+                <div class="spk-prose"><div>
+                    <h2 id="states">Чотири стани зміни</h2>
+                    <div class="spk-table" role="region" tabindex="0" aria-label="Стани зміни ключа"><table>
+                        <caption>Стани зміни ключа</caption>
+                        <thead>
+                            <tr><th scope="col">Стан</th><th scope="col">Що це означає</th><th scope="col">Що робити</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><th scope="row">Запитано</th><td>Зміну внесено в Admin Panel.</td><td>Стежте за статусом доставки.</td></tr>
+                            <tr><th scope="row">Очікує доставки</th><td>Зміна очікує, доки зчитувач знову підключиться. На зчитувачі її ще немає.</td><td>Вважайте, що попередній доступ на цьому зчитувачі все ще можливий.</td></tr>
+                            <tr><th scope="row">Підтверджено зчитувачем</th><td>Зчитувач повідомив, що застосував зміну.</td><td>Для роз­б­ло­ку­ва­ння це означає, що зчитувач виконав дію. Це не доводить, що людина пройшла чи що двері відчинилися.</td></tr>
+                            <tr><th scope="row">Помилка або не підтверджено</th><td>Зчитувач повідомив про помилку або під­т­ве­р­дже­ння не надійшло.</td><td>Перевірте зчитувач і його підключення, потім повторіть спробу або передайте питання на вищий рівень.</td></tr>
+                        </tbody>
+                    </table>
+                    </div><p>Не кожен тип операцій очікує в черзі: для деяких потрібно, щоб зчитувач був онлайн у момент їх виконання.</p>
+                    <h2 id="revocation">Що це означає для відкликання</h2>
+                    <p>Відкликання, виконане, коли зчитувач офлайн, перебуває в очікуванні й не засто­со­ву­є­ться. Доки зчитувач знову не підключиться й не підтвердить зміну, іде­н­ти­фі­ка­тор доступу може й далі працювати на цьому зчитувачі. Якщо доступ потрібно припинити негайно, відновіть з'єднання зчитувача, стежте за під­т­ве­р­дже­н­ням, а тим часом дотримуйтеся власних процедур вашого об'єкта.</p>
+                    <h2 id="checks">Що має перевірити оператор</h2>
+                    <ul>
+                        <li>Статус з'єднання зчитувача.</li>
+                        <li>Операції, що очікують, для цієї людини та відповідних дверей.</li>
+                        <li>Під­т­ве­р­дже­ння, щойно зчитувач знову буде онлайн.</li>
+                        <li>Сповіщення пристроїв, якщо ви налаштували їх для своєї роботи.</li>
+                    </ul>
+                    <h2 id="local">Локальний доступ та інші сервіси</h2>
+                    <p>Чи продовжує іде­н­ти­фі­ка­тор доступу працювати локально під час перебою зв'язку, залежить від пристрою та його конфігурації. Інші сервіси залежать від зв'язку по-своєму: QR-домофон, відео, AI Concierge і надання іде­н­ти­фі­ка­то­рів доступу поводяться під час перебою по-різному, тож перевірте кожен, на який ви покладаєтеся.</p>
+                    <h2 id="recovery">Відновлення та підтримка</h2>
+                    <p>Коли зчитувач знову під­к­лю­ча­є­ться, зміни з черги доста­в­ля­ю­ться, а їхній статус оновлюється. Якщо зміна залишається непі­д­т­ве­р­дже­ною, зверніться до служби підтримки, указавши дані об'єкта та зчитувача. Будь ласка, не надсилайте паролі, коди доступу чи іде­н­ти­фі­ка­тори доступу електронною поштою.</p>
+                </div>
+            </div>
+            </article>
+
+        <nav class="section container related" aria-labelledby="related-title">
+            <h2 id="related-title" class="related-title">Пов'язані сторінки</h2>
+            <ul class="next-links">
+                
+                <li><a href="/smartphonekey-site-v2/uk/platform/access-management/">Керування доступом</a></li><li><a href="/smartphonekey-site-v2/uk/security/">Безпека і довіра</a></li><li><a href="/smartphonekey-site-v2/uk/products/readers/">Зчитувачі</a></li>
+            
+            </ul>
+        </nav>
+
+        <section class="section container next-steps" aria-labelledby="next-title">
+            <h2 id="next-title">Сплануйте наступний крок.</h2>
+            <p>Пройдіть чек-лист планування самостійно або поставте свої запитання команді.</p>
+            <div class="next-actions">
+                
+                <a href="/smartphonekey-site-v2/uk/find-your-setup/">Підібрати конфігурацію</a>
+                <a href="/smartphonekey-site-v2/uk/compatibility/">Перевірити сумісність</a>
+                <a href="/smartphonekey-site-v2/uk/contact/?interest=project">Обговорити проєкт</a>
+            
+            </div>
+        </section>
+        
+            </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <p class="footer-name">SmartphoneKey</p>
+                        <p>Ваш ключ до контролю доступу.</p>
+                        <p class="muted">Керуйте об'єктами, людьми, іде­н­ти­фі­ка­то­рами доступу та підключеними пристроями.</p>
+                        <p><a href="mailto:info@smartphonekey.com">info@smartphonekey.com</a></p>
+                        <p><a href="https://spkey.odoo.com/adminpanel">Admin Panel</a></p>
+                    </div>
+                    <nav class="footer-nav" aria-label="Нижня навігація">
+                        <div>
+                            <p class="footer-title">Платформа</p>
+                            <ul>
+                                <li>
+                                    <a href="/smartphonekey-site-v2/uk/platform/">Огляд</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/platform/access-management/">Керування доступом</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/platform/automation/">Автоматизація</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/platform/visitor-access/">Доступ відвідувачів</a>
+                                </li>
+                            </ul>
+                        </div><div>
+                            <p class="footer-title">Продукти</p>
+                            <ul>
+                                <li>
+                                    <a href="/smartphonekey-site-v2/uk/products/readers/">Зчитувачі</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/compatibility/">Сумісність</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/certifications/">Сертифікати</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/apps-and-chatbot/">Застосунки</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/find-your-setup/">Підібрати конфігурацію</a>
+                                </li>
+                            </ul>
+                        </div><div>
+                            <p class="footer-title">Інструкції</p>
+                            <ul>
+                                <li>
+                                    <a href="https://spkey.odoo.com/guide-for-usage-and-installation?lang=uk">Інструкція з монтажу та підключення</a>
+                                </li><li>
+                                    <a href="https://spkey.odoo.com/instructions/admin-guide?lang=uk">Посібник користувача Admin Panel</a>
+                                </li><li>
+                                    <a href="https://spkey.odoo.com/instructions/admin-panel?lang=uk">Огляд-демонстрація Admin Panel</a>
+                                </li><li>
+                                    <a href="https://spkey.odoo.com/instructions/mobile-app-guide?lang=uk">Посібник користувача мобільного застосунку</a>
+                                </li><li>
+                                    <a href="https://spkey.odoo.com/instructions/mobile-app?lang=uk">Огляд-демонстрація мобільного застосунку</a>
+                                </li>
+                            </ul>
+                        </div><div>
+                            <p class="footer-title">Ресурси</p>
+                            <ul>
+                                <li>
+                                    <a href="/smartphonekey-site-v2/uk/resources/#guides">Посібники</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/solutions/property-managers/">Керуючі компанії</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/solutions/integrators/">Інтегратори</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/security/">Безпека і довіра</a>
+                                </li>
+                            </ul>
+                        </div><div>
+                            <p class="footer-title">Компанія</p>
+                            <ul>
+                                <li>
+                                    <a href="/smartphonekey-site-v2/uk/about/">Про нас</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/contact/">Контакти</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/contact/?interest=partner">Стати партнером</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/privacy-policy/">Політика конфіденційності</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/uk/terms-of-service/">Умови надання послуг</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <nav class="footer-langs" aria-label="Мова">
+        <ul class="lang-list">
+            <li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/resources/access-control-when-offline/" hreflang="en" lang="en">English</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/fr/resources/access-control-when-offline/" hreflang="fr" lang="fr">Français</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/de/resources/access-control-when-offline/" hreflang="de" lang="de">Deutsch</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/es/resources/access-control-when-offline/" hreflang="es" lang="es">Español</a>
+            </li><li>
+                <a data-no-post-process="1" href="/smartphonekey-site-v2/uk/resources/access-control-when-offline/" hreflang="uk" lang="uk" aria-current="true">Українська</a>
+            </li>
+        </ul>
+                </nav>
+            </div>
+        </footer>
+        
+    </body>
+</html>

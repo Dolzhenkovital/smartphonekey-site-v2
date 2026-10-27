@@ -1,17 +1,26 @@
 # -*- coding: utf-8 -*-
 """Rendering helpers shared by the controllers and the 404 handler: the
-values every 2.0 page gets (navigation, metadata, canonical URL, structured
-data, preview flags) and the switches that control the site."""
+values every 2.0 page gets (navigation, metadata, canonical URL, languages,
+structured data, preview flags) and the switches that control the site.
+
+Languages: Odoo's website routing puts the visitor's language in the URL
+(/fr/..., /de/..., /es/..., /uk/...) and in ``request.lang``. Template text and
+the translatable fields of the content records come from the module's .po
+files the usual way; the English strings of site_content.py are translated
+here, from the same .po files (Python code terms).
+"""
 
 import json
 from types import SimpleNamespace
 
+from babel.dates import format_date
 from lxml import etree, html as lxml_html
 from markupsafe import Markup
 
 from odoo.http import request
 from odoo.modules.module import get_manifest
 from odoo.tools import str2bool
+from odoo.tools.translate import code_translations
 
 from odoo.addons.spk_website.controllers.main import _template_values as baseline_template_values
 
@@ -19,6 +28,9 @@ from . import site_content as content
 
 # The site data as templates see it: QWeb refuses a module in its context.
 SITE_DATA = SimpleNamespace(**{name: value for name, value in vars(content).items() if name.isupper()})
+LANGS = {odoo_code: (url_code, odoo_code, name) for url_code, odoo_code, name in content.SITE_LANGS}
+DEFAULT = LANGS["en_US"]
+SOFT_HYPHEN = "\u00ad"  # the translations break long words at it (tools/i18n_soft_hyphens.py)
 
 # Rollback switch: "False" hands every URL back to the AP-428 site. Stored as
 # text and on when missing, like the baseline's homepage switch (a parameter
@@ -60,9 +72,56 @@ def booking_url(env):
     return False
 
 
-def format_day(value):
-    """26 October 2026: the date style the pages use."""
-    return "%d %s" % (value.day, value.strftime("%B %Y")) if value else ""
+# --- Languages ----------------------------------------------------------------
+
+def current_lang():
+    """``((url code, Odoo code, name), supported)`` for this request. A website
+    language the 2.0 site has no copy for shows the English text, noindex."""
+    lang = getattr(request, "lang", None)
+    code = lang.code if lang else (request.env.lang or "en_US")
+    return LANGS.get(code, DEFAULT), code in LANGS
+
+
+def translator(odoo_code):
+    """``t(text, **kw)``: a site_content string in the language ``odoo_code``."""
+    catalogue = {} if odoo_code == "en_US" else code_translations.get_python_translations("spk_website_v2", odoo_code)
+
+    def t(text, **kwargs):
+        value = catalogue.get(text) or text
+        return value % kwargs if kwargs else value
+    return t
+
+
+def localized_data(t):
+    """SITE_DATA with every label the pages show in the visitor's language."""
+    data = dict(vars(SITE_DATA))
+    for name in ("ENQUIRY_TYPES", "ROLES", "SITES", "DOORS", "CONNECTIONS", "INTERESTS", "HOME_SITE_CHOICES",
+                 "SETUP_ROLES", "SETUP_INTERESTS"):
+        data[name] = tuple((key, t(label)) for key, label in getattr(content, name))
+    for name in ("HOME_SITE_COPY", "HOME_CONNECTION_COPY", "SETUP_CONNECTION_ADVICE"):
+        data[name] = {key: t(text) for key, text in getattr(content, name).items()}
+    data["INSTRUCTION_PATHS"] = {path: t(label) for path, label in content.INSTRUCTION_PATHS.items()}
+    return SimpleNamespace(**data)
+
+
+def switch_url(path, code):
+    """The switcher's link. English goes through /en/...: Odoo answers it with a
+    redirect to the plain URL and resets the remembered language, which a plain
+    URL would otherwise send back to the visitor's last language."""
+    if code == content.DEFAULT_LANG:
+        return "/" + code + ("" if path == "/" else path)
+    return content.lang_url(path, code)
+
+
+def localized_menu(menu, t):
+    return tuple((t(group), tuple((t(label), path) for label, path in links)) for group, links in menu)
+
+
+def day_formatter(odoo_code):
+    """26 October 2026, 26 octobre 2026, 26 жовтня 2026 ..."""
+    def format_day(value):
+        return format_date(value, format="d MMMM y", locale=odoo_code) if value else ""
+    return format_day
 
 
 def json_for_script(data):
@@ -71,19 +130,18 @@ def json_for_script(data):
     return Markup(text.replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026"))
 
 
-def crumbs_for(path, route):
+def crumbs_for(path, route, t):
     if path == "/":
         return []
-    trail = [("Home", "/")]
+    trail = [(t("Home"), "/")]
     for parent in route.get("crumbs", ()):
-        trail.append((content.ROUTES[parent]["label"], parent))
+        trail.append((t(content.ROUTES[parent]["label"]), parent))
     trail.append((route["label"], path))
     return trail
 
 
-def structured_data(path, route, crumbs, article=None):
+def structured_data(page_url, route, crumbs, url_code, article=None):
     """The page's JSON-LD graph, built from the same values the page shows."""
-    canonical = content.canonical_url(path)
     page_types = {"home": "WebPage", "collection": "CollectionPage", "contact": "ContactPage", "about": "AboutPage"}
     graph = []
     if route.get("kind") == "home":
@@ -101,27 +159,28 @@ def structured_data(path, route, crumbs, article=None):
             "@id": content.WEBSITE_ID,
             "url": content.ORIGIN + "/",
             "name": "SmartphoneKey",
-            "inLanguage": "en",
+            "inLanguage": [lang[0] for lang in content.SITE_LANGS],
             "publisher": {"@id": content.ORGANIZATION_ID},
         })
     page = {
         "@type": page_types.get(route.get("kind"), "WebPage"),
-        "@id": canonical + "#webpage",
-        "url": canonical,
+        "@id": page_url + "#webpage",
+        "url": page_url,
         "name": route["title"],
         "description": route["description"],
-        "inLanguage": "en",
+        "inLanguage": url_code,
         "isPartOf": {"@id": content.WEBSITE_ID},
     }
     if crumbs:
-        page["breadcrumb"] = {"@id": canonical + "#breadcrumb"}
+        page["breadcrumb"] = {"@id": page_url + "#breadcrumb"}
     graph.append(page)
     if crumbs:
         graph.append({
             "@type": "BreadcrumbList",
-            "@id": canonical + "#breadcrumb",
+            "@id": page_url + "#breadcrumb",
             "itemListElement": [
-                {"@type": "ListItem", "position": index, "name": label, "item": content.canonical_url(crumb_path)}
+                {"@type": "ListItem", "position": index, "name": label,
+                 "item": content.ORIGIN + content.lang_url(crumb_path, url_code)}
                 for index, (label, crumb_path) in enumerate(crumbs, start=1)
             ],
         })
@@ -130,15 +189,15 @@ def structured_data(path, route, crumbs, article=None):
                   else {"@type": "Organization", "name": article["author_name"], "url": content.ORIGIN + "/about"})
         node = {
             "@type": "Article",
-            "@id": canonical + "#article",
-            "headline": article["name"],
+            "@id": page_url + "#article",
+            "headline": article["name"].replace(SOFT_HYPHEN, ""),  # no soft hyphens in data
             "description": article["description"],
             "datePublished": article["published_on"].isoformat(),
             "dateModified": (article["modified_on"] or article["published_on"]).isoformat(),
             "author": author,
             "publisher": {"@id": content.ORGANIZATION_ID},
-            "mainEntityOfPage": {"@id": canonical + "#webpage"},
-            "inLanguage": "en",
+            "mainEntityOfPage": {"@id": page_url + "#webpage"},
+            "inLanguage": "en" if article["kind"] == "post" else url_code,
         }
         if article.get("hero_image"):
             node["image"] = content.ORIGIN + article["hero_image"]
@@ -188,40 +247,63 @@ def prepare_body(body):
     return Markup((fragment.text or "") + inner), contents
 
 
-def page_values(path, route=None, article=None, **extra):
-    """Everything layout.xml needs, plus the page's own values."""
+def page_values(path, route=None, article=None, english_only=False, **extra):
+    """Everything layout.xml needs, plus the page's own values.
+
+    ``english_only``: a page kept in English in every language (legal text,
+    archived articles). Its canonical URL is the English one, without
+    language alternates."""
     env = request.env
+    (url_code, odoo_code, _name), supported = current_lang()
+    t = translator(odoo_code)
     route = route or content.ROUTES[path]
-    crumbs = crumbs_for(path, route)
-    noindex = (not route.get("index", True)) or is_noindex_environment(env)
+    route = dict(route, title=t(route["title"]), description=t(route["description"]), label=t(route["label"]))
+    english_only = english_only or path in content.ENGLISH_ONLY
+    crumbs = crumbs_for(path, route, t)
+    noindex = (not route.get("index", True)) or is_noindex_environment(env) or not supported
+    localized = not english_only and supported
+    page_url = content.ORIGIN + (content.lang_url(path, url_code) if localized else path)
+    alternates = []
+    if localized and not noindex:
+        alternates = [(code, content.ORIGIN + content.lang_url(path, code)) for code, _odoo, _n in content.SITE_LANGS]
+        alternates.append(("x-default", content.ORIGIN + path))
     image = route.get("image") or content.OG_IMAGE
     values = baseline_template_values()
     values.update({
-        "content": SITE_DATA,
+        "content": localized_data(t),
+        "t": t,
         "page_path": path,
         "route": route,
         "title": route["title"],
         "page_description": route["description"],
-        "canonical": content.canonical_url(path),
+        "canonical": page_url,
+        "alternates": alternates,
+        "lang_code": url_code,
+        "og_locale": content.OG_LOCALES[url_code],
+        "lang_switch": [(name, switch_url(path, code), code, code == url_code)
+                        for code, _odoo, name in content.SITE_LANGS],
+        "current_lang_name": LANGS[odoo_code][2] if supported else DEFAULT[2],
+        "english_only": english_only and url_code != content.DEFAULT_LANG,
         "robots": "noindex, nofollow" if noindex else False,
         "og_image": dict(image, url=content.ORIGIN + image["path"]),
         "crumbs": crumbs,
-        "jsonld": structured_data(path, route, crumbs, article=article),
-        "nav": content.NAV,
-        "footer_nav": content.FOOTER,
-        "cta": content.CTA,
+        "jsonld": structured_data(page_url, route, crumbs, url_code if localized else "en", article=article),
+        "nav": localized_menu(content.NAV, t),
+        "footer_nav": localized_menu(content.FOOTER, t),
         "preview_mode": is_preview(env),
         "contact_email": content.CONTACT_EMAIL,
         "v2_asset_version": get_manifest("spk_website_v2").get("version", ""),
         "nav_current": content.route_path(path),
-        "format_day": format_day,
+        "format_day": day_formatter(odoo_code),
     })
     values.update(extra)
     return values
 
 
-def render_page(path, route=None, status=200, article=None, **extra):
-    values = page_values(path, route=route, article=article, **extra)
-    headers = [("X-Robots-Tag", "noindex, nofollow")] if values["robots"] else []
+def render_page(path, route=None, status=200, article=None, english_only=False, **extra):
+    values = page_values(path, route=route, article=article, english_only=english_only, **extra)
+    headers = [("Content-Language", values["lang_code"])]
+    if values["robots"]:
+        headers.append(("X-Robots-Tag", "noindex, nofollow"))
     return request.render(route["template"] if route else content.ROUTES[path]["template"], values,
                           status=status, headers=headers)

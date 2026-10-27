@@ -47,6 +47,14 @@ python tools/check_static.py preview --base /smartphonekey-site-v2
 
 Commit `preview/`; the Pages workflow publishes it.
 
+## Languages
+
+English (default, at the root), French, German, Spanish and Ukrainian, as Odoo website languages: `/fr/…`, `/de/…`, `/es/…`, `/uk/…`. The module activates them on install and adds them to every website. Each page has its own canonical URL and `hreflang` alternates; nothing is chosen by IP address (Odoo only remembers a language the visitor picked).
+
+* Page text, guides, compatibility rows and team roles are translated through `addons/spk_website_v2/i18n/*.po` (the `.pot` is Odoo's own export plus the strings of `site_content.py`).
+* Kept in English in every language, with a visible note: the privacy policy and terms (a legal translation needs review), the archived blog articles and the team biographies. Their canonical URL is the English one.
+* After changing copy: export a new `.pot` from a test database (`odoo -d <db> --i18n-export=spk_website_v2.pot --modules=spk_website_v2`), run `python tools/i18n_build.py --pot <file> --addon addons/spk_website_v2`, translate the new empty entries, and run the tests (`test_every_site_string_is_translated` fails on a missing string).
+
 ## Settings the addon reads
 
 | System parameter | Default | Effect |
