@@ -16,7 +16,7 @@
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <meta name="description" t-att-content="page_description"/>
                 <meta t-if="robots" name="robots" t-att-content="robots"/>
-                <link rel="canonical" t-att-href="canonical"/>
+                <link t-if="canonical" rel="canonical" t-att-href="canonical"/>
                 <link t-foreach="alternates" t-as="alternate" rel="alternate" t-att-hreflang="alternate[0]" t-att-href="alternate[1]"/>
                 <link rel="apple-touch-icon" href="/spk_website_v2/static/src/img/apple-touch-icon.png"/>
                 <meta property="og:type" t-att-content="'article' if route.get('kind') == 'article' else 'website'"/>
@@ -24,32 +24,29 @@
                 <meta property="og:locale" t-att-content="og_locale"/>
                 <meta property="og:title" t-att-content="title"/>
                 <meta property="og:description" t-att-content="page_description"/>
-                <meta property="og:url" t-att-content="canonical"/>
+                <meta t-if="canonical" property="og:url" t-att-content="canonical"/>
                 <meta property="og:image" t-att-content="og_image['url']"/>
                 <meta property="og:image:width" t-att-content="og_image['width']"/>
                 <meta property="og:image:height" t-att-content="og_image['height']"/>
                 <meta property="og:image:alt" t-att-content="og_image['alt']"/>
                 <meta name="twitter:card" content="summary_large_image"/>
-                <!-- General Sans (ITF Free Font License) from Fontshare, as in the design
-                     reference. It has no Cyrillic, so Ukrainian pages use the system sans
-                     (see the font token in site.scss). -->
-                <t t-if="lang_code != 'uk'">
-                    <link rel="preconnect" href="https://api.fontshare.com" crossorigin=""/>
-                    <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&amp;display=swap"/>
-                </t>
+                <!-- Manrope (SIL OFL 1.1) is self-hosted from static/src/fonts and declared in site.scss; the
+                     Latin subset (and the Cyrillic one on Ukrainian pages) is fetched early. -->
+                <link rel="preload" as="font" type="font/woff2" crossorigin="" href="/spk_website_v2/static/src/fonts/manrope-latin-wght-normal.woff2"/>
+                <link t-if="lang_code == 'uk'" rel="preload" as="font" type="font/woff2" crossorigin="" href="/spk_website_v2/static/src/fonts/manrope-cyrillic-wght-normal.woff2"/>
                 <t t-call-assets="spk_website_v2.assets_site" t-js="false"/>
-                <script type="application/ld+json" t-out="jsonld"/>
+                <script t-if="jsonld" type="application/ld+json" t-out="jsonld"/>
                 <script t-attf-src="/spk_website_v2/static/src/js/navigation.js?v=#{v2_asset_version}" defer="defer"/>
                 <t t-out="page_scripts or ''"/>
             </t>
             <a class="skip" href="#main">Skip to content</a>
             <p t-if="preview_mode" class="preview-banner" role="note">
-                Test preview of SmartphoneKey website 2.0. This is not the live site, and nothing entered here is sent or stored.
+                Test preview of the new SmartphoneKey website. This is not the live site, and nothing you enter here is sent or stored.
             </p>
             <t t-call="spk_website_v2.header"/>
             <main id="main" tabindex="-1">
                 <div t-if="english_only" class="container">
-                    <p class="note english-only">This page is available in English only.</p>
+                    <p class="note english-only">This page is in English. A reviewed translation is not available.</p>
                 </div>
                 <t t-out="0"/>
             </main>
@@ -59,7 +56,7 @@
 
     <!-- The language switcher: every language copy of the current page. -->
     <template id="language_links" name="SmartphoneKey 2.0: language links">
-        <ul class="lang-list">
+        <ul class="lang-list" role="list">
             <li t-foreach="lang_switch" t-as="option">
                 <a t-att-href="option[1]" t-att-hreflang="option[2]" t-att-lang="option[2]" data-no-post-process="1"
                    t-att-aria-current="'true' if option[3] else None" t-out="option[0]"/>
@@ -69,17 +66,33 @@
 
     <template id="header" name="SmartphoneKey 2.0: header">
         <header class="site-header">
-            <div class="container header-inner">
+            <!-- Utility row: where existing users go, and the language switcher. -->
+            <div class="header-utility">
+                <div class="container utility-inner">
+                    <div class="header-actions">
+                        <span class="utility-label">Already using SmartphoneKey?</span>
+                        <a t-att-href="content.INSTALLATION_GUIDE">Instructions</a>
+                        <a href="/adminpanel">Admin Panel</a>
+                    </div>
+                    <details class="menu-group lang-switch" data-spk-menu="">
+                        <summary><span class="visually-hidden">Language: </span><t t-out="current_lang_name"/></summary>
+                        <div class="menu-panel lang-panel">
+                            <t t-call="spk_website_v2.language_links"/>
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <div class="container header-bar">
                 <a class="brand" href="/">
-                    <img src="/spk_website_v2/static/src/img/brand-mark.png" width="32" height="32" alt=""/>
+                    <img src="/spk_website_v2/static/src/img/brand-mark.png" width="32" height="32" loading="eager" alt=""/>
                     <span>SmartphoneKey</span>
                 </a>
                 <nav class="desktop-nav" aria-label="Main">
-                    <ul class="menu">
+                    <ul class="menu" role="list">
                         <li t-foreach="nav" t-as="group">
                             <details class="menu-group" data-spk-menu="">
                                 <summary t-out="group[0]"/>
-                                <ul class="menu-panel">
+                                <ul class="menu-panel" role="list">
                                     <li t-foreach="group[1]" t-as="link">
                                         <a t-att-href="link[1]" t-att-aria-current="'page' if link[1] == nav_current else None" t-out="link[0]"/>
                                     </li>
@@ -88,33 +101,26 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="header-actions">
-                    <a t-att-href="content.INSTALLATION_GUIDE">Instructions</a>
-                    <a href="/adminpanel">Admin Panel</a>
-                    <a href="/find-your-setup" class="header-action" t-att-aria-current="'page' if nav_current == '/find-your-setup' else None">Find your setup</a>
-                    <details class="menu-group lang-switch" data-spk-menu="">
-                        <summary><span class="visually-hidden">Language: </span><t t-out="current_lang_name"/></summary>
-                        <div class="menu-panel lang-panel">
-                            <t t-call="spk_website_v2.language_links"/>
-                        </div>
-                    </details>
-                </div>
+                <a href="/find-your-setup" class="button-outline header-action" t-att-aria-current="'page' if nav_current == '/find-your-setup' else None" t-out="t(content.CTA['setup'][0])"/>
                 <details class="mobile-nav" data-spk-mobile-menu="">
                     <summary>Menu</summary>
                     <nav class="mobile-panel" aria-label="Mobile">
+                        <a href="/find-your-setup" class="button" t-att-aria-current="'page' if nav_current == '/find-your-setup' else None" t-out="t(content.CTA['setup'][0])"/>
+                        <div class="mobile-group mobile-existing">
+                            <p class="mobile-title">Already using SmartphoneKey?</p>
+                            <ul role="list">
+                                <li><a t-att-href="content.INSTALLATION_GUIDE">Instructions</a></li>
+                                <li><a href="/adminpanel">Admin Panel</a></li>
+                            </ul>
+                        </div>
                         <div t-foreach="nav" t-as="group" class="mobile-group">
                             <p class="mobile-title" t-out="group[0]"/>
-                            <ul>
+                            <ul role="list">
                                 <li t-foreach="group[1]" t-as="link">
                                     <a t-att-href="link[1]" t-att-aria-current="'page' if link[1] == nav_current else None" t-out="link[0]"/>
                                 </li>
                             </ul>
                         </div>
-                        <ul class="mobile-actions">
-                            <li><a href="/find-your-setup">Find your setup</a></li>
-                            <li><a t-att-href="content.INSTALLATION_GUIDE">Instructions</a></li>
-                            <li><a href="/adminpanel">Admin Panel</a></li>
-                        </ul>
                         <div class="mobile-group mobile-langs">
                             <p class="mobile-title">Language</p>
                             <t t-call="spk_website_v2.language_links"/>
@@ -132,14 +138,14 @@
                     <div class="footer-brand">
                         <p class="footer-name">SmartphoneKey</p>
                         <p>Your key to access control.</p>
-                        <p class="muted">Manage sites, people, credentials and connected devices.</p>
+                        <p class="muted">Manage access, digital keys, cards and readers across your sites.</p>
                         <p><a t-attf-href="mailto:#{contact_email}" t-out="contact_email"/></p>
                         <p><a href="/adminpanel">Admin Panel</a></p>
                     </div>
                     <nav class="footer-nav" aria-label="Footer">
                         <div t-foreach="footer_nav" t-as="group">
                             <p class="footer-title" t-out="group[0]"/>
-                            <ul>
+                            <ul role="list">
                                 <li t-foreach="group[1]" t-as="link">
                                     <a t-att-href="link[1]" t-out="link[0]"/>
                                 </li>
@@ -154,13 +160,21 @@
         </footer>
     </template>
 
-    <!-- The compact opening of every page below the home page. -->
+    <!-- The opening of every page below the home page: breadcrumb, H1, lead, then the
+         page's own actions (the body). A page with evidence (a product image, a status
+         illustration) sets it as ``evidence``; it sits beside the copy at desktop widths
+         and after the actions on phones. ``actions`` is an optional action row (one filled
+         button at most, then text links) rendered after the lead. -->
     <template id="page_intro" name="SmartphoneKey 2.0: page intro">
-        <div class="page-intro">
+        <div t-attf-class="page-opening#{' has-evidence' if evidence else ''}">
             <t t-call="spk_website_v2.breadcrumbs"/>
-            <h1 t-out="heading"/>
-            <p t-if="intro" class="lead" t-out="intro"/>
-            <t t-out="0"/>
+            <div class="opening-copy">
+                <h1 t-out="heading"/>
+                <p t-if="intro" class="lead" t-out="intro"/>
+                <div t-if="actions" class="actions" t-out="actions"/>
+                <t t-out="0"/>
+            </div>
+            <div t-if="evidence" class="opening-evidence" t-out="evidence"/>
         </div>
     </template>
 

@@ -1,111 +1,220 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <!-- The home page: the seven sections of DESIGN.md, in order, with the copy of
-         design-reference.html. The setup tool is the page's signature: useful
-         guidance before any conversation, no email and no submission. -->
+    <!-- The home page (copy deck rev. 2.2, DESIGN.md "Home opening"): a hero with the
+         reader panel and the three-part system strip, the everyday tasks, keys, cards and
+         visitors, events and status, readers, additional capabilities, the audience paths
+         and the compact recommendations tool with the next-step links. -->
     <template id="page_home" name="SmartphoneKey 2.0: home">
+        <!-- The hero image is eager on purpose (the largest image of the first screen); loading="eager" is
+             written out so that Odoo's post-processing does not add loading="lazy". -->
         <t t-call="spk_website_v2.layout">
             <t t-set="page_scripts">
                 <script type="application/json" id="spk-setup-rules" t-out="setup_rules"/>
                 <script t-attf-src="/spk_website_v2/static/src/js/setup_guide.js?v=#{v2_asset_version}" defer="defer"/>
             </t>
 
-            <section class="container hero" aria-labelledby="hero-title">
-                <div class="intro-copy">
-                    <h1 id="hero-title">Your key to access control.</h1>
-                    <p class="lead">Manage sites, people and connected devices through one access control platform.</p>
+            <section class="container hero-opening" aria-labelledby="hero-title">
+                <div class="hero-copy">
+                    <p class="kicker">Access management platform for buildings</p>
+                    <h1 id="hero-title">Manage access across your properties in one place</h1>
+                    <p class="lead">Give residents, staff and contractors access to the doors they need. Manage cards and digital keys, review events and check reader status in SmartphoneKey.</p>
                     <div class="actions">
                         <a class="button" href="/platform">Explore the platform</a>
-                        <a class="text-link" href="/products/readers">Compare readers</a>
+                        <a class="text-link" href="/contact?interest=project">Discuss your project</a>
                     </div>
                 </div>
-                <form class="setup" id="setup" action="/find-your-setup" method="get" aria-labelledby="setup-title" data-spk-home-setup="">
-                    <h2 id="setup-title">Find your setup</h2>
-                    <div>
-                        <label for="site-type">What do you manage?</label>
-                        <select id="site-type" name="site">
-                            <option t-foreach="content.HOME_SITE_CHOICES" t-as="choice" t-att-value="choice[0]" t-out="choice[1]"/>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="connection">Available connection</label>
-                        <select id="connection" name="connection">
-                            <option t-foreach="content.CONNECTIONS" t-as="choice" t-att-value="choice[0]" t-out="choice[1]"/>
-                        </select>
-                    </div>
-                    <output for="site-type connection" id="setup-result" aria-live="polite"><t t-out="content.HOME_CONNECTION_COPY['wifi']"/> <t t-out="content.HOME_SITE_COPY['property']"/></output>
-                    <div class="setup-links">
-                        <button type="submit" class="link-button">Open the full setup guide</button>
-                        <a href="/products/readers">Review reader options</a>
-                    </div>
-                    <noscript><p>For cellular connectivity, review LTE coverage and SIM provisioning. No account is needed to read the options below.</p></noscript>
-                </form>
+                <figure class="photo-panel">
+                    <img src="/spk_website_v2/static/src/img/reader-cutout-560.webp"
+                         srcset="/spk_website_v2/static/src/img/reader-cutout-560.webp 270w, /spk_website_v2/static/src/img/reader-cutout-1120.webp 540w"
+                         sizes="(max-width: 640px) 135px, 183px" width="270" height="560" loading="eager" fetchpriority="high" decoding="async"
+                         alt="SmartphoneKey reader: a black unit with the SmartphoneKey logo and a phone-with-key symbol on the front"/>
+                    <figcaption class="photo-caption">SmartphoneKey reader</figcaption>
+                </figure>
+                <ol class="system-strip" role="list" aria-label="How SmartphoneKey fits together">
+                    <li>
+                        <p class="cell-title">Admin Panel</p>
+                        <p class="cell-text">Sites, people and their access; events and device status</p>
+                    </li>
+                    <li>
+                        <p class="cell-title">Ways to enter</p>
+                        <p class="cell-text">Wallet keys, NFC cards and the visitor QR code</p>
+                    </li>
+                    <li class="is-tinted">
+                        <p class="cell-title">Reader at the door</p>
+                        <p class="cell-text">Reader and access controller in one device, on LTE or Wi-Fi</p>
+                    </li>
+                </ol>
             </section>
 
             <section class="section container" id="platform" aria-labelledby="platform-title">
-                <div class="section-head">
-                    <h2 id="platform-title">Sites, people and permissions.</h2>
-                    <p>Organise each site, assign responsibilities and follow what happens at the door.</p>
-                </div>
-                <dl class="workflow">
-                    <div><dt>Sites</dt><dd>Keep installations organised</dd></div>
-                    <div><dt>People</dt><dd>Delegate local management</dd></div>
-                    <div><dt>Credentials</dt><dd>Issue and revoke access</dd></div>
-                    <div><dt>Activity</dt><dd>See pending and confirmed actions</dd></div>
+                <h2 id="platform-title">Handle everyday access changes</h2>
+                <p class="lead">Make the change in the Admin Panel and check that the reader has applied it.</p>
+                <ol class="task-sequence" role="list">
+                    <li>
+                        <h3 class="task-title">Add a resident</h3>
+                        <p class="task-text">Give a new resident a card or digital key for the doors they use.</p>
+                    </li>
+                    <li>
+                        <h3 class="task-title">Change access</h3>
+                        <p class="task-text">Add or remove doors as a person's needs change.</p>
+                    </li>
+                    <li>
+                        <h3 class="task-title">Revoke a contractor's access</h3>
+                        <p class="task-text">End access when the job is done and check that each reader has applied it.</p>
+                        <p class="task-note">A change for an offline reader stays pending until the reader confirms it.</p>
+                    </li>
+                    <li>
+                        <h3 class="task-title">Assign a site administrator</h3>
+                        <p class="task-text">Let a local administrator manage access for their own building.</p>
+                    </li>
+                </ol>
+            </section>
+
+            <section class="section container" id="entry" aria-labelledby="entry-title">
+                <h2 id="entry-title">Keys, cards and visitors</h2>
+                <p class="lead">Residents and staff enter with a Wallet key or an NFC card. Visitors use the entrance QR code to reach someone. Key holders manage their keys in the SmartphoneKey app.</p>
+                <dl class="evidence-row is-compact">
+                    <div>
+                        <dt class="cell-label">Wallet key</dt>
+                        <dd>A digital key in Apple Wallet or Google Wallet. The person holds a supported phone to the reader.</dd>
+                    </div>
+                    <div>
+                        <dt class="cell-label">NFC card</dt>
+                        <dd>A physical card for people who prefer one or do not use a phone to enter.</dd>
+                    </div>
+                    <div>
+                        <dt class="cell-label">Visitor QR code</dt>
+                        <dd>Visitors scan the code at the entrance to contact a resident or the site team.</dd>
+                    </div>
+                    <div>
+                        <dt class="cell-label">SmartphoneKey app</dt>
+                        <dd>Where key holders manage their keys, on Android and iPhone. Entry at the door uses a Wallet key or a card.</dd>
+                    </div>
                 </dl>
             </section>
 
-            <section class="section container audiences" id="solutions" aria-label="Who it is for">
-                <article>
-                    <h2>Manage your buildings.</h2>
-                    <p>Handle resident changes, contractor access and local responsibilities across your sites.</p>
-                    <a href="/solutions/property-managers">Explore property management</a>
-                </article>
-                <article>
-                    <h2>Deliver your systems.</h2>
-                    <p>Choose a setup, install it, hand it over and support your customer.</p>
-                    <a href="/solutions/integrators">Explore the partner workflow</a>
-                </article>
-            </section>
-
-            <section class="section container reader" id="readers" aria-labelledby="reader-title">
-                <figure>
-                    <img src="/spk_website_v2/static/src/img/reader-800.webp"
-                         srcset="/spk_website_v2/static/src/img/reader-480.webp 480w, /spk_website_v2/static/src/img/reader-800.webp 800w"
-                         sizes="(max-width: 40rem) 100vw, 50vw" width="800" height="751" loading="lazy" decoding="async"
-                         alt="SmartphoneKey reader from the current product image library"/>
-                </figure>
-                <div class="reader-copy">
-                    <h2 id="reader-title">Reader and controller. Built together.</h2>
-                    <p>Our LTE and Wi-Fi readers combine credential reading and an access controller.</p>
-                    <p>Supported configurations add card programming and connected-device functions.</p>
-                    <a href="/products/readers">Compare LTE and Wi-Fi</a>
-                    <a href="/resources/mifare-classic-desfire-ev3">MIFARE Classic and DESFire EV3</a>
-                </div>
-            </section>
-
-            <section class="section automation" id="automation" aria-labelledby="automation-title">
-                <div class="container">
-                    <div class="section-head">
-                        <h2 id="automation-title">Make devices work together.</h2>
-                        <p>Build scenarios around supported triggers, conditions and actions.</p>
+            <section class="section container" id="status" aria-labelledby="status-title">
+                <h2 id="status-title">See what happened and what needs attention</h2>
+                <dl class="capabilities">
+                    <div>
+                        <dt>Events</dt>
+                        <dd>Activity and audit records for each site.</dd>
                     </div>
-                    <dl class="scenario-list">
-                        <div><dt>Door contact</dt><dd>Turn on compatible entry lighting</dd></div>
-                        <div><dt>Leak detected</dt><dd>Close a compatible water valve</dd></div>
-                        <div><dt>Closing time</dt><dd>Switch off selected lights or sockets</dd></div>
-                    </dl>
-                    <p class="section-note">Device capabilities and commissioning matter. Current scenarios use one hub and its connected devices.</p>
+                    <div>
+                        <dt>Reader connection</dt>
+                        <dd>Which readers are connected and which need attention.</dd>
+                    </div>
+                    <div>
+                        <dt>Status of each change</dt>
+                        <dd>Pending, confirmed by the reader or failed.</dd>
+                    </div>
+                </dl>
+                <p class="note">A revocation that is waiting for an offline reader is not yet in effect on that reader.</p>
+            </section>
+
+            <section class="section container" id="readers" aria-labelledby="reader-title">
+                <h2 id="reader-title">Reader and access controller in one device</h2>
+                <dl class="evidence-row">
+                    <div class="is-tinted">
+                        <dt class="cell-label">Included in the device</dt>
+                        <dd>Card and digital key reading, and the access controller.</dd>
+                    </div>
+                    <div>
+                        <dt class="cell-label">You choose for each door</dt>
+                        <dd>LTE or Wi-Fi, according to the connection available there.</dd>
+                    </div>
+                    <div>
+                        <dt class="cell-label">You provide at the door</dt>
+                        <dd>Power, compatible lock hardware and wiring as described in the installation guide.</dd>
+                    </div>
+                </dl>
+                <p class="links">
+                    <a href="/products/readers#compare">Compare LTE and Wi-Fi readers</a>
+                    <a href="/guide-for-usage-and-installation">Installation and connection guide</a>
+                </p>
+            </section>
+
+            <section class="section container" id="automation" aria-labelledby="automation-title">
+                <h2 id="automation-title">Add what your site needs</h2>
+                <p class="lead">Available with supported readers, devices and services.</p>
+                <dl class="capabilities">
+                    <div>
+                        <dt>Card programming</dt>
+                        <dd>Supported SmartphoneKey reader configurations also let you program MIFARE Classic and MIFARE DESFire EV3 cards.</dd>
+                    </div>
+                    <div>
+                        <dt>Connected-device scenarios</dt>
+                        <dd>For example, when a leak sensor reports water, close a compatible valve. Each scenario runs on one hub and its commissioned devices.</dd>
+                    </div>
+                    <div>
+                        <dt>Cameras</dt>
+                        <dd>Manage supported cameras alongside access, according to your configured services.</dd>
+                    </div>
+                    <div>
+                        <dt>Alerts</dt>
+                        <dd>Configure alerts for supported device events.</dd>
+                    </div>
+                </dl>
+                <p class="links">
+                    <a href="/platform/automation">Scenarios for connected devices</a>
+                    <a href="/compatibility">Check compatibility</a>
+                </p>
+            </section>
+
+            <section class="section container" id="solutions" aria-label="Who it is for">
+                <div class="paths">
+                    <article>
+                        <h2>For property teams</h2>
+                        <p>Move-ins and move-outs, staff and contractor access, site administrators and an overview of every building.</p>
+                        <a class="text-link" href="/solutions/property-managers">How property teams use SmartphoneKey</a>
+                    </article>
+                    <article>
+                        <h2>For installers and integrators</h2>
+                        <p>What the installation needs, commissioning, handover to the customer and support afterwards.</p>
+                        <a class="text-link" href="/solutions/integrators">How installers work with SmartphoneKey</a>
+                    </article>
+                    <article>
+                        <h2>Already using SmartphoneKey?</h2>
+                        <p>Sign in to the Admin Panel, read the instructions or get the app.</p>
+                        <p class="links">
+                            <a href="/adminpanel">Admin Panel</a>
+                            <a href="/resources#instructions">All instructions</a>
+                            <a href="/apps-and-chatbot">SmartphoneKey apps</a>
+                        </p>
+                    </article>
                 </div>
             </section>
 
-            <section class="section container next-steps" id="resources" aria-labelledby="next-title">
-                <h2 id="next-title">Choose your next step.</h2>
-                <p>Get the detail you need, then decide what comes next.</p>
-                <div class="next-links">
-                    <a href="/compatibility">Check compatibility</a>
-                    <a href="/resources#guides">Read the guides</a>
-                    <a href="/contact?interest=project">Discuss your project</a>
+            <section class="section container" id="resources" aria-labelledby="next-title">
+                <h2 id="next-title">Plan your installation</h2>
+                <div class="plan-grid">
+                    <form class="setup-compact" id="setup" action="/find-your-setup" method="get" aria-labelledby="setup-title" data-spk-home-setup="">
+                        <h3 id="setup-title">Recommendations for your site</h3>
+                        <div>
+                            <label for="site-type">What do you manage?</label>
+                            <select id="site-type" name="site">
+                                <option t-foreach="content.HOME_SITE_CHOICES" t-as="choice" t-att-value="choice[0]" t-out="choice[1]"/>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="connection">Connection at the doors</label>
+                            <select id="connection" name="connection">
+                                <option t-foreach="content.CONNECTIONS" t-as="choice" t-att-value="choice[0]" t-out="choice[1]"/>
+                            </select>
+                        </div>
+                        <output for="site-type connection" id="setup-result" aria-live="polite"><t t-out="content.HOME_CONNECTION_COPY['wifi']"/> <t t-out="content.HOME_SITE_COPY['property']"/></output>
+                        <div class="setup-links">
+                            <button type="submit" class="link-button">See full recommendations</button>
+                            <a href="/products/readers">Compare LTE and Wi-Fi readers</a>
+                        </div>
+                        <noscript><p>Choose your answers, then select See full recommendations.</p></noscript>
+                    </form>
+                    <ul class="plan-links" role="list">
+                        <li><a href="/find-your-setup">Site recommendations</a></li>
+                        <li><a href="/compatibility">Check compatibility</a></li>
+                        <li><a href="/contact?interest=project">Discuss your project</a></li>
+                        <li><a href="/contact?interest=partner">Become a partner</a></li>
+                    </ul>
                 </div>
             </section>
         </t>

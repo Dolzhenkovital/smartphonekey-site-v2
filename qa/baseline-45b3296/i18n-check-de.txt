@@ -1,0 +1,200 @@
+de: 795 public terms, 795 translated
+BLOCKING third-party programmer wording (C05): Die dokumentierten Programmier-Workflows nennen MIFARE Classic und MIFARE DESFire EV3. Ein kompatibles Programmiergerät oder das unterstützt
+warning soft hyphen in a short term (heading?): <span class="step-title">Ausstellen</span><span>des unter­stütz­ten Zutritts­me­di­ums</span>
+warning identical to English: <span>SmartphoneKey</span>
+warning soft hyphen in a short term (heading?): Ein kompatibler Kon­takt­sen­sor meldet eine offene Tür
+warning soft hyphen in a short term (heading?): Ein kompatibler Lecka­ge­s­en­sor meldet Wasser
+warning soft hyphen in a short term (heading?): Ein unter­stütz­ter Tem­pe­ra­tur­sen­sor erreicht einen gewählten Schwel­len­wert
+warning soft hyphen in a short term (heading?): Aktivitäten und Warn­mel­dun­gen
+warning soft hyphen in a short term (heading?): Eine Bei­spiel­to­po­lo­gie
+warning soft hyphen in a short term (heading?): Ein Beispiel: der Besuch eines Dienst­leis­ters.
+warning identical to English: App in ChatGPT.
+warning soft hyphen in a short term (heading?): Bestätigung der Apple-ECP2-Zer­ti­fi­zie­rung
+warning soft hyphen in a short term (heading?): Geeignete Strom­ver­sor­gung an jeder Tür
+warning soft hyphen in a short term (heading?): Nach Kom­pa­ti­bi­li­tät fragen
+warning soft hyphen in a short term (heading?): Bewerten Sie die Instal­la­tion als Ganzes.
+warning soft hyphen in a short term (heading?): Weisen Sie physische NFC-Schlüssel neben digitalen Zutritts­me­dien zu, prüfen und entziehen Sie sie.
+warning soft hyphen in a short term (heading?): Die verfügbaren Bildschirme und Aktionen hängen von Berech­ti­gun­gen und kon­fi­gu­rier­ten Diensten ab.
+warning soft hyphen in a short term (heading?): Bester Aus­gangs­punkt
+warning soft hyphen in a short term (heading?): Brot­krü­mel­na­vi­ga­tion
+warning soft hyphen in a short term (heading?): Bringen Sie das Zutritts­ma­na­ge­ment in ein über­sicht­li­ches System.
+warning soft hyphen in a short term (heading?): Nutzen Sie diese Angaben in der Kon­fi­gu­ra­ti­ons­hilfe oder in einem Gespräch mit unserem Team:
+warning soft hyphen in a short term (heading?): Erstellen Sie Szenarien auf Basis unter­stütz­ter Auslöser, Bedingungen und Aktionen.
+warning soft hyphen in a short term (heading?): Errichten Sie die Anlage. Behalten Sie die Kun­den­be­zie­hung.
+warning soft hyphen in a short term (heading?): Kann ein Leser die Kon­nek­ti­vi­tät für andere Leser bereit­stel­len?
+warning soft hyphen in a short term (heading?): Kar­ten­fa­mi­lie
+warning soft hyphen in a short term (heading?): Kar­ten­pro­gram­mie­rung
+warning soft hyphen in a short term (heading?): Die Kar­ten­pro­gram­mie­rung hängt von der Kar­ten­fa­mi­lie und dem Pro­gram­mier­ge­rät ab.
+warning soft hyphen in a short term (heading?): Netz­be­trei­ber, Region, Signal und Ein­bau­po­si­tion
+warning soft hyphen in a short term (heading?): Mobil­funkab­de­ckung sowie geeignete SIM-Karte und geeigneter Mobil­funk­dienst
+warning soft hyphen in a short term (heading?): Beschei­ni­gung der RED-Konformität, Richtlinie 2014/53/EU (Ref. AiTDG-260511001-C01)
+warning soft hyphen in a short term (heading?): Zertifikate und Kon­for­mi­täts­do­ku­mente.
+warning soft hyphen in a short term (heading?): Zer­ti­fi­zie­run­gen und Dokumente
+warning soft hyphen in a short term (heading?): Zer­ti­fi­zie­run­gen und Dokumente.
+warning soft hyphen in a short term (heading?): Prüfen Sie den Leser und seine Verbindung; wiederholen oder eskalieren Sie anschlie­ßend.
+warning soft hyphen in a short term (heading?): Prüfen Sie, was Ihr Standort benötigt, und fragen Sie dann nach der Ver­füg­bar­keit für Ihre Instal­la­tion.
+warning identical to English: Chief Artificial Intelligence Officer
+warning soft hyphen in a short term (heading?): Wählen Sie eine Kon­fi­gu­ra­tion, instal­lie­ren Sie sie, übergeben Sie sie und betreuen Sie Ihren Kunden.
+warning soft hyphen in a short term (heading?): Gesprächs­ter­min wählen
+warning soft hyphen in a short term (heading?): Wählen Sie eine verfügbare Verbindung, um Ihren Aus­gangs­punkt zu sehen.
+warning soft hyphen in a short term (heading?): Wählen Sie das Pro­gram­mier­ge­rät und den Kartentyp.
+warning soft hyphen in a short term (heading?): Wählen Sie die Leser­kon­fi­gu­ra­tion.
+warning soft hyphen in a short term (heading?): Kompatibles Was­ser­ven­til schließen
+warning soft hyphen in a short term (heading?): Geschäfts­schluss
+warning soft hyphen in a short term (heading?): Die beiden Ver­bin­dun­gen im Vergleich
+warning soft hyphen in a short term (heading?): Kompatible Ver­rie­ge­lungs­tech­nik und alle Aus­gangs­vor­rich­tun­gen, die die Tür benötigt
+warning soft hyphen in a short term (heading?): Bedingungen und Ein­schrän­kun­gen
+warning soft hyphen in a short term (heading?): Kon­nek­ti­vi­tät an jeder Tür
+warning soft hyphen in a short term (heading?): Kon­nek­ti­vi­tät an der geplanten Leser­po­si­tion geprüft
+warning soft hyphen in a short term (heading?): Team kon­tak­tie­ren
+warning soft hyphen in a short term (heading?): Kon­troll­me­cha­nis­men
+warning soft hyphen in a short term (heading?): Abdeckung am Leser, Zugangs­da­ten und Netz­werk­an­for­de­run­gen
+warning soft hyphen in a short term (heading?): Workflows für Zutritts­me­dien.
+warning soft hyphen in a short term (heading?): Zutritts­me­dien
+warning soft hyphen in a short term (heading?): Tages­ge­schäft
+warning soft hyphen in a short term (heading?): Gewünschte Zutritts­me­dien
+warning soft hyphen in a short term (heading?): Gerä­te­war­nun­gen, sofern Sie diese für Ihren Betrieb kon­fi­gu­riert haben.
+warning soft hyphen in a short term (heading?): Digitale Zutritts­me­dien
+warning soft hyphen in a short term (heading?): Digitale Zutritts­me­dien.
+warning soft hyphen in a short term (heading?): Auto­ma­ti­sie­rungs­pro­jekt besprechen
+warning soft hyphen in a short term (heading?): Leser­ve­r­füg­bar­keit besprechen
+warning soft hyphen in a short term (heading?): Technische Anfor­de­run­gen besprechen
+warning soft hyphen in a short term (heading?): Diese Kon­fi­gu­ra­tion besprechen
+warning soft hyphen in a short term (heading?): Besu­cher­zu­tritt besprechen
+warning soft hyphen in a short term (heading?): Ihr Immo­bi­li­en­port­fo­lio besprechen
+warning soft hyphen in a short term (heading?): Doku­men­tierte Workflows zur Kar­ten­pro­gram­mie­rung
+warning soft hyphen in a short term (heading?): Doku­men­tier­ter Workflow
+warning soft hyphen in a short term (heading?): Funk­tio­niert SmartphoneKey mit jedem Matter-Gerät?
+warning identical to English: Dongguan Yaxu (AiT) Technology Limited
+warning soft hyphen in a short term (heading?): Her­un­ter­la­den
+warning soft hyphen in a short term (heading?): Während eines kon­fi­gu­rier­ten Abend­zeit­plans
+warning soft hyphen in a short term (heading?): E-Mail <span class="required">(erfor­der­lich)</span>
+warning soft hyphen in a short term (heading?): Bei­spiel­s­ze­na­rien
+warning soft hyphen in a short term (heading?): Bei­spiel­to­po­lo­gie. Der Aufbau hängt von der Kon­fi­gu­ra­tion ab.
+warning soft hyphen in a short term (heading?): Vorhandene Ver­rie­ge­lungs­tech­nik
+warning soft hyphen in a short term (heading?): Erkunden Sie eine Kon­fi­gu­ra­tion für Ihren Standort oder besprechen Sie die Details mit unserem Team.
+warning soft hyphen in a short term (heading?): Zutritts­ma­na­ge­ment entdecken
+warning soft hyphen in a short term (heading?): Haus­ver­wal­tung entdecken
+warning identical to English: FCC ID 2BNRNSPKRDRLV1
+warning identical to English: FCC ID 2BNRNSPKRDRWV1
+warning soft hyphen in a short term (heading?): FCC-Gerä­te­zu­las­sung (Vereinigte Staaten)
+warning soft hyphen in a short term (heading?): Fehl­ge­schla­gen oder unbestätigt
+warning soft hyphen in a short term (heading?): Finden Sie eine Kon­fi­gu­ra­tion für Ihr Gebäude.
+warning soft hyphen in a short term (heading?): Verfolgen Sie den Zustell­sta­tus.
+warning soft hyphen in a short term (heading?): Leitet Daten­ver­kehr innerhalb des Thread-Mesh weiter
+warning soft hyphen in a short term (heading?): Holen Sie sich die Infor­ma­ti­o­nen, die Sie brauchen, und entscheiden Sie dann, wie es weitergeht.
+warning soft hyphen in a short term (heading?): Wie sich die Rollen von Matter und Thread unter­schei­den
+warning soft hyphen in a short term (heading?): Wie ein Bediener eine Karte pro­gram­miert
+warning soft hyphen in a short term (heading?): Wie unter­schei­den sich LTE- und Wi-Fi-Leser?
+warning soft hyphen in a short term (heading?): Wie Sie über Änderungen an Netz­wer­kname, Passwort oder Geräten informiert werden.
+warning soft hyphen in a short term (heading?): Hubs und unter­stützte Matter-Geräte
+warning identical to English: IC 35944-SPKRDRWV1
+warning soft hyphen in a short term (heading?): ISED-Regis­trie­rung von Funkanlagen (Kanada)
+warning soft hyphen in a short term (heading?): Instal­lie­ren.
+warning soft hyphen in a short term (heading?): Instal­la­ti­ons­an­for­de­run­gen und Dokumente.
+warning soft hyphen in a short term (heading?): Inter­net­ver­bin­dung
+warning soft hyphen in a short term (heading?): Inter­net­ver­bin­dung über Mobilfunk.
+warning soft hyphen in a short term (heading?): Inter­net­ver­bin­dung über das Wi-Fi-Netzwerk des Standorts.
+warning soft hyphen in a short term (heading?): Anlagen über­sicht­lich orga­ni­sie­ren
+warning soft hyphen in a short term (heading?): Halten Sie Berech­ti­gung und Gespräch getrennt.
+warning soft hyphen in a short term (heading?): Halten Sie das Ergebnis nach­voll­zieh­bar.
+warning soft hyphen in a short term (heading?): Anfor­de­run­gen an LTE- und Wi-Fi-Leser
+warning soft hyphen in a short term (heading?): LTE- und Wi-Fi-Leser mit inte­grier­tem Controller
+warning soft hyphen in a short term (heading?): Lokale Ver­ant­wor­tung.
+warning soft hyphen in a short term (heading?): Schlösser, Strom­ver­sor­gung und Verkabelung
+warning identical to English: MIFARE Classic
+warning identical to English: MIFARE DESFire EV3
+warning soft hyphen in a short term (heading?): Haupt­na­vi­ga­tion
+warning soft hyphen in a short term (heading?): Lassen Sie Geräte zusam­me­n­a­r­bei­ten.
+warning soft hyphen in a short term (heading?): Verwalten Sie Zutritte, wenn sich Personen und Zustän­dig­kei­ten ändern.
+warning soft hyphen in a short term (heading?): Verwalten Sie Standorte, Personen und vernetzte Geräte über eine einzige Plattform für die Zutritts­kon­trolle.
+warning soft hyphen in a short term (heading?): Verwalten Sie Standorte, Personen, Zutritts­me­dien und vernetzte Geräte.
+warning soft hyphen in a short term (heading?): Verwalten Sie den gesamten Zutritts­le­bens­zy­klus.
+warning soft hyphen in a short term (heading?): Verwalten Sie Ihre Schlüssel und unter­stütz­ten Zutritte von einem Android-Smartphone oder -Tablet aus.
+warning soft hyphen in a short term (heading?): Infor­ma­ti­o­nen des Herstellers oder zum Standard
+warning soft hyphen in a short term (heading?): Matter und Thread für die Zutritts­kon­trolle.
+warning soft hyphen in a short term (heading?): Spei­cher­größe und gege­be­nen­falls vorhandenes Zutritts­da­ten­for­mat
+warning soft hyphen in a short term (heading?): Name <span class="required">(erfor­der­lich)</span>
+warning soft hyphen in a short term (heading?): Benötigen Sie Hilfe mit einem instal­lier­ten System?
+warning soft hyphen in a short term (heading?): Erfor­der­lich für eine Empfehlung. Alle anderen Angaben sind optional.
+warning soft hyphen in a short term (heading?): Es wird keine Zahl ver­öf­fent­licht, solange kein repro­du­zier­ba­rer, modell­s­pe­zi­fi­scher Prüfbericht vorliegt.
+warning soft hyphen in a short term (heading?): Noch keine ver­öf­fent­lich­ten Einträge. Nennen Sie uns Ihre Kon­fi­gu­ra­tion, und wir prüfen sie.
+warning soft hyphen in a short term (heading?): Andere DESFire-Gene­ra­ti­o­nen und Spei­cher­grö­ßen müssen bestätigt werden
+warning soft hyphen in a short term (heading?): Unsere LTE- und Wi-Fi-Leser vereinen das Lesen von Zutritts­me­dien und einen Zutritts­con­trol­ler.
+warning soft hyphen in a short term (heading?): Part­ne­r­opti­o­nen.
+warning soft hyphen in a short term (heading?): Personen und Zustän­dig­kei­ten
+warning soft hyphen in a short term (heading?): Pro­gram­mie­rung physischer Karten
+warning soft hyphen in a short term (heading?): Pro­gram­mie­rung physischer Karten.
+warning soft hyphen in a short term (heading?): Physische Instal­la­tion
+warning soft hyphen in a short term (heading?): Planen Sie den Besu­cher­zu­tritt.
+warning soft hyphen in a short term (heading?): Strom­ver­sor­gung und kompatible Türtechnik erfor­der­lich
+warning soft hyphen in a short term (heading?): Strom­ver­sor­gung und Ver­rie­ge­lungs­tech­nik werden weiterhin benötigt
+warning soft hyphen in a short term (heading?): Praktische Hinweise für Ihr Zutritts­sys­tem.
+warning identical to English: Product Owner
+warning soft hyphen in a short term (heading?): Pro­dukt­zer­ti­fi­zie­run­gen und Dokumente
+warning soft hyphen in a short term (heading?): Pro­dukt­do­ku­mente
+warning soft hyphen in a short term (heading?): Pro­duk­t­an­ga­ben geprüft
+warning soft hyphen in a short term (heading?): Pro­gram­mie­ren Sie unter­stützte physische Karten.
+warning soft hyphen in a short term (heading?): Zum Pro­gram­mie­ren einer neuen Karte sind eine unter­stützte Kar­ten­fa­mi­lie und ein unter­stütz­tes Pro­gram­mier­g
+warning soft hyphen in a short term (heading?): Pro­jekt­de­tails
+warning soft hyphen in a short term (heading?): Pro­jek­tan­frage
+warning soft hyphen in a short term (heading?): Ver­öf­fent­licht
+warning soft hyphen in a short term (heading?): QR-Besu­cher­kon­takt
+warning soft hyphen in a short term (heading?): Instal­la­ti­ons­hin­weise lesen
+warning soft hyphen in a short term (heading?): Lesen, Pro­gram­mie­ren und Zuweisen von Zutritt
+warning soft hyphen in a short term (heading?): Wie­der­her­stel­lung und Support
+warning soft hyphen in a short term (heading?): Zulas­sungs­ein­träge
+warning soft hyphen in a short term (heading?): Zulas­sungs­ein­träge.
+warning soft hyphen in a short term (heading?): Gruppen für Bewohner, Personal und Dienst­leis­ter
+warning soft hyphen in a short term (heading?): Zustän­dig­kei­ten mit Gel­tungs­be­reich.
+warning soft hyphen in a short term (heading?): Lese­r­opti­o­nen prüfen
+warning identical to English: Scenario Builder
+warning soft hyphen in a short term (heading?): Bereichs­be­zo­gene Verwaltung.
+warning soft hyphen in a short term (heading?): Kompatible Gerä­te­funk­ti­o­nen ansehen
+warning soft hyphen in a short term (heading?): Ser­vice­a­r­bei­ten.
+warning soft hyphen in a short term (heading?): Meinen Aus­gangs­punkt anzeigen
+warning soft hyphen in a short term (heading?): Stand­ort­be­wer­tung
+warning soft hyphen in a short term (heading?): Standorte, an denen Mobil­funk­kon­nek­ti­vi­tät zur Instal­la­tion passt
+warning soft hyphen in a short term (heading?): Standorte, Personen und Berech­ti­gun­gen.
+warning soft hyphen in a short term (heading?): Kon­for­mi­täts­zer­ti­fi­kat für Smart Tap 2.1
+warning identical to English: SmartphoneKey
+warning soft hyphen in a short term (heading?): SmartphoneKey (Unter­neh­mens­do­ku­ment), 14. April 2025
+warning soft hyphen in a short term (heading?): SmartphoneKey-Leser aus der aktuellen Pro­dukt­bild­bi­blio­thek
+warning soft hyphen in a short term (heading?): Zustände einer Schlüs­se­l­än­de­rung
+warning soft hyphen in a short term (heading?): Geeignete Wi-Fi-Abdeckung und Netz­werk­kon­fi­gu­ra­tion
+warning soft hyphen in a short term (heading?): Support-Zustän­dig­kei­ten
+warning soft hyphen in a short term (heading?): Unter­stützte Bedingungen Ihrer Wahl
+warning soft hyphen in a short term (heading?): Unter­stützte Kon­fi­gu­ra­ti­o­nen ergänzen Kar­ten­pro­gram­mie­rung und Funktionen für vernetzte Geräte.
+warning soft hyphen in a short term (heading?): Unter­stützte Leser­kon­fi­gu­ra­ti­o­nen können sich über einen Matter-Hub verbinden.
+warning soft hyphen in a short term (heading?): Unter­stützte Wallet-Zugangs­me­dien
+warning soft hyphen in a short term (heading?): Ausgewählte Leuchten oder Steckdosen schalten. Halten Sie unver­zicht­bare Geräte aus dieser Regel heraus.
+warning soft hyphen in a short term (heading?): Halten Sie die Karte an das Pro­gram­mier­ge­rät.
+warning soft hyphen in a short term (heading?): Dass er Thread-Daten­ver­kehr wei­ter­lei­tet
+warning soft hyphen in a short term (heading?): Die Adresse ist mög­li­cher­weise falsch geschrieben, oder die Seite wurde verschoben.
+warning soft hyphen in a short term (heading?): Die in der Instal­la­ti­ons­an­lei­tung angegebenen Anschlüsse
+warning soft hyphen in a short term (heading?): Der Ver­bin­dungs­sta­tus des Lesers.
+warning soft hyphen in a short term (heading?): Die Inter­net­ver­bin­dung des Standorts, über Wi-Fi, Ethernet oder Mobilfunk.
+warning soft hyphen in a short term (heading?): Die beiden doku­men­tier­ten Kar­ten­fa­mi­lien
+warning identical to English: Thread Border Router
+warning soft hyphen in a short term (heading?): Mit einer Karte geschehen drei ver­schie­dene Dinge, die leicht zu verwechseln sind:
+warning soft hyphen in a short term (heading?): Unter­stützte Leuchte einschalten
+warning soft hyphen in a short term (heading?): Kompatible Ein­gangs­be­leuch­tung einschalten
+warning soft hyphen in a short term (heading?): Verstehen Sie die Kon­troll­me­cha­nis­men hinter dem System.
+warning soft hyphen in a short term (heading?): Aktu­a­li­siert
+warning soft hyphen in a short term (heading?): Zer­ti­fi­zie­run­gen ansehen
+warning soft hyphen in a short term (heading?): Instal­la­ti­ons­an­lei­tung ansehen
+warning soft hyphen in a short term (heading?): Zutritts­wege
+warning soft hyphen in a short term (heading?): Was passiert mit einer Schlüs­se­l­än­de­rung, während ein Leser offline ist?
+warning soft hyphen in a short term (heading?): Wobei möchten Sie Hilfe? <span class="required">(erfor­der­lich)</span>
+warning soft hyphen in a short term (heading?): Wann Sie eine Stand­ort­prü­fung anfordern sollten
+warning soft hyphen in a short term (heading?): Welche physischen Karten können pro­gram­miert werden?
+warning soft hyphen in a short term (heading?): Welche Leser­re­vi­sion und Firmware werden installiert?
+warning soft hyphen in a short term (heading?): Wer SIM-Karte und Dienst bereit­stellt und in welcher Region der Leser installiert wird.
+warning soft hyphen in a short term (heading?): Warum andere Gene­ra­ti­o­nen und Größen bestätigt werden müssen
+warning soft hyphen in a short term (heading?): Wi-Fi-Abdeckung an jeder geplanten Leser­po­si­tion.
+warning soft hyphen in a short term (heading?): Ihr Schlüssel zur Zutritts­kon­trolle.
+warning soft hyphen in a short term (heading?): Ihr Aus­gangs­punkt für die Planung
+warning soft hyphen in a short term (heading?): zur Kom­pa­ti­bi­li­tät
+warning soft hyphen in a short term (heading?): Instal­la­ti­ons- und Anschluss­an­lei­tung
+warning identical to English: %(name)s, %(job)s | SmartphoneKey
+blocking: 1, warnings: 197

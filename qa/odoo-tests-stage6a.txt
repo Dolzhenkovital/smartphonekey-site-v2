@@ -1,0 +1,888 @@
+ Container spk-site-v2-db-1 Running 
+ Container spk-site-v2-odoo-run-44c702b5db00 Creating 
+ Container spk-site-v2-odoo-run-44c702b5db00 Created 
+2026-10-27 17:20:32,511 1 INFO ? odoo: Odoo version 18.0-20260409 
+2026-10-27 17:20:32,511 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-10-27 17:20:32,511 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/.local/share/Odoo/addons/18.0', '/mnt/v2', '/mnt/baseline'] 
+2026-10-27 17:20:32,511 1 INFO ? odoo: database: odoo@db:5432 
+Warn: Can't find .pfb for face 'Courier'
+2026-10-27 17:20:32,715 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-10-27 17:20:32,726 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltoimage binary at /usr/local/bin/wkhtmltoimage 
+2026-10-27 17:20:32,895 1 INFO ? odoo.service.server: HTTP service (werkzeug) running on d4ca7f543baa:8069 
+2026-10-27 17:20:32,939 1 INFO spk_v2_test odoo.tests.common: Importing test framework 
+2026-10-27 17:20:32,992 1 INFO spk_v2_test odoo.modules.loading: loading 1 modules... 
+2026-10-27 17:20:32,998 1 INFO spk_v2_test odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-10-27 17:20:33,027 1 INFO spk_v2_test odoo.modules.loading: updating modules list 
+2026-10-27 17:20:33,031 1 INFO spk_v2_test odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-10-27 17:20:34,867 1 INFO spk_v2_test odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['SmartphoneKey Website 2.0'] to user __system__ #1 via n/a 
+2026-10-27 17:20:34,867 1 INFO spk_v2_test odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['SmartphoneKey Website 2.0'] to user __system__ #1 via n/a 
+2026-10-27 17:20:35,903 1 INFO spk_v2_test odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user __system__ #1 via n/a 
+2026-10-27 17:20:35,976 1 INFO spk_v2_test odoo.modules.loading: loading 51 modules... 
+2026-10-27 17:20:36,582 1 INFO spk_v2_test odoo.modules.loading: Loading module spk_website_v2 (51/51) 
+2026-10-27 17:20:36,983 1 INFO spk_v2_test odoo.modules.registry: module spk_website_v2: creating or updating database tables 
+2026-10-27 17:20:37,210 1 INFO spk_v2_test odoo.modules.loading: loading spk_website_v2/security/spk_website_v2_security.xml 
+2026-10-27 17:20:37,767 1 INFO spk_v2_test odoo.modules.loading: loading spk_website_v2/security/ir.model.access.csv 
+2026-10-27 17:20:39,441 1 INFO spk_v2_test odoo.modules.loading: loading spk_website_v2/data/website_claims.xml 
+2026-10-27 17:20:39,469 1 INFO spk_v2_test odoo.modules.loading: loading spk_website_v2/data/website_compatibility.xml 
+2026-10-27 17:20:39,490 1 INFO spk_v2_test odoo.modules.loading: loading spk_website_v2/data/website_resources.xml 
+2026-10-27 17:20:39,507 1 INFO spk_v2_test odoo.modules.loading: loading spk_website_v2/data/website_posts.xml 
+2026-10-27 17:20:39,527 1 INFO spk_v2_test odoo.modules.loading: loading spk_website_v2/data/website_team.xml 
+2026-10-27 17:20:39,546 1 INFO spk_v2_test odoo.modules.loading: loading spk_website_v2/views/layout.xml 
+2026-10-27 17:20:39,623 1 INFO spk_v2_test odoo.modules.loading: loading spk_website_v2/views/components.xml 
+2026-10-27 17:20:39,665 1 INFO spk_v2_test odoo.modules.loading: loading spk_website_v2/views/home.xml 
+2026-10-27 17:20:39,767 1 INFO spk_v2_test odoo.modules.loading: loading spk_website_v2/views/platform.xml 
+2026-10-27 17:20:39,927 1 INFO spk_v2_test odoo.modules.loading: loading spk_website_v2/views/solutions.xml 
+2026-10-27 17:20:39,995 1 INFO spk_v2_test odoo.modules.loading: loading spk_website_v2/views/products.xml 
+2026-10-27 17:20:40,055 1 INFO spk_v2_test odoo.modules.loading: loading spk_website_v2/views/resources.xml 
+2026-10-27 17:20:40,117 1 INFO spk_v2_test odoo.modules.loading: loading spk_website_v2/views/setup.xml 
+2026-10-27 17:20:40,151 1 INFO spk_v2_test odoo.modules.loading: loading spk_website_v2/views/contact.xml 
+2026-10-27 17:20:40,213 1 INFO spk_v2_test odoo.modules.loading: loading spk_website_v2/views/company.xml 
+2026-10-27 17:20:40,280 1 INFO spk_v2_test odoo.modules.loading: loading spk_website_v2/views/legal_pages.xml 
+2026-10-27 17:20:40,303 1 INFO spk_v2_test odoo.modules.loading: loading spk_website_v2/views/backend_content.xml 
+2026-10-27 17:20:40,409 1 INFO spk_v2_test odoo.modules.loading: loading spk_website_v2/views/crm_lead_views.xml 
+2026-10-27 17:20:40,457 1 INFO spk_v2_test odoo.addons.base.models.ir_module: module spk_website_v2: loading translation file /mnt/v2/spk_website_v2/i18n/fr.po for language fr_FR 
+2026-10-27 17:20:40,462 1 INFO spk_v2_test odoo.tools.translate: loading base translation file /mnt/v2/spk_website_v2/i18n/fr.po for language fr_FR 
+2026-10-27 17:20:40,622 1 INFO spk_v2_test odoo.addons.base.models.ir_module: module spk_website_v2: loading translation file /mnt/v2/spk_website_v2/i18n/de.po for language de_DE 
+2026-10-27 17:20:40,629 1 INFO spk_v2_test odoo.tools.translate: loading base translation file /mnt/v2/spk_website_v2/i18n/de.po for language de_DE 
+2026-10-27 17:20:40,788 1 INFO spk_v2_test odoo.addons.base.models.ir_module: module spk_website_v2: loading translation file /mnt/v2/spk_website_v2/i18n/es.po for language es_ES 
+2026-10-27 17:20:40,794 1 INFO spk_v2_test odoo.tools.translate: loading base translation file /mnt/v2/spk_website_v2/i18n/es.po for language es_ES 
+2026-10-27 17:20:40,972 1 INFO spk_v2_test odoo.addons.base.models.ir_module: module spk_website_v2: loading translation file /mnt/v2/spk_website_v2/i18n/uk.po for language uk_UA 
+2026-10-27 17:20:40,980 1 INFO spk_v2_test odoo.tools.translate: loading base translation file /mnt/v2/spk_website_v2/i18n/uk.po for language uk_UA 
+2026-10-27 17:20:41,961 1 INFO spk_v2_test odoo.modules.loading: Module spk_website_v2 loaded in 5.38s, 760 queries (+760 other) 
+2026-10-27 17:20:41,961 1 INFO spk_v2_test odoo.modules.loading: 51 modules loaded in 5.99s, 760 queries (+760 extra) 
+2026-10-27 17:20:43,069 1 INFO spk_v2_test odoo.modules.loading: Modules loaded. 
+2026-10-27 17:20:43,073 1 INFO spk_v2_test odoo.modules.registry: Registry changed, signaling through the database 
+2026-10-27 17:20:43,075 1 INFO spk_v2_test odoo.modules.registry: Registry loaded in 10.179s 
+2026-10-27 17:20:43,075 1 INFO spk_v2_test odoo.service.server: Starting post tests 
+2026-10-27 17:20:43,082 1 INFO spk_v2_test odoo.addons.base.models.ir_qweb: Pregenerating assets bundles 
+2026-10-27 17:20:45,861 1 INFO spk_v2_test odoo.addons.base.models.ir_qweb: JS Assets bundles generated in 1.3756113052368164 seconds 
+2026-10-27 17:20:45,937 1 INFO spk_v2_test odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/b7a9f07/spk_website_v2.assets_site.min.css (id:362) 
+2026-10-27 17:20:45,938 1 INFO spk_v2_test odoo.addons.base.models.assetsbundle: Deleting attachments [331] (matching /web/assets/_______/spk_website_v2.assets_site.min.css) because it was replaced with /web/assets/b7a9f07/spk_website_v2.assets_site.min.css 
+2026-10-27 17:20:46,259 1 INFO spk_v2_test odoo.addons.base.models.ir_qweb: CSS Assets bundles generated in 0.3975675106048584 seconds 
+2026-10-27 17:20:46,285 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_enquiry: Starting TestEnquiry.test_bad_submission_id ... 
+2026-10-27 17:20:46,322 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:20:46,543 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:46] "GET /contact HTTP/1.1" 200 - 57 0.035 0.214
+2026-10-27 17:20:46,570 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:46] "POST /website/spk/enquiry HTTP/1.1" 400 - 1 0.006 0.015
+2026-10-27 17:20:46,571 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_enquiry.TestEnquiry.test_bad_submission_id: waiting for threads: [<Thread(odoo.service.http.request.131085406570176, started 131085406570176)>] 
+2026-10-27 17:20:46,576 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_enquiry: Starting TestEnquiry.test_insert_race_is_resolved_by_the_unique_index ... 
+2026-10-27 17:20:46,599 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:20:46,853 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:46] "GET /contact HTTP/1.1" 200 - 62 0.037 0.238
+2026-10-27 17:20:46,921 1 INFO spk_v2_test odoo.addons.mail.tools.mail_validation: The (optional) `flanker` Python module is not installed,so email validation will fallback to email_normalize. 
+2026-10-27 17:20:46,928 1 INFO spk_v2_test odoo.addons.spk_website_v2.models.crm_lead: Website enquiry 0883669440804cac88db5f25f3b656e0 (project) created lead 38 
+2026-10-27 17:20:46,929 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:46] "POST /website/spk/enquiry HTTP/1.1" 200 - 45 0.031 0.041
+2026-10-27 17:20:46,961 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_enquiry: Starting TestEnquiry.test_invalid_and_hostile_input ... 
+2026-10-27 17:20:46,983 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:20:47,177 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:47] "GET /contact HTTP/1.1" 200 - 62 0.038 0.177
+2026-10-27 17:20:47,213 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:47] "POST /website/spk/enquiry HTTP/1.1" 400 - 1 0.008 0.020
+2026-10-27 17:20:47,258 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:47] "GET /contact HTTP/1.1" 200 - 3 0.006 0.035
+2026-10-27 17:20:47,287 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:47] "POST /website/spk/enquiry HTTP/1.1" 400 - 1 0.006 0.019
+2026-10-27 17:20:47,362 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:47] "GET /contact HTTP/1.1" 200 - 3 0.007 0.034
+2026-10-27 17:20:47,472 1 INFO spk_v2_test odoo.addons.spk_website_v2.models.crm_lead: Website enquiry 687de4e1178d41beb19f3a31bd9f8c46 (project) created lead 41 
+2026-10-27 17:20:47,475 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:47] "POST /website/spk/enquiry HTTP/1.1" 200 - 45 0.046 0.060
+2026-10-27 17:20:47,508 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:47] "GET /contact HTTP/1.1" 200 - 2 0.002 0.025
+2026-10-27 17:20:47,514 1 INFO spk_v2_test odoo.addons.spk_website_v2.controllers.enquiry: Website enquiry rejected: honeypot field filled 
+2026-10-27 17:20:47,515 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:47] "POST /website/spk/enquiry HTTP/1.1" 400 - 0 0.000 0.003
+2026-10-27 17:20:47,518 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_enquiry.TestEnquiry.test_invalid_and_hostile_input: waiting for threads: [<Thread(odoo.service.http.request.131085406570176, started 131085406570176)>] 
+2026-10-27 17:20:47,522 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_enquiry: Starting TestEnquiry.test_missing_csrf_token_is_rejected ... 
+2026-10-27 17:20:47,545 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:20:47,786 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:47] "GET /contact HTTP/1.1" 200 - 62 0.044 0.218
+2026-10-27 17:20:47,811 1 WARNING spk_v2_test odoo.http: No CSRF validation token provided for path '/website/spk/enquiry'
+
+Odoo URLs are CSRF-protected by default (when accessed with unsafe
+HTTP methods). See
+https://www.odoo.com/documentation/master/developer/reference/addons/http.html#csrf
+for more details.
+
+* if this endpoint is accessed through Odoo via py-QWeb form, embed a CSRF
+  token in the form, Tokens are available via `request.csrf_token()`
+  can be provided through a hidden input and must be POST-ed named
+  `csrf_token` e.g. in your form add:
+      <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+
+* if the form is generated or posted in javascript, the token value is
+  available as `csrf_token` on `web.core` and as the `csrf_token`
+  value in the default js-qweb execution context
+
+* if the form is accessed by an external third party (e.g. REST API
+  endpoint, payment gateway callback) you will need to disable CSRF
+  protection (and implement your own protection if necessary) by
+  passing the `csrf=False` parameter to the `route` decorator.
+ 
+2026-10-27 17:20:48,353 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:48] "POST /website/spk/enquiry HTTP/1.1" 400 - 137 0.098 0.463
+2026-10-27 17:20:48,358 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_enquiry: Starting TestEnquiry.test_preview_never_stores ... 
+2026-10-27 17:20:48,387 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:20:48,588 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:48] "GET /contact HTTP/1.1" 200 - 62 0.041 0.185
+2026-10-27 17:20:48,611 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:48] "POST /website/spk/enquiry HTTP/1.1" 503 - 1 0.005 0.015
+2026-10-27 17:20:48,653 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:48] "GET /contact HTTP/1.1" 200 - 3 0.007 0.032
+2026-10-27 17:20:48,660 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_enquiry: Starting TestEnquiry.test_public_user_cannot_read_leads ... 
+2026-10-27 17:20:48,664 1 INFO spk_v2_test odoo.addons.base.models.ir_model: Access Denied by ACLs for operation: read, uid: 4, model: crm.lead 
+2026-10-27 17:20:48,679 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_enquiry: Starting TestEnquiry.test_retries_and_concurrent_duplicates_create_one_lead ... 
+2026-10-27 17:20:48,709 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:20:48,970 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:48] "GET /contact HTTP/1.1" 200 - 62 0.052 0.234
+2026-10-27 17:20:49,048 1 INFO spk_v2_test odoo.addons.spk_website_v2.models.crm_lead: Website enquiry b069c0f32df343958be185627543e51a (project) created lead 42 
+2026-10-27 17:20:49,050 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:49] "POST /website/spk/enquiry HTTP/1.1" 200 - 45 0.032 0.044
+2026-10-27 17:20:49,060 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:49] "POST /website/spk/enquiry HTTP/1.1" 200 - 3 0.002 0.004
+2026-10-27 17:20:49,070 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:49] "POST /website/spk/enquiry HTTP/1.1" 409 - 3 0.002 0.005
+2026-10-27 17:20:49,076 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_enquiry: Starting TestEnquiry.test_throttle ... 
+2026-10-27 17:20:49,106 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:20:49,401 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:49] "GET /contact HTTP/1.1" 200 - 62 0.040 0.282
+2026-10-27 17:20:49,459 1 INFO spk_v2_test odoo.addons.spk_website_v2.models.crm_lead: Website enquiry 7c4db275bdf84c9ebf3e8b113a06d733 (project) created lead 43 
+2026-10-27 17:20:49,461 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:49] "POST /website/spk/enquiry HTTP/1.1" 200 - 45 0.025 0.031
+2026-10-27 17:20:49,485 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:49] "GET /contact HTTP/1.1" 200 - 2 0.002 0.019
+2026-10-27 17:20:49,522 1 INFO spk_v2_test odoo.addons.spk_website_v2.models.crm_lead: Website enquiry ff4776d82a074d7a9bb11113b92b2843 (project) created lead 44 
+2026-10-27 17:20:49,523 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:49] "POST /website/spk/enquiry HTTP/1.1" 200 - 31 0.015 0.019
+2026-10-27 17:20:49,546 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:49] "GET /contact HTTP/1.1" 200 - 2 0.002 0.018
+2026-10-27 17:20:49,581 1 INFO spk_v2_test odoo.addons.spk_website_v2.models.crm_lead: Website enquiry afc5b0773e2c46b4aac16ef5dc7cbc4a (project) created lead 45 
+2026-10-27 17:20:49,582 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:49] "POST /website/spk/enquiry HTTP/1.1" 200 - 31 0.014 0.018
+2026-10-27 17:20:49,608 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:49] "GET /contact HTTP/1.1" 200 - 2 0.002 0.020
+2026-10-27 17:20:49,643 1 INFO spk_v2_test odoo.addons.spk_website_v2.models.crm_lead: Website enquiry 6623d03f580d459e963db696b4f380c0 (project) created lead 46 
+2026-10-27 17:20:49,644 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:49] "POST /website/spk/enquiry HTTP/1.1" 200 - 31 0.016 0.017
+2026-10-27 17:20:49,668 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:49] "GET /contact HTTP/1.1" 200 - 2 0.002 0.019
+2026-10-27 17:20:49,705 1 INFO spk_v2_test odoo.addons.spk_website_v2.models.crm_lead: Website enquiry 5cd14b34e2104df5ba559213f22a3b4b (project) created lead 47 
+2026-10-27 17:20:49,706 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:49] "POST /website/spk/enquiry HTTP/1.1" 200 - 31 0.016 0.018
+2026-10-27 17:20:49,730 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:49] "GET /contact HTTP/1.1" 200 - 2 0.002 0.019
+2026-10-27 17:20:49,742 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:49] "POST /website/spk/enquiry HTTP/1.1" 429 - 4 0.002 0.005
+2026-10-27 17:20:49,746 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_enquiry: Starting TestEnquiry.test_valid_enquiry_creates_one_lead_with_its_context ... 
+2026-10-27 17:20:49,768 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:20:49,970 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:49] "GET /contact HTTP/1.1" 200 - 62 0.040 0.181
+2026-10-27 17:20:50,046 1 INFO spk_v2_test odoo.addons.spk_website_v2.models.crm_lead: Website enquiry b54e3cefaaf14ea191c2959aa34aea94 (project) created lead 48 
+2026-10-27 17:20:50,047 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:50] "POST /website/spk/enquiry HTTP/1.1" 200 - 45 0.032 0.041
+2026-10-27 17:20:50,057 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_enquiry: Starting TestEnquiry.test_without_javascript ... 
+2026-10-27 17:20:50,089 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:20:50,475 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:50] "GET /contact HTTP/1.1" 200 - 62 0.062 0.354
+2026-10-27 17:20:50,572 1 INFO spk_v2_test odoo.addons.spk_website_v2.models.crm_lead: Website enquiry 2bdb379324fb4cbca0ca3c45bcec55b0 (project) created lead 49 
+2026-10-27 17:20:50,574 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:50] "POST /website/spk/enquiry HTTP/1.1" 303 - 45 0.044 0.049
+2026-10-27 17:20:50,606 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:50] "GET /thank-you HTTP/1.1" 200 - 5 0.003 0.026
+2026-10-27 17:20:50,629 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:50] "GET /thank-you HTTP/1.1" 200 - 2 0.001 0.018
+2026-10-27 17:20:50,653 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:50] "GET /contact HTTP/1.1" 200 - 2 0.002 0.019
+2026-10-27 17:20:50,677 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:50] "POST /website/spk/enquiry HTTP/1.1" 400 - 1 0.001 0.019
+2026-10-27 17:20:50,704 1 INFO spk_v2_test odoo.addons.base.models.ir_attachment: filestore gc 2 checked, 1 removed 
+2026-10-27 17:20:50,715 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_i18n: Starting TestLanguages.test_dates_follow_the_language ... 
+2026-10-27 17:20:50,740 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:20:51,100 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:51] "GET /fr/compatibility HTTP/1.1" 200 - 83 0.049 0.331
+2026-10-27 17:20:51,107 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_i18n: Starting TestLanguages.test_english_only_pages ... 
+2026-10-27 17:20:51,128 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:20:51,381 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:51] "GET /fr/privacy-policy HTTP/1.1" 200 - 60 0.041 0.231
+2026-10-27 17:20:51,797 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:51] "GET /de/post/how-smartphonekey-enhances-security-for-your-property HTTP/1.1" 200 - 24 0.025 0.384
+2026-10-27 17:20:52,098 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:52] "GET /uk/team/vadym-sydorenko HTTP/1.1" 200 - 23 0.021 0.273
+2026-10-27 17:20:52,105 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_i18n: Starting TestLanguages.test_every_site_string_is_translated ... 
+2026-10-27 17:20:52,111 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_i18n: ====================================================================== 
+2026-10-27 17:20:52,111 1 ERROR spk_v2_test odoo.addons.spk_website_v2.tests.test_i18n: FAIL: TestLanguages.test_every_site_string_is_translated
+Traceback (most recent call last):
+  File "/mnt/v2/spk_website_v2/tests/test_i18n.py", line 32, in test_every_site_string_is_translated
+    self.assertFalse(missing, "%s lacks %d strings, e.g. %s" % (code, len(missing), missing[:3]))
+AssertionError: ['Profile of %(name)s, %(job)s, on the SmartphoneKey website.'] is not false : fr lacks 1 strings, e.g. ['Profile of %(name)s, %(job)s, on the SmartphoneKey website.']
+ 
+2026-10-27 17:20:52,114 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_i18n: Starting TestLanguages.test_pages_render_in_each_language ... 
+2026-10-27 17:20:52,137 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:20:52,305 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:52] "GET /fr/platform HTTP/1.1" 200 - 69 0.040 0.149
+2026-10-27 17:20:52,603 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:52] "GET /de/platform HTTP/1.1" 200 - 25 0.022 0.107
+2026-10-27 17:20:53,173 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:53] "GET /es/platform HTTP/1.1" 200 - 25 0.029 0.326
+2026-10-27 17:20:53,464 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:53] "GET /uk/platform HTTP/1.1" 200 - 25 0.023 0.109
+2026-10-27 17:20:53,706 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_i18n: Starting TestLanguages.test_setup_guide_and_enquiry_speak_the_visitor_language ... 
+2026-10-27 17:20:53,899 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:20:54,139 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:54] "GET /uk/find-your-setup?connection=cellular&interests=cards HTTP/1.1" 200 - 60 0.049 0.216
+2026-10-27 17:20:54,343 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:54] "GET /de/contact HTTP/1.1" 200 - 23 0.019 0.179
+2026-10-27 17:20:54,369 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:54] "POST /de/website/spk/enquiry HTTP/1.1" 400 - 1 0.005 0.016
+2026-10-27 17:20:54,617 1 INFO spk_v2_test odoo.addons.spk_website_v2.models.crm_lead: Website enquiry 7a6f406ff5a149da9af73ad127b3bea5 (partner) created lead 50 
+2026-10-27 17:20:54,618 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:54] "POST /de/website/spk/enquiry HTTP/1.1" 200 - 45 0.025 0.065
+2026-10-27 17:20:54,627 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_i18n: Starting TestLanguages.test_sitemap_lists_each_language_copy ... 
+2026-10-27 17:20:54,649 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:20:54,694 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:54] "GET /sitemap.xml HTTP/1.1" 200 - 29 0.019 0.045
+2026-10-27 17:20:54,700 1 INFO spk_v2_test odoo.addons.base.models.ir_attachment: filestore gc 0 checked, 0 removed 
+2026-10-27 17:20:54,713 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_migration: Starting TestMigration.test_every_snapshot_url_has_its_intended_answer ... 
+2026-10-27 17:20:54,736 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:20:54,879 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:54] "GET / HTTP/1.1" 200 - 55 0.032 0.130
+2026-10-27 17:20:54,924 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:54] "GET /404 HTTP/1.1" 404 - 6 0.008 0.034
+2026-10-27 17:20:54,948 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:54] "GET /adminpanel HTTP/1.1" 303 - 1 0.005 0.016
+2026-10-27 17:20:55,015 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:55] "GET /apps-and-chatbot HTTP/1.1" 200 - 15 0.014 0.049
+2026-10-27 17:20:55,036 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:55] "GET /blog HTTP/1.1" 301 - 1 0.005 0.015
+2026-10-27 17:20:55,120 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:55] "GET /resources HTTP/1.1" 200 - 10 0.013 0.068
+2026-10-27 17:20:55,205 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:55] "GET /certifications HTTP/1.1" 200 - 6 0.017 0.064
+2026-10-27 17:20:55,331 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:55] "GET /contact HTTP/1.1" 200 - 8 0.013 0.109
+2026-10-27 17:20:55,360 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:55] "GET /facility-services HTTP/1.1" 301 - 1 0.005 0.020
+2026-10-27 17:20:55,440 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:55] "GET /solutions/property-managers HTTP/1.1" 200 - 6 0.013 0.064
+2026-10-27 17:20:55,466 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:55] "GET /features HTTP/1.1" 301 - 1 0.005 0.017
+2026-10-27 17:20:55,565 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:55] "GET /platform HTTP/1.1" 200 - 12 0.017 0.078
+2026-10-27 17:20:56,015 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:56] "GET /guide-for-usage-and-installation HTTP/1.1" 404 - 143 0.089 0.354
+2026-10-27 17:20:56,036 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:56] "GET /how-it-works HTTP/1.1" 301 - 1 0.005 0.014
+2026-10-27 17:20:56,076 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:56] "GET /platform HTTP/1.1" 200 - 3 0.007 0.030
+2026-10-27 17:20:56,098 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:56] "GET /intercom-solution HTTP/1.1" 301 - 1 0.005 0.015
+2026-10-27 17:20:56,150 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:56] "GET /platform/visitor-access HTTP/1.1" 200 - 6 0.008 0.041
+2026-10-27 17:20:56,196 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:56] "GET /privacy-policy HTTP/1.1" 200 - 6 0.008 0.034
+2026-10-27 17:20:56,218 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:56] "GET /products/smartphonekey-reader-1 HTTP/1.1" 301 - 1 0.004 0.015
+2026-10-27 17:20:56,421 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:56] "GET /products/readers HTTP/1.1" 200 - 9 0.013 0.187
+2026-10-27 17:20:56,526 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:56] "GET /referral-program HTTP/1.1" 200 - 12 0.017 0.085
+2026-10-27 17:20:56,554 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:56] "GET /security-professionals HTTP/1.1" 301 - 1 0.005 0.019
+2026-10-27 17:20:56,616 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:56] "GET /solutions/integrators HTTP/1.1" 200 - 6 0.009 0.051
+2026-10-27 17:20:56,643 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:56] "GET /smart-home-integrators HTTP/1.1" 301 - 1 0.005 0.019
+2026-10-27 17:20:56,691 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:56] "GET /solutions/integrators HTTP/1.1" 200 - 3 0.007 0.038
+2026-10-27 17:20:56,722 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:56] "GET /team HTTP/1.1" 301 - 1 0.007 0.021
+2026-10-27 17:20:56,784 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:56] "GET /about HTTP/1.1" 200 - 8 0.010 0.046
+2026-10-27 17:20:56,833 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:56] "GET /terms-of-service HTTP/1.1" 200 - 6 0.008 0.038
+2026-10-27 17:20:56,834 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_migration.TestMigration.test_every_snapshot_url_has_its_intended_answer: waiting for threads: [<Thread(odoo.service.http.request.131085406570176, started 131085406570176)>] 
+2026-10-27 17:20:56,837 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_migration: Starting TestMigration.test_kept_articles_and_team_pages ... 
+2026-10-27 17:20:56,860 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:20:57,020 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:57] "GET /post/how-smartphonekey-enhances-security-for-your-property HTTP/1.1" 200 - 62 0.038 0.142
+2026-10-27 17:20:57,063 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:57] "GET /post/matter-standard-the-key-to-a-seamless-smart-home HTTP/1.1" 200 - 5 0.007 0.031
+2026-10-27 17:20:57,105 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:57] "GET /post/smart-home-trends-2025-the-future-of-secure-and-connected-living HTTP/1.1" 200 - 5 0.007 0.031
+2026-10-27 17:20:57,149 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:57] "GET /post/smartphonekey-official-launch HTTP/1.1" 200 - 5 0.008 0.031
+2026-10-27 17:20:57,191 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:57] "GET /post/the-future-of-keyless-entry-why-its-time-to-upgrade-to-smartphonekey HTTP/1.1" 200 - 5 0.007 0.031
+2026-10-27 17:20:57,233 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:57] "GET /post/welcome-to-smartphonekey-your-affordable-access-to-a-keyless-future HTTP/1.1" 200 - 5 0.007 0.030
+2026-10-27 17:20:57,285 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:57] "GET /team/alex-sydorenko HTTP/1.1" 200 - 8 0.009 0.039
+2026-10-27 17:20:57,327 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:57] "GET /team/denys-merkulov HTTP/1.1" 200 - 5 0.007 0.030
+2026-10-27 17:20:57,368 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:57] "GET /team/ioannis-mavridis HTTP/1.1" 200 - 5 0.006 0.031
+2026-10-27 17:20:57,411 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:57] "GET /team/kate-vasylenko HTTP/1.1" 200 - 5 0.007 0.032
+2026-10-27 17:20:57,452 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:57] "GET /team/kostiantyn-dolzhenko HTTP/1.1" 200 - 5 0.007 0.031
+2026-10-27 17:20:57,503 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:57] "GET /team/lana-ostapenko HTTP/1.1" 200 - 5 0.008 0.037
+2026-10-27 17:20:57,575 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:57] "GET /team/oleksii-andrieiev HTTP/1.1" 200 - 5 0.013 0.055
+2026-10-27 17:20:57,635 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:57] "GET /team/vadym-sydorenko HTTP/1.1" 200 - 5 0.008 0.045
+2026-10-27 17:20:57,681 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:57] "GET /team/vitalii-dolzhenko HTTP/1.1" 200 - 5 0.007 0.034
+2026-10-27 17:20:57,687 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_migration: Starting TestMigration.test_no_new_page_links_to_the_old_webflow_urls ... 
+2026-10-27 17:20:57,716 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:20:57,915 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:57] "GET / HTTP/1.1" 200 - 55 0.038 0.188
+2026-10-27 17:20:58,051 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:58] "GET /platform HTTP/1.1" 200 - 21 0.024 0.106
+2026-10-27 17:20:58,150 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:58] "GET /platform/access-management HTTP/1.1" 200 - 6 0.013 0.082
+2026-10-27 17:20:58,205 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:58] "GET /platform/automation HTTP/1.1" 200 - 6 0.008 0.043
+2026-10-27 17:20:58,252 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:58] "GET /platform/visitor-access HTTP/1.1" 200 - 6 0.007 0.038
+2026-10-27 17:20:58,302 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:58] "GET /solutions/property-managers HTTP/1.1" 200 - 6 0.008 0.039
+2026-10-27 17:20:58,350 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:58] "GET /solutions/integrators HTTP/1.1" 200 - 6 0.009 0.037
+2026-10-27 17:20:58,407 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:58] "GET /products/readers HTTP/1.1" 200 - 9 0.011 0.043
+2026-10-27 17:20:58,483 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:58] "GET /compatibility HTTP/1.1" 200 - 23 0.016 0.057
+2026-10-27 17:20:58,531 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:58] "GET /security HTTP/1.1" 200 - 6 0.008 0.037
+2026-10-27 17:20:58,598 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:58] "GET /resources HTTP/1.1" 200 - 10 0.011 0.054
+2026-10-27 17:20:58,683 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:58] "GET /find-your-setup HTTP/1.1" 200 - 6 0.008 0.074
+2026-10-27 17:20:58,826 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:58] "GET /contact HTTP/1.1" 200 - 8 0.012 0.128
+2026-10-27 17:20:58,891 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:58] "GET /about HTTP/1.1" 200 - 8 0.011 0.049
+2026-10-27 17:20:58,963 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:58] "GET /certifications HTTP/1.1" 200 - 6 0.013 0.054
+2026-10-27 17:20:59,022 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:59] "GET /apps-and-chatbot HTTP/1.1" 200 - 6 0.012 0.045
+2026-10-27 17:20:59,084 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:59] "GET /privacy-policy HTTP/1.1" 200 - 6 0.007 0.052
+2026-10-27 17:20:59,143 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:59] "GET /terms-of-service HTTP/1.1" 200 - 6 0.010 0.045
+2026-10-27 17:20:59,246 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:59] "GET /resources/lte-vs-wifi-access-control HTTP/1.1" 200 - 10 0.023 0.076
+2026-10-27 17:20:59,305 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:59] "GET /resources/mifare-classic-desfire-ev3 HTTP/1.1" 200 - 5 0.008 0.048
+2026-10-27 17:20:59,348 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:59] "GET /resources/matter-thread-access-control HTTP/1.1" 200 - 5 0.007 0.034
+2026-10-27 17:20:59,388 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:59] "GET /resources/access-control-when-offline HTTP/1.1" 200 - 5 0.007 0.031
+2026-10-27 17:20:59,389 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_migration.TestMigration.test_no_new_page_links_to_the_old_webflow_urls: waiting for threads: [<Thread(odoo.service.http.request.131085406570176, started 131085406570176)>] 
+2026-10-27 17:20:59,392 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_migration: Starting TestMigration.test_referral_page_is_neither_linked_nor_in_the_sitemap ... 
+2026-10-27 17:20:59,414 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:20:59,559 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:59] "GET / HTTP/1.1" 200 - 55 0.034 0.131
+2026-10-27 17:20:59,641 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:59] "GET /platform HTTP/1.1" 200 - 21 0.018 0.061
+2026-10-27 17:20:59,690 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:59] "GET /platform/access-management HTTP/1.1" 200 - 6 0.008 0.038
+2026-10-27 17:20:59,748 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:59] "GET /platform/automation HTTP/1.1" 200 - 6 0.007 0.047
+2026-10-27 17:20:59,796 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:59] "GET /platform/visitor-access HTTP/1.1" 200 - 6 0.007 0.038
+2026-10-27 17:20:59,852 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:59] "GET /solutions/property-managers HTTP/1.1" 200 - 6 0.009 0.044
+2026-10-27 17:20:59,918 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:20:59] "GET /solutions/integrators HTTP/1.1" 200 - 6 0.008 0.055
+2026-10-27 17:21:00,021 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:00] "GET /products/readers HTTP/1.1" 200 - 9 0.017 0.082
+2026-10-27 17:21:00,117 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:00] "GET /compatibility HTTP/1.1" 200 - 23 0.015 0.076
+2026-10-27 17:21:00,189 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:00] "GET /security HTTP/1.1" 200 - 6 0.008 0.061
+2026-10-27 17:21:00,288 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:00] "GET /resources HTTP/1.1" 200 - 10 0.012 0.085
+2026-10-27 17:21:00,380 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:00] "GET /find-your-setup HTTP/1.1" 200 - 6 0.011 0.076
+2026-10-27 17:21:00,481 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:00] "GET /contact HTTP/1.1" 200 - 8 0.010 0.089
+2026-10-27 17:21:00,538 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:00] "GET /about HTTP/1.1" 200 - 8 0.009 0.044
+2026-10-27 17:21:00,588 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:00] "GET /certifications HTTP/1.1" 200 - 6 0.009 0.039
+2026-10-27 17:21:00,637 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:00] "GET /apps-and-chatbot HTTP/1.1" 200 - 6 0.008 0.038
+2026-10-27 17:21:00,686 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:00] "GET /privacy-policy HTTP/1.1" 200 - 6 0.010 0.036
+2026-10-27 17:21:00,743 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:00] "GET /terms-of-service HTTP/1.1" 200 - 6 0.009 0.045
+2026-10-27 17:21:00,807 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:00] "GET /resources/lte-vs-wifi-access-control HTTP/1.1" 200 - 10 0.010 0.052
+2026-10-27 17:21:00,850 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:00] "GET /resources/mifare-classic-desfire-ev3 HTTP/1.1" 200 - 5 0.007 0.033
+2026-10-27 17:21:00,892 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:00] "GET /resources/matter-thread-access-control HTTP/1.1" 200 - 5 0.007 0.033
+2026-10-27 17:21:00,938 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:00] "GET /resources/access-control-when-offline HTTP/1.1" 200 - 5 0.008 0.035
+2026-10-27 17:21:00,969 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:00] "GET /sitemap.xml HTTP/1.1" 200 - 9 0.010 0.019
+2026-10-27 17:21:00,970 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_migration.TestMigration.test_referral_page_is_neither_linked_nor_in_the_sitemap: waiting for threads: [<Thread(odoo.service.http.request.131085406570176, started 131085406570176)>] 
+2026-10-27 17:21:00,976 1 INFO spk_v2_test odoo.addons.base.models.ir_attachment: filestore gc 0 checked, 0 removed 
+2026-10-27 17:21:01,255 1 INFO spk_v2_test odoo.models.unlink: User #1 deleted mail.mail records with IDs: [9] 
+2026-10-27 17:21:01,268 1 INFO spk_v2_test odoo.models.unlink: User #1 deleted mail.message records with IDs: [70] 
+2026-10-27 17:21:01,272 1 INFO spk_v2_test odoo.addons.auth_signup.models.res_users: Signup email sent for user <spk_editor> to <s.s@example.com> 
+2026-10-27 17:21:01,461 1 INFO spk_v2_test odoo.models.unlink: User #1 deleted mail.mail records with IDs: [10] 
+2026-10-27 17:21:01,474 1 INFO spk_v2_test odoo.models.unlink: User #1 deleted mail.message records with IDs: [72] 
+2026-10-27 17:21:01,478 1 INFO spk_v2_test odoo.addons.auth_signup.models.res_users: Signup email sent for user <spk_publisher> to <s.s@example.com> 
+2026-10-27 17:21:01,486 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_publication: Starting TestPublication.test_claim_codes_are_permanent ... 
+2026-10-27 17:21:01,497 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_publication: Starting TestPublication.test_editing_a_published_row_sends_it_back_to_review ... 
+2026-10-27 17:21:01,532 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:21:01,823 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:01] "GET /compatibility HTTP/1.1" 200 - 83 0.053 0.259
+2026-10-27 17:21:01,879 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:01] "GET /compatibility HTTP/1.1" 200 - 17 0.010 0.034
+2026-10-27 17:21:01,885 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_publication: Starting TestPublication.test_only_publishers_publish_resources ... 
+2026-10-27 17:21:01,918 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:21:02,060 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:02] "GET /resources/access-control-when-offline HTTP/1.1" 404 - 54 0.031 0.130
+2026-10-27 17:21:02,061 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_publication.TestPublication.test_only_publishers_publish_resources: waiting for threads: [<Thread(odoo.service.http.request.131085406570176, started 131085406570176)>] 
+2026-10-27 17:21:02,066 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_publication: Starting TestPublication.test_private_evidence_never_reaches_the_page ... 
+2026-10-27 17:21:02,089 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:21:02,294 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:02] "GET /compatibility HTTP/1.1" 200 - 83 0.048 0.178
+2026-10-27 17:21:02,296 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_publication.TestPublication.test_private_evidence_never_reaches_the_page: waiting for threads: [<Thread(odoo.service.http.request.131085406570176, started 131085406570176)>] 
+2026-10-27 17:21:02,303 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_publication: Starting TestPublication.test_public_user_has_no_model_access ... 
+2026-10-27 17:21:02,322 1 INFO spk_v2_test odoo.addons.base.models.ir_model: Access Denied by ACLs for operation: read, uid: 4, model: spk.website.claim 
+2026-10-27 17:21:02,342 1 INFO spk_v2_test odoo.addons.base.models.ir_model: Access Denied by ACLs for operation: read, uid: 4, model: spk.website.compatibility 
+2026-10-27 17:21:02,346 1 INFO spk_v2_test odoo.addons.base.models.ir_model: Access Denied by ACLs for operation: read, uid: 4, model: spk.website.resource 
+2026-10-27 17:21:02,352 1 INFO spk_v2_test odoo.addons.base.models.ir_model: Access Denied by ACLs for operation: read, uid: 4, model: spk.website.team.member 
+2026-10-27 17:21:02,357 1 INFO spk_v2_test odoo.addons.base.models.ir_model: Access Denied by ACLs for operation: read, uid: 4, model: spk.website.enquiry.attempt 
+2026-10-27 17:21:02,366 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_publication: Starting TestPublication.test_rows_of_ungated_claims_cannot_be_published ... 
+2026-10-27 17:21:02,413 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:21:02,663 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:02] "GET /compatibility HTTP/1.1" 200 - 78 0.055 0.221
+2026-10-27 17:21:02,665 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_publication.TestPublication.test_rows_of_ungated_claims_cannot_be_published: waiting for threads: [<Thread(odoo.service.http.request.131085406570176, started 131085406570176)>] 
+2026-10-27 17:21:02,677 1 INFO spk_v2_test odoo.addons.base.models.ir_attachment: filestore gc 2 checked, 2 removed 
+2026-10-27 17:21:02,696 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_routes: Starting TestRoutes.test_certifications_and_instructions_are_reachable ... 
+2026-10-27 17:21:02,723 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:21:02,867 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:02] "GET / HTTP/1.1" 200 - 55 0.034 0.133
+2026-10-27 17:21:02,958 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:02] "GET /resources HTTP/1.1" 200 - 19 0.017 0.069
+2026-10-27 17:21:03,010 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:03] "GET /certifications HTTP/1.1" 200 - 6 0.008 0.040
+2026-10-27 17:21:03,017 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_routes: Starting TestRoutes.test_contact_prefill_takes_enums_only ... 
+2026-10-27 17:21:03,038 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:21:03,311 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:03] "GET /contact?interest=visitor&role=owner&sites=nonsense&name=Mallory HTTP/1.1" 200 - 62 0.036 0.257
+2026-10-27 17:21:03,319 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_routes: Starting TestRoutes.test_content_is_server_rendered ... 
+2026-10-27 17:21:03,339 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:21:03,512 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:03] "GET / HTTP/1.1" 200 - 55 0.036 0.156
+2026-10-27 17:21:03,631 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:03] "GET /platform HTTP/1.1" 200 - 21 0.023 0.087
+2026-10-27 17:21:03,709 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:03] "GET /products/readers HTTP/1.1" 200 - 9 0.011 0.062
+2026-10-27 17:21:03,794 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:03] "GET /resources/lte-vs-wifi-access-control HTTP/1.1" 200 - 10 0.015 0.065
+2026-10-27 17:21:03,894 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:03] "GET /compatibility HTTP/1.1" 200 - 23 0.017 0.078
+2026-10-27 17:21:03,967 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:03] "GET /find-your-setup HTTP/1.1" 200 - 6 0.007 0.061
+2026-10-27 17:21:04,062 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:04] "GET /contact HTTP/1.1" 200 - 8 0.008 0.082
+2026-10-27 17:21:04,069 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_routes: Starting TestRoutes.test_marketing_assets_stay_off_the_login_page ... 
+2026-10-27 17:21:04,096 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:21:04,569 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:04] "GET /web/login HTTP/1.1" 200 - 167 0.095 0.403
+2026-10-27 17:21:04,570 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_routes.TestRoutes.test_marketing_assets_stay_off_the_login_page: waiting for threads: [<Thread(odoo.service.http.request.131085406570176, started 131085406570176)>] 
+2026-10-27 17:21:04,574 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_routes: Starting TestRoutes.test_required_routes_are_substantive_and_unique ... 
+2026-10-27 17:21:04,594 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:21:04,808 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:04] "GET / HTTP/1.1" 200 - 55 0.045 0.188
+2026-10-27 17:21:04,908 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:04] "GET /platform HTTP/1.1" 200 - 21 0.019 0.076
+2026-10-27 17:21:04,974 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:04] "GET /platform/access-management HTTP/1.1" 200 - 6 0.011 0.050
+2026-10-27 17:21:05,028 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:05] "GET /platform/automation HTTP/1.1" 200 - 6 0.008 0.042
+2026-10-27 17:21:05,099 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:05] "GET /platform/visitor-access HTTP/1.1" 200 - 6 0.011 0.055
+2026-10-27 17:21:05,148 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:05] "GET /solutions/property-managers HTTP/1.1" 200 - 6 0.008 0.036
+2026-10-27 17:21:05,197 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:05] "GET /solutions/integrators HTTP/1.1" 200 - 6 0.008 0.036
+2026-10-27 17:21:05,258 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:05] "GET /products/readers HTTP/1.1" 200 - 9 0.010 0.046
+2026-10-27 17:21:05,332 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:05] "GET /compatibility HTTP/1.1" 200 - 23 0.014 0.057
+2026-10-27 17:21:05,381 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:05] "GET /security HTTP/1.1" 200 - 6 0.008 0.035
+2026-10-27 17:21:05,451 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:05] "GET /resources HTTP/1.1" 200 - 10 0.011 0.054
+2026-10-27 17:21:05,522 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:05] "GET /find-your-setup HTTP/1.1" 200 - 6 0.009 0.057
+2026-10-27 17:21:05,612 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:05] "GET /contact HTTP/1.1" 200 - 8 0.009 0.077
+2026-10-27 17:21:05,666 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:05] "GET /about HTTP/1.1" 200 - 8 0.008 0.042
+2026-10-27 17:21:05,714 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:05] "GET /certifications HTTP/1.1" 200 - 6 0.008 0.035
+2026-10-27 17:21:05,763 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:05] "GET /apps-and-chatbot HTTP/1.1" 200 - 6 0.008 0.037
+2026-10-27 17:21:05,815 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:05] "GET /privacy-policy HTTP/1.1" 200 - 6 0.008 0.039
+2026-10-27 17:21:05,869 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:05] "GET /terms-of-service HTTP/1.1" 200 - 6 0.008 0.041
+2026-10-27 17:21:05,981 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:05] "GET /resources/lte-vs-wifi-access-control HTTP/1.1" 200 - 10 0.016 0.089
+2026-10-27 17:21:06,030 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:06] "GET /resources/mifare-classic-desfire-ev3 HTTP/1.1" 200 - 5 0.007 0.036
+2026-10-27 17:21:06,088 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:06] "GET /resources/matter-thread-access-control HTTP/1.1" 200 - 5 0.010 0.043
+2026-10-27 17:21:06,150 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:06] "GET /resources/access-control-when-offline HTTP/1.1" 200 - 5 0.007 0.050
+2026-10-27 17:21:06,160 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_routes: Starting TestRoutes.test_route_metadata_matches_register ... 
+2026-10-27 17:21:06,182 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:21:06,357 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:06] "GET / HTTP/1.1" 200 - 55 0.038 0.157
+2026-10-27 17:21:06,444 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:06] "GET /platform HTTP/1.1" 200 - 21 0.018 0.066
+2026-10-27 17:21:06,494 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:06] "GET /platform/access-management HTTP/1.1" 200 - 6 0.008 0.038
+2026-10-27 17:21:06,546 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:06] "GET /platform/automation HTTP/1.1" 200 - 6 0.008 0.041
+2026-10-27 17:21:06,596 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:06] "GET /platform/visitor-access HTTP/1.1" 200 - 6 0.008 0.036
+2026-10-27 17:21:06,646 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:06] "GET /solutions/property-managers HTTP/1.1" 200 - 6 0.009 0.036
+2026-10-27 17:21:06,696 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:06] "GET /solutions/integrators HTTP/1.1" 200 - 6 0.008 0.036
+2026-10-27 17:21:06,758 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:06] "GET /products/readers HTTP/1.1" 200 - 9 0.011 0.046
+2026-10-27 17:21:06,831 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:06] "GET /compatibility HTTP/1.1" 200 - 23 0.014 0.055
+2026-10-27 17:21:06,880 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:06] "GET /security HTTP/1.1" 200 - 6 0.008 0.036
+2026-10-27 17:21:07,047 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:07] "GET /resources HTTP/1.1" 200 - 10 0.013 0.149
+2026-10-27 17:21:07,176 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:07] "GET /find-your-setup HTTP/1.1" 200 - 6 0.016 0.107
+2026-10-27 17:21:07,298 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:07] "GET /contact HTTP/1.1" 200 - 8 0.010 0.105
+2026-10-27 17:21:07,373 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:07] "GET /about HTTP/1.1" 200 - 8 0.012 0.057
+2026-10-27 17:21:07,427 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:07] "GET /certifications HTTP/1.1" 200 - 6 0.008 0.041
+2026-10-27 17:21:07,481 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:07] "GET /apps-and-chatbot HTTP/1.1" 200 - 6 0.007 0.042
+2026-10-27 17:21:07,562 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:07] "GET /privacy-policy HTTP/1.1" 200 - 6 0.011 0.062
+2026-10-27 17:21:07,621 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:07] "GET /terms-of-service HTTP/1.1" 200 - 6 0.008 0.045
+2026-10-27 17:21:07,626 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_routes: Starting TestRoutes.test_setup_result_without_javascript ... 
+2026-10-27 17:21:07,646 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:21:07,820 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:07] "GET /find-your-setup?role=integrator&sites=eleven_plus&connection=cellular&interests=cards&interests=bogus&email=someone@example.com HTTP/1.1" 200 - 60 0.035 0.157
+2026-10-27 17:21:07,863 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:07] "GET /find-your-setup?site=partner&connection=wifi HTTP/1.1" 200 - 3 0.006 0.031
+2026-10-27 17:21:07,870 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_routes: Starting TestRoutes.test_switch_hands_the_site_back_to_the_baseline ... 
+2026-10-27 17:21:07,892 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:21:08,464 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:08] "GET /platform HTTP/1.1" 404 - 166 0.103 0.487
+2026-10-27 17:21:08,600 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:08] "GET /features HTTP/1.1" 200 - 23 0.020 0.112
+2026-10-27 17:21:08,662 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:08] "GET / HTTP/1.1" 200 - 7 0.009 0.050
+2026-10-27 17:21:08,696 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:08] "GET /features HTTP/1.1" 301 - 13 0.010 0.020
+2026-10-27 17:21:08,698 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_routes.TestRoutes.test_switch_hands_the_site_back_to_the_baseline: waiting for threads: [<Thread(odoo.service.http.request.131085398177472, started 131085398177472)>] 
+2026-10-27 17:21:08,702 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_routes: Starting TestRoutes.test_thank_you_is_noindex_and_claims_nothing_without_an_enquiry ... 
+2026-10-27 17:21:08,723 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:21:08,855 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:08] "GET /thank-you HTTP/1.1" 200 - 56 0.031 0.119
+2026-10-27 17:21:08,860 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_routes: Starting TestRoutes.test_unknown_route_is_a_real_404 ... 
+2026-10-27 17:21:08,881 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:21:09,032 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:09] "GET /no-such-page HTTP/1.1" 404 - 61 0.034 0.137
+2026-10-27 17:21:09,079 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:09] "GET /resources/no-such-guide HTTP/1.1" 404 - 8 0.009 0.033
+2026-10-27 17:21:09,129 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:09] "GET /post/no-such-post HTTP/1.1" 404 - 7 0.010 0.037
+2026-10-27 17:21:09,175 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:09] "GET /team/no-such-person HTTP/1.1" 404 - 7 0.008 0.035
+2026-10-27 17:21:09,176 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_routes.TestRoutes.test_unknown_route_is_a_real_404: waiting for threads: [<Thread(odoo.service.http.request.131085398177472, started 131085398177472)>] 
+2026-10-27 17:21:09,182 1 INFO spk_v2_test odoo.addons.base.models.ir_attachment: filestore gc 0 checked, 0 removed 
+2026-10-27 17:21:09,195 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_seo: Starting TestDiscovery.test_claim_scope_on_the_new_pages ... 
+2026-10-27 17:21:09,216 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:21:09,472 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:09] "GET / HTTP/1.1" 200 - 55 0.035 0.239
+2026-10-27 17:21:09,587 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:09] "GET /platform HTTP/1.1" 200 - 21 0.020 0.090
+2026-10-27 17:21:09,664 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:09] "GET /platform/access-management HTTP/1.1" 200 - 6 0.010 0.059
+2026-10-27 17:21:09,730 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:09] "GET /platform/automation HTTP/1.1" 200 - 6 0.009 0.048
+2026-10-27 17:21:09,793 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:09] "GET /platform/visitor-access HTTP/1.1" 200 - 6 0.008 0.046
+2026-10-27 17:21:09,856 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:09] "GET /solutions/property-managers HTTP/1.1" 200 - 6 0.009 0.048
+2026-10-27 17:21:09,912 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:09] "GET /solutions/integrators HTTP/1.1" 200 - 6 0.008 0.042
+2026-10-27 17:21:10,013 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:10] "GET /products/readers HTTP/1.1" 200 - 9 0.017 0.079
+2026-10-27 17:21:10,097 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:10] "GET /compatibility HTTP/1.1" 200 - 23 0.016 0.060
+2026-10-27 17:21:10,156 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:10] "GET /security HTTP/1.1" 200 - 6 0.007 0.045
+2026-10-27 17:21:10,232 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:10] "GET /resources HTTP/1.1" 200 - 10 0.011 0.061
+2026-10-27 17:21:10,313 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:10] "GET /find-your-setup HTTP/1.1" 200 - 6 0.010 0.065
+2026-10-27 17:21:10,418 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:10] "GET /contact HTTP/1.1" 200 - 8 0.009 0.090
+2026-10-27 17:21:10,476 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:10] "GET /about HTTP/1.1" 200 - 8 0.008 0.042
+2026-10-27 17:21:10,528 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:10] "GET /certifications HTTP/1.1" 200 - 6 0.008 0.040
+2026-10-27 17:21:10,576 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:10] "GET /apps-and-chatbot HTTP/1.1" 200 - 6 0.007 0.036
+2026-10-27 17:21:10,624 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:10] "GET /privacy-policy HTTP/1.1" 200 - 6 0.008 0.035
+2026-10-27 17:21:10,677 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:10] "GET /terms-of-service HTTP/1.1" 200 - 6 0.008 0.039
+2026-10-27 17:21:10,752 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:10] "GET /resources/lte-vs-wifi-access-control HTTP/1.1" 200 - 10 0.010 0.059
+2026-10-27 17:21:10,805 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:10] "GET /resources/mifare-classic-desfire-ev3 HTTP/1.1" 200 - 5 0.008 0.038
+2026-10-27 17:21:10,853 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:10] "GET /resources/matter-thread-access-control HTTP/1.1" 200 - 5 0.007 0.035
+2026-10-27 17:21:10,900 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:10] "GET /resources/access-control-when-offline HTTP/1.1" 200 - 5 0.007 0.033
+2026-10-27 17:21:10,942 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:10] "GET /certifications HTTP/1.1" 200 - 3 0.007 0.030
+2026-10-27 17:21:10,984 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:10] "GET /apps-and-chatbot HTTP/1.1" 200 - 3 0.006 0.031
+2026-10-27 17:21:11,029 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:11] "GET /resources/access-control-when-offline HTTP/1.1" 200 - 5 0.007 0.031
+2026-10-27 17:21:11,068 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:11] "GET /platform/visitor-access HTTP/1.1" 200 - 3 0.006 0.029
+2026-10-27 17:21:11,110 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:11] "GET /products/readers HTTP/1.1" 200 - 3 0.008 0.029
+2026-10-27 17:21:11,116 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_seo: Starting TestDiscovery.test_open_graph ... 
+2026-10-27 17:21:11,138 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:21:11,281 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:11] "GET / HTTP/1.1" 200 - 55 0.032 0.131
+2026-10-27 17:21:11,369 1 INFO ? werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:11] "GET /spk_website_v2/static/src/img/og-default.png HTTP/1.1" 200 - 1 0.005 0.075
+2026-10-27 17:21:11,492 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:11] "GET /platform HTTP/1.1" 200 - 21 0.023 0.090
+2026-10-27 17:21:11,530 1 INFO ? werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:11] "GET /spk_website_v2/static/src/img/og-default.png HTTP/1.1" 200 - 1 0.005 0.029
+2026-10-27 17:21:11,616 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:11] "GET /products/readers HTTP/1.1" 200 - 9 0.014 0.060
+2026-10-27 17:21:11,659 1 INFO ? werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:11] "GET /spk_website_v2/static/src/img/reader-800.webp HTTP/1.1" 200 - 1 0.007 0.030
+2026-10-27 17:21:11,663 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_seo.TestDiscovery.test_open_graph: waiting for threads: [<Thread(odoo.service.http.request.131085398177472, started 131085398177472)>] 
+2026-10-27 17:21:11,667 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_seo: Starting TestDiscovery.test_preview_is_never_indexed ... 
+2026-10-27 17:21:11,706 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:21:11,772 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:11] "GET /robots.txt HTTP/1.1" 200 - 17 0.017 0.081
+2026-10-27 17:21:11,970 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:11] "GET /platform HTTP/1.1" 200 - 53 0.036 0.158
+2026-10-27 17:21:12,177 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:12] "GET /platform HTTP/1.1" 200 - 44 0.035 0.165
+2026-10-27 17:21:12,185 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_seo: Starting TestDiscovery.test_robots_keeps_search_and_training_decisions_separate ... 
+2026-10-27 17:21:12,208 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:21:12,251 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:12] "GET /robots.txt HTTP/1.1" 200 - 25 0.016 0.048
+2026-10-27 17:21:12,252 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_seo.TestDiscovery.test_robots_keeps_search_and_training_decisions_separate: waiting for threads: [<Thread(odoo.service.http.request.131085398177472, started 131085398177472)>] 
+2026-10-27 17:21:12,258 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_seo: Starting TestDiscovery.test_sitemap_lists_published_canonical_pages_only ... 
+2026-10-27 17:21:12,282 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:21:12,334 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:12] "GET /sitemap.xml HTTP/1.1" 200 - 29 0.021 0.052
+2026-10-27 17:21:12,359 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /uk/solutions/integrators in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:12,360 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /solutions/integrators in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:12,504 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:12] "GET /uk/solutions/integrators HTTP/1.1" 200 - 43 0.034 0.132
+2026-10-27 17:21:12,528 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /uk/find-your-setup in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:12,530 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /find-your-setup in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:12,583 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:12] "GET /uk/find-your-setup HTTP/1.1" 200 - 6 0.010 0.065
+2026-10-27 17:21:12,603 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /fr/resources/access-control-when-offline in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:12,605 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /resources/access-control-when-offline in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:12,724 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:12] "GET /fr/resources/access-control-when-offline HTTP/1.1" 200 - 26 0.022 0.117
+2026-10-27 17:21:12,751 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /es/solutions/integrators in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:12,752 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /solutions/integrators in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:12,861 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:12] "GET /es/solutions/integrators HTTP/1.1" 200 - 21 0.019 0.114
+2026-10-27 17:21:12,887 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /security in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:12,888 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /security in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:12,999 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:12] "GET /security HTTP/1.1" 200 - 23 0.020 0.114
+2026-10-27 17:21:13,033 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /de/apps-and-chatbot in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:13,035 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /apps-and-chatbot in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:13,225 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:13] "GET /de/apps-and-chatbot HTTP/1.1" 200 - 23 0.030 0.193
+2026-10-27 17:21:13,246 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /post/matter-standard-the-key-to-a-seamless-smart-home in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:13,247 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /post/matter-standard-the-key-to-a-seamless-smart-home in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:13,309 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:13] "GET /post/matter-standard-the-key-to-a-seamless-smart-home HTTP/1.1" 200 - 6 0.007 0.074
+2026-10-27 17:21:13,338 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /uk/products/readers in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:13,341 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /products/readers in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:13,409 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:13] "GET /uk/products/readers HTTP/1.1" 200 - 12 0.017 0.080
+2026-10-27 17:21:13,433 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /es in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:13,435 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request / in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:13,516 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:13] "GET /es HTTP/1.1" 200 - 7 0.012 0.091
+2026-10-27 17:21:13,545 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /es/contact in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:13,547 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /contact in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:13,627 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:13] "GET /es/contact HTTP/1.1" 200 - 8 0.010 0.096
+2026-10-27 17:21:13,650 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /es/find-your-setup in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:13,651 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /find-your-setup in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:13,703 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:13] "GET /es/find-your-setup HTTP/1.1" 200 - 4 0.008 0.066
+2026-10-27 17:21:13,725 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /platform in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:13,726 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /platform in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:13,775 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:13] "GET /platform HTTP/1.1" 200 - 10 0.012 0.056
+2026-10-27 17:21:13,797 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /de/solutions/property-managers in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:13,799 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /solutions/property-managers in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:13,833 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:13] "GET /de/solutions/property-managers HTTP/1.1" 200 - 6 0.009 0.047
+2026-10-27 17:21:13,858 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /fr/solutions/integrators in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:13,860 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /solutions/integrators in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:13,895 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:13] "GET /fr/solutions/integrators HTTP/1.1" 200 - 6 0.009 0.050
+2026-10-27 17:21:13,916 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /uk/resources in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:13,917 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /resources in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:14,068 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:14] "GET /uk/resources HTTP/1.1" 200 - 10 0.013 0.157
+2026-10-27 17:21:14,089 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /platform/automation in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:14,090 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /platform/automation in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:14,123 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:14] "GET /platform/automation HTTP/1.1" 200 - 6 0.008 0.045
+2026-10-27 17:21:14,144 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /de/products/readers in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:14,145 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /products/readers in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:14,182 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:14] "GET /de/products/readers HTTP/1.1" 200 - 8 0.010 0.045
+2026-10-27 17:21:14,202 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /team/alex-sydorenko in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:14,203 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /team/alex-sydorenko in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:14,233 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:14] "GET /team/alex-sydorenko HTTP/1.1" 200 - 8 0.008 0.041
+2026-10-27 17:21:14,255 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /team/vitalii-dolzhenko in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:14,257 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /team/vitalii-dolzhenko in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:14,282 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:14] "GET /team/vitalii-dolzhenko HTTP/1.1" 200 - 5 0.007 0.037
+2026-10-27 17:21:14,303 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /team/kate-vasylenko in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:14,303 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /team/kate-vasylenko in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:14,322 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:14] "GET /team/kate-vasylenko HTTP/1.1" 200 - 5 0.007 0.031
+2026-10-27 17:21:14,345 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /fr in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:14,346 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request / in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:14,389 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:14] "GET /fr HTTP/1.1" 200 - 4 0.008 0.055
+2026-10-27 17:21:14,415 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /es/about in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:14,416 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /about in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:14,478 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:14] "GET /es/about HTTP/1.1" 200 - 8 0.010 0.075
+2026-10-27 17:21:14,519 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /es/solutions/property-managers in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:14,521 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /solutions/property-managers in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:14,577 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:14] "GET /es/solutions/property-managers HTTP/1.1" 200 - 4 0.019 0.076
+2026-10-27 17:21:14,598 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /fr/find-your-setup in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:14,600 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /find-your-setup in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:14,661 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:14] "GET /fr/find-your-setup HTTP/1.1" 200 - 4 0.006 0.074
+2026-10-27 17:21:14,683 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /compatibility in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:14,685 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /compatibility in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:14,761 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:14] "GET /compatibility HTTP/1.1" 200 - 23 0.017 0.079
+2026-10-27 17:21:14,785 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /de/resources/access-control-when-offline in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:14,787 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /resources/access-control-when-offline in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:14,862 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:14] "GET /de/resources/access-control-when-offline HTTP/1.1" 200 - 8 0.012 0.087
+2026-10-27 17:21:14,885 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /uk/resources/matter-thread-access-control in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:14,886 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /resources/matter-thread-access-control in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:14,932 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:14] "GET /uk/resources/matter-thread-access-control HTTP/1.1" 200 - 8 0.009 0.058
+2026-10-27 17:21:14,952 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /es/platform/access-management in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:14,953 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /platform/access-management in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:14,987 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:14] "GET /es/platform/access-management HTTP/1.1" 200 - 8 0.009 0.043
+2026-10-27 17:21:15,007 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /resources/matter-thread-access-control in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:15,010 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /resources/matter-thread-access-control in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:15,034 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:15] "GET /resources/matter-thread-access-control HTTP/1.1" 200 - 5 0.007 0.038
+2026-10-27 17:21:15,055 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /resources/mifare-classic-desfire-ev3 in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:15,056 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /resources/mifare-classic-desfire-ev3 in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:15,077 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:15] "GET /resources/mifare-classic-desfire-ev3 HTTP/1.1" 200 - 5 0.007 0.034
+2026-10-27 17:21:15,097 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /de/platform/automation in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:15,099 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /platform/automation in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:15,129 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:15] "GET /de/platform/automation HTTP/1.1" 200 - 4 0.007 0.041
+2026-10-27 17:21:15,150 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /uk/about in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:15,151 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /about in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:15,182 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:15] "GET /uk/about HTTP/1.1" 200 - 6 0.007 0.043
+2026-10-27 17:21:15,202 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /es/platform/automation in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:15,204 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /platform/automation in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:15,233 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:15] "GET /es/platform/automation HTTP/1.1" 200 - 4 0.007 0.041
+2026-10-27 17:21:15,254 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /team/lana-ostapenko in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:15,255 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /team/lana-ostapenko in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:15,276 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:15] "GET /team/lana-ostapenko HTTP/1.1" 200 - 5 0.008 0.032
+2026-10-27 17:21:15,296 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /products/readers in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:15,297 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /products/readers in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:15,331 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:15] "GET /products/readers HTTP/1.1" 200 - 6 0.009 0.043
+2026-10-27 17:21:15,353 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /about in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:15,354 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /about in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:15,388 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:15] "GET /about HTTP/1.1" 200 - 6 0.007 0.046
+2026-10-27 17:21:15,408 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /de/about in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:15,410 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /about in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:15,441 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:15] "GET /de/about HTTP/1.1" 200 - 6 0.007 0.043
+2026-10-27 17:21:15,464 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /fr/about in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:15,465 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /about in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:15,497 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:15] "GET /fr/about HTTP/1.1" 200 - 6 0.008 0.044
+2026-10-27 17:21:15,517 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /fr/resources/matter-thread-access-control in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:15,518 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /resources/matter-thread-access-control in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:15,541 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:15] "GET /fr/resources/matter-thread-access-control HTTP/1.1" 200 - 5 0.007 0.035
+2026-10-27 17:21:15,563 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /fr/resources/mifare-classic-desfire-ev3 in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:15,564 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /resources/mifare-classic-desfire-ev3 in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:15,590 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:15] "GET /fr/resources/mifare-classic-desfire-ev3 HTTP/1.1" 200 - 5 0.008 0.038
+2026-10-27 17:21:15,614 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /uk/solutions/property-managers in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:15,615 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /solutions/property-managers in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:15,640 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:15] "GET /uk/solutions/property-managers HTTP/1.1" 200 - 4 0.008 0.038
+2026-10-27 17:21:15,662 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /uk/certifications in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:15,664 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /certifications in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:15,704 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:15] "GET /uk/certifications HTTP/1.1" 200 - 6 0.008 0.051
+2026-10-27 17:21:15,725 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /post/smartphonekey-official-launch in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:15,727 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /post/smartphonekey-official-launch in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:15,761 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:15] "GET /post/smartphonekey-official-launch HTTP/1.1" 200 - 5 0.008 0.047
+2026-10-27 17:21:15,784 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /es/resources/access-control-when-offline in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:15,785 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /resources/access-control-when-offline in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:15,871 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:15] "GET /es/resources/access-control-when-offline HTTP/1.1" 200 - 8 0.010 0.095
+2026-10-27 17:21:15,899 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /uk/platform/visitor-access in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:15,900 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /platform/visitor-access in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:15,940 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:15] "GET /uk/platform/visitor-access HTTP/1.1" 200 - 6 0.011 0.052
+2026-10-27 17:21:15,963 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /es/platform/visitor-access in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:15,965 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /platform/visitor-access in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:16,005 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:16] "GET /es/platform/visitor-access HTTP/1.1" 200 - 4 0.009 0.052
+2026-10-27 17:21:16,031 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /fr/compatibility in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:16,032 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /compatibility in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:16,100 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:16] "GET /fr/compatibility HTTP/1.1" 200 - 22 0.019 0.073
+2026-10-27 17:21:16,129 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /resources/lte-vs-wifi-access-control in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:16,131 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /resources/lte-vs-wifi-access-control in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:16,169 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:16] "GET /resources/lte-vs-wifi-access-control HTTP/1.1" 200 - 7 0.015 0.051
+2026-10-27 17:21:16,197 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /certifications in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:16,198 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /certifications in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:16,231 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:16] "GET /certifications HTTP/1.1" 200 - 4 0.009 0.049
+2026-10-27 17:21:16,252 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /fr/resources/lte-vs-wifi-access-control in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:16,253 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /resources/lte-vs-wifi-access-control in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:16,287 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:16] "GET /fr/resources/lte-vs-wifi-access-control HTTP/1.1" 200 - 7 0.009 0.044
+2026-10-27 17:21:16,309 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /es/compatibility in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:16,311 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /compatibility in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:16,364 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:16] "GET /es/compatibility HTTP/1.1" 200 - 20 0.012 0.063
+2026-10-27 17:21:16,385 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /de/resources/matter-thread-access-control in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:16,386 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /resources/matter-thread-access-control in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:16,408 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:16] "GET /de/resources/matter-thread-access-control HTTP/1.1" 200 - 5 0.007 0.034
+2026-10-27 17:21:16,429 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /fr/contact in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:16,431 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /contact in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:16,498 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:16] "GET /fr/contact HTTP/1.1" 200 - 4 0.008 0.079
+2026-10-27 17:21:16,519 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /uk/apps-and-chatbot in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:16,520 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /apps-and-chatbot in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:16,545 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:16] "GET /uk/apps-and-chatbot HTTP/1.1" 200 - 4 0.006 0.037
+2026-10-27 17:21:16,565 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /fr/apps-and-chatbot in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:16,566 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /apps-and-chatbot in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:16,593 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:16] "GET /fr/apps-and-chatbot HTTP/1.1" 200 - 4 0.007 0.038
+2026-10-27 17:21:16,614 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /team/denys-merkulov in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:16,615 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /team/denys-merkulov in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:16,635 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:16] "GET /team/denys-merkulov HTTP/1.1" 200 - 5 0.008 0.031
+2026-10-27 17:21:16,656 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request / in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:16,657 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request / in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:16,694 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:16] "GET / HTTP/1.1" 200 - 4 0.007 0.050
+2026-10-27 17:21:16,715 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /es/resources in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:16,716 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /resources in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:16,765 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:16] "GET /es/resources HTTP/1.1" 200 - 8 0.011 0.057
+2026-10-27 17:21:16,787 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /team/kostiantyn-dolzhenko in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:16,788 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /team/kostiantyn-dolzhenko in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:16,808 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:16] "GET /team/kostiantyn-dolzhenko HTTP/1.1" 200 - 5 0.007 0.032
+2026-10-27 17:21:16,829 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /post/welcome-to-smartphonekey-your-affordable-access-to-a-keyless-future in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:16,830 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /post/welcome-to-smartphonekey-your-affordable-access-to-a-keyless-future in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:16,850 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:16] "GET /post/welcome-to-smartphonekey-your-affordable-access-to-a-keyless-future HTTP/1.1" 200 - 5 0.007 0.031
+2026-10-27 17:21:16,870 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /fr/platform in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:16,871 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /platform in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:16,904 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:16] "GET /fr/platform HTTP/1.1" 200 - 4 0.007 0.045
+2026-10-27 17:21:16,925 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /platform/visitor-access in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:16,926 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /platform/visitor-access in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:16,959 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:16] "GET /platform/visitor-access HTTP/1.1" 200 - 4 0.008 0.045
+2026-10-27 17:21:16,982 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /resources in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:16,984 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /resources in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:17,033 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:17] "GET /resources HTTP/1.1" 200 - 8 0.011 0.058
+2026-10-27 17:21:17,057 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /es/resources/matter-thread-access-control in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:17,058 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /resources/matter-thread-access-control in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:17,085 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:17] "GET /es/resources/matter-thread-access-control HTTP/1.1" 200 - 5 0.009 0.041
+2026-10-27 17:21:17,107 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /team/oleksii-andrieiev in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:17,110 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /team/oleksii-andrieiev in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:17,148 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:17] "GET /team/oleksii-andrieiev HTTP/1.1" 200 - 5 0.009 0.051
+2026-10-27 17:21:17,175 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /uk/security in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:17,177 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /security in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:17,216 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:17] "GET /uk/security HTTP/1.1" 200 - 4 0.010 0.055
+2026-10-27 17:21:17,240 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /post/how-smartphonekey-enhances-security-for-your-property in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:17,241 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /post/how-smartphonekey-enhances-security-for-your-property in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:17,266 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:17] "GET /post/how-smartphonekey-enhances-security-for-your-property HTTP/1.1" 200 - 5 0.008 0.038
+2026-10-27 17:21:17,287 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /uk/platform/automation in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:17,288 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /platform/automation in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:17,335 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:17] "GET /uk/platform/automation HTTP/1.1" 200 - 4 0.007 0.058
+2026-10-27 17:21:17,355 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /es/certifications in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:17,357 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /certifications in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:17,395 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:17] "GET /es/certifications HTTP/1.1" 200 - 4 0.007 0.050
+2026-10-27 17:21:17,418 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /de/security in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:17,419 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /security in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:17,448 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:17] "GET /de/security HTTP/1.1" 200 - 4 0.006 0.043
+2026-10-27 17:21:17,482 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /es/apps-and-chatbot in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:17,485 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /apps-and-chatbot in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:17,521 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:17] "GET /es/apps-and-chatbot HTTP/1.1" 200 - 4 0.008 0.061
+2026-10-27 17:21:17,544 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /de in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:17,546 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request / in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:17,607 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:17] "GET /de HTTP/1.1" 200 - 4 0.008 0.075
+2026-10-27 17:21:17,627 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /team/vadym-sydorenko in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:17,628 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /team/vadym-sydorenko in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:17,649 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:17] "GET /team/vadym-sydorenko HTTP/1.1" 200 - 5 0.006 0.034
+2026-10-27 17:21:17,669 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /resources/access-control-when-offline in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:17,670 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /resources/access-control-when-offline in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:17,692 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:17] "GET /resources/access-control-when-offline HTTP/1.1" 200 - 5 0.007 0.033
+2026-10-27 17:21:17,714 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /uk/resources/access-control-when-offline in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:17,715 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /resources/access-control-when-offline in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:17,736 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:17] "GET /uk/resources/access-control-when-offline HTTP/1.1" 200 - 5 0.008 0.033
+2026-10-27 17:21:17,758 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /de/certifications in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:17,760 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /certifications in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:17,789 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:17] "GET /de/certifications HTTP/1.1" 200 - 4 0.007 0.043
+2026-10-27 17:21:17,810 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /de/platform/visitor-access in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:17,811 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /platform/visitor-access in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:17,838 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:17] "GET /de/platform/visitor-access HTTP/1.1" 200 - 4 0.006 0.040
+2026-10-27 17:21:17,858 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /es/resources/lte-vs-wifi-access-control in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:17,859 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /resources/lte-vs-wifi-access-control in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:17,886 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:17] "GET /es/resources/lte-vs-wifi-access-control HTTP/1.1" 200 - 7 0.008 0.037
+2026-10-27 17:21:17,906 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /fr/resources in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:17,907 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /resources in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:17,958 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:17] "GET /fr/resources HTTP/1.1" 200 - 8 0.011 0.059
+2026-10-27 17:21:17,986 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /solutions/integrators in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:17,987 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /solutions/integrators in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:18,039 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:18] "GET /solutions/integrators HTTP/1.1" 200 - 4 0.009 0.069
+2026-10-27 17:21:18,074 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /uk/contact in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:18,076 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /contact in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:18,187 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:18] "GET /uk/contact HTTP/1.1" 200 - 4 0.010 0.134
+2026-10-27 17:21:18,207 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /terms-of-service in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:18,208 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /terms-of-service in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:18,235 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:18] "GET /terms-of-service HTTP/1.1" 200 - 6 0.008 0.037
+2026-10-27 17:21:18,257 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /fr/security in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:18,258 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /security in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:18,290 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:18] "GET /fr/security HTTP/1.1" 200 - 4 0.007 0.044
+2026-10-27 17:21:18,312 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /de/solutions/integrators in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:18,314 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /solutions/integrators in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:18,341 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:18] "GET /de/solutions/integrators HTTP/1.1" 200 - 4 0.009 0.039
+2026-10-27 17:21:18,364 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /es/resources/mifare-classic-desfire-ev3 in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:18,366 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /resources/mifare-classic-desfire-ev3 in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:18,397 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:18] "GET /es/resources/mifare-classic-desfire-ev3 HTTP/1.1" 200 - 5 0.010 0.043
+2026-10-27 17:21:18,418 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /uk/resources/lte-vs-wifi-access-control in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:18,419 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /resources/lte-vs-wifi-access-control in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:18,453 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:18] "GET /uk/resources/lte-vs-wifi-access-control HTTP/1.1" 200 - 5 0.009 0.044
+2026-10-27 17:21:18,475 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /contact in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:18,476 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /contact in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:18,590 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:18] "GET /contact HTTP/1.1" 200 - 4 0.007 0.126
+2026-10-27 17:21:18,617 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /team/ioannis-mavridis in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:18,618 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /team/ioannis-mavridis in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:18,638 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:18] "GET /team/ioannis-mavridis HTTP/1.1" 200 - 5 0.008 0.036
+2026-10-27 17:21:18,658 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /uk in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:18,661 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request / in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:18,713 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:18] "GET /uk HTTP/1.1" 200 - 4 0.009 0.064
+2026-10-27 17:21:18,743 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /fr/solutions/property-managers in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:18,745 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /solutions/property-managers in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:18,778 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:18] "GET /fr/solutions/property-managers HTTP/1.1" 200 - 4 0.011 0.052
+2026-10-27 17:21:18,802 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /es/security in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:18,804 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /security in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:18,849 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:18] "GET /es/security HTTP/1.1" 200 - 4 0.008 0.058
+2026-10-27 17:21:18,873 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /solutions/property-managers in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:18,875 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /solutions/property-managers in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:18,927 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:18] "GET /solutions/property-managers HTTP/1.1" 200 - 4 0.008 0.066
+2026-10-27 17:21:18,957 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /de/resources/mifare-classic-desfire-ev3 in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:18,958 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /resources/mifare-classic-desfire-ev3 in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:18,985 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:18] "GET /de/resources/mifare-classic-desfire-ev3 HTTP/1.1" 200 - 5 0.008 0.041
+2026-10-27 17:21:19,005 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /apps-and-chatbot in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:19,006 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /apps-and-chatbot in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:19,030 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:19] "GET /apps-and-chatbot HTTP/1.1" 200 - 4 0.006 0.036
+2026-10-27 17:21:19,051 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /de/resources in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:19,052 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /resources in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:19,099 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:19] "GET /de/resources HTTP/1.1" 200 - 8 0.012 0.054
+2026-10-27 17:21:19,122 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /de/find-your-setup in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:19,123 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /find-your-setup in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:19,168 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:19] "GET /de/find-your-setup HTTP/1.1" 200 - 4 0.009 0.057
+2026-10-27 17:21:19,189 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /fr/certifications in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:19,190 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /certifications in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:19,218 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:19] "GET /fr/certifications HTTP/1.1" 200 - 4 0.007 0.040
+2026-10-27 17:21:19,238 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /fr/platform/visitor-access in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:19,240 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /platform/visitor-access in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:19,269 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:19] "GET /fr/platform/visitor-access HTTP/1.1" 200 - 4 0.007 0.041
+2026-10-27 17:21:19,291 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /find-your-setup in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:19,292 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /find-your-setup in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:19,338 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:19] "GET /find-your-setup HTTP/1.1" 200 - 4 0.007 0.060
+2026-10-27 17:21:19,358 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /de/contact in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:19,359 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /contact in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:19,427 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:19] "GET /de/contact HTTP/1.1" 200 - 4 0.007 0.078
+2026-10-27 17:21:19,449 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /platform/access-management in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:19,451 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /platform/access-management in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:19,477 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:19] "GET /platform/access-management HTTP/1.1" 200 - 4 0.008 0.039
+2026-10-27 17:21:19,498 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /de/platform/access-management in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:19,500 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /platform/access-management in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:19,527 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:19] "GET /de/platform/access-management HTTP/1.1" 200 - 4 0.007 0.038
+2026-10-27 17:21:19,547 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /de/platform in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:19,548 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /platform in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:19,579 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:19] "GET /de/platform HTTP/1.1" 200 - 4 0.007 0.043
+2026-10-27 17:21:19,601 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /post/smart-home-trends-2025-the-future-of-secure-and-connected-living in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:19,602 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /post/smart-home-trends-2025-the-future-of-secure-and-connected-living in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:19,626 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:19] "GET /post/smart-home-trends-2025-the-future-of-secure-and-connected-living HTTP/1.1" 200 - 5 0.008 0.034
+2026-10-27 17:21:19,648 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /es/platform in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:19,649 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /platform in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:19,687 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:19] "GET /es/platform HTTP/1.1" 200 - 4 0.009 0.050
+2026-10-27 17:21:19,708 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /uk/platform/access-management in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:19,709 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /platform/access-management in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:19,749 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:19] "GET /uk/platform/access-management HTTP/1.1" 200 - 4 0.008 0.052
+2026-10-27 17:21:19,775 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /fr/products/readers in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:19,777 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /products/readers in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:19,816 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:19] "GET /fr/products/readers HTTP/1.1" 200 - 4 0.009 0.053
+2026-10-27 17:21:19,855 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /privacy-policy in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:19,856 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /privacy-policy in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:19,903 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:19] "GET /privacy-policy HTTP/1.1" 200 - 6 0.016 0.068
+2026-10-27 17:21:19,927 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /fr/platform/access-management in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:19,929 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /platform/access-management in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:19,968 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:19] "GET /fr/platform/access-management HTTP/1.1" 200 - 4 0.008 0.053
+2026-10-27 17:21:19,990 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /de/resources/lte-vs-wifi-access-control in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:19,992 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /resources/lte-vs-wifi-access-control in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:20,015 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:20] "GET /de/resources/lte-vs-wifi-access-control HTTP/1.1" 200 - 5 0.007 0.036
+2026-10-27 17:21:20,036 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /de/compatibility in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:20,038 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /compatibility in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:20,106 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:20] "GET /de/compatibility HTTP/1.1" 200 - 20 0.020 0.068
+2026-10-27 17:21:20,136 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /es/products/readers in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:20,137 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /products/readers in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:20,168 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:20] "GET /es/products/readers HTTP/1.1" 200 - 4 0.010 0.047
+2026-10-27 17:21:20,190 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /post/the-future-of-keyless-entry-why-its-time-to-upgrade-to-smartphonekey in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:20,191 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /post/the-future-of-keyless-entry-why-its-time-to-upgrade-to-smartphonekey in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:20,227 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:20] "GET /post/the-future-of-keyless-entry-why-its-time-to-upgrade-to-smartphonekey HTTP/1.1" 200 - 5 0.008 0.048
+2026-10-27 17:21:20,258 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /uk/compatibility in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:20,260 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /compatibility in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:20,337 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:20] "GET /uk/compatibility HTTP/1.1" 200 - 20 0.026 0.081
+2026-10-27 17:21:20,358 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /uk/resources/mifare-classic-desfire-ev3 in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:20,360 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /resources/mifare-classic-desfire-ev3 in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:20,383 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:20] "GET /uk/resources/mifare-classic-desfire-ev3 HTTP/1.1" 200 - 5 0.007 0.036
+2026-10-27 17:21:20,404 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /uk/platform in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:20,405 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /platform in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:20,438 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:20] "GET /uk/platform HTTP/1.1" 200 - 4 0.007 0.046
+2026-10-27 17:21:20,458 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /fr/platform/automation in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:20,459 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /platform/automation in /spk_website_v2/tests/test_seo.py:TestDiscovery.test_sitemap_lists_published_canonical_pages_only 
+2026-10-27 17:21:20,489 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:20] "GET /fr/platform/automation HTTP/1.1" 200 - 4 0.008 0.041
+2026-10-27 17:21:20,490 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_seo.TestDiscovery.test_sitemap_lists_published_canonical_pages_only: waiting for threads: [<Thread(odoo.service.http.request.131085398177472, started 131085398177472)>] 
+2026-10-27 17:21:20,493 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_seo: Starting TestDiscovery.test_structured_data_matches_the_page ... 
+2026-10-27 17:21:20,515 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:21:20,655 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:20] "GET / HTTP/1.1" 200 - 55 0.030 0.130
+2026-10-27 17:21:20,739 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:20] "GET /platform HTTP/1.1" 200 - 21 0.018 0.062
+2026-10-27 17:21:20,791 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:20] "GET /platform/access-management HTTP/1.1" 200 - 6 0.007 0.039
+2026-10-27 17:21:20,849 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:20] "GET /platform/automation HTTP/1.1" 200 - 6 0.008 0.046
+2026-10-27 17:21:20,901 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:20] "GET /platform/visitor-access HTTP/1.1" 200 - 6 0.007 0.039
+2026-10-27 17:21:20,948 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:20] "GET /solutions/property-managers HTTP/1.1" 200 - 6 0.007 0.036
+2026-10-27 17:21:21,007 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:21] "GET /solutions/integrators HTTP/1.1" 200 - 6 0.007 0.045
+2026-10-27 17:21:21,070 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:21] "GET /products/readers HTTP/1.1" 200 - 9 0.010 0.049
+2026-10-27 17:21:21,169 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:21] "GET /compatibility HTTP/1.1" 200 - 23 0.013 0.081
+2026-10-27 17:21:21,258 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:21] "GET /security HTTP/1.1" 200 - 6 0.010 0.073
+2026-10-27 17:21:21,390 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:21] "GET /resources HTTP/1.1" 200 - 10 0.017 0.103
+2026-10-27 17:21:21,529 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:21] "GET /find-your-setup HTTP/1.1" 200 - 6 0.011 0.124
+2026-10-27 17:21:21,657 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:21] "GET /contact HTTP/1.1" 200 - 8 0.009 0.105
+2026-10-27 17:21:21,735 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:21] "GET /about HTTP/1.1" 200 - 8 0.013 0.058
+2026-10-27 17:21:21,791 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:21] "GET /certifications HTTP/1.1" 200 - 6 0.009 0.042
+2026-10-27 17:21:21,844 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:21] "GET /apps-and-chatbot HTTP/1.1" 200 - 6 0.007 0.042
+2026-10-27 17:21:21,894 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:21] "GET /privacy-policy HTTP/1.1" 200 - 6 0.009 0.036
+2026-10-27 17:21:21,945 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:21] "GET /terms-of-service HTTP/1.1" 200 - 6 0.008 0.040
+2026-10-27 17:21:22,015 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:22] "GET /resources/lte-vs-wifi-access-control HTTP/1.1" 200 - 10 0.012 0.054
+2026-10-27 17:21:22,060 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:22] "GET /resources/mifare-classic-desfire-ev3 HTTP/1.1" 200 - 5 0.007 0.032
+2026-10-27 17:21:22,107 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:22] "GET /resources/matter-thread-access-control HTTP/1.1" 200 - 5 0.009 0.033
+2026-10-27 17:21:22,151 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:22] "GET /resources/access-control-when-offline HTTP/1.1" 200 - 5 0.007 0.033
+2026-10-27 17:21:22,197 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:22] "GET /post/how-smartphonekey-enhances-security-for-your-property HTTP/1.1" 200 - 5 0.007 0.034
+2026-10-27 17:21:22,207 1 INFO spk_v2_test odoo.addons.base.models.ir_attachment: filestore gc 0 checked, 0 removed 
+2026-10-27 17:21:22,219 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_setup_result: Starting TestSetupResult.test_connection_basics_reuse_the_advice ... 
+2026-10-27 17:21:22,242 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:21:22,439 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:22] "GET /find-your-setup HTTP/1.1" 200 - 60 0.037 0.180
+2026-10-27 17:21:22,446 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_setup_result: Starting TestSetupResult.test_contact_prefill_note_follows_the_recommendations ... 
+2026-10-27 17:21:22,474 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:21:22,748 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:22] "GET /uk/contact?interest=project&role=owner&connection=wifi HTTP/1.1" 200 - 62 0.051 0.248
+2026-10-27 17:21:22,775 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /contact in /spk_website_v2/tests/test_setup_result.py:TestSetupResult.test_contact_prefill_note_follows_the_recommendations 
+2026-10-27 17:21:22,777 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /contact in /spk_website_v2/tests/test_setup_result.py:TestSetupResult.test_contact_prefill_note_follows_the_recommendations 
+2026-10-27 17:21:22,962 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:22] "GET /contact?interests=cards&interests=wallets HTTP/1.1" 200 - 19 0.023 0.185
+2026-10-27 17:21:22,994 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /contact in /spk_website_v2/tests/test_setup_result.py:TestSetupResult.test_contact_prefill_note_follows_the_recommendations 
+2026-10-27 17:21:22,995 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /contact in /spk_website_v2/tests/test_setup_result.py:TestSetupResult.test_contact_prefill_note_follows_the_recommendations 
+2026-10-27 17:21:23,018 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:23] "GET /contact HTTP/1.1" 200 - 3 0.007 0.041
+2026-10-27 17:21:23,041 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /uk/contact in /spk_website_v2/tests/test_setup_result.py:TestSetupResult.test_contact_prefill_note_follows_the_recommendations 
+2026-10-27 17:21:23,042 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /contact in /spk_website_v2/tests/test_setup_result.py:TestSetupResult.test_contact_prefill_note_follows_the_recommendations 
+2026-10-27 17:21:23,061 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:23] "GET /uk/contact HTTP/1.1" 200 - 3 0.006 0.032
+2026-10-27 17:21:23,084 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /contact in /spk_website_v2/tests/test_setup_result.py:TestSetupResult.test_contact_prefill_note_follows_the_recommendations 
+2026-10-27 17:21:23,086 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /contact in /spk_website_v2/tests/test_setup_result.py:TestSetupResult.test_contact_prefill_note_follows_the_recommendations 
+2026-10-27 17:21:23,106 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:23] "GET /contact?interest=partner HTTP/1.1" 200 - 3 0.007 0.034
+2026-10-27 17:21:23,129 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /contact in /spk_website_v2/tests/test_setup_result.py:TestSetupResult.test_contact_prefill_note_follows_the_recommendations 
+2026-10-27 17:21:23,130 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /contact in /spk_website_v2/tests/test_setup_result.py:TestSetupResult.test_contact_prefill_note_follows_the_recommendations 
+2026-10-27 17:21:23,152 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:23] "GET /contact?interest=automation HTTP/1.1" 200 - 3 0.007 0.033
+2026-10-27 17:21:23,174 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /contact in /spk_website_v2/tests/test_setup_result.py:TestSetupResult.test_contact_prefill_note_follows_the_recommendations 
+2026-10-27 17:21:23,175 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /contact in /spk_website_v2/tests/test_setup_result.py:TestSetupResult.test_contact_prefill_note_follows_the_recommendations 
+2026-10-27 17:21:23,193 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:23] "GET /contact?role=bogus&sites=999&interests=bogus HTTP/1.1" 200 - 3 0.007 0.031
+2026-10-27 17:21:23,214 1 INFO ? odoo.tests.common: Opening a test cursor without specified test on request /contact in /spk_website_v2/tests/test_setup_result.py:TestSetupResult.test_contact_prefill_note_follows_the_recommendations 
+2026-10-27 17:21:23,215 1 INFO spk_v2_test odoo.tests.common: Opening a test cursor without specified test on request /contact in /spk_website_v2/tests/test_setup_result.py:TestSetupResult.test_contact_prefill_note_follows_the_recommendations 
+2026-10-27 17:21:23,235 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:23] "GET /contact?interest=automation HTTP/1.1" 200 - 3 0.006 0.032
+2026-10-27 17:21:23,241 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_setup_result: Starting TestSetupResult.test_home_tool_site_choice_joins_the_connection ... 
+2026-10-27 17:21:23,264 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:21:23,523 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:23] "GET /find-your-setup?site=portfolio&connection=cellular HTTP/1.1" 200 - 60 0.034 0.245
+2026-10-27 17:21:23,564 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:23] "GET /find-your-setup?site=partner&connection=wifi HTTP/1.1" 200 - 3 0.006 0.031
+2026-10-27 17:21:23,607 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:23] "GET /find-your-setup?site=property&connection=wifi HTTP/1.1" 200 - 3 0.007 0.031
+2026-10-27 17:21:23,649 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:23] "GET /find-your-setup?site=partner&connection=wifi&role=owner&interests=cards HTTP/1.1" 200 - 3 0.006 0.031
+2026-10-27 17:21:23,691 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:23] "GET /find-your-setup?site=portfolio&connection=wifi&doors=one_to_five HTTP/1.1" 200 - 3 0.007 0.030
+2026-10-27 17:21:23,743 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:23] "GET /find-your-setup?site=portfolio&connection=wifi&interests=wallets HTTP/1.1" 200 - 3 0.007 0.040
+2026-10-27 17:21:23,789 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:23] "GET /find-your-setup?site=bogus&connection=wifi HTTP/1.1" 200 - 3 0.006 0.034
+2026-10-27 17:21:23,796 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_setup_result: Starting TestSetupResult.test_result_has_every_field_without_javascript ... 
+2026-10-27 17:21:23,819 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:21:24,058 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:24] "GET /find-your-setup?role=property_manager&sites=two_to_ten&connection=wifi&interests=cards HTTP/1.1" 200 - 60 0.047 0.212
+2026-10-27 17:21:24,064 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_setup_result: Starting TestSetupResult.test_result_stays_empty_until_a_connection_is_chosen ... 
+2026-10-27 17:21:24,095 1 INFO spk_v2_test odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-10-27 17:21:24,315 1 INFO spk_v2_test werkzeug: 127.0.0.1 - - [27/Oct/2026 17:21:24] "GET /find-your-setup?role=owner&sites=one HTTP/1.1" 200 - 60 0.045 0.204
+2026-10-27 17:21:24,323 1 INFO spk_v2_test odoo.addons.spk_website_v2.tests.test_setup_result: Starting TestSetupResult.test_selection_labels_follow_form_order ... 
+2026-10-27 17:21:24,328 1 INFO spk_v2_test odoo.addons.base.models.ir_attachment: filestore gc 0 checked, 0 removed 
+2026-10-27 17:21:24,329 1 INFO spk_v2_test odoo.service.server: 48 post-tests in 41.25s, 7075 queries 
+2026-10-27 17:21:24,329 1 INFO spk_v2_test odoo.tests.stats: spk_website_v2: 62 tests 38.06s 6766 queries 
+2026-10-27 17:21:24,329 1 ERROR spk_v2_test odoo.tests.result: 1 failed, 0 error(s) of 48 tests when loading database 'spk_v2_test' 
+2026-10-27 17:21:24,329 1 INFO spk_v2_test odoo.service.server: Initiating shutdown 
+2026-10-27 17:21:24,329 1 INFO spk_v2_test odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-10-27 17:21:24,568 1 INFO spk_v2_test odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+

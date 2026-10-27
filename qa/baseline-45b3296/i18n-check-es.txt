@@ -1,0 +1,74 @@
+es: 795 public terms, 795 translated
+BLOCKING third-party programmer wording (C05): <strong>Programación</strong>: un dispositivo de programación compatible escribe una credencial de SmartphoneKey en una tarjeta compatible.
+BLOCKING third-party programmer wording (C05): La programación de tarjetas depende de la familia de tarjetas y del dispositivo de programación.
+BLOCKING third-party programmer wording (C05): Elija el dispositivo de programación y el tipo de tarjeta.
+BLOCKING third-party programmer wording (C05): Programación de credenciales mediante el flujo de trabajo del Admin Panel con un dispositivo de programación SmartphoneKey compatible, inclu
+BLOCKING third-party programmer wording (C05): Programe las tarjetas MIFARE Classic y MIFARE DESFire EV3 admitidas con un dispositivo de programación compatible, incluido el programador i
+BLOCKING third-party programmer wording (C05): Para programar una tarjeta nueva se necesitan una familia de tarjetas y un dispositivo de programación compatibles.
+BLOCKING third-party programmer wording (C05): Programación a través del Admin Panel con un dispositivo de programación compatible, incluido el programador integrado del lector cuando est
+BLOCKING third-party programmer wording (C05): Acerque la tarjeta al programador.
+BLOCKING third-party programmer wording (C05): Los flujos de trabajo de programación documentados mencionan MIFARE Classic y MIFARE DESFire EV3. Un programador compatible o el programador
+warning soft hyphen in a short term (heading?): <span class="step-title">Seguir</span><span>las ins­truc­cio­nes para visitantes</span>
+warning identical to English: <span>SmartphoneKey</span>
+warning soft hyphen in a short term (heading?): <strong>Lectura</strong>: un lector detecta la tarjeta y su iden­ti­fi­ca­dor.
+warning soft hyphen in a short term (heading?): Confirmación de la cer­ti­fi­ca­ción Apple ECP2
+warning soft hyphen in a short term (heading?): Preguntar por la com­pa­ti­bi­li­dad
+warning soft hyphen in a short term (heading?): Utilice estos datos en la guía de con­fi­gu­ra­ción o en una conversación con nuestro equipo:
+warning soft hyphen in a short term (heading?): Cer­ti­fi­ca­cio­nes y documentos
+warning soft hyphen in a short term (heading?): Cer­ti­fi­ca­cio­nes y documentos.
+warning soft hyphen in a short term (heading?): Compruebe qué necesita su instalación y, después, pregunte por la dis­po­ni­bi­li­dad para ella.
+warning soft hyphen in a short term (heading?): Elija una con­fi­gu­ra­ción, instálela, entréguela y dé soporte a su cliente.
+warning soft hyphen in a short term (heading?): Elija la con­fi­gu­ra­ción del lector.
+warning soft hyphen in a short term (heading?): Hablar de un proyecto de auto­ma­ti­za­ción
+warning soft hyphen in a short term (heading?): Hablar de la dis­po­ni­bi­li­dad de lectores
+warning soft hyphen in a short term (heading?): Hablar de esta con­fi­gu­ra­ción
+warning identical to English: Dongguan Yaxu (AiT) Technology Limited
+warning soft hyphen in a short term (heading?): Topología de ejemplo. La implantación depende de la con­fi­gu­ra­ción.
+warning soft hyphen in a short term (heading?): Explore una con­fi­gu­ra­ción para su instalación o hable de los detalles con nuestro equipo.
+warning soft hyphen in a short term (heading?): Explorar la admi­nis­tra­ción de fincas
+warning identical to English: FCC ID 2BNRNSPKRDRLV1
+warning identical to English: FCC ID 2BNRNSPKRDRWV1
+warning soft hyphen in a short term (heading?): Encuentre una con­fi­gu­ra­ción para su edificio.
+warning identical to English: IC 35944-SPKRDRWV1
+warning soft hyphen in a short term (heading?): Iden­ti­fi­ca­dor
+warning soft hyphen in a short term (heading?): Ins­truc­cio­nes.
+warning soft hyphen in a short term (heading?): Mantenga organizadas las ins­ta­la­cio­nes
+warning soft hyphen in a short term (heading?): Res­pon­sa­bi­li­dad local.
+warning identical to English: MIFARE Classic
+warning identical to English: MIFARE DESFire EV3
+warning soft hyphen in a short term (heading?): Gestione el acceso a medida que cambian las personas y las res­pon­sa­bi­li­da­des.
+warning soft hyphen in a short term (heading?): Gestione ins­ta­la­cio­nes, personas y dispositivos conectados desde una sola plataforma de control de accesos.
+warning soft hyphen in a short term (heading?): Gestione ins­ta­la­cio­nes, personas, credenciales y dispositivos conectados.
+warning soft hyphen in a short term (heading?): Necesaria para una reco­men­da­ción. Todo lo demás es opcional.
+warning soft hyphen in a short term (heading?): Aún no hay entradas publicadas. Indíquenos su con­fi­gu­ra­ción y la com­pro­ba­re­mos.
+warning soft hyphen in a short term (heading?): Número de ins­ta­la­cio­nes
+warning soft hyphen in a short term (heading?): Número de ins­ta­la­cio­nes y puertas
+warning soft hyphen in a short term (heading?): Personas y res­pon­sa­bi­li­da­des
+warning identical to English: Product Owner
+warning soft hyphen in a short term (heading?): Cer­ti­fi­ca­cio­nes y documentos del producto
+warning soft hyphen in a short term (heading?): Leer las ins­truc­cio­nes de instalación
+warning soft hyphen in a short term (heading?): Res­pon­sa­bi­li­da­des con alcance definido.
+warning identical to English: Scenario Builder
+warning soft hyphen in a short term (heading?): Vea lo que desa­rro­lla­mos.
+warning soft hyphen in a short term (heading?): Trabajos de man­te­ni­miento.
+warning soft hyphen in a short term (heading?): Ins­ta­la­cio­nes
+warning soft hyphen in a short term (heading?): Ins­ta­la­cio­nes en las que la conectividad móvil se adapta a la implantación
+warning soft hyphen in a short term (heading?): Ins­ta­la­cio­nes con contexto.
+warning soft hyphen in a short term (heading?): Ins­ta­la­cio­nes que disponen de una red Wi-Fi gestionada adecuada
+warning soft hyphen in a short term (heading?): Ins­ta­la­cio­nes, personas y permisos.
+warning identical to English: SmartphoneKey
+warning soft hyphen in a short term (heading?): Cobertura Wi-Fi y con­fi­gu­ra­ción de red adecuadas
+warning soft hyphen in a short term (heading?): Res­pon­sa­bi­li­da­des de soporte
+warning soft hyphen in a short term (heading?): Las con­fi­gu­ra­cio­nes admitidas añaden programación de tarjetas y funciones de dispositivos conectados.
+warning soft hyphen in a short term (heading?): Las con­fi­gu­ra­cio­nes de lector admitidas pueden conectarse a través de un hub Matter.
+warning soft hyphen in a short term (heading?): Apagar las luces o enchufes selec­cio­na­dos
+warning soft hyphen in a short term (heading?): Accione las luces o enchufes selec­cio­na­dos. Mantenga los equipos esenciales fuera de esta regla.
+warning soft hyphen in a short term (heading?): Que todos los con­tro­la­do­res puedan usar todas las funciones
+warning soft hyphen in a short term (heading?): Las conexiones espe­ci­fi­ca­das en la guía de instalación
+warning identical to English: Thread Border Router
+warning soft hyphen in a short term (heading?): Entender el fun­cio­na­miento sin conexión
+warning soft hyphen in a short term (heading?): Ver cer­ti­fi­ca­cio­nes
+warning soft hyphen in a short term (heading?): Su punto de partida para la pla­ni­fi­ca­ción
+warning soft hyphen in a short term (heading?): la com­pa­ti­bi­li­dad
+warning identical to English: %(name)s, %(job)s | SmartphoneKey
+blocking: 9, warnings: 63

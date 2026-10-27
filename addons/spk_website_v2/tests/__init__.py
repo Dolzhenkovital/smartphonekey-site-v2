@@ -1,4 +1,5 @@
 from . import test_routes
+from . import test_setup_result
 from . import test_migration
 from . import test_enquiry
 from . import test_publication

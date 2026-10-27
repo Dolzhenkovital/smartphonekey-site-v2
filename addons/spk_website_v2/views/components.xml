@@ -3,22 +3,22 @@
     <!-- Shared pieces. Text that pages pass in is written as markup in the
          t-call body (never as Python strings), so it is translated with the page. -->
 
-    <!-- The LTE / Wi-Fi requirements table: the one source for /products/readers
-         and the LTE vs Wi-Fi guide (rendering.BODY_COMPONENTS). -->
+    <!-- The LTE / Wi-Fi comparison table: the one source for /products/readers and the
+         LTE vs Wi-Fi guide (rendering.BODY_COMPONENTS). Only the differences: what both
+         readers share is written next to the table on each page. -->
     <template id="reader_comparison" name="SmartphoneKey 2.0: reader comparison">
-        <div class="spk-table" role="region" tabindex="0" aria-label="LTE and Wi-Fi reader requirements">
+        <div class="spk-table" role="region" tabindex="0" aria-label="How the LTE and Wi-Fi readers differ">
             <table>
-                <caption>LTE and Wi-Fi reader requirements</caption>
+                <caption>How the LTE and Wi-Fi readers differ</caption>
                 <thead>
-                    <tr><th scope="col">Requirement</th><th scope="col">LTE reader</th><th scope="col">Wi-Fi reader</th></tr>
+                    <tr><th scope="col">What differs</th><th scope="col">LTE reader</th><th scope="col">Wi-Fi reader</th></tr>
                 </thead>
                 <tbody>
-                    <tr><th scope="row">Internet connection</th><td>Cellular coverage and suitable SIM and service</td><td>Suitable Wi-Fi coverage and network configuration</td></tr>
-                    <tr><th scope="row">Site assessment</th><td>Carrier, region, signal and installation position</td><td>Coverage at the reader, access details and network requirements</td></tr>
-                    <tr><th scope="row">Best starting point</th><td>Sites where cellular connectivity fits the deployment</td><td>Sites with suitable managed Wi-Fi available</td></tr>
-                    <tr><th scope="row">Physical installation</th><td>Power and compatible door hardware required</td><td>Power and compatible door hardware required</td></tr>
-                    <tr><th scope="row">Thread roles</th><td>Thread Border Router and mesh router, no separate firmware</td><td>Thread Border Router and mesh router, no separate firmware</td></tr>
-                    <tr><th scope="row">Card programming</th><td>MIFARE Classic and DESFire EV3 workflows; confirm the model and firmware</td><td>MIFARE Classic and DESFire EV3 workflows; confirm the model and firmware</td></tr>
+                    <tr><th scope="row">Connection</th><td>Cellular network (LTE)</td><td>The site's Wi-Fi network</td></tr>
+                    <tr><th scope="row">Check at each door</th><td>Cellular coverage at the reader position</td><td>Wi-Fi coverage at the reader position</td></tr>
+                    <tr><th scope="row">You provide</th><td>A SIM and cellular service for each reader</td><td>Network access details and the settings in the installation guide</td></tr>
+                    <tr><th scope="row">Suits</th><td>Doors with reliable cellular coverage, or sites where the local network cannot be used</td><td>Doors with reliable Wi-Fi on a network you can configure</td></tr>
+                    <tr><th scope="row">To keep it working</th><td>Keep the SIM service active</td><td>Plan for changes to the network name, password or equipment</td></tr>
                 </tbody>
             </table>
         </div>
@@ -52,7 +52,7 @@
     <template id="related_links" name="SmartphoneKey 2.0: related pages">
         <nav class="section container related" aria-labelledby="related-title">
             <h2 id="related-title" class="related-title" t-out="related_title"/>
-            <ul class="next-links">
+            <ul class="next-links" role="list">
                 <t t-out="0"/>
             </ul>
         </nav>

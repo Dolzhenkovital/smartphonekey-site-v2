@@ -22,7 +22,7 @@ SAME_AS = (
     "https://www.instagram.com/smartphonekey_/",
 )
 OG_IMAGE = {"path": "/spk_website_v2/static/src/img/og-default.png", "width": 1200, "height": 630,
-            "alt": "SmartphoneKey reader beside the SmartphoneKey key logo"}
+            "alt": "SmartphoneKey reader with a QR code labelled Scan to call, beside the SmartphoneKey logo"}
 LOGO_PATH = "/spk_website_v2/static/src/img/brand-mark.png"
 
 # The date the 2.0 copy was settled; product evidence was checked a day earlier.
@@ -35,36 +35,36 @@ EVIDENCE_DATE = "2026-10-26"
 ROUTES = {
     "/": {
         "template": "spk_website_v2.page_home",
-        "title": "Access Control Management Platform | SmartphoneKey",
-        "description": "Manage sites, people, keys and connected devices with SmartphoneKey. "
-                       "Explore the platform, compare LTE and Wi-Fi readers, and find a setup for your property.",
+        "title": "Access Management Platform for Properties | SmartphoneKey",
+        "description": "Manage access to one or many buildings: add residents, issue cards and digital keys, revoke "
+                       "access and check events and reader status in one place.",
         "label": "Home",
         "kind": "home",
         "crumbs": (),
     },
     "/platform": {
         "template": "spk_website_v2.page_platform",
-        "title": "Access Control Platform for Sites and People | SmartphoneKey",
-        "description": "Explore how SmartphoneKey connects sites, people, credentials, readers and supported "
-                       "devices in one access management workflow.",
+        "title": "How the Access Management Platform Works | SmartphoneKey",
+        "description": "How SmartphoneKey works: the Admin Panel for sites and access, digital keys and cards, readers "
+                       "with a built-in controller, and event and device status.",
         "label": "Platform",
         "kind": "webpage",
         "crumbs": (),
     },
     "/platform/access-management": {
         "template": "spk_website_v2.page_access_management",
-        "title": "Multi-Site Access Management and Credentials | SmartphoneKey",
-        "description": "Organise sites, delegate responsibilities and manage supported credentials with clear "
-                       "activity and pending-operation states.",
+        "title": "Access Management for Multiple Sites | SmartphoneKey",
+        "description": "Add residents, staff and contractors, issue and revoke cards and digital keys, assign site "
+                       "administrators and check that each change reached the reader.",
         "label": "Access management",
         "kind": "webpage",
         "crumbs": ("/platform",),
     },
     "/platform/automation": {
         "template": "spk_website_v2.page_automation",
-        "title": "Matter Device Automation for Access Environments | SmartphoneKey",
-        "description": "Explore practical triggers, conditions and actions for supported Matter devices, with "
-                       "clear capability and configuration limits.",
+        "title": "Matter Device Scenarios for Buildings | SmartphoneKey",
+        "description": "Example scenarios with supported Matter devices: entrance lighting, leak response, temperature "
+                       "and end-of-day rules, and the limits behind each one.",
         "label": "Automation",
         "kind": "webpage",
         "crumbs": ("/platform",),
@@ -72,8 +72,8 @@ ROUTES = {
     "/platform/visitor-access": {
         "template": "spk_website_v2.page_visitor_access",
         "title": "QR Intercom and Visitor Access | SmartphoneKey",
-        "description": "Understand QR visitor contact and ask about AI Concierge availability and configuration "
-                       "for your site.",
+        "description": "Visitors scan the QR code at the entrance to reach a resident or the site team. Ask about "
+                       "AI Concierge availability and requirements for your site.",
         "label": "Visitor access",
         "kind": "webpage",
         "crumbs": ("/platform",),
@@ -81,37 +81,37 @@ ROUTES = {
     "/solutions/property-managers": {
         "template": "spk_website_v2.page_property_managers",
         "title": "Access Control for Property Management | SmartphoneKey",
-        "description": "Organise access for residents, staff and contractors across the properties you manage. "
-                       "Explore site and credential workflows.",
-        "label": "Property managers",
+        "description": "Give access at move-in and revoke it at move-out, manage staff and contractor access, assign "
+                       "site administrators and see issues across buildings.",
+        "label": "Property teams",
         "kind": "webpage",
         "crumbs": (),
     },
     "/solutions/integrators": {
         "template": "spk_website_v2.page_integrators",
         "title": "Access Control for Installers and Integrators | SmartphoneKey",
-        "description": "Evaluate, install, hand over and support customer access systems with SmartphoneKey. "
-                       "Explore reader options and partner workflows.",
-        "label": "Integrators",
+        "description": "Assess each door, install LTE or Wi-Fi readers with a built-in controller, hand the site over "
+                       "to the customer's administrators and support it afterwards.",
+        "label": "Installers and integrators",
         "kind": "webpage",
         "crumbs": (),
     },
     "/products/readers": {
         "template": "spk_website_v2.page_readers",
         "title": "LTE and Wi-Fi Access Control Readers | SmartphoneKey",
-        "description": "Compare SmartphoneKey LTE and Wi-Fi reader configurations, integrated control, supported "
-                       "card programming and installation requirements.",
+        "description": "SmartphoneKey readers have a built-in access controller. Compare the LTE and Wi-Fi versions "
+                       "and see what else the installation needs.",
         "label": "Readers",
         "kind": "webpage",
         "crumbs": (),
         "image": {"path": "/spk_website_v2/static/src/img/reader-800.webp", "width": 800, "height": 751,
-                  "alt": "SmartphoneKey reader from the current product image library"},
+                  "alt": "Black SmartphoneKey reader with a phone symbol and a QR code labelled Scan to call"},
     },
     "/compatibility": {
         "template": "spk_website_v2.page_compatibility",
-        "title": "Card and Matter Device Compatibility | SmartphoneKey",
-        "description": "Check documented MIFARE Classic and DESFire EV3 programming, Matter capabilities and the "
-                       "configuration details needed for your site.",
+        "title": "Card, Digital Key and Matter Compatibility | SmartphoneKey",
+        "description": "Check which cards SmartphoneKey readers can program, what digital keys need, which Matter "
+                       "capabilities are supported and each reader's network roles.",
         "label": "Compatibility",
         "kind": "webpage",
         "crumbs": (),
@@ -119,51 +119,52 @@ ROUTES = {
     "/security": {
         "template": "spk_website_v2.page_security",
         "title": "Access Control Security and Trust | SmartphoneKey",
-        "description": "Review scoped permissions, operation visibility, installation boundaries and relevant "
-                       "product documentation for your access system.",
+        "description": "How SmartphoneKey limits who can change access, shows whether each change reached the reader, "
+                       "and which product documents apply to your model.",
         "label": "Security and trust",
         "kind": "webpage",
         "crumbs": (),
     },
     "/resources": {
         "template": "spk_website_v2.page_resources",
-        "title": "Access Control Guides and Resources | SmartphoneKey",
-        "description": "Find operating instructions and practical guides to credentials, LTE and Wi-Fi, Matter "
-                       "and Thread, and offline access management.",
+        "title": "Access Control Guides and Instructions | SmartphoneKey",
+        "description": "Guides to LTE and Wi-Fi, card programming, Matter and Thread and offline readers, plus "
+                       "installation, Admin Panel and mobile app instructions.",
         "label": "Resources",
         "kind": "collection",
         "crumbs": (),
     },
     "/find-your-setup": {
         "template": "spk_website_v2.page_setup",
-        "title": "Find an Access Control Setup for Your Site | SmartphoneKey",
-        "description": "Explore an access-control planning checklist for your sites, doors and connection options. "
-                       "View results without submitting contact details.",
-        "label": "Find your setup",
+        "title": "Access Control Recommendations for Your Site | SmartphoneKey",
+        "description": "Answer a few questions about your sites, doors and connection to get a reader recommendation "
+                       "and a list of site checks. No contact details needed.",
+        "label": "Site recommendations",
         "kind": "webpage",
         "crumbs": (),
     },
     "/contact": {
         "template": "spk_website_v2.page_contact",
         "title": "Discuss Your Access Control Project | SmartphoneKey",
-        "description": "Contact SmartphoneKey about project planning, compatibility, integration, partnership or "
-                       "a product walkthrough.",
+        "description": "Tell us about your sites and doors and what you need to solve. Ask about a project, "
+                       "compatibility, integration, partnership or a product walkthrough.",
         "label": "Contact",
         "kind": "contact",
         "crumbs": (),
     },
     "/about": {
         "template": "spk_website_v2.page_about",
-        "title": "About SmartphoneKey | Access Control Management",
-        "description": "Meet the product and team behind SmartphoneKey and explore our approach to managing access.",
+        "title": "About SmartphoneKey | Access Management Platform",
+        "description": "Meet the team behind SmartphoneKey, the access management platform with LTE and Wi-Fi readers "
+                       "for property teams and installers.",
         "label": "About",
         "kind": "about",
         "crumbs": (),
     },
     "/thank-you": {
         "template": "spk_website_v2.page_thank_you",
-        "title": "Enquiry Received | SmartphoneKey",
-        "description": "Your enquiry has been received.",
+        "title": "Enquiry Confirmation | SmartphoneKey",
+        "description": "Confirmation of an enquiry sent to SmartphoneKey.",
         "label": "Enquiry",
         "kind": "webpage",
         "index": False,
@@ -173,16 +174,16 @@ ROUTES = {
     "/certifications": {
         "template": "spk_website_v2.page_certifications",
         "title": "Product Certifications and Documents | SmartphoneKey",
-        "description": "Open the regulatory records and platform documents published for SmartphoneKey readers "
-                       "and check the exact model each one covers.",
+        "description": "Regulatory records, conformity documents and platform certificates for SmartphoneKey readers, "
+                       "with the exact model each one covers.",
         "label": "Certifications",
         "kind": "webpage",
         "crumbs": ("/products/readers",),
     },
     "/apps-and-chatbot": {
         "template": "spk_website_v2.page_apps",
-        "title": "SmartphoneKey Mobile Apps and ChatGPT App | SmartphoneKey",
-        "description": "Get the SmartphoneKey apps for Android and iPhone, and open the SmartphoneKey app in ChatGPT.",
+        "title": "Mobile Apps and ChatGPT App | SmartphoneKey",
+        "description": "Get the SmartphoneKey app for Android and iPhone, and open the SmartphoneKey app in ChatGPT.",
         "label": "Apps",
         "kind": "webpage",
         "crumbs": ("/resources",),
@@ -258,8 +259,8 @@ NAV = (
         ("Visitor access", "/platform/visitor-access"),
     )),
     ("Solutions", (
-        ("Property managers", "/solutions/property-managers"),
-        ("Integrators", "/solutions/integrators"),
+        ("Property teams", "/solutions/property-managers"),
+        ("Installers and integrators", "/solutions/integrators"),
     )),
     ("Products", (
         ("Readers", "/products/readers"),
@@ -269,7 +270,7 @@ NAV = (
     ("Resources", (
         ("Guides", "/resources#guides"),
         ("Instructions", INSTALLATION_GUIDE),
-        ("Insights", "/resources#insights"),
+        ("Article archive", "/resources#insights"),
         ("Security and trust", "/security"),
     )),
 )
@@ -285,13 +286,13 @@ FOOTER = (
         ("Compatibility", "/compatibility"),
         ("Certifications", "/certifications"),
         ("Apps", "/apps-and-chatbot"),
-        ("Find your setup", "/find-your-setup"),
+        ("Site recommendations", "/find-your-setup"),
     )),
     ("Instructions", tuple((label, path) for path, label in INSTRUCTION_PATHS.items())),
-    ("Resources", (
+    ("Guides and solutions", (
         ("Guides", "/resources#guides"),
-        ("Property managers", "/solutions/property-managers"),
-        ("Integrators", "/solutions/integrators"),
+        ("Property teams", "/solutions/property-managers"),
+        ("Installers and integrators", "/solutions/integrators"),
         ("Security and trust", "/security"),
     )),
     ("Company", (
@@ -304,7 +305,7 @@ FOOTER = (
 )
 CTA = {
     "explore": ("Explore the platform", "/platform"),
-    "setup": ("Find your setup", "/find-your-setup"),
+    "setup": ("Site recommendations", "/find-your-setup"),
     "project": ("Discuss your project", "/contact?interest=project"),
     "compatibility": ("Check compatibility", "/compatibility"),
     "partner": ("Become a partner", "/contact?interest=partner"),
@@ -339,15 +340,15 @@ DOORS = (
 )
 CONNECTIONS = (
     ("wifi", "Wi-Fi"),
-    ("cellular", "Cellular"),
+    ("cellular", "Cellular (LTE)"),
     ("both", "Both"),
     ("unsure", "Not sure yet"),
 )
 INTERESTS = (
-    ("cards", "Physical cards"),
-    ("wallets", "Wallet credentials"),
+    ("cards", "NFC cards"),
+    ("wallets", "Wallet keys"),
     ("visitors", "Visitor access"),
-    ("automation", "Automation"),
+    ("automation", "Connected-device scenarios"),
     ("cameras", "Cameras"),
 )
 # ``/contact?interest=...``: the enquiry type it preselects and the interests it ticks.
@@ -374,80 +375,87 @@ FIELD_LIMITS = {
 SETUP_ROLES = ROLES[:3]
 SETUP_INTERESTS = INTERESTS[:4]
 SETUP_CONNECTION_ADVICE = {
-    "wifi": "Start by checking Wi-Fi coverage and network requirements at each planned reader location.",
-    "cellular": "Discuss LTE coverage, SIM provisioning and the reader model for your installation.",
-    "both": "We’ll help compare connection options and site requirements.",
-    "unsure": "We’ll help compare connection options and site requirements.",
+    "wifi": "Wi-Fi reader, if there is reliable Wi-Fi coverage at every door. Check coverage at each reader "
+            "position before ordering.",
+    "cellular": "LTE reader, where cellular coverage at the door is reliable and you can provide a SIM and service. "
+                "Check coverage at each reader position, not just outside the building.",
+    "both": "Choose for each door: a Wi-Fi reader where Wi-Fi coverage is reliable and you can configure the "
+            "network, an LTE reader where cellular coverage is better. Check both at each reader position.",
+    "unsure": "Check Wi-Fi coverage at each door first. Choose a Wi-Fi reader where it is reliable and an LTE reader "
+              "where only cellular coverage is reliable; if neither is, ask us for a site review.",
 }
 SETUP_LINKS = {
     "lte_wifi": ("LTE or Wi-Fi: what fits your site?", "/resources/lte-vs-wifi-access-control"),
-    "readers": ("Compare reader configurations", "/products/readers"),
-    "access_management": ("Access management across sites", "/platform/access-management"),
+    "readers": ("Compare LTE and Wi-Fi readers", "/products/readers"),
+    "access_management": ("Managing access across sites", "/platform/access-management"),
     "property_managers": ("Access control for property teams", "/solutions/property-managers"),
-    "integrators": ("Installer and integrator workflow", "/solutions/integrators"),
+    "integrators": ("For installers and integrators", "/solutions/integrators"),
     "installation": ("Installation and connection guide", "/guide-for-usage-and-installation"),
     "cards": ("Which NFC cards can SmartphoneKey program?", "/resources/mifare-classic-desfire-ev3"),
     "compatibility": ("Card and device compatibility", "/compatibility"),
     "visitors": ("Visitor access", "/platform/visitor-access"),
-    "automation": ("Automation with connected devices", "/platform/automation"),
+    "automation": ("Scenarios for connected devices", "/platform/automation"),
     "matter": ("Matter and Thread for access control", "/resources/matter-thread-access-control"),
     "offline": ("What happens when a reader goes offline?", "/resources/access-control-when-offline"),
 }
 SETUP_RULES = (
-    {"when": {}, "item": "List each door with its existing lock hardware, power supply and planned reader position.",
+    {"when": {}, "item": "List each door with its lock hardware, power supply and planned reader position.",
      "links": ()},
     {"when": {"connection": ("wifi", "both", "unsure")},
-     "item": "Check Wi-Fi coverage and the network settings the reader will need at every planned location.",
+     "item": "Check Wi-Fi coverage at every planned reader position and the network settings the installation "
+             "guide requires.",
      "links": ("lte_wifi",)},
     {"when": {"connection": ("cellular", "both", "unsure")},
-     "item": "Check cellular coverage at every planned location and who will provide the SIM and service.",
+     "item": "Check cellular coverage at every planned reader position, and decide who provides the SIM and "
+             "service.",
      "links": ("lte_wifi", "readers")},
     {"when": {"sites": ("two_to_ten", "eleven_plus")},
-     "item": "Decide how each site is organised and who manages it locally.",
+     "item": "Decide how each site will be set up and who administers it locally.",
      "links": ("access_management",)},
     {"when": {"doors": ("six_to_twentyfive", "twentysix_plus")},
-     "item": "Group the doors by building and network area before choosing the connection for each location.",
+     "item": "Group the doors by building and network area, then choose the connection for each position.",
      "links": ("offline",)},
     {"when": {"role": ("property_manager",)},
-     "item": "Map your resident, staff and contractor groups to the doors they need.",
+     "item": "Map residents, staff and contractors to the doors each group needs.",
      "links": ("property_managers",)},
     {"when": {"role": ("owner",)},
-     "item": "Decide who will issue and revoke access for your property day to day.",
+     "item": "Decide who will issue and revoke access day to day.",
      "links": ("access_management",)},
     {"when": {"role": ("integrator",)},
-     "item": "Plan the installation, the customer handover and who supports the site afterwards.",
+     "item": "Plan the installation, the handover to the customer's site administrators and who supports the "
+             "site afterwards.",
      "links": ("integrators", "installation")},
     {"when": {"interests": ("cards",)},
-     "item": "Confirm the card family and credential format. The documented programming workflows cover "
-             "MIFARE Classic and MIFARE DESFire EV3.",
+     "item": "Confirm the exact card product with us. Supported SmartphoneKey reader configurations program "
+             "MIFARE Classic and MIFARE DESFire EV3 cards.",
      "links": ("cards",)},
     {"when": {"interests": ("wallets",)},
-     "item": "Check the phone, operating system and account requirements for wallet credentials.",
+     "item": "Check the phone, operating system and account requirements for Wallet keys.",
      "links": ("compatibility",)},
     {"when": {"interests": ("visitors",)},
-     "item": "Decide the contact path a visitor should follow at each entrance.",
+     "item": "Decide how a visitor at each entrance should reach a resident or the site team.",
      "links": ("visitors",)},
     {"when": {"interests": ("automation",)},
-     "item": "List the devices each workflow needs and the capabilities they report. Current scenarios use "
-             "one hub and its commissioned devices.",
+     "item": "List the devices each scenario needs and the capabilities they report. Each scenario runs on one "
+             "hub and the devices commissioned to it.",
      "links": ("automation", "matter")},
 )
 # The compact tool in the home hero: two choices, frozen copy from the design reference.
 HOME_SITE_CHOICES = (
     ("property", "One property"),
     ("portfolio", "Several sites"),
-    ("partner", "Customer installations"),
+    ("partner", "Installations for customers"),
 )
 HOME_SITE_COPY = {
-    "property": "Organise people and permissions around your property.",
-    "portfolio": "Keep each site and its local responsibilities organised.",
-    "partner": "Plan installation, customer handover and ongoing support.",
+    "property": "Then list who needs which doors: residents, staff and contractors.",
+    "portfolio": "Then choose a local administrator for each site.",
+    "partner": "Then plan the installation, the handover and support after it.",
 }
 HOME_CONNECTION_COPY = {
-    "wifi": "Start with Wi-Fi coverage at each reader location.",
-    "cellular": "Review LTE coverage and SIM provisioning for the installation.",
-    "both": "Compare Wi-Fi readiness with LTE coverage before choosing hardware.",
-    "unsure": "Review connection options and site requirements before choosing hardware.",
+    "wifi": "Wi-Fi reader, if every door has reliable Wi-Fi coverage.",
+    "cellular": "LTE reader, where cellular coverage at each door is reliable and you can provide a SIM.",
+    "both": "Wi-Fi reader where Wi-Fi is reliable, LTE reader at the other doors.",
+    "unsure": "Check Wi-Fi coverage at each door first; use an LTE reader where Wi-Fi is weak.",
 }
 # The home choice, carried into the full guide's own fields.
 HOME_SITE_TO_SETUP = {
@@ -565,7 +573,7 @@ EXTRA_STRINGS = (
     "Page not found | SmartphoneKey",
     "The page you asked for is not on the SmartphoneKey website.",
     "%(name)s, %(job)s | SmartphoneKey",
-    "%(name)s is %(job)s at SmartphoneKey.",
+    "Profile of %(name)s, %(job)s, on the SmartphoneKey website.",
     "Read",
     "Program",
     "Control",

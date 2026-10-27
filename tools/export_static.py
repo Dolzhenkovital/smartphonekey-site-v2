@@ -180,10 +180,22 @@ def main():
     (folder / "index.html").write_text(
         redirect_page(args.base, "/products/smartphonekey-reader-1", "/products/readers"), encoding="utf-8")
 
-    for asset in sorted(rewriter.assets):
+    # The CSS bundle refers to the self-hosted fonts with url(/spk_website_v2/static/...):
+    # collect those files too and point the copy at the Pages base path.
+    css_url = re.compile(r"url\((['\"]?)(/spk_website_v2/static/[^'\")]+)\1\)")
+    pending = sorted(rewriter.assets)
+    while pending:
+        asset = pending.pop(0)
         status, body = fetch(odoo + asset)
         if status != 200:
             raise SystemExit("asset %s answered %s" % (asset, status))
+        if asset.startswith("/web/assets/"):
+            text = body.decode("utf-8")
+            for _quote, path in css_url.findall(text):
+                if path not in rewriter.assets:
+                    rewriter.assets.add(path)
+                    pending.append(path)
+            body = css_url.sub(lambda m: "url(%s%s)" % (rewriter.base, m.group(2)), text).encode("utf-8")
         destination = args.out / ("assets/site.css" if asset.startswith("/web/assets/") else asset.lstrip("/"))
         destination.parent.mkdir(parents=True, exist_ok=True)
         destination.write_bytes(body)

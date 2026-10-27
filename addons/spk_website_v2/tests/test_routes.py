@@ -46,12 +46,12 @@ class TestRoutes(SiteCase):
     def test_content_is_server_rendered(self):
         """A03: the answers are in the HTML, not built by a script."""
         expectations = {
-            "/": ["Your key to access control.", "Start with Wi-Fi coverage at each reader location."],
-            "/platform": ["SmartphoneKey is an access control management platform."],
-            "/products/readers": ["LTE reader", "Wi-Fi reader", "Cellular coverage and suitable SIM and service"],
+            "/": ["Your key to access control.", "Wi-Fi reader, if every door has reliable Wi-Fi coverage."],
+            "/platform": ["SmartphoneKey is an access management platform."],
+            "/products/readers": ["LTE reader", "Wi-Fi reader", "A SIM and cellular service for each reader"],
             "/resources/lte-vs-wifi-access-control": ["LTE reader", "Choose the connection that fits the site"],
             "/compatibility": ["MIFARE Classic", "MIFARE DESFire EV3"],
-            "/find-your-setup": ["Start by checking Wi-Fi coverage and network requirements"],
+            "/find-your-setup": [content.SETUP_CONNECTION_ADVICE["wifi"]],
             "/contact": ["Send enquiry", "info@smartphonekey.com"],
         }
         for path, phrases in expectations.items():
@@ -65,7 +65,7 @@ class TestRoutes(SiteCase):
         _response, doc = self.page("/find-your-setup?role=integrator&sites=eleven_plus&connection=cellular"
                                    "&interests=cards&interests=bogus&email=someone@example.com")
         text = " ".join(doc.text_content().split())
-        self.assertIn("Discuss LTE coverage, SIM provisioning and the reader model for your installation.", text)
+        self.assertIn(content.SETUP_CONNECTION_ADVICE["cellular"], text)
         self.assertIn("MIFARE Classic and MIFARE DESFire EV3", text)
         contact = doc.xpath("//a[@data-spk-result-contact]/@href")[0]
         self.assertEqual(contact, "/contact?interest=project&role=integrator&sites=eleven_plus"
@@ -73,7 +73,7 @@ class TestRoutes(SiteCase):
         self.assertNotIn("example.com", contact)
         # The home hero's compact tool hands over its two choices.
         _response, doc = self.page("/find-your-setup?site=partner&connection=wifi")
-        self.assertIn("Plan the installation, the customer handover", doc.text_content())
+        self.assertIn("Plan the installation, the handover to the customer's site administrators", " ".join(doc.text_content().split()))
 
     def test_certifications_and_instructions_are_reachable(self):
         """Every page links the certificates and the instructions from its navigation."""

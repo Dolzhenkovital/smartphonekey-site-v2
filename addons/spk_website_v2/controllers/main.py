@@ -67,10 +67,17 @@ def contact_defaults(query):
         "connection": dict(content.CONNECTIONS),
     }
     values = {field: query.get(field) for field in allowed if query.get(field) in allowed[field]}
-    chosen = set(interests) | set(request.httprequest.args.getlist("interests"))
+    listed = set(request.httprequest.args.getlist("interests"))
+    chosen = set(interests) | listed
     values["interests"] = [key for key, _label in content.INTERESTS if key in chosen]
     values["enquiry_type"] = enquiry_type or ""
     values.update(clean_utm(query))
+    # The page shows its "answers from the site recommendations" note only when
+    # enum choices of that tool arrived. ``?interest=automation`` ticks an
+    # interest too, but that comes from a link on the site, not from the tool.
+    values["prefilled"] = bool(
+        any(field in values for field in allowed)
+        or listed.intersection(key for key, _label in content.INTERESTS))
     return values
 
 
@@ -178,7 +185,7 @@ class SpkWebsiteV2Legacy(SpkWebsite):
         route = {
             "template": "spk_website_v2.page_team_member",
             "title": t("%(name)s, %(job)s | SmartphoneKey", name=member["name"], job=member["job_title"]),
-            "description": t("%(name)s is %(job)s at SmartphoneKey.", name=member["name"], job=member["job_title"]),
+            "description": t("Profile of %(name)s, %(job)s, on the SmartphoneKey website.", name=member["name"], job=member["job_title"]),
             "label": member["name"],
             "kind": "webpage",
             "crumbs": ("/about",),
@@ -202,6 +209,7 @@ def render_not_found():
         "label": t("Page not found"),
         "kind": "webpage",
         "index": False,
+        "canonical": False,
         "crumbs": (),
     }
     return render_page(request.httprequest.path, route=route, status=404)
@@ -273,10 +281,12 @@ class SpkWebsiteV2(http.Controller):
         url_code, t = _lang()
         args = request.httprequest.args
         selection = setup_guide.clean_selection(args, args.getlist("interests"))
-        if "connection" not in selection and args.get("site") in content.HOME_SITE_TO_SETUP:
-            # The home hero's compact tool hands over its two choices.
+        mapped = content.HOME_SITE_TO_SETUP.get(args.get("site"))
+        if mapped and not any(field in selection for field in ("role", "sites", "doors")):
+            # The home hero's compact tool hands over its two choices: the site choice
+            # becomes the matching role or number of sites, next to the connection.
             selection = setup_guide.clean_selection(
-                dict(content.HOME_SITE_TO_SETUP[args["site"]], connection=args.get("connection")), ())
+                dict(mapped, connection=selection.get("connection")), selection.get("interests", ()))
         return render_page("/find-your-setup", selection=selection, result=setup_guide.result_for(selection, t),
                            setup_rules=json_for_script(setup_guide.rules_for_script(t, url_code)),
                            setup_fields=setup_guide.FIELDS)
@@ -291,8 +301,9 @@ class SpkWebsiteV2(http.Controller):
 
 def render_contact(values, errors, status=200, submission_id=None):
     form = dict(values)
+    prefilled = bool(form.pop("prefilled", False))
     form.setdefault("interests", [])
     form["submission_id"] = submission_id or uuid.uuid4().hex
     form["source_path"] = form.get("source_path") or _source_path()
-    return render_page("/contact", status=status, form=form, errors=errors,
+    return render_page("/contact", status=status, form=form, errors=errors, prefilled=prefilled,
                        booking_url=booking_url(request.env))

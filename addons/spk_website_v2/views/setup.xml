@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <!-- The ungated setup guide. A GET form: without JavaScript the server renders
-         the result from the enum query; with it, setup_guide.js evaluates the same
-         rules in place. No contact fields until the visitor chooses to discuss. -->
+    <!-- Site recommendations (the route stays /find-your-setup). A GET form:
+         without JavaScript the server renders the result from the enum query;
+         with it, setup_guide.js evaluates the same rules in place. The result
+         has the same fields, in the same order, either way. No contact fields
+         until the visitor chooses to discuss. The tool gives planning guidance,
+         not a configuration, a bill of materials or a quotation.
+         The result section is rendered by the server for a request without
+         JavaScript; setup_guide.js fills the same elements in place. Until a
+         connection is chosen only [data-spk-result-empty] is visible; once one
+         is chosen only [data-spk-result-body] is. -->
     <template id="page_setup" name="SmartphoneKey 2.0: find your setup">
         <t t-call="spk_website_v2.layout">
             <t t-set="page_scripts">
@@ -11,14 +18,14 @@
             </t>
             <div class="container">
                 <t t-call="spk_website_v2.page_intro">
-                    <t t-set="heading">Find a setup for your building.</t>
-                    <t t-set="intro">Choose the options that describe your project. You can explore the result without providing contact details. This is a planning guide, not a final hardware design or quotation.</t>
+                    <t t-set="heading">Recommendations for your site</t>
+                    <t t-set="intro">Answer a few questions about your sites, doors and connection. You get a reader recommendation with its reason, the checks still to do on site and the guides that apply. No contact details are needed. This is planning guidance, not a final design or quotation.</t>
                 </t>
             </div>
 
             <div class="container setup-guide">
                 <form class="setup setup-full" action="/find-your-setup" method="get" data-spk-setup-guide="" aria-labelledby="guide-form-title">
-                    <h2 id="guide-form-title" class="visually-hidden">Your project</h2>
+                    <h2 id="guide-form-title" class="visually-hidden" tabindex="-1">Your site</h2>
                     <fieldset>
                         <legend>Your role</legend>
                         <div class="choices">
@@ -47,8 +54,8 @@
                         </div>
                     </fieldset>
                     <fieldset aria-describedby="connection-help">
-                        <legend>Available connection</legend>
-                        <p id="connection-help" class="field-help">Needed for a recommendation. Every other choice is optional.</p>
+                        <legend>Connection at the doors</legend>
+                        <p id="connection-help" class="field-help">Needed for a recommendation. All other questions are optional.</p>
                         <div class="choices">
                             <label t-foreach="content.CONNECTIONS" t-as="choice" class="choice">
                                 <input type="radio" name="connection" t-att-value="choice[0]" t-att-checked="selection.get('connection') == choice[0] or None"/>
@@ -57,7 +64,7 @@
                         </div>
                     </fieldset>
                     <fieldset>
-                        <legend>What would you like to manage?</legend>
+                        <legend>What do you want to use?</legend>
                         <div class="choices">
                             <label t-foreach="content.SETUP_INTERESTS" t-as="choice" class="choice">
                                 <input type="checkbox" name="interests" t-att-value="choice[0]" t-att-checked="choice[0] in selection.get('interests', []) or None"/>
@@ -66,54 +73,82 @@
                         </div>
                     </fieldset>
                     <div class="form-actions">
-                        <button type="submit" class="button">Show my starting point</button>
+                        <button type="submit" class="button">Show recommendations</button>
                         <a href="/find-your-setup" class="text-link" data-spk-setup-reset="">Start again</a>
                     </div>
                 </form>
 
-                <section class="setup-result" id="setup-result" aria-labelledby="result-title" tabindex="-1" data-spk-setup-result="">
-                    <h2 id="result-title">Your planning starting point</h2>
-                    <t t-if="result">
-                        <p class="lead" data-spk-result-advice="" t-out="result['advice']"/>
-                        <ul class="checklist" data-spk-result-items="">
-                            <li t-foreach="result['items']" t-as="item" t-out="item"/>
-                        </ul>
-                        <p class="result-subtitle">Read next</p>
-                        <ul class="plain-list" data-spk-result-links="">
-                            <li t-foreach="result['links']" t-as="link"><a t-att-href="link[1]" t-out="link[0]"/></li>
-                        </ul>
-                    </t>
-                    <t t-else="">
-                        <p class="lead" data-spk-result-advice="">Choose an available connection to see your starting point.</p>
-                        <ul class="checklist" data-spk-result-items="" hidden="hidden"/>
-                        <p class="result-subtitle" hidden="hidden" data-spk-result-links-title="">Read next</p>
-                        <ul class="plain-list" data-spk-result-links="" hidden="hidden"/>
-                    </t>
-                    <div class="result-actions">
-                        <a href="/platform">Keep exploring</a>
-                        <a href="/compatibility">Check compatibility</a>
-                        <a t-att-href="result['contact_href'] if result else '/contact?interest=project'" data-spk-result-contact="">Discuss this setup</a>
+                <section class="setup-result result-card" id="setup-result" aria-labelledby="result-title" tabindex="-1" data-spk-setup-result="">
+                    <h2 id="result-title">Recommendations for your site</h2>
+
+                    <div class="result-empty" data-spk-result-empty="" t-att-hidden="'hidden' if result else None">
+                        <p class="lead">Choose the connection at your doors to see recommendations.</p>
+                        <p class="result-contact"><a href="/contact?interest=project">Discuss your project</a></p>
                     </div>
+
+                    <div class="result-body" data-spk-result-body="" t-att-hidden="None if result else 'hidden'">
+                        <dl class="result-fields">
+                            <div class="result-field">
+                                <dt>Your selection</dt>
+                                <dd>
+                                    <ul class="chips" data-spk-result-summary="">
+                                        <li t-foreach="result['summary'] if result else []" t-as="label" class="chip" t-out="label"/>
+                                    </ul>
+                                    <a href="#guide-form-title" class="text-link">Change answers</a>
+                                </dd>
+                            </div>
+                            <div class="result-field">
+                                <dt>Recommendation</dt>
+                                <dd><p data-spk-result-advice="" t-out="result['advice'] if result else ''"/></dd>
+                            </div>
+                            <div class="result-field">
+                                <dt>Why</dt>
+                                <dd><p data-spk-result-why="">Each reader needs a reliable connection at its own position to receive access changes and report events.</p></dd>
+                            </div>
+                            <div class="result-field">
+                                <dt>Still to check on site</dt>
+                                <dd>
+                                    <ul class="checklist" data-spk-result-items="">
+                                        <li t-foreach="result['items'] if result else []" t-as="item" t-out="item"/>
+                                    </ul>
+                                </dd>
+                            </div>
+                            <div class="result-field">
+                                <dt data-spk-result-links-title="">Guides for your selection</dt>
+                                <dd>
+                                    <ul class="plain-list" data-spk-result-links="">
+                                        <li t-foreach="result['links'] if result else []" t-as="link"><a t-att-href="link[1]" t-out="link[0]"/></li>
+                                    </ul>
+                                </dd>
+                            </div>
+                        </dl>
+                        <div class="result-contact">
+                            <a class="button" t-att-href="result['contact_href'] if result else '/contact?interest=project'" data-spk-result-contact="">Discuss these recommendations</a>
+                            <p class="field-help">Your answers are copied into the enquiry form, where you can change them.</p>
+                        </div>
+                    </div>
+
+                    <p class="result-more"><a href="/compatibility">Check compatibility</a></p>
                 </section>
             </div>
 
             <section class="section container" aria-labelledby="basics-title">
                 <div class="section-head">
-                    <h2 id="basics-title">Connection basics.</h2>
-                    <p>Whichever reader you choose, it needs power, compatible lock hardware and a connection that works at the door.</p>
+                    <h2 id="basics-title">Choosing the connection</h2>
+                    <p>Whichever reader you choose, it needs power, compatible lock hardware and a reliable connection at the door.</p>
                 </div>
                 <dl class="workflow workflow-3">
                     <div>
                         <dt>Wi-Fi</dt>
-                        <dd>Start by checking Wi-Fi coverage and network requirements at each planned reader location.</dd>
+                        <dd t-out="content.SETUP_CONNECTION_ADVICE['wifi']"/>
                     </div>
                     <div>
-                        <dt>Cellular</dt>
-                        <dd>Discuss LTE coverage, SIM provisioning and the reader model for your installation.</dd>
+                        <dt>Cellular (LTE)</dt>
+                        <dd t-out="content.SETUP_CONNECTION_ADVICE['cellular']"/>
                     </div>
                     <div>
                         <dt>Both or not sure</dt>
-                        <dd>We’ll help compare connection options and site requirements.</dd>
+                        <dd t-out="content.SETUP_CONNECTION_ADVICE['unsure']"/>
                     </div>
                 </dl>
                 <p class="section-note"><a href="/resources/lte-vs-wifi-access-control">LTE or Wi-Fi: what fits your site?</a></p>

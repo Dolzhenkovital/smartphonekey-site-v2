@@ -6,13 +6,13 @@
         <t t-call="spk_website_v2.layout">
             <div class="container">
                 <t t-call="spk_website_v2.page_intro">
-                    <t t-set="heading">The team behind SmartphoneKey.</t>
-                    <t t-set="intro">We build tools for managing access: the software that organises people and permissions, and the devices that connect that work to a building. Explore the system, meet the team and discuss what your site needs.</t>
+                    <t t-set="heading">The team behind SmartphoneKey</t>
+                    <t t-set="intro">We build SmartphoneKey: the Admin Panel where teams manage access to their sites, and the readers, cards and digital keys used at the door.</t>
                 </t>
             </div>
 
             <section t-if="team" class="section container" aria-labelledby="team-title">
-                <h2 id="team-title">The team.</h2>
+                <h2 id="team-title">The team</h2>
                 <ul class="team-list">
                     <li t-foreach="team" t-as="member">
                         <img t-if="member['photo']" t-att-src="member['photo']" alt="" width="160" height="173" loading="lazy" decoding="async"/>
@@ -24,8 +24,8 @@
             </section>
 
             <t t-call="spk_website_v2.next_step">
-                <t t-set="next_title">See what we build.</t>
-                <t t-set="next_text">Start with the platform, or tell us about your site.</t>
+                <t t-set="next_title">See what we build</t>
+                <t t-set="next_text" t-value="False"/>
                 <a class="button" href="/platform">Explore the platform</a>
                 <a href="/contact">Contact the team</a>
             </t>
@@ -35,10 +35,12 @@
     <template id="page_team_member" name="SmartphoneKey 2.0: team member">
         <t t-call="spk_website_v2.layout">
             <article class="container spk-document team-member" aria-labelledby="member-name">
-                <div class="page-intro">
+                <div class="page-opening">
                     <t t-call="spk_website_v2.breadcrumbs"/>
-                    <h1 id="member-name" t-out="member['name']"/>
-                    <p class="lead" t-out="member['job_title']"/>
+                    <div class="opening-copy">
+                        <h1 id="member-name" t-out="member['name']"/>
+                        <p class="lead" t-out="member['job_title']"/>
+                    </div>
                 </div>
                 <div class="member-body">
                     <img t-if="member['photo']" t-att-src="member['photo']" t-att-alt="member['photo_alt'] or ''" width="480" height="519" decoding="async"/>
@@ -49,7 +51,7 @@
                 </div>
             </article>
             <t t-call="spk_website_v2.next_step">
-                <t t-set="next_title">Meet the rest of the team.</t>
+                <t t-set="next_title">Meet the rest of the team</t>
                 <t t-set="next_text" t-value="False"/>
                 <a href="/about">About SmartphoneKey</a>
                 <a href="/contact">Contact</a>
@@ -61,8 +63,14 @@
         <t t-call="spk_website_v2.layout">
             <div class="container">
                 <t t-call="spk_website_v2.page_intro">
-                    <t t-set="heading">Understand the controls behind the system.</t>
-                    <t t-set="intro">Access control depends on the full installation: permissions, credentials, devices, networks and operating practices. Review the capabilities and evidence relevant to your configuration.</t>
+                    <t t-set="heading">Assess the security of your installation</t>
+                    <t t-set="intro">Security depends on the whole installation: who can change access, the readers and their network, and how the site is operated. Here is what SmartphoneKey controls and shows, and which documents to check.</t>
+                    <t t-set="actions">
+                        <div class="actions">
+                            <a class="button" href="/contact?interest=technical">Discuss technical requirements</a>
+                            <a href="/certifications">View certifications</a>
+                        </div>
+                    </t>
                 </t>
             </div>
 
@@ -70,38 +78,38 @@
                 <h2 id="controls-title" class="visually-hidden">Controls</h2>
                 <div class="columns-2">
                     <div>
-                        <h3>Scoped management.</h3>
-                        <p>Organise people and responsibilities by site. Available actions follow the account's permissions and configured services.</p>
+                        <h3>Permissions by site</h3>
+                        <p>Administrators work only on the sites they are given. What each person can see and do follows their permissions and the services configured for the account.</p>
                     </div>
                     <div>
-                        <h3>Visible outcomes.</h3>
-                        <p>Use activity and operation records to distinguish a request from its confirmed result. A queued key change is not already enforced on a disconnected device.</p>
+                        <h3>Changes you can check</h3>
+                        <p>Events and change status show whether a change was requested, confirmed by the reader or failed. A change waiting for an offline reader is not yet in effect there.</p>
                     </div>
                     <div>
-                        <h3>Connected-device boundaries.</h3>
-                        <p>Confirm supported capabilities and networking roles. A working connection does not certify a complete installation or establish a response-time guarantee.</p>
+                        <h3>Devices and networks</h3>
+                        <p>Check the capabilities and network roles of each device. A working connection does not certify the whole installation, and alerts are not a response-time guarantee.</p>
                     </div>
                     <div>
-                        <h3>Documents for your review.</h3>
-                        <p>Open the product's available certificates and installation documents. Check the exact model and scope on each document.</p>
+                        <h3>Product documents</h3>
+                        <p>Open the regulatory records and certificates for the readers. Each document applies only to the model and scope it names.</p>
                         <a href="/certifications">View certifications</a>
                     </div>
                 </div>
             </section>
 
             <section class="section container split" aria-labelledby="procurement-title">
-                <h2 id="procurement-title">Procurement questions welcome.</h2>
+                <h2 id="procurement-title">Questions for procurement</h2>
                 <div class="split-copy">
-                    <p>Ask about deployment architecture, responsibilities, retention, access permissions and the documents required by your project. We will identify the applicable information rather than assume one configuration fits every requirement.</p>
+                    <p>Ask about the deployment architecture, responsibilities, data retention, access permissions and the documents your project requires. We answer for your configuration rather than assume one setup fits every requirement.</p>
                 </div>
             </section>
 
             <t t-call="spk_website_v2.next_step">
-                <t t-set="next_title">Review the evidence for your project.</t>
+                <t t-set="next_title">Discuss your security requirements</t>
                 <t t-set="next_text" t-value="False"/>
                 <a class="button" href="/contact?interest=technical">Discuss technical requirements</a>
                 <a href="/certifications">View certifications</a>
-                <a href="/guide-for-usage-and-installation">Read installation guidance</a>
+                <a href="/guide-for-usage-and-installation">Installation and connection guide</a>
             </t>
         </t>
     </template>
@@ -111,13 +119,13 @@
         <t t-call="spk_website_v2.layout">
             <div class="container">
                 <t t-call="spk_website_v2.page_intro">
-                    <t t-set="heading">Certifications and documents.</t>
-                    <t t-set="intro">The regulatory records, conformity documents and platform certificates published for SmartphoneKey readers. Each one applies only to the model, version and scope it names, so check those before relying on it for your project.</t>
+                    <t t-set="heading">Certifications and documents</t>
+                    <t t-set="intro">Regulatory records, conformity documents and platform certificates for SmartphoneKey readers. Each applies only to the model, version and scope it names; check these before you rely on a document for your project.</t>
                 </t>
             </div>
 
             <section class="section container" aria-labelledby="records-title">
-                <h2 id="records-title">Regulatory records.</h2>
+                <h2 id="records-title">Regulatory records</h2>
                 <div class="spk-table" role="region" tabindex="0" aria-label="Regulatory records">
                     <table>
                         <caption>Regulatory records</caption>
@@ -149,7 +157,7 @@
             </section>
 
             <section class="section container" aria-labelledby="documents-title">
-                <h2 id="documents-title">Certificates and conformity documents.</h2>
+                <h2 id="documents-title">Certificates and conformity documents</h2>
                 <div class="spk-table" role="region" tabindex="0" aria-label="Product documents">
                     <table>
                         <caption>Product documents</caption>
@@ -188,8 +196,8 @@
             </section>
 
             <t t-call="spk_website_v2.next_step">
-                <t t-set="next_title">Assess the installation as a whole.</t>
-                <t t-set="next_text">Documents cover a product. Your project also depends on permissions, credentials, networks and operating practice.</t>
+                <t t-set="next_title">Assess the whole installation</t>
+                <t t-set="next_text">A document covers a product. Your project also depends on permissions, keys and cards, networks and how the site is operated.</t>
                 <a href="/security">Security and trust</a>
                 <a href="/guide-for-usage-and-installation">Installation and connection guide</a>
                 <a href="/contact?interest=technical">Discuss technical requirements</a>
@@ -201,8 +209,8 @@
         <t t-call="spk_website_v2.layout">
             <div class="container">
                 <t t-call="spk_website_v2.page_intro">
-                    <t t-set="heading">SmartphoneKey apps.</t>
-                    <t t-set="intro">Use the SmartphoneKey apps on Android and iPhone, and the SmartphoneKey app in ChatGPT. What you can do in each depends on your account and its permissions.</t>
+                    <t t-set="heading">SmartphoneKey apps</t>
+                    <t t-set="intro">The SmartphoneKey app for Android and iPhone, and the SmartphoneKey app in ChatGPT. What you can do in each depends on your account and its permissions.</t>
                 </t>
             </div>
 
@@ -210,17 +218,17 @@
                 <h2 id="apps-title" class="visually-hidden">Download</h2>
                 <div class="columns-3">
                     <div>
-                        <h3>Android app.</h3>
-                        <p>Manage your keys and supported access from an Android phone or tablet.</p>
+                        <h3>Android</h3>
+                        <p>Manage your keys and access from an Android phone or tablet.</p>
                         <a href="https://play.google.com/store/apps/details?id=com.smartphonekey.mobileapp&amp;hl=en" rel="noopener">Get it on Google Play</a>
                     </div>
                     <div>
-                        <h3>iPhone app.</h3>
-                        <p>Manage your keys and supported access from iPhone, including supported wallet credentials.</p>
+                        <h3>iPhone</h3>
+                        <p>Manage your keys and access from an iPhone, including supported Wallet keys.</p>
                         <a href="https://apps.apple.com/ca/app/smartphonekey/id6736495951" rel="noopener">Download on the App Store</a>
                     </div>
                     <div>
-                        <h3>App in ChatGPT.</h3>
+                        <h3>ChatGPT</h3>
                         <p>Use the SmartphoneKey app inside ChatGPT. The actions available depend on your account.</p>
                         <a href="https://chatgpt.com/apps/smartphonekey/asdk_app_69e95d545bb48191985e5873db121d5b" rel="noopener">Open in ChatGPT</a>
                     </div>
@@ -228,7 +236,7 @@
             </section>
 
             <t t-call="spk_website_v2.next_step">
-                <t t-set="next_title">Learn the app.</t>
+                <t t-set="next_title">Learn the app</t>
                 <t t-set="next_text" t-value="False"/>
                 <a href="/instructions/mobile-app-guide">Mobile app user guide</a>
                 <a href="/instructions/mobile-app">Mobile app walkthrough</a>
@@ -239,14 +247,16 @@
     <template id="page_404" name="SmartphoneKey 2.0: not found">
         <t t-call="spk_website_v2.layout">
             <div class="container">
-                <div class="page-intro">
-                    <h1>This page is not here.</h1>
-                    <p class="lead">The address may be mistyped, or the page may have moved.</p>
-                    <div class="next-actions">
-                        <a href="/">Home</a>
-                        <a href="/platform">Platform</a>
-                        <a href="/resources">Resources</a>
-                        <a href="/contact">Contact</a>
+                <div class="page-opening">
+                    <div class="opening-copy">
+                        <h1>This page is not here.</h1>
+                        <p class="lead">The address may be mistyped, or the page may have moved.</p>
+                        <div class="next-actions">
+                            <a href="/">Home</a>
+                            <a href="/platform">Platform</a>
+                            <a href="/resources">Resources</a>
+                            <a href="/contact">Contact</a>
+                        </div>
                     </div>
                 </div>
             </div>

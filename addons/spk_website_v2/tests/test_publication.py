@@ -32,7 +32,7 @@ class TestPublication(SiteCase):
         self.assertEqual(self.row.verified_at, self.row.verified_at.today())
         body = self.get("/compatibility").content.decode()
         self.assertIn("Edited wording awaiting review.", body)
-        self.assertIn("Reviewed %d " % self.row.verified_at.day, body)
+        self.assertIn("Product facts checked %d " % self.row.verified_at.day, body)
 
     def test_rows_of_ungated_claims_cannot_be_published(self):
         distance = self.env.ref("spk_website_v2.compat_reader_link_distance")

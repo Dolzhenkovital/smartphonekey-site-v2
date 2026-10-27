@@ -37,7 +37,7 @@ class TestLanguages(SiteCase):
                                      "%s: placeholders of %r" % (code, text))
 
     def test_pages_render_in_each_language(self):
-        english_h1 = "Bring access management into one clear system."
+        english_h1 = "How SmartphoneKey works"
         for code, _odoo in TRANSLATED:
             response, doc = self.page("/%s/platform" % code)
             self.assertEqual(doc.get("lang"), code)

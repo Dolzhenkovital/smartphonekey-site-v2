@@ -3,10 +3,10 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Matter et Thread pour le contrôle d'accès : explications | SmartphoneKey</title>
+        <title>Matter et Thread dans le contrôle d’accès | SmartphoneKey</title>
         <link type="image/x-icon" rel="shortcut icon" href="/smartphonekey-site-v2/spk_website_v2/static/src/img/favicon-32.png">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-                <meta name="description" content="Comprenez les fonctionnalités Matter, le maillage Thread et les rôles de Border Router, ainsi que les questions de déploiement qui se posent pour un système d'accès connecté.">
+                <meta name="description" content="Le rôle de Matter, de Thread et d’un Thread Border Router, les rôles des lecteurs SmartphoneKey et ce qu’il faut régler avant de planifier un réseau maillé.">
                 <meta name="robots" content="noindex, nofollow">
                 <link rel="canonical" href="https://smartphonekey.com/fr/resources/matter-thread-access-control">
                 
@@ -14,20 +14,19 @@
                 <meta property="og:type" content="article">
                 <meta property="og:site_name" content="SmartphoneKey">
                 <meta property="og:locale" content="fr_FR">
-                <meta property="og:title" content="Matter et Thread pour le contrôle d'accès : explications | SmartphoneKey">
-                <meta property="og:description" content="Comprenez les fonctionnalités Matter, le maillage Thread et les rôles de Border Router, ainsi que les questions de déploiement qui se posent pour un système d'accès connecté.">
+                <meta property="og:title" content="Matter et Thread dans le contrôle d’accès | SmartphoneKey">
+                <meta property="og:description" content="Le rôle de Matter, de Thread et d’un Thread Border Router, les rôles des lecteurs SmartphoneKey et ce qu’il faut régler avant de planifier un réseau maillé.">
                 <meta property="og:url" content="https://smartphonekey.com/fr/resources/matter-thread-access-control">
                 <meta property="og:image" content="https://smartphonekey.com/spk_website_v2/static/src/img/og-default.png">
                 <meta property="og:image:width" content="1200">
                 <meta property="og:image:height" content="630">
-                <meta property="og:image:alt" content="SmartphoneKey reader beside the SmartphoneKey key logo">
+                <meta property="og:image:alt" content="SmartphoneKey reader with a QR code labelled Scan to call, beside the SmartphoneKey logo">
                 <meta name="twitter:card" content="summary_large_image">
                 
-                    <link rel="preconnect" href="https://api.fontshare.com" crossorigin="">
-                    <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&amp;display=swap">
+                <link rel="preload" as="font" type="font/woff2" crossorigin="" href="/smartphonekey-site-v2/spk_website_v2/static/src/fonts/manrope-latin-wght-normal.woff2">
                 <link type="text/css" rel="stylesheet" href="/smartphonekey-site-v2/assets/site.css">
-                <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://smartphonekey.com/fr/resources/matter-thread-access-control#webpage","url":"https://smartphonekey.com/fr/resources/matter-thread-access-control","name":"Matter et Thread pour le contrôle d'accès : explications | SmartphoneKey","description":"Comprenez les fonctionnalités Matter, le maillage Thread et les rôles de Border Router, ainsi que les questions de déploiement qui se posent pour un système d'accès connecté.","inLanguage":"fr","isPartOf":{"@id":"https://smartphonekey.com/#website"},"breadcrumb":{"@id":"https://smartphonekey.com/fr/resources/matter-thread-access-control#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://smartphonekey.com/fr/resources/matter-thread-access-control#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://smartphonekey.com/fr"},{"@type":"ListItem","position":2,"name":"Ressources","item":"https://smartphonekey.com/fr/resources"},{"@type":"ListItem","position":3,"name":"Matter et Thread pour le contrôle d'accès.","item":"https://smartphonekey.com/fr/resources/matter-thread-access-control"}]},{"@type":"Article","@id":"https://smartphonekey.com/fr/resources/matter-thread-access-control#article","headline":"Matter et Thread pour le contrôle d'accès.","description":"Comprenez les fonctionnalités Matter, le maillage Thread et les rôles de Border Router, ainsi que les questions de déploiement qui se posent pour un système d'accès connecté.","datePublished":"2026-10-27","dateModified":"2026-10-27","author":{"@type":"Organization","name":"SmartphoneKey product team","url":"https://smartphonekey.com/about"},"publisher":{"@id":"https://smartphonekey.com/#organization"},"mainEntityOfPage":{"@id":"https://smartphonekey.com/fr/resources/matter-thread-access-control#webpage"},"inLanguage":"fr"}]}</script>
-                <script defer src="/smartphonekey-site-v2/spk_website_v2/static/src/js/navigation.js?v=18.0.2.1.0"></script>
+                <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://smartphonekey.com/fr/resources/matter-thread-access-control#webpage","url":"https://smartphonekey.com/fr/resources/matter-thread-access-control","name":"Matter et Thread dans le contrôle d’accès | SmartphoneKey","description":"Le rôle de Matter, de Thread et d’un Thread Border Router, les rôles des lecteurs SmartphoneKey et ce qu’il faut régler avant de planifier un réseau maillé.","inLanguage":"fr","isPartOf":{"@id":"https://smartphonekey.com/#website"},"breadcrumb":{"@id":"https://smartphonekey.com/fr/resources/matter-thread-access-control#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://smartphonekey.com/fr/resources/matter-thread-access-control#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://smartphonekey.com/fr"},{"@type":"ListItem","position":2,"name":"Ressources","item":"https://smartphonekey.com/fr/resources"},{"@type":"ListItem","position":3,"name":"Matter et Thread pour le contrôle d’accès","item":"https://smartphonekey.com/fr/resources/matter-thread-access-control"}]},{"@type":"Article","@id":"https://smartphonekey.com/fr/resources/matter-thread-access-control#article","headline":"Matter et Thread pour le contrôle d’accès","description":"Le rôle de Matter, de Thread et d’un Thread Border Router, les rôles des lecteurs SmartphoneKey et ce qu’il faut régler avant de planifier un réseau maillé.","datePublished":"2026-10-27","dateModified":"2026-10-27","author":{"@type":"Organization","name":"SmartphoneKey product team","url":"https://smartphonekey.com/about"},"publisher":{"@id":"https://smartphonekey.com/#organization"},"mainEntityOfPage":{"@id":"https://smartphonekey.com/fr/resources/matter-thread-access-control#webpage"},"inLanguage":"fr"}]}</script>
+                <script defer src="/smartphonekey-site-v2/spk_website_v2/static/src/js/navigation.js?v=18.0.3.0.0"></script>
                 
             
     </head>
@@ -35,81 +34,21 @@
         
             <a class="skip" href="#main">Aller au contenu</a>
             <p class="preview-banner" role="note">
-                Aperçu de test du site web SmartphoneKey 2.0. Ce n'est pas le site en ligne, et rien de ce qui est saisi ici n'est envoyé ni enregistré.
+                Aperçu de test du nouveau site web SmartphoneKey. Ce n’est pas le site public, et rien de ce que vous saisissez ici n’est envoyé ni enregistré.
             </p>
         <header class="site-header">
-            <div class="container header-inner">
-                <a class="brand" href="/smartphonekey-site-v2/fr/">
-                    <img src="/smartphonekey-site-v2/spk_website_v2/static/src/img/brand-mark.png" width="32" height="32" alt="" loading="lazy">
-                    <span>SmartphoneKey</span>
-                </a>
-                <nav class="desktop-nav" aria-label="Principal">
-                    <ul class="menu">
-                        <li>
-                            <details class="menu-group" data-spk-menu="">
-                                <summary>Plateforme</summary>
-                                <ul class="menu-panel">
-                                    <li>
-                                        <a href="/smartphonekey-site-v2/fr/platform/">Vue d'ensemble</a>
-                                    </li><li>
-                                        <a href="/smartphonekey-site-v2/fr/platform/access-management/">Gestion des accès</a>
-                                    </li><li>
-                                        <a href="/smartphonekey-site-v2/fr/platform/automation/">Automatisation</a>
-                                    </li><li>
-                                        <a href="/smartphonekey-site-v2/fr/platform/visitor-access/">Accès visiteurs</a>
-                                    </li>
-                                </ul>
-                            </details>
-                        </li><li>
-                            <details class="menu-group" data-spk-menu="">
-                                <summary>Solutions</summary>
-                                <ul class="menu-panel">
-                                    <li>
-                                        <a href="/smartphonekey-site-v2/fr/solutions/property-managers/">Gestionnaires immobiliers</a>
-                                    </li><li>
-                                        <a href="/smartphonekey-site-v2/fr/solutions/integrators/">Intégrateurs</a>
-                                    </li>
-                                </ul>
-                            </details>
-                        </li><li>
-                            <details class="menu-group" data-spk-menu="">
-                                <summary>Produits</summary>
-                                <ul class="menu-panel">
-                                    <li>
-                                        <a href="/smartphonekey-site-v2/fr/products/readers/">Lecteurs</a>
-                                    </li><li>
-                                        <a href="/smartphonekey-site-v2/fr/compatibility/">Compatibilité</a>
-                                    </li><li>
-                                        <a href="/smartphonekey-site-v2/fr/certifications/">Certifications</a>
-                                    </li>
-                                </ul>
-                            </details>
-                        </li><li>
-                            <details class="menu-group" data-spk-menu="">
-                                <summary>Ressources</summary>
-                                <ul class="menu-panel">
-                                    <li>
-                                        <a href="/smartphonekey-site-v2/fr/resources/#guides">Guides</a>
-                                    </li><li>
-                                        <a href="https://spkey.odoo.com/guide-for-usage-and-installation?lang=fr">Instructions</a>
-                                    </li><li>
-                                        <a href="/smartphonekey-site-v2/fr/resources/#insights">Articles</a>
-                                    </li><li>
-                                        <a href="/smartphonekey-site-v2/fr/security/">Sécurité et confiance</a>
-                                    </li>
-                                </ul>
-                            </details>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="header-actions">
-                    <a href="https://spkey.odoo.com/guide-for-usage-and-installation?lang=fr">Instructions</a>
-                    <a href="https://spkey.odoo.com/adminpanel">Admin Panel</a>
-                    <a href="/smartphonekey-site-v2/fr/find-your-setup/" class="header-action">Trouver votre configuration</a>
+            
+            <div class="header-utility">
+                <div class="container utility-inner">
+                    <div class="header-actions">
+                        <span class="utility-label">Vous utilisez déjà SmartphoneKey ?</span>
+                        <a href="https://spkey.odoo.com/guide-for-usage-and-installation?lang=fr">Instructions</a>
+                        <a href="https://spkey.odoo.com/adminpanel">Admin Panel</a>
+                    </div>
                     <details class="menu-group lang-switch" data-spk-menu="">
                         <summary><span class="visually-hidden">Langue : </span>Français</summary>
                         <div class="menu-panel lang-panel">
-        <ul class="lang-list">
+        <ul class="lang-list" role="list">
             <li>
                 <a data-no-post-process="1" href="/smartphonekey-site-v2/resources/matter-thread-access-control/" hreflang="en" lang="en">English</a>
             </li><li>
@@ -125,14 +64,88 @@
                         </div>
                     </details>
                 </div>
+            </div>
+            <div class="container header-bar">
+                <a class="brand" href="/smartphonekey-site-v2/fr/">
+                    <img src="/smartphonekey-site-v2/spk_website_v2/static/src/img/brand-mark.png" width="32" height="32" loading="eager" alt="">
+                    <span>SmartphoneKey</span>
+                </a>
+                <nav class="desktop-nav" aria-label="Principal">
+                    <ul class="menu" role="list">
+                        <li>
+                            <details class="menu-group" data-spk-menu="">
+                                <summary>Plateforme</summary>
+                                <ul class="menu-panel" role="list">
+                                    <li>
+                                        <a href="/smartphonekey-site-v2/fr/platform/">Vue d’ensemble</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/fr/platform/access-management/">Gestion des accès</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/fr/platform/automation/">Automatisation</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/fr/platform/visitor-access/">Accès visiteurs</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li><li>
+                            <details class="menu-group" data-spk-menu="">
+                                <summary>Solutions</summary>
+                                <ul class="menu-panel" role="list">
+                                    <li>
+                                        <a href="/smartphonekey-site-v2/fr/solutions/property-managers/">Équipes immobilières</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/fr/solutions/integrators/">Installateurs et intégrateurs</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li><li>
+                            <details class="menu-group" data-spk-menu="">
+                                <summary>Produits</summary>
+                                <ul class="menu-panel" role="list">
+                                    <li>
+                                        <a href="/smartphonekey-site-v2/fr/products/readers/">Lecteurs</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/fr/compatibility/">Compatibilité</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/fr/certifications/">Certifications</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li><li>
+                            <details class="menu-group" data-spk-menu="">
+                                <summary>Ressources</summary>
+                                <ul class="menu-panel" role="list">
+                                    <li>
+                                        <a href="/smartphonekey-site-v2/fr/resources/#guides">Guides</a>
+                                    </li><li>
+                                        <a href="https://spkey.odoo.com/guide-for-usage-and-installation?lang=fr">Instructions</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/fr/resources/#insights">Archives des articles</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/fr/security/">Sécurité et confiance</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="/smartphonekey-site-v2/fr/find-your-setup/" class="button-outline header-action">Recommandations pour votre site</a>
                 <details class="mobile-nav" data-spk-mobile-menu="">
                     <summary>Menu</summary>
                     <nav class="mobile-panel" aria-label="Mobile">
+                        <a href="/smartphonekey-site-v2/fr/find-your-setup/" class="button">Recommandations pour votre site</a>
+                        <div class="mobile-group mobile-existing">
+                            <p class="mobile-title">Vous utilisez déjà SmartphoneKey ?</p>
+                            <ul role="list">
+                                <li><a href="https://spkey.odoo.com/guide-for-usage-and-installation?lang=fr">Instructions</a></li>
+                                <li><a href="https://spkey.odoo.com/adminpanel">Admin Panel</a></li>
+                            </ul>
+                        </div>
                         <div class="mobile-group">
                             <p class="mobile-title">Plateforme</p>
-                            <ul>
+                            <ul role="list">
                                 <li>
-                                    <a href="/smartphonekey-site-v2/fr/platform/">Vue d'ensemble</a>
+                                    <a href="/smartphonekey-site-v2/fr/platform/">Vue d’ensemble</a>
                                 </li><li>
                                     <a href="/smartphonekey-site-v2/fr/platform/access-management/">Gestion des accès</a>
                                 </li><li>
@@ -143,16 +156,16 @@
                             </ul>
                         </div><div class="mobile-group">
                             <p class="mobile-title">Solutions</p>
-                            <ul>
+                            <ul role="list">
                                 <li>
-                                    <a href="/smartphonekey-site-v2/fr/solutions/property-managers/">Gestionnaires immobiliers</a>
+                                    <a href="/smartphonekey-site-v2/fr/solutions/property-managers/">Équipes immobilières</a>
                                 </li><li>
-                                    <a href="/smartphonekey-site-v2/fr/solutions/integrators/">Intégrateurs</a>
+                                    <a href="/smartphonekey-site-v2/fr/solutions/integrators/">Installateurs et intégrateurs</a>
                                 </li>
                             </ul>
                         </div><div class="mobile-group">
                             <p class="mobile-title">Produits</p>
-                            <ul>
+                            <ul role="list">
                                 <li>
                                     <a href="/smartphonekey-site-v2/fr/products/readers/">Lecteurs</a>
                                 </li><li>
@@ -163,26 +176,21 @@
                             </ul>
                         </div><div class="mobile-group">
                             <p class="mobile-title">Ressources</p>
-                            <ul>
+                            <ul role="list">
                                 <li>
                                     <a href="/smartphonekey-site-v2/fr/resources/#guides">Guides</a>
                                 </li><li>
                                     <a href="https://spkey.odoo.com/guide-for-usage-and-installation?lang=fr">Instructions</a>
                                 </li><li>
-                                    <a href="/smartphonekey-site-v2/fr/resources/#insights">Articles</a>
+                                    <a href="/smartphonekey-site-v2/fr/resources/#insights">Archives des articles</a>
                                 </li><li>
                                     <a href="/smartphonekey-site-v2/fr/security/">Sécurité et confiance</a>
                                 </li>
                             </ul>
                         </div>
-                        <ul class="mobile-actions">
-                            <li><a href="/smartphonekey-site-v2/fr/find-your-setup/">Trouver votre configuration</a></li>
-                            <li><a href="https://spkey.odoo.com/guide-for-usage-and-installation?lang=fr">Instructions</a></li>
-                            <li><a href="https://spkey.odoo.com/adminpanel">Admin Panel</a></li>
-                        </ul>
                         <div class="mobile-group mobile-langs">
                             <p class="mobile-title">Langue</p>
-        <ul class="lang-list">
+        <ul class="lang-list" role="list">
             <li>
                 <a data-no-post-process="1" href="/smartphonekey-site-v2/resources/matter-thread-access-control/" hreflang="en" lang="en">English</a>
             </li><li>
@@ -203,68 +211,72 @@
             <main id="main" tabindex="-1">
                 
             <article class="container spk-document" aria-labelledby="article-title">
-                <div class="page-intro">
-        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+                <div class="page-opening">
+        <nav class="breadcrumb" aria-label="Fil d’Ariane">
             <ol>
                 <li>
                     <a href="/smartphonekey-site-v2/fr/">Accueil</a>
                 </li><li>
                     <a href="/smartphonekey-site-v2/fr/resources/">Ressources</a>
                 </li><li>
-                    <span aria-current="page">Matter et Thread pour le contrôle d'accès.</span>
+                    <span aria-current="page">Matter et Thread pour le contrôle d’accès</span>
                 </li>
             </ol>
         </nav>
-                    <h1 id="article-title">Matter et Thread pour le contrôle d'accès.</h1>
-                    <div class="meta">
-                            <p>Par l'équipe produit SmartphoneKey</p>
-                            <p>Publié 27 octobre 2026</p>
-                            <p>Informations produit vérifiées le 26 octobre 2026</p>
+                    <div class="opening-copy">
+                        <h1 id="article-title">Matter et Thread pour le contrôle d’accès</h1>
+                        <div class="meta">
+                                <p>Par l’équipe produit SmartphoneKey</p>
+                                <p>Publié le 27 octobre 2026</p>
+                                <p>Mis à jour le 27 octobre 2026</p>
+                                <p>Informations produit vérifiées le 26 octobre 2026</p>
+                        </div>
+                        <p class="lead answer">Matter décrit ce qu’un appareil connecté peut faire, par exemple s’allumer ou signaler une température. Thread est un réseau maillé IP que les appareils Matter peuvent utiliser, et un Thread Border Router relie ce réseau maillé à vos autres réseaux IP. Chaque lecteur SmartphoneKey peut faire office de Thread Border Router et de routeur du réseau maillé, sans version de firmware distincte. Ce qu’un scénario peut faire dépend des fonctions que déclare chaque appareil.</p>
                     </div>
-                    <p class="lead answer">Matter décrit la manière dont les appareils pris en charge communiquent leurs fonctionnalités. Thread fournit un réseau maillé IP. Un Thread Border Router relie ce maillage à d'autres réseaux IP. Ce sont des rôles différents ; un déploiement doit donc indiquer ce que chaque appareil fournit réellement. Dans SmartphoneKey, ce qu'un processus peut faire dépend des fonctionnalités que déclare chaque appareil mis en service.</p>
                 </div>
                 <nav class="contents" aria-label="Sur cette page">
                     <p class="contents-title">Sur cette page</p>
                     <ul>
-                        <li><a href="#roles">Quatre rôles souvent confondus</a></li><li><a href="#topology">Un exemple de topologie</a></li><li><a href="#capabilities">Les fonc­tion­na­li­tés déterminent ce qu'un processus peut faire</a></li><li><a href="#one-hub">Un seul hub par scénario</a></li><li><a href="#coverage">Couverture et chemin vers Internet</a></li><li><a href="#questions">Questions à régler pour votre matériel</a></li>
+                        <li><a href="#roles">Quatre rôles faciles à confondre</a></li><li><a href="#readers">Les rôles des lecteurs SmartphoneKey</a></li><li><a href="#topology">Un exemple de topologie</a></li><li><a href="#capabilities">Les fonctions déterminent ce qu’un scénario peut faire</a></li><li><a href="#one-hub">Un seul hub par scénario</a></li><li><a href="#coverage">Couverture et chemin vers Internet</a></li><li><a href="#questions">Questions à régler pour votre site</a></li>
                     </ul>
                 </nav>
                 <div class="spk-prose"><div>
-                    <h2 id="roles">Quatre rôles souvent confondus</h2>
+                    <h2 id="roles">Quatre rôles faciles à confondre</h2>
                     <div class="spk-table" role="region" tabindex="0" aria-label="Rôles Matter et Thread"><table>
                         <caption>Rôles Matter et Thread</caption>
                         <thead>
-                            <tr><th scope="col">Rôle</th><th scope="col">Ce qu'il fait</th><th scope="col">Ce que cela ne prouve pas</th></tr>
+                            <tr><th scope="col">Rôle</th><th scope="col">Ce qu’il fait</th><th scope="col">Ce que cela ne signifie pas</th></tr>
                         </thead>
                         <tbody>
-                            <tr><th scope="row">Appareil Matter</th><td>Expose des fonc­tion­na­li­tés telles que marche/arrêt, contact ou température</td><td>Que tout contrôleur puisse utiliser chaque fonction</td></tr>
-                            <tr><th scope="row">Contrôleur Matter</th><td>Met en service les appareils et leur envoie des commandes</td><td>Qu'il fasse transiter le trafic Thread</td></tr>
-                            <tr><th scope="row">Routeur Thread</th><td>Fait transiter le trafic au sein du maillage Thread</td><td>Que le maillage puisse atteindre Internet</td></tr>
-                            <tr><th scope="row">Thread Border Router</th><td>Relie le maillage Thread à d'autres réseaux IP</td><td>Qu'il pilote des appareils Matter</td></tr>
+                            <tr><th scope="row">Appareil Matter</th><td>Déclare des fonctions comme marche/arrêt, contact ou température</td><td>Que tout contrôleur puisse utiliser chaque fonction</td></tr>
+                            <tr><th scope="row">Contrôleur Matter</th><td>Met en service les appareils et leur envoie des commandes</td><td>Qu’il fasse transiter le trafic Thread</td></tr>
+                            <tr><th scope="row">Routeur Thread</th><td>Fait transiter le trafic dans le réseau maillé Thread</td><td>Que le réseau maillé puisse atteindre Internet</td></tr>
+                            <tr><th scope="row">Thread Border Router</th><td>Relie le réseau maillé Thread à d’autres réseaux IP</td><td>Qu’il pilote des appareils Matter</td></tr>
                         </tbody>
                     </table>
-                    </div><h2 id="topology">Un exemple de topologie</h2>
-                    <p>Exemple de topologie. Le déploiement dépend de la confi­gu­ra­tion.</p>
+                    </div><h2 id="readers">Les rôles des lecteurs SmartphoneKey</h2>
+                    <p>Chaque lecteur SmartphoneKey peut faire office de Thread Border Router et de routeur Thread, sans version de firmware distincte. Le lecteur qui porte la connexion du réseau maillé à Internet se décide site par site. Les fonctions de contrôleur Matter sont confirmées pour chaque projet, et les rôles des autres appareils dépendent de leur propre matériel et de leur firmware.</p>
+                    <h2 id="topology">Un exemple de topologie</h2>
+                    <p>Exemple de topologie. Le déploiement dépend de la configuration.</p>
                     <ol>
-                        <li>La connexion Internet du site, en Wi-Fi, Ethernet ou cellulaire.</li>
-                        <li>Un Thread Border Router, qui relie le maillage Thread à ce réseau IP. N'importe quel lecteur SmartphoneKey peut assumer ce rôle.</li>
-                        <li>Des routeurs Thread, qui font transiter le trafic entre les appareils du maillage. Chaque lecteur SmartphoneKey peut aussi assumer ce rôle.</li>
-                        <li>Des appareils Matter, tels que des capteurs, des éclairages et des vannes, chacun déclarant ses propres fonc­tion­na­li­tés.</li>
-                        <li>Un contrôleur Matter, qui met en service les appareils et exécute les processus configurés.</li>
+                        <li>La connexion Internet du site, par Wi-Fi, Ethernet ou réseau mobile.</li>
+                        <li>Un Thread Border Router, qui relie le réseau maillé Thread à ce réseau. Tout lecteur SmartphoneKey peut assumer ce rôle.</li>
+                        <li>Des routeurs Thread, qui font transiter le trafic entre les appareils du réseau maillé. Chaque lecteur SmartphoneKey peut aussi assumer ce rôle.</li>
+                        <li>Des appareils Matter, comme des capteurs, des éclairages et des vannes, chacun déclarant ses propres fonctions.</li>
+                        <li>Un contrôleur Matter, qui met les appareils en service et exécute les scénarios configurés.</li>
                     </ol>
-                    <p>Dans une installation SmartphoneKey, chaque lecteur peut faire office de Thread Border Router et de routeur Thread, sans version de firmware distincte. Le lecteur qui assure la connexion à Internet est déterminé pour chaque site ; les rôles des autres appareils dépendent de leur propre matériel et de leur propre firmware.</p>
-                    <h2 id="capabilities">Les fonc­tion­na­li­tés déterminent ce qu'un processus peut faire</h2>
-                    <p>Un label Matter ne signifie pas que tous les appareils exposent les mêmes commandes. Un capteur de contact signale l'état ouvert ou fermé ; un éclairage s'allume ou s'éteint ; un détecteur de fuite signale la présence d'eau ; une vanne s'ouvre ou se ferme ; un thermostat accepte une consigne. Un processus ne peut utiliser que ce que l'appareil mis en service déclare et ce que le système configuré prend en charge.</p>
+                    <h2 id="capabilities">Les fonctions déterminent ce qu’un scénario peut faire</h2>
+                    <p>La mention Matter ne signifie pas que tous les appareils offrent les mêmes fonctions. Un capteur de contact signale ouvert ou fermé ; un éclairage s’allume ou s’éteint ; un détecteur de fuite signale la présence d’eau ; une vanne s’ouvre ou se ferme ; un thermostat accepte une consigne. Un scénario ne peut utiliser que ce que déclare l’appareil mis en service et ce que votre configuration prend en charge.</p>
                     <h2 id="one-hub">Un seul hub par scénario</h2>
-                    <p>Dans la mise en œuvre actuelle, chaque scénario appartient à un seul hub et à ses appareils mis en service. Planifiez les processus autour du hub qui pilote les appareils dont ils ont besoin.</p>
+                    <p>Chaque scénario appartient pour l’instant à un seul hub et aux appareils qui y sont mis en service. Concevez les scénarios autour du hub qui pilote les appareils dont ils ont besoin.</p>
                     <h2 id="coverage">Couverture et chemin vers Internet</h2>
-                    <p>Un déploiement maillé dépend des rôles des nœuds, de leur emplacement, de l'alimentation et du chemin disponible vers Internet. La couverture dépend du bâtiment, de l'emplacement et des conditions radio ; planifiez-la donc pour le site et vérifiez-la après l'installation. Lorsque le chemin vers Internet est perdu, la gestion à distance attend son réta­blis­se­ment ; consultez <a href="/smartphonekey-site-v2/resources/access-control-when-offline/">ce qui se passe lorsqu'un lecteur passe hors ligne</a>.</p>
-                    <h2 id="questions">Questions à régler pour votre matériel</h2>
+                    <p>Un réseau maillé dépend des rôles de ses appareils, de leur emplacement et de leur alimentation, et du chemin vers Internet. La couverture dépend du bâtiment, de l’emplacement et des conditions radio : planifiez-la pour le site et vérifiez-la après l’installation. Quand le chemin vers Internet est perdu, la gestion à distance attend son retour ; lisez <a href="/smartphonekey-site-v2/resources/access-control-when-offline/">ce qui se passe lorsqu’un lecteur est hors ligne</a>.</p>
+                    <h2 id="questions">Questions à régler pour votre site</h2>
                     <ul>
-                        <li>Quelle révision du lecteur et quel firmware seront installés ?</li>
-                        <li>Quels lecteurs relieront le maillage à Internet, et quels autres appareils rejoindront le maillage ?</li>
-                        <li>Comment le site accède-t-il à Internet, et que doit-il se passer si cette connexion est interrompue ?</li>
-                        <li>Quels appareils et quelles fonc­tion­na­li­tés chaque processus nécessite-t-il, et quel hub les pilote ?</li>
+                        <li>Quelle version de lecteur et quel firmware seront installés ?</li>
+                        <li>Quels lecteurs relieront le réseau maillé à Internet, et quels autres appareils le rejoindront ?</li>
+                        <li>Comment le site accède-t-il à Internet, et que doit-il se passer si cette connexion tombe ?</li>
+                        <li>De quels appareils et fonctions chaque scénario a-t-il besoin, et quel hub les pilote ?</li>
                     </ul>
                 </div>
             </div>
@@ -278,7 +290,7 @@
 
         <nav class="section container related" aria-labelledby="related-title">
             <h2 id="related-title" class="related-title">Pages associées</h2>
-            <ul class="next-links">
+            <ul class="next-links" role="list">
                 
                 <li><a href="/smartphonekey-site-v2/fr/platform/automation/">Automatisation</a></li><li><a href="/smartphonekey-site-v2/fr/compatibility/">Compatibilité</a></li><li><a href="/smartphonekey-site-v2/fr/products/readers/">Lecteurs</a></li>
             
@@ -286,11 +298,10 @@
         </nav>
 
         <section class="section container next-steps" aria-labelledby="next-title">
-            <h2 id="next-title">Planifiez votre prochaine étape.</h2>
-            <p>Parcourez une liste de vérification de pla­ni­fi­ca­tion par vous-même, ou soumettez vos questions à l'équipe.</p>
+            <h2 id="next-title">Planifiez votre installation</h2>
             <div class="next-actions">
                 
-                <a href="/smartphonekey-site-v2/fr/find-your-setup/">Trouver votre configuration</a>
+                <a href="/smartphonekey-site-v2/fr/find-your-setup/">Recommandations pour votre site</a>
                 <a href="/smartphonekey-site-v2/fr/compatibility/">Vérifier la compatibilité</a>
                 <a href="/smartphonekey-site-v2/fr/contact/?interest=project">Parler de votre projet</a>
             
@@ -303,17 +314,17 @@
                 <div class="footer-main">
                     <div class="footer-brand">
                         <p class="footer-name">SmartphoneKey</p>
-                        <p>Votre clé du contrôle d'accès.</p>
-                        <p class="muted">Gérez les sites, les personnes, les identifiants d'accès et les appareils connectés.</p>
+                        <p>La clé de votre contrôle d’accès.</p>
+                        <p class="muted">Gérez les accès, les clés numériques, les cartes et les lecteurs de tous vos sites.</p>
                         <p><a href="mailto:info@smartphonekey.com">info@smartphonekey.com</a></p>
                         <p><a href="https://spkey.odoo.com/adminpanel">Admin Panel</a></p>
                     </div>
                     <nav class="footer-nav" aria-label="Pied de page">
                         <div>
                             <p class="footer-title">Plateforme</p>
-                            <ul>
+                            <ul role="list">
                                 <li>
-                                    <a href="/smartphonekey-site-v2/fr/platform/">Vue d'ensemble</a>
+                                    <a href="/smartphonekey-site-v2/fr/platform/">Vue d’ensemble</a>
                                 </li><li>
                                     <a href="/smartphonekey-site-v2/fr/platform/access-management/">Gestion des accès</a>
                                 </li><li>
@@ -324,7 +335,7 @@
                             </ul>
                         </div><div>
                             <p class="footer-title">Produits</p>
-                            <ul>
+                            <ul role="list">
                                 <li>
                                     <a href="/smartphonekey-site-v2/fr/products/readers/">Lecteurs</a>
                                 </li><li>
@@ -334,40 +345,40 @@
                                 </li><li>
                                     <a href="/smartphonekey-site-v2/fr/apps-and-chatbot/">Applications</a>
                                 </li><li>
-                                    <a href="/smartphonekey-site-v2/fr/find-your-setup/">Trouver votre configuration</a>
+                                    <a href="/smartphonekey-site-v2/fr/find-your-setup/">Recommandations pour votre site</a>
                                 </li>
                             </ul>
                         </div><div>
                             <p class="footer-title">Instructions</p>
-                            <ul>
+                            <ul role="list">
                                 <li>
-                                    <a href="https://spkey.odoo.com/guide-for-usage-and-installation?lang=fr">Guide d'installation et de raccordement</a>
+                                    <a href="https://spkey.odoo.com/guide-for-usage-and-installation?lang=fr">Guide d’installation et de raccordement</a>
                                 </li><li>
-                                    <a href="https://spkey.odoo.com/instructions/admin-guide?lang=fr">Guide d'utilisation de l'Admin Panel</a>
+                                    <a href="https://spkey.odoo.com/instructions/admin-guide?lang=fr">Guide d’utilisation de l’Admin Panel</a>
                                 </li><li>
-                                    <a href="https://spkey.odoo.com/instructions/admin-panel?lang=fr">Présentation guidée de l'Admin Panel</a>
+                                    <a href="https://spkey.odoo.com/instructions/admin-panel?lang=fr">Présentation guidée de l’Admin Panel</a>
                                 </li><li>
-                                    <a href="https://spkey.odoo.com/instructions/mobile-app-guide?lang=fr">Guide d'utilisation de l'application mobile</a>
+                                    <a href="https://spkey.odoo.com/instructions/mobile-app-guide?lang=fr">Guide d’utilisation de l’application mobile</a>
                                 </li><li>
-                                    <a href="https://spkey.odoo.com/instructions/mobile-app?lang=fr">Présentation guidée de l'application mobile</a>
+                                    <a href="https://spkey.odoo.com/instructions/mobile-app?lang=fr">Présentation guidée de l’application mobile</a>
                                 </li>
                             </ul>
                         </div><div>
-                            <p class="footer-title">Ressources</p>
-                            <ul>
+                            <p class="footer-title">Guides et solutions</p>
+                            <ul role="list">
                                 <li>
                                     <a href="/smartphonekey-site-v2/fr/resources/#guides">Guides</a>
                                 </li><li>
-                                    <a href="/smartphonekey-site-v2/fr/solutions/property-managers/">Gestionnaires immobiliers</a>
+                                    <a href="/smartphonekey-site-v2/fr/solutions/property-managers/">Équipes immobilières</a>
                                 </li><li>
-                                    <a href="/smartphonekey-site-v2/fr/solutions/integrators/">Intégrateurs</a>
+                                    <a href="/smartphonekey-site-v2/fr/solutions/integrators/">Installateurs et intégrateurs</a>
                                 </li><li>
                                     <a href="/smartphonekey-site-v2/fr/security/">Sécurité et confiance</a>
                                 </li>
                             </ul>
                         </div><div>
                             <p class="footer-title">Entreprise</p>
-                            <ul>
+                            <ul role="list">
                                 <li>
                                     <a href="/smartphonekey-site-v2/fr/about/">À propos</a>
                                 </li><li>
@@ -377,14 +388,14 @@
                                 </li><li>
                                     <a href="/smartphonekey-site-v2/fr/privacy-policy/">Politique de confidentialité</a>
                                 </li><li>
-                                    <a href="/smartphonekey-site-v2/fr/terms-of-service/">Conditions d'utilisation</a>
+                                    <a href="/smartphonekey-site-v2/fr/terms-of-service/">Conditions d’utilisation</a>
                                 </li>
                             </ul>
                         </div>
                     </nav>
                 </div>
                 <nav class="footer-langs" aria-label="Langue">
-        <ul class="lang-list">
+        <ul class="lang-list" role="list">
             <li>
                 <a data-no-post-process="1" href="/smartphonekey-site-v2/resources/matter-thread-access-control/" hreflang="en" lang="en">English</a>
             </li><li>

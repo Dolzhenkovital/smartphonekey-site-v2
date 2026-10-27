@@ -117,10 +117,18 @@ def localized_menu(menu, t):
     return tuple((t(group), tuple((t(label), path) for label, path in links)) for group, links in menu)
 
 
+# Babel locale for the long date of each site language: British English for the
+# English pages ("27 October 2026"); the other languages use their own long
+# format ("27. Oktober 2026", "27 de octubre de 2026", "27 жовтня 2026 р.").
+DATE_LOCALES = {"en_US": "en_GB"}
+
+
 def day_formatter(odoo_code):
-    """26 October 2026, 26 octobre 2026, 26 жовтня 2026 ..."""
+    """27 October 2026, 27 octobre 2026, 27. Oktober 2026, 27 de octubre de 2026, 27 жовтня 2026 р."""
+    locale = DATE_LOCALES.get(odoo_code, odoo_code)
+
     def format_day(value):
-        return format_date(value, format="d MMMM y", locale=odoo_code) if value else ""
+        return format_date(value, format="long", locale=locale) if value else ""
     return format_day
 
 
@@ -259,7 +267,11 @@ def page_values(path, route=None, article=None, english_only=False, **extra):
     route = route or content.ROUTES[path]
     route = dict(route, title=t(route["title"]), description=t(route["description"]), label=t(route["label"]))
     english_only = english_only or path in content.ENGLISH_ONLY
-    crumbs = crumbs_for(path, route, t)
+    # A response that is not a real document (the 404) sets route["canonical"] = False: no canonical link,
+    # no og:url, no breadcrumb and no structured data. route["breadcrumbs"] = False drops only the trail
+    # (a confirmation page that shows none).
+    has_canonical = route.get("canonical", True)
+    crumbs = crumbs_for(path, route, t) if has_canonical and route.get("breadcrumbs", True) else []
     noindex = (not route.get("index", True)) or is_noindex_environment(env) or not supported
     localized = not english_only and supported
     page_url = content.ORIGIN + (content.lang_url(path, url_code) if localized else path)
@@ -276,7 +288,7 @@ def page_values(path, route=None, article=None, english_only=False, **extra):
         "route": route,
         "title": route["title"],
         "page_description": route["description"],
-        "canonical": page_url,
+        "canonical": page_url if has_canonical else None,
         "alternates": alternates,
         "lang_code": url_code,
         "og_locale": content.OG_LOCALES[url_code],
@@ -287,7 +299,8 @@ def page_values(path, route=None, article=None, english_only=False, **extra):
         "robots": "noindex, nofollow" if noindex else False,
         "og_image": dict(image, url=content.ORIGIN + image["path"]),
         "crumbs": crumbs,
-        "jsonld": structured_data(page_url, route, crumbs, url_code if localized else "en", article=article),
+        "jsonld": (structured_data(page_url, route, crumbs, url_code if localized else "en", article=article)
+                   if has_canonical else ""),
         "nav": localized_menu(content.NAV, t),
         "footer_nav": localized_menu(content.FOOTER, t),
         "preview_mode": is_preview(env),

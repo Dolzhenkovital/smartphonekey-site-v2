@@ -1,60 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <!-- The two audience pages (copy deck: Property managers, Integrators). -->
+    <!-- The two audience pages (copy deck: Property teams, Installers and integrators). -->
 
     <template id="page_property_managers" name="SmartphoneKey 2.0: property managers">
         <t t-call="spk_website_v2.layout">
             <div class="container">
                 <t t-call="spk_website_v2.page_intro">
-                    <t t-set="heading">Keep access organised across your buildings.</t>
-                    <t t-set="intro">Residents change. Staff need different doors. Contractors arrive for a limited job. SmartphoneKey gives property teams a structured place to manage those changes.</t>
+                    <t t-set="heading">Access for residents, staff and contractors</t>
+                    <t t-set="intro">Give access when a resident moves in and revoke it when they move out. Give staff the doors they need, give contractors access for the job, and see which buildings need attention.</t>
+                    <t t-set="actions">
+                        <div class="actions">
+                            <a class="button" href="/find-your-setup">Site recommendations</a>
+                            <a href="/contact?interest=project">Discuss your properties</a>
+                        </div>
+                    </t>
                 </t>
             </div>
 
             <section class="section container" aria-labelledby="scenarios-title">
-                <h2 id="scenarios-title" class="visually-hidden">Day-to-day operations</h2>
+                <h2 id="scenarios-title" class="visually-hidden">Everyday operations</h2>
                 <div class="columns-2">
                     <div>
-                        <h3>Move-in and move-out.</h3>
-                        <p>Put the person in the correct site, issue the credentials they need and revoke access when their permission ends. Check device status for changes that are waiting to be delivered.</p>
+                        <h3>Move-in and move-out</h3>
+                        <p>Add the new resident to their site and issue a Wallet key or NFC card. At move-out, revoke it and check that each reader has applied the change; a revocation waiting for an offline reader is not yet in effect there.</p>
                     </div>
                     <div>
-                        <h3>Local responsibility.</h3>
-                        <p>Let the appropriate local administrator handle the site while maintaining a consistent operating process across the portfolio.</p>
+                        <h3>Staff and contractors</h3>
+                        <p>Give staff the doors their work needs. Give a contractor access for the job, temporary where supported, and revoke it when the work ends.</p>
                     </div>
                     <div>
-                        <h3>Service work.</h3>
-                        <p>Manage supported guest or temporary credentials for the required doors. Review the outcome and close the access lifecycle after the visit.</p>
+                        <h3>Site administrators</h3>
+                        <p>Let a local administrator manage access for their building, while you keep one way of working across every site.</p>
                     </div>
                     <div>
-                        <h3>Connected operations.</h3>
-                        <p>Add supported cameras and device workflows where they solve a real operational need. Check model compatibility and service scope before deployment.</p>
+                        <h3>Every building at a glance</h3>
+                        <p>Review events and reader status for each site, see changes that are still pending and configure alerts for supported device events.</p>
+                    </div>
+                    <div>
+                        <h3>Cameras and connected devices</h3>
+                        <p>Add supported cameras and device scenarios where they solve a real need. Check camera models and service scope before you plan them.</p>
                     </div>
                 </div>
             </section>
 
             <section class="section container split" aria-labelledby="checklist-title">
-                <h2 id="checklist-title">Project checklist.</h2>
+                <h2 id="checklist-title">What to prepare</h2>
                 <div class="split-copy">
-                    <p>Bring these details to the setup guide or to a conversation with our team:</p>
+                    <p>Bring these details to the site recommendations or to a conversation with us:</p>
                     <ul class="plain-list">
-                        <li>Number of sites and doors</li>
-                        <li>Resident, staff and contractor groups</li>
-                        <li>Existing lock hardware</li>
-                        <li>Connectivity at each door</li>
-                        <li>Desired credentials</li>
-                        <li>Visitor workflow</li>
-                        <li>Support responsibilities</li>
+                        <li>Number of sites, and doors at each site</li>
+                        <li>Resident, staff and contractor groups, and the doors each group needs</li>
+                        <li>Existing lock hardware at each door</li>
+                        <li>Wi-Fi or cellular coverage at each door</li>
+                        <li>Cards, Wallet keys or both</li>
+                        <li>How visitors should reach residents</li>
+                        <li>Who issues and revokes access day to day, and who handles support</li>
                     </ul>
                 </div>
             </section>
 
             <t t-call="spk_website_v2.next_step">
-                <t t-set="next_title">Start with your portfolio.</t>
-                <t t-set="next_text">See a planning starting point without sharing contact details, or talk to us about your buildings.</t>
-                <a class="button" href="/find-your-setup">Find your setup</a>
-                <a href="/platform/access-management">Explore access management</a>
-                <a href="/contact?interest=project">Discuss your property portfolio</a>
+                <t t-set="next_title">Tell us about the properties you manage</t>
+                <t t-set="next_text">Get recommendations for your sites, or discuss your buildings with our team.</t>
+                <a class="button" href="/find-your-setup">Site recommendations</a>
+                <a href="/platform/access-management">How access management works</a>
+                <a href="/contact?interest=project">Discuss your properties</a>
             </t>
         </t>
     </template>
@@ -63,54 +73,67 @@
         <t t-call="spk_website_v2.layout">
             <div class="container">
                 <t t-call="spk_website_v2.page_intro">
-                    <t t-set="heading">Build the installation. Keep the customer relationship.</t>
-                    <t t-set="intro">Use SmartphoneKey to organise customer sites and support the access system after installation. Combine the right reader configuration with clear handover and management workflows.</t>
+                    <t t-set="heading">Install, hand over and support access systems</t>
+                    <t t-set="intro">Assess each door, install SmartphoneKey readers, set up the customer's sites and administrators, and support the installation after handover.</t>
+                    <t t-set="actions">
+                        <div class="actions">
+                            <a class="button" href="/contact?interest=partner">Become a partner</a>
+                            <a href="/guide-for-usage-and-installation">Installation and connection guide</a>
+                        </div>
+                    </t>
                 </t>
             </div>
 
-            <section class="section container" aria-labelledby="workflow-title">
-                <h2 id="workflow-title">From evaluation to support.</h2>
+            <section class="section container" aria-labelledby="phases-title">
+                <h2 id="phases-title">From assessment to support</h2>
                 <ol class="phases">
                     <li>
-                        <h3>Evaluate.</h3>
-                        <p>Check door hardware, power, network conditions, credential requirements and supported devices.</p>
+                        <h3>Assess</h3>
+                        <p>Check door hardware, power, Wi-Fi or cellular coverage at each door, the cards or digital keys the customer wants and any connected devices.</p>
                     </li>
                     <li>
-                        <h3>Install.</h3>
-                        <p>Follow the model-specific installation guidance. Choose LTE or Wi-Fi according to coverage and the site's network requirements.</p>
+                        <h3>Install</h3>
+                        <p>Follow the installation and connection guide for each reader. Choose LTE or Wi-Fi for each door according to coverage and the site's network rules.</p>
                     </li>
                     <li>
-                        <h3>Hand over.</h3>
-                        <p>Organise the site, configure supported access and assign the appropriate local management responsibilities.</p>
+                        <h3>Hand over</h3>
+                        <p>Set up the customer's sites, doors and access, and assign their site administrators.</p>
                     </li>
                     <li>
-                        <h3>Support.</h3>
-                        <p>Find the customer's site, review its devices and use activity and operation status to investigate issues.</p>
+                        <h3>Support</h3>
+                        <p>Find the customer's site, review its readers, events and the status of each change, and investigate issues with the customer.</p>
                     </li>
                 </ol>
             </section>
 
             <section class="section container split" aria-labelledby="variant-title">
-                <h2 id="variant-title">Choose the reader configuration.</h2>
+                <h2 id="variant-title">Choose the reader for each door</h2>
                 <div class="split-copy">
-                    <p>LTE and Wi-Fi readers share the same platform. The connection the site can support decides which one fits; power and compatible door hardware are needed either way. Every reader can also act as a Thread Border Router and as a router in the Thread mesh, with the same firmware.</p>
+                    <p>LTE and Wi-Fi readers work with the same platform. Choose by the connection each door position can support; both need power and compatible lock hardware. Every reader can also act as a Thread Border Router and as a router in the Thread mesh, without a separate firmware version.</p>
                     <a href="/resources/lte-vs-wifi-access-control">LTE or Wi-Fi: what fits your site?</a>
                     <a href="/guide-for-usage-and-installation">Installation and connection guide</a>
                 </div>
             </section>
 
-            <section class="section container split" aria-labelledby="partner-title">
-                <h2 id="partner-title">Partner options.</h2>
+            <section class="section container split" aria-labelledby="relationship-title">
+                <h2 id="relationship-title">Your role and the customer's</h2>
                 <div class="split-copy">
-                    <p>Discuss distribution, integration, service and branding requirements with our team. The available scope depends on the agreed offering.</p>
+                    <p>The customer's administrators manage their own people, keys and cards. You can be given access to the customer's sites to commission readers and support them after handover; what you can see and do depends on the permissions granted to you.</p>
+                </div>
+            </section>
+
+            <section class="section container split" aria-labelledby="partner-title">
+                <h2 id="partner-title">Partnership</h2>
+                <div class="split-copy">
+                    <p>Discuss distribution, integration, service and branding with our team. What a partnership includes depends on the agreement.</p>
                 </div>
             </section>
 
             <t t-call="spk_website_v2.next_step">
-                <t t-set="next_title">Work with SmartphoneKey.</t>
-                <t t-set="next_text">Read the installation guidance and compare readers on your own, or start a partnership conversation.</t>
+                <t t-set="next_title">Talk to us about working together</t>
+                <t t-set="next_text" t-value="False"/>
                 <a class="button" href="/contact?interest=partner">Become a partner</a>
-                <a href="/guide-for-usage-and-installation">Read installation guidance</a>
+                <a href="/guide-for-usage-and-installation">Installation and connection guide</a>
                 <a href="/products/readers">Compare readers</a>
             </t>
         </t>

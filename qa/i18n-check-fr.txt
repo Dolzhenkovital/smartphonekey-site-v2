@@ -1,0 +1,15 @@
+fr: 846 public terms, 846 translated
+warning identical to English: <span>SmartphoneKey</span>
+warning identical to English: Dongguan Yaxu (AiT) Technology Limited
+warning identical to English: FCC ID 2BNRNSPKRDRLV1
+warning identical to English: FCC ID 2BNRNSPKRDRWV1
+warning identical to English: IC 35944-SPKRDRWV1
+warning identical to English: MIFARE Classic
+warning identical to English: MIFARE DESFire EV3
+warning identical to English: Product Owner
+warning identical to English: Scenario Builder
+warning identical to English: SmartphoneKey
+warning identical to English: Thread Border Router
+warning identical to English: Certifications
+warning identical to English: %(name)s, %(job)s | SmartphoneKey
+blocking: 0, warnings: 13

@@ -3,10 +3,10 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Automatisation des appareils Matter pour les environnements d'accès | SmartphoneKey</title>
+        <title>Scénarios d’appareils Matter pour bâtiments | SmartphoneKey</title>
         <link type="image/x-icon" rel="shortcut icon" href="/smartphonekey-site-v2/spk_website_v2/static/src/img/favicon-32.png">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-                <meta name="description" content="Découvrez des déclencheurs, conditions et actions concrets pour les appareils Matter pris en charge, avec des limites claires de fonctionnalités et de configuration.">
+                <meta name="description" content="Exemples de scénarios avec des appareils Matter pris en charge : éclairage d’entrée, fuite d’eau, température, fin de journée, et les limites de chacun.">
                 <meta name="robots" content="noindex, nofollow">
                 <link rel="canonical" href="https://smartphonekey.com/fr/platform/automation">
                 
@@ -14,20 +14,19 @@
                 <meta property="og:type" content="website">
                 <meta property="og:site_name" content="SmartphoneKey">
                 <meta property="og:locale" content="fr_FR">
-                <meta property="og:title" content="Automatisation des appareils Matter pour les environnements d'accès | SmartphoneKey">
-                <meta property="og:description" content="Découvrez des déclencheurs, conditions et actions concrets pour les appareils Matter pris en charge, avec des limites claires de fonctionnalités et de configuration.">
+                <meta property="og:title" content="Scénarios d’appareils Matter pour bâtiments | SmartphoneKey">
+                <meta property="og:description" content="Exemples de scénarios avec des appareils Matter pris en charge : éclairage d’entrée, fuite d’eau, température, fin de journée, et les limites de chacun.">
                 <meta property="og:url" content="https://smartphonekey.com/fr/platform/automation">
                 <meta property="og:image" content="https://smartphonekey.com/spk_website_v2/static/src/img/og-default.png">
                 <meta property="og:image:width" content="1200">
                 <meta property="og:image:height" content="630">
-                <meta property="og:image:alt" content="SmartphoneKey reader beside the SmartphoneKey key logo">
+                <meta property="og:image:alt" content="SmartphoneKey reader with a QR code labelled Scan to call, beside the SmartphoneKey logo">
                 <meta name="twitter:card" content="summary_large_image">
                 
-                    <link rel="preconnect" href="https://api.fontshare.com" crossorigin="">
-                    <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&amp;display=swap">
+                <link rel="preload" as="font" type="font/woff2" crossorigin="" href="/smartphonekey-site-v2/spk_website_v2/static/src/fonts/manrope-latin-wght-normal.woff2">
                 <link type="text/css" rel="stylesheet" href="/smartphonekey-site-v2/assets/site.css">
-                <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://smartphonekey.com/fr/platform/automation#webpage","url":"https://smartphonekey.com/fr/platform/automation","name":"Automatisation des appareils Matter pour les environnements d'accès | SmartphoneKey","description":"Découvrez des déclencheurs, conditions et actions concrets pour les appareils Matter pris en charge, avec des limites claires de fonctionnalités et de configuration.","inLanguage":"fr","isPartOf":{"@id":"https://smartphonekey.com/#website"},"breadcrumb":{"@id":"https://smartphonekey.com/fr/platform/automation#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://smartphonekey.com/fr/platform/automation#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://smartphonekey.com/fr"},{"@type":"ListItem","position":2,"name":"Plateforme","item":"https://smartphonekey.com/fr/platform"},{"@type":"ListItem","position":3,"name":"Automatisation","item":"https://smartphonekey.com/fr/platform/automation"}]}]}</script>
-                <script defer src="/smartphonekey-site-v2/spk_website_v2/static/src/js/navigation.js?v=18.0.2.1.0"></script>
+                <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://smartphonekey.com/fr/platform/automation#webpage","url":"https://smartphonekey.com/fr/platform/automation","name":"Scénarios d’appareils Matter pour bâtiments | SmartphoneKey","description":"Exemples de scénarios avec des appareils Matter pris en charge : éclairage d’entrée, fuite d’eau, température, fin de journée, et les limites de chacun.","inLanguage":"fr","isPartOf":{"@id":"https://smartphonekey.com/#website"},"breadcrumb":{"@id":"https://smartphonekey.com/fr/platform/automation#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://smartphonekey.com/fr/platform/automation#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://smartphonekey.com/fr"},{"@type":"ListItem","position":2,"name":"Plateforme","item":"https://smartphonekey.com/fr/platform"},{"@type":"ListItem","position":3,"name":"Automatisation","item":"https://smartphonekey.com/fr/platform/automation"}]}]}</script>
+                <script defer src="/smartphonekey-site-v2/spk_website_v2/static/src/js/navigation.js?v=18.0.3.0.0"></script>
                 
             
     </head>
@@ -35,81 +34,21 @@
         
             <a class="skip" href="#main">Aller au contenu</a>
             <p class="preview-banner" role="note">
-                Aperçu de test du site web SmartphoneKey 2.0. Ce n'est pas le site en ligne, et rien de ce qui est saisi ici n'est envoyé ni enregistré.
+                Aperçu de test du nouveau site web SmartphoneKey. Ce n’est pas le site public, et rien de ce que vous saisissez ici n’est envoyé ni enregistré.
             </p>
         <header class="site-header">
-            <div class="container header-inner">
-                <a class="brand" href="/smartphonekey-site-v2/fr/">
-                    <img src="/smartphonekey-site-v2/spk_website_v2/static/src/img/brand-mark.png" width="32" height="32" alt="" loading="lazy">
-                    <span>SmartphoneKey</span>
-                </a>
-                <nav class="desktop-nav" aria-label="Principal">
-                    <ul class="menu">
-                        <li>
-                            <details class="menu-group" data-spk-menu="">
-                                <summary>Plateforme</summary>
-                                <ul class="menu-panel">
-                                    <li>
-                                        <a href="/smartphonekey-site-v2/fr/platform/">Vue d'ensemble</a>
-                                    </li><li>
-                                        <a href="/smartphonekey-site-v2/fr/platform/access-management/">Gestion des accès</a>
-                                    </li><li>
-                                        <a href="/smartphonekey-site-v2/fr/platform/automation/" aria-current="page">Automatisation</a>
-                                    </li><li>
-                                        <a href="/smartphonekey-site-v2/fr/platform/visitor-access/">Accès visiteurs</a>
-                                    </li>
-                                </ul>
-                            </details>
-                        </li><li>
-                            <details class="menu-group" data-spk-menu="">
-                                <summary>Solutions</summary>
-                                <ul class="menu-panel">
-                                    <li>
-                                        <a href="/smartphonekey-site-v2/fr/solutions/property-managers/">Gestionnaires immobiliers</a>
-                                    </li><li>
-                                        <a href="/smartphonekey-site-v2/fr/solutions/integrators/">Intégrateurs</a>
-                                    </li>
-                                </ul>
-                            </details>
-                        </li><li>
-                            <details class="menu-group" data-spk-menu="">
-                                <summary>Produits</summary>
-                                <ul class="menu-panel">
-                                    <li>
-                                        <a href="/smartphonekey-site-v2/fr/products/readers/">Lecteurs</a>
-                                    </li><li>
-                                        <a href="/smartphonekey-site-v2/fr/compatibility/">Compatibilité</a>
-                                    </li><li>
-                                        <a href="/smartphonekey-site-v2/fr/certifications/">Certifications</a>
-                                    </li>
-                                </ul>
-                            </details>
-                        </li><li>
-                            <details class="menu-group" data-spk-menu="">
-                                <summary>Ressources</summary>
-                                <ul class="menu-panel">
-                                    <li>
-                                        <a href="/smartphonekey-site-v2/fr/resources/#guides">Guides</a>
-                                    </li><li>
-                                        <a href="https://spkey.odoo.com/guide-for-usage-and-installation?lang=fr">Instructions</a>
-                                    </li><li>
-                                        <a href="/smartphonekey-site-v2/fr/resources/#insights">Articles</a>
-                                    </li><li>
-                                        <a href="/smartphonekey-site-v2/fr/security/">Sécurité et confiance</a>
-                                    </li>
-                                </ul>
-                            </details>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="header-actions">
-                    <a href="https://spkey.odoo.com/guide-for-usage-and-installation?lang=fr">Instructions</a>
-                    <a href="https://spkey.odoo.com/adminpanel">Admin Panel</a>
-                    <a href="/smartphonekey-site-v2/fr/find-your-setup/" class="header-action">Trouver votre configuration</a>
+            
+            <div class="header-utility">
+                <div class="container utility-inner">
+                    <div class="header-actions">
+                        <span class="utility-label">Vous utilisez déjà SmartphoneKey ?</span>
+                        <a href="https://spkey.odoo.com/guide-for-usage-and-installation?lang=fr">Instructions</a>
+                        <a href="https://spkey.odoo.com/adminpanel">Admin Panel</a>
+                    </div>
                     <details class="menu-group lang-switch" data-spk-menu="">
                         <summary><span class="visually-hidden">Langue : </span>Français</summary>
                         <div class="menu-panel lang-panel">
-        <ul class="lang-list">
+        <ul class="lang-list" role="list">
             <li>
                 <a data-no-post-process="1" href="/smartphonekey-site-v2/platform/automation/" hreflang="en" lang="en">English</a>
             </li><li>
@@ -125,14 +64,88 @@
                         </div>
                     </details>
                 </div>
+            </div>
+            <div class="container header-bar">
+                <a class="brand" href="/smartphonekey-site-v2/fr/">
+                    <img src="/smartphonekey-site-v2/spk_website_v2/static/src/img/brand-mark.png" width="32" height="32" loading="eager" alt="">
+                    <span>SmartphoneKey</span>
+                </a>
+                <nav class="desktop-nav" aria-label="Principal">
+                    <ul class="menu" role="list">
+                        <li>
+                            <details class="menu-group" data-spk-menu="">
+                                <summary>Plateforme</summary>
+                                <ul class="menu-panel" role="list">
+                                    <li>
+                                        <a href="/smartphonekey-site-v2/fr/platform/">Vue d’ensemble</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/fr/platform/access-management/">Gestion des accès</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/fr/platform/automation/" aria-current="page">Automatisation</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/fr/platform/visitor-access/">Accès visiteurs</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li><li>
+                            <details class="menu-group" data-spk-menu="">
+                                <summary>Solutions</summary>
+                                <ul class="menu-panel" role="list">
+                                    <li>
+                                        <a href="/smartphonekey-site-v2/fr/solutions/property-managers/">Équipes immobilières</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/fr/solutions/integrators/">Installateurs et intégrateurs</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li><li>
+                            <details class="menu-group" data-spk-menu="">
+                                <summary>Produits</summary>
+                                <ul class="menu-panel" role="list">
+                                    <li>
+                                        <a href="/smartphonekey-site-v2/fr/products/readers/">Lecteurs</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/fr/compatibility/">Compatibilité</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/fr/certifications/">Certifications</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li><li>
+                            <details class="menu-group" data-spk-menu="">
+                                <summary>Ressources</summary>
+                                <ul class="menu-panel" role="list">
+                                    <li>
+                                        <a href="/smartphonekey-site-v2/fr/resources/#guides">Guides</a>
+                                    </li><li>
+                                        <a href="https://spkey.odoo.com/guide-for-usage-and-installation?lang=fr">Instructions</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/fr/resources/#insights">Archives des articles</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/fr/security/">Sécurité et confiance</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="/smartphonekey-site-v2/fr/find-your-setup/" class="button-outline header-action">Recommandations pour votre site</a>
                 <details class="mobile-nav" data-spk-mobile-menu="">
                     <summary>Menu</summary>
                     <nav class="mobile-panel" aria-label="Mobile">
+                        <a href="/smartphonekey-site-v2/fr/find-your-setup/" class="button">Recommandations pour votre site</a>
+                        <div class="mobile-group mobile-existing">
+                            <p class="mobile-title">Vous utilisez déjà SmartphoneKey ?</p>
+                            <ul role="list">
+                                <li><a href="https://spkey.odoo.com/guide-for-usage-and-installation?lang=fr">Instructions</a></li>
+                                <li><a href="https://spkey.odoo.com/adminpanel">Admin Panel</a></li>
+                            </ul>
+                        </div>
                         <div class="mobile-group">
                             <p class="mobile-title">Plateforme</p>
-                            <ul>
+                            <ul role="list">
                                 <li>
-                                    <a href="/smartphonekey-site-v2/fr/platform/">Vue d'ensemble</a>
+                                    <a href="/smartphonekey-site-v2/fr/platform/">Vue d’ensemble</a>
                                 </li><li>
                                     <a href="/smartphonekey-site-v2/fr/platform/access-management/">Gestion des accès</a>
                                 </li><li>
@@ -143,16 +156,16 @@
                             </ul>
                         </div><div class="mobile-group">
                             <p class="mobile-title">Solutions</p>
-                            <ul>
+                            <ul role="list">
                                 <li>
-                                    <a href="/smartphonekey-site-v2/fr/solutions/property-managers/">Gestionnaires immobiliers</a>
+                                    <a href="/smartphonekey-site-v2/fr/solutions/property-managers/">Équipes immobilières</a>
                                 </li><li>
-                                    <a href="/smartphonekey-site-v2/fr/solutions/integrators/">Intégrateurs</a>
+                                    <a href="/smartphonekey-site-v2/fr/solutions/integrators/">Installateurs et intégrateurs</a>
                                 </li>
                             </ul>
                         </div><div class="mobile-group">
                             <p class="mobile-title">Produits</p>
-                            <ul>
+                            <ul role="list">
                                 <li>
                                     <a href="/smartphonekey-site-v2/fr/products/readers/">Lecteurs</a>
                                 </li><li>
@@ -163,26 +176,21 @@
                             </ul>
                         </div><div class="mobile-group">
                             <p class="mobile-title">Ressources</p>
-                            <ul>
+                            <ul role="list">
                                 <li>
                                     <a href="/smartphonekey-site-v2/fr/resources/#guides">Guides</a>
                                 </li><li>
                                     <a href="https://spkey.odoo.com/guide-for-usage-and-installation?lang=fr">Instructions</a>
                                 </li><li>
-                                    <a href="/smartphonekey-site-v2/fr/resources/#insights">Articles</a>
+                                    <a href="/smartphonekey-site-v2/fr/resources/#insights">Archives des articles</a>
                                 </li><li>
                                     <a href="/smartphonekey-site-v2/fr/security/">Sécurité et confiance</a>
                                 </li>
                             </ul>
                         </div>
-                        <ul class="mobile-actions">
-                            <li><a href="/smartphonekey-site-v2/fr/find-your-setup/">Trouver votre configuration</a></li>
-                            <li><a href="https://spkey.odoo.com/guide-for-usage-and-installation?lang=fr">Instructions</a></li>
-                            <li><a href="https://spkey.odoo.com/adminpanel">Admin Panel</a></li>
-                        </ul>
                         <div class="mobile-group mobile-langs">
                             <p class="mobile-title">Langue</p>
-        <ul class="lang-list">
+        <ul class="lang-list" role="list">
             <li>
                 <a data-no-post-process="1" href="/smartphonekey-site-v2/platform/automation/" hreflang="en" lang="en">English</a>
             </li><li>
@@ -203,8 +211,8 @@
             <main id="main" tabindex="-1">
                 
             <div class="container">
-        <div class="page-intro">
-        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <div class="page-opening has-evidence">
+        <nav class="breadcrumb" aria-label="Fil d’Ariane">
             <ol>
                 <li>
                     <a href="/smartphonekey-site-v2/fr/">Accueil</a>
@@ -215,47 +223,69 @@
                 </li>
             </ol>
         </nav>
-            <h1>Transformez les appareils connectés en processus concrets.</h1>
-            <p class="lead">Utilisez le Scenario Builder pour combiner des déclencheurs, conditions et actions pris en charge. Commencez par une règle simple ou créez un processus plus détaillé à partir des fonc­tion­na­li­tés que déclarent vos appareils.</p>
-            
+            <div class="opening-copy">
+                <h1>Scénarios pour appareils connectés</h1>
+                <p class="lead">Avec le Scenario Builder, combinez déclencheurs, conditions et actions d’appareils Matter pris en charge. Commencez par une règle simple ou construisez-en une détaillée à partir des fonctions que vos appareils déclarent.</p>
+                <div class="actions">
+                        <a class="button" href="/smartphonekey-site-v2/fr/compatibility/">Vérifier la compatibilité</a>
+                        <a class="text-link" href="/smartphonekey-site-v2/fr/contact/?interest=automation">Parler d’un projet d’automatisation</a>
+                    </div>
                 
+                
+            </div>
+            <div class="opening-evidence">
+                        <div class="workflow-illustration">
+                            <p class="illustration-label">Exemple de scénario</p>
+                            <p class="flow-title">Éclairer l’entrée</p>
+                            <dl class="scenario-card">
+                                <div>
+                                    <dt>Quand</dt>
+                                    <dd>Un capteur de contact compatible signale une porte ouverte</dd>
+                                </div>
+                                <div>
+                                    <dt>Condition</dt>
+                                    <dd>Pendant une plage horaire du soir définie</dd>
+                                </div>
+                                <div>
+                                    <dt>Alors</dt>
+                                    <dd>Allumer un éclairage pris en charge</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </div>
         </div>
             </div>
 
             <section class="section container" aria-labelledby="examples-title">
                 <div class="section-head">
-                    <h2 id="examples-title">Quatre exemples.</h2>
-                    <p>Chacun est un exemple de ce que des appareils pris en charge peuvent faire ensemble, et non une promesse valable pour tous les appareils.</p>
+                    <h2 id="examples-title">Exemples de scénarios</h2>
+                    <p>Exemples de ce que des appareils pris en charge peuvent faire ensemble. Ce qui fonctionne sur votre site dépend des appareils et de leurs fonctions.</p>
                 </div>
                 <div class="spk-table" role="region" tabindex="0" aria-label="Exemples de scénarios">
                     <table>
                         <caption>Exemples de scénarios</caption>
                         <thead>
-                            <tr><th scope="col">Exemple</th><th scope="col">Quand</th><th scope="col">Seulement si</th><th scope="col">Alors</th></tr>
+                            <tr><th scope="col">Exemple</th><th scope="col">Quand</th><th scope="col">Condition</th><th scope="col">Alors</th></tr>
                         </thead>
                         <tbody>
-                            <tr><th scope="row">Éclairer l'entrée</th><td>Un capteur de contact compatible signale une porte ouverte</td><td>Pendant une plage horaire du soir configurée</td><td>Allumer un éclairage pris en charge</td></tr>
-                            <tr><th scope="row">Réagir à une fuite</th><td>Un détecteur de fuite compatible signale la présence d'eau</td><td>Toujours</td><td>Envoyer une commande de fermeture à une vanne d'eau prise en charge. Confirmer la réponse de l'appareil et conserver la commande manuelle.</td></tr>
-                            <tr><th scope="row">Ajuster la température de la pièce</th><td>Un capteur de température pris en charge atteint un seuil choisi</td><td>Toujours</td><td>Modifier la consigne d'un thermostat compatible</td></tr>
-                            <tr><th scope="row">Clôturer la journée de travail</th><td>Une plage horaire</td><td>Conditions prises en charge de votre choix</td><td>Commuter les éclairages ou prises sélectionnés. Laisser les équipements essentiels en dehors de cette règle.</td></tr>
+                            <tr><th scope="row">Éclairer l’entrée</th><td>Un capteur de contact compatible signale une porte ouverte</td><td>Pendant une plage horaire du soir définie</td><td>Allumer un éclairage pris en charge</td></tr>
+                            <tr><th scope="row">Réagir à une fuite</th><td>Un détecteur de fuite compatible signale la présence d’eau</td><td>Aucune</td><td>Fermer une vanne d’eau prise en charge. Vérifier que la vanne a confirmé la fermeture, et garder la commande manuelle.</td></tr>
+                            <tr><th scope="row">Ajuster la température</th><td>Un capteur de température pris en charge franchit un seuil défini</td><td>Aucune</td><td>Modifier la consigne d’un thermostat compatible</td></tr>
+                            <tr><th scope="row">Clôturer la journée de travail</th><td>À une heure définie</td><td>Conditions de votre choix</td><td>Éteindre des éclairages ou des prises choisis. Exclure de cette règle les équipements essentiels.</td></tr>
                         </tbody>
                     </table>
                 </div>
             </section>
 
-            <section class="section container split" aria-labelledby="capabilities-title">
-                <h2 id="capabilities-title">Vérifiez les fonc­tion­na­li­tés sur lesquelles repose l'exemple.</h2>
-                <div class="split-copy">
-                    <p>Un label Matter ne signifie pas que tous les appareils exposent les mêmes commandes. Les scénarios dépendent des appareils mis en service, des fonc­tion­na­li­tés qu'ils déclarent et de leur firmware. Dans la mise en œuvre actuelle, chaque scénario appartient à un seul hub.</p>
-                    <a href="/smartphonekey-site-v2/fr/compatibility/">Voir les fonc­tion­na­li­tés des appareils compatibles</a>
-                </div>
+            <section class="section container stack" aria-labelledby="capabilities-title">
+                <h2 id="capabilities-title">Ce qu’un scénario peut utiliser</h2>
+                <p>La mention Matter ne signifie pas que tous les appareils offrent les mêmes fonctions. Un scénario ne peut utiliser que ce que déclare chaque appareil mis en service et que son firmware prend en charge. Chaque scénario s’exécute sur un seul hub et sur les appareils qui y sont mis en service.</p>
+                <a href="/smartphonekey-site-v2/fr/compatibility/#matter">Voir les fonctions des appareils pris en charge</a>
             </section>
 
-            <section class="section container split" aria-labelledby="applied-title">
-                <h2 id="applied-title">Voyez ce qui a été appliqué.</h2>
-                <div class="split-copy">
-                    <p>Le processus de gestion distingue les modi­fi­ca­tions qui attendent le hub de celles que le hub a appliquées ou rejetées. La modification d'un scénario ne remplace pas auto­ma­ti­que­ment la version déjà en cours d'exécution sur le hub.</p>
-                </div>
+            <section class="section container stack" aria-labelledby="applied-title">
+                <h2 id="applied-title">Vérifiez que le hub a appliqué la modification</h2>
+                <p>L’Admin Panel indique si la modification d’un scénario est en attente du hub, appliquée ou rejetée. Tant que le hub n’a pas appliqué une modification, la version déjà présente sur le hub continue de s’exécuter.</p>
             </section>
 
         <section class="section container faq" aria-labelledby="faq-title">
@@ -264,20 +294,24 @@
                 
                 <div class="faq-item">
                     <h3>SmartphoneKey fonctionne-t-il avec tous les appareils Matter ?</h3>
-                    <p>La com­pa­ti­bi­lité dépend du type d'appareil, des fonc­tion­na­li­tés exposées, du firmware et de la confi­gu­ra­tion. Vérifiez les fonctions requises par votre processus au lieu de supposer que tout appareil Matter les prend en charge.</p>
+                    <p>Cela dépend du type d’appareil, des fonctions qu’il déclare, de son firmware et de votre configuration. Vérifiez les fonctions dont votre scénario a besoin plutôt que de supposer que tous les appareils Matter les offrent.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Un scénario peut-il utiliser des appareils de deux hubs ?</h3>
+                    <p>Non. Chaque scénario appartient pour l’instant à un seul hub et aux appareils qui y sont mis en service. Concevez chaque scénario autour du hub qui pilote les appareils dont il a besoin.</p>
                 </div>
             
             </div>
         </section>
 
         <section class="section container next-steps" aria-labelledby="next-title">
-            <h2 id="next-title">Planifiez vos processus.</h2>
-            <p>Vérifiez les appareils que vous envisagez, puis parlez-nous du processus.</p>
+            <h2 id="next-title">Planifiez les scénarios de votre site</h2>
+            <p>Vérifiez les fonctions des appareils envisagés, puis dites-nous ce que le scénario doit faire.</p>
             <div class="next-actions">
                 
                 <a class="button" href="/smartphonekey-site-v2/fr/compatibility/">Vérifier la compatibilité</a>
-                <a href="/smartphonekey-site-v2/fr/resources/matter-thread-access-control/">Comprendre Matter et Thread</a>
-                <a href="/smartphonekey-site-v2/fr/contact/?interest=automation">Parler d'un projet d'auto­ma­ti­sa­tion</a>
+                <a class="text-link" href="/smartphonekey-site-v2/fr/resources/matter-thread-access-control/">Matter et Thread pour le contrôle d’accès</a>
+                <a class="text-link" href="/smartphonekey-site-v2/fr/contact/?interest=automation">Parler d’un projet d’automatisation</a>
             
             </div>
         </section>
@@ -288,17 +322,17 @@
                 <div class="footer-main">
                     <div class="footer-brand">
                         <p class="footer-name">SmartphoneKey</p>
-                        <p>Votre clé du contrôle d'accès.</p>
-                        <p class="muted">Gérez les sites, les personnes, les identifiants d'accès et les appareils connectés.</p>
+                        <p>La clé de votre contrôle d’accès.</p>
+                        <p class="muted">Gérez les accès, les clés numériques, les cartes et les lecteurs de tous vos sites.</p>
                         <p><a href="mailto:info@smartphonekey.com">info@smartphonekey.com</a></p>
                         <p><a href="https://spkey.odoo.com/adminpanel">Admin Panel</a></p>
                     </div>
                     <nav class="footer-nav" aria-label="Pied de page">
                         <div>
                             <p class="footer-title">Plateforme</p>
-                            <ul>
+                            <ul role="list">
                                 <li>
-                                    <a href="/smartphonekey-site-v2/fr/platform/">Vue d'ensemble</a>
+                                    <a href="/smartphonekey-site-v2/fr/platform/">Vue d’ensemble</a>
                                 </li><li>
                                     <a href="/smartphonekey-site-v2/fr/platform/access-management/">Gestion des accès</a>
                                 </li><li>
@@ -309,7 +343,7 @@
                             </ul>
                         </div><div>
                             <p class="footer-title">Produits</p>
-                            <ul>
+                            <ul role="list">
                                 <li>
                                     <a href="/smartphonekey-site-v2/fr/products/readers/">Lecteurs</a>
                                 </li><li>
@@ -319,40 +353,40 @@
                                 </li><li>
                                     <a href="/smartphonekey-site-v2/fr/apps-and-chatbot/">Applications</a>
                                 </li><li>
-                                    <a href="/smartphonekey-site-v2/fr/find-your-setup/">Trouver votre configuration</a>
+                                    <a href="/smartphonekey-site-v2/fr/find-your-setup/">Recommandations pour votre site</a>
                                 </li>
                             </ul>
                         </div><div>
                             <p class="footer-title">Instructions</p>
-                            <ul>
+                            <ul role="list">
                                 <li>
-                                    <a href="https://spkey.odoo.com/guide-for-usage-and-installation?lang=fr">Guide d'installation et de raccordement</a>
+                                    <a href="https://spkey.odoo.com/guide-for-usage-and-installation?lang=fr">Guide d’installation et de raccordement</a>
                                 </li><li>
-                                    <a href="https://spkey.odoo.com/instructions/admin-guide?lang=fr">Guide d'utilisation de l'Admin Panel</a>
+                                    <a href="https://spkey.odoo.com/instructions/admin-guide?lang=fr">Guide d’utilisation de l’Admin Panel</a>
                                 </li><li>
-                                    <a href="https://spkey.odoo.com/instructions/admin-panel?lang=fr">Présentation guidée de l'Admin Panel</a>
+                                    <a href="https://spkey.odoo.com/instructions/admin-panel?lang=fr">Présentation guidée de l’Admin Panel</a>
                                 </li><li>
-                                    <a href="https://spkey.odoo.com/instructions/mobile-app-guide?lang=fr">Guide d'utilisation de l'application mobile</a>
+                                    <a href="https://spkey.odoo.com/instructions/mobile-app-guide?lang=fr">Guide d’utilisation de l’application mobile</a>
                                 </li><li>
-                                    <a href="https://spkey.odoo.com/instructions/mobile-app?lang=fr">Présentation guidée de l'application mobile</a>
+                                    <a href="https://spkey.odoo.com/instructions/mobile-app?lang=fr">Présentation guidée de l’application mobile</a>
                                 </li>
                             </ul>
                         </div><div>
-                            <p class="footer-title">Ressources</p>
-                            <ul>
+                            <p class="footer-title">Guides et solutions</p>
+                            <ul role="list">
                                 <li>
                                     <a href="/smartphonekey-site-v2/fr/resources/#guides">Guides</a>
                                 </li><li>
-                                    <a href="/smartphonekey-site-v2/fr/solutions/property-managers/">Gestionnaires immobiliers</a>
+                                    <a href="/smartphonekey-site-v2/fr/solutions/property-managers/">Équipes immobilières</a>
                                 </li><li>
-                                    <a href="/smartphonekey-site-v2/fr/solutions/integrators/">Intégrateurs</a>
+                                    <a href="/smartphonekey-site-v2/fr/solutions/integrators/">Installateurs et intégrateurs</a>
                                 </li><li>
                                     <a href="/smartphonekey-site-v2/fr/security/">Sécurité et confiance</a>
                                 </li>
                             </ul>
                         </div><div>
                             <p class="footer-title">Entreprise</p>
-                            <ul>
+                            <ul role="list">
                                 <li>
                                     <a href="/smartphonekey-site-v2/fr/about/">À propos</a>
                                 </li><li>
@@ -362,14 +396,14 @@
                                 </li><li>
                                     <a href="/smartphonekey-site-v2/fr/privacy-policy/">Politique de confidentialité</a>
                                 </li><li>
-                                    <a href="/smartphonekey-site-v2/fr/terms-of-service/">Conditions d'utilisation</a>
+                                    <a href="/smartphonekey-site-v2/fr/terms-of-service/">Conditions d’utilisation</a>
                                 </li>
                             </ul>
                         </div>
                     </nav>
                 </div>
                 <nav class="footer-langs" aria-label="Langue">
-        <ul class="lang-list">
+        <ul class="lang-list" role="list">
             <li>
                 <a data-no-post-process="1" href="/smartphonekey-site-v2/platform/automation/" hreflang="en" lang="en">English</a>
             </li><li>

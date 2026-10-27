@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""The ungated setup guide: enum choices in, a planning checklist out.
+"""The ungated site recommendations: enum choices in, a planning checklist out.
 
 Deterministic and shared: the controller renders the result for a request
 without JavaScript, and static/src/js/setup_guide.js evaluates the same rules
@@ -17,7 +17,8 @@ FIELDS = {
     "doors": dict(content.DOORS),
     "connection": dict(content.CONNECTIONS),
 }
-INTEREST_KEYS = tuple(key for key, _label in content.SETUP_INTERESTS)
+INTEREST_LABELS = dict(content.SETUP_INTERESTS)
+INTEREST_KEYS = tuple(INTEREST_LABELS)
 
 
 def clean_selection(single, interests):
@@ -44,8 +45,19 @@ def _identity(text, **kwargs):
     return text % kwargs if kwargs else text
 
 
+def selection_labels(selection, t=_identity):
+    """The labels of the chosen options, in form order: role, sites, doors,
+    connection, then the interests. Unanswered questions are left out.
+
+    ``t`` translates the labels (rendering.translator). The same order and
+    labels are what setup_guide.js reads from the checked inputs."""
+    labels = [t(FIELDS[field][selection[field]]) for field in FIELDS if selection.get(field) in FIELDS[field]]
+    labels += [t(INTEREST_LABELS[key]) for key in selection.get("interests", ()) if key in INTEREST_LABELS]
+    return labels
+
+
 def result_for(selection, t=_identity):
-    """The planning starting point, or None until a connection is chosen.
+    """The site recommendations, or None until a connection is chosen.
 
     ``t`` translates the texts (rendering.translator); link paths stay
     language-neutral because the page adds the language prefix itself."""
@@ -62,6 +74,7 @@ def result_for(selection, t=_identity):
                     label, path = content.SETUP_LINKS[key]
                     links.append((t(label), path))
     return {
+        "summary": selection_labels(selection, t),
         "advice": t(content.SETUP_CONNECTION_ADVICE[connection]),
         "items": items,
         "links": links,

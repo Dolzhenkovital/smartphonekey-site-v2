@@ -6,10 +6,12 @@ than a phone screen ("Zutrittskontrolle"). Browsers only hyphenate with a
 dictionary for the language, which many do not have, so the break points are
 written into the text: they are invisible unless a word has to break.
 
-Only page and guide text is touched (template terms, guide titles and bodies,
-compatibility rows). Titles, meta descriptions and other strings the code
-uses, product names, markup and URLs are left alone. Run after
-i18n_build.py; it is idempotent.
+Only paragraph-length page and guide text is touched (template terms of 80
+characters or more, guide bodies, compatibility rows), and only words of 16
+characters or more. Headings, labels, titles, meta descriptions and other
+strings the code uses, product names, markup and URLs are left alone: the
+design sets headings to ``hyphens: manual`` and relies on their width budget
+instead. Run after i18n_build.py; it is idempotent.
 
     python i18n_soft_hyphens.py --addon ../addons/spk_website_v2
 
@@ -24,7 +26,9 @@ import polib
 import pyphen
 
 SHY = "­"
-LANGS = {"de": ("de_DE", 12), "es": ("es", 13), "fr": ("fr", 13), "uk": ("uk_UA", 13)}
+LANGS = {"de": ("de_DE", 16), "es": ("es", 16), "fr": ("fr", 16), "uk": ("uk_UA", 16)}
+# Headings carry no soft hyphens (DESIGN.md): only paragraph-length terms are touched.
+MIN_TERM_LENGTH = 80
 TEXT_REFS = ("model_terms:ir.ui.view,arch_db:", "model_terms:spk.website.resource,body:",
              "model:spk.website.resource,name:", "model:spk.website.compatibility,")
 TAG_OR_TEXT = re.compile(r"(<[^>]+>)")
@@ -56,6 +60,8 @@ def main():
                 continue
             if not any(ref.startswith(TEXT_REFS) for ref in refs):
                 continue
+            if len(entry.msgid) < MIN_TERM_LENGTH:
+                continue  # a heading, label or short line: no soft hyphens
             new = hyphenate_text(entry.msgstr.replace(SHY, ""), dictionary, minimum)
             if new != entry.msgstr:
                 entry.msgstr = new

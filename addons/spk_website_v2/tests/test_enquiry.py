@@ -165,7 +165,7 @@ class TestEnquiry(SiteCase):
         doc = lxml_html.fromstring(self.get("/thank-you").content)
         self.assertEqual(doc.xpath("//h1")[0].text_content(), "Your enquiry has been received.")
         doc = lxml_html.fromstring(self.get("/thank-you").content)
-        self.assertEqual(doc.xpath("//h1")[0].text_content(), "No enquiry to confirm.")
+        self.assertEqual(doc.xpath("//h1")[0].text_content(), "No enquiry to confirm")
 
         data = self.form(email="nope", name="<b>Visitor</b>")
         response = self.post(data, json=False)

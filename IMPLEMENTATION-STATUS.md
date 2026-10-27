@@ -1,6 +1,6 @@
 # Implementation status
 
-Last update: 27 October 2026 (owner changes: reader roles, five languages, certificates and instructions). State: **ready for review**, not deployed. All six phases are implemented and checked in a local Odoo 18 test instance; the static review copy is published separately on GitHub Pages.
+Last update: 27 October 2026 (revision after the owner's assessment "different but not better"). State: **ready for review**, local only, not deployed. The addon is at 18.0.3.0.0; the GitHub Pages review copy is regenerated from the updated sources in this working tree (see QA-REPORT.md for what was checked and how).
 
 ## Where the work lives
 
@@ -8,60 +8,48 @@ Last update: 27 October 2026 (owner changes: reader roles, five languages, certi
 |---|---|
 | Odoo 18 addon | [`addons/spk_website_v2`](addons/spk_website_v2) |
 | Local test environment | [`dev/`](dev) (Docker: Odoo 18 + PostgreSQL 16, baseline mounted read-only) |
-| Tools | [`tools/`](tools): legacy import, static export and link check, concurrency check, screenshots |
+| Tools | [`tools/`](tools): legacy import, static export and link check, concurrency check, screenshots (`capture_screens.mjs`), translation build (`i18n_build.py`), translation checks (`i18n_check.py`), soft hyphens (`i18n_soft_hyphens.py`) |
 | Registers | [`registers/`](registers): routes, the 34 legacy URLs, claim usage |
-| QA evidence | [`QA-REPORT.md`](QA-REPORT.md), [`qa/`](qa) |
+| Content and design sources | `../docs/site-v2/04-COPY-DECK-EN.md` (English deck, revision 2.2), `GLOSSARY.md`, `LOCALE-BRIEF.md`, `DESIGN.md` (design contract), `concepts/` (the two layout concepts and their rationale), `02-EVIDENCE-AND-CLAIMS.md` and `data/claims.json` |
+| QA evidence | [`QA-REPORT.md`](QA-REPORT.md), [`qa/`](qa): `baseline-45b3296/` (before), `inventory-2026-10-27.md`, `review-en-2026-10-27.md`, `review-locales-2026-10-27.md`, `screenshots/` (after), test logs |
 | Release and rollback | [`RELEASE-CHECKLIST.md`](RELEASE-CHECKLIST.md) |
-| Static review copy | [`preview/`](preview), published by `.github/workflows/pages.yml` |
+| Static review copy | [`preview/`](preview), published by `.github/workflows/pages.yml` when committed |
 
-## Integration decision
+## What changed in this revision
 
-The AP-428 Webflow port (`spk_website`, with the AP-429 homepage switch) exists on the spk-odoo branches and is deployed on spkey.odoo.com. Rather than rewrite it, `spk_website_v2` **depends on it and extends it**:
+**Product truth.** Claim C05: SmartphoneKey does not support third-party card-programming devices (owner-stated, 27 October 2026; not a new hardware test). Public sentence: "Supported SmartphoneKey reader configurations also let you program MIFARE Classic and MIFARE DESFire EV3 cards." The technical answer "SmartphoneKey does not support third-party card programmers" appears once, on the compatibility page and in the MIFARE guide. Every page, table, FAQ, setup rule, metadata string and translation that implied a compatible programmer or a built-in programmer "where available" was rewritten. Card programming moved from the reader proposition to "additional capabilities" on the home, platform and readers pages. C13/C14 (reader Thread roles, shared uplink) are recorded as published in every claim document, matching the register.
 
-* `/` extends `SpkWebsiteHome.index`, so "Use SmartphoneKey site as homepage" and a website Homepage URL still decide what `/` shows.
-* The baseline's Webflow URLs go through an override of its `page`, `post`, `team_member` and `/404` handlers: retained in the 2.0 shell or answered with a 301.
-* Untouched and still served by the baseline: `/adminpanel` (portal entry, redirects to `/my`), `/referral-program` (noindex) and its form endpoint `/spk-website/form`.
-* Untouched and served by `smartphonekey`: `/guide-for-usage-and-installation` and `/instructions/*`, in their languages.
-* Rollback switch: system parameter `spk_website_v2.enabled` = `False` hands every URL back to the baseline without touching data (tested).
+**Editorial.** English rewritten from the deck (revision 2.1, corrections in 2.2): category "access management platform"; home H1 "Manage access across your properties in one place"; everyday tasks, ways to enter (Wallet keys, NFC cards, visitor QR code; the app is where keys are managed), events and status, readers with a built-in access controller, additional capabilities, audience paths, next steps. "Find your setup" became "Site recommendations" with the result fields Your selection / Recommendation / Why / Still to check on site / Guides for your selection / Discuss these recommendations. Demo disclaimers, filler introductions, "Entity" (except once), "credentials" as a blanket word, "lifecycle", "workflow" and "v2" wording are gone. The brand line stays in the footer only.
 
-To ship it, copy `addons/spk_website_v2` into spk-odoo `addons/` on a branch named for its Jira task, add `spk_website_v2` to the deployment, and follow that repository's PR rules (changelog entry, `> Guide: n/a`, lint gates).
+**Design.** Concept B of two measured layout hypotheses (`docs/site-v2/concepts/`): cool near-white base, one teal for actions and evidence, Manrope (SIL OFL, self-hosted, Latin and Cyrillic), 51–54 px desktop H1 and 34 px mobile H1, 17 px body, header with an existing-user row, product panel with the real reader image in the hero, system strip, task sequence, comparison cells, labelled workflow illustration on the platform page, inner-page openings with evidence and an action, recommendation result card, quieter footer. The warm paper theme, the 93–96 px slogan, the hero questionnaire and the dark automation band are gone. Mobile menu: action and existing-user links first, full-height sheet.
 
-## Phases
+**Assets.** The only real product images are the installation guide's reader and exit-button images (from the `smartphonekey` module in spk-odoo), converted to transparent WebP cutouts. No Admin Panel or mobile app screenshot exists anywhere (inventory, section 3); the mobile walkthrough PNGs in spk-odoo are pre-release design mock-ups. The platform page uses a labelled illustration instead.
 
-| Phase | Done | Exit evidence |
-|---|---|---|
-| 1 Baseline, evidence, routes, assets | Baseline inspected (AP-428/AP-429 code, live spkey.odoo.com, mirror, export); claim, route and redirect registers; genuine assets only (logo, reader photo, team photos, article images, four certificate documents) | `registers/`, importer `tools/import_legacy_content.py` (reads the public export, never `export/private` or `.env`) |
-| 2 Tokens, layout, home | Locked tokens and reference CSS ported to one scoped SCSS file; header, footer, seven-section home; working two-field setup tool | Screenshots at 8 sizes, keyboard and reduced-motion checks |
-| 3 Pages and setup guide | 15 new routes, 4 buyer guides, retained certifications/apps/legal/posts/team in the new shell; deterministic setup guide (server and script share one rule table) | `test_routes`, crawl of every page, no-JS screenshots |
-| 4 CRM and content operations | `POST /website/spk/enquiry`: allowlist, CSRF, honeypot, throttle, captcha hook, idempotent submission ID with a unique index, honest errors, `/thank-you` only after persistence; claim register, compatibility rows with review/publish, resources and team as editable records with editor/publisher groups | `test_enquiry`, `test_publication`, real concurrency run |
-| 5 Search and migration | Canonicals, metadata, Open Graph, JSON-LD from the same data, own sitemap and robots, 34 legacy URLs handled, staging/preview noindex | `test_seo`, `test_migration`, `qa/robots-*.txt`, `qa/sitemap-*.xml` |
-| 6 QA and release preparation | Tests, lint, Hallmark render lint, screenshots, static copy check, QA report, release/rollback checklist | `QA-REPORT.md` |
+**Localisation.** The `.pot` was re-exported from the implemented templates; each catalogue (fr, de, es, uk) was rewritten by a dedicated worker from the frozen deck and glossary (841 public terms per language; the English-only legal pages, archived articles and biographies stay untranslated with a note in the page language). Checks: `tools/i18n_check.py` (coverage, placeholders, tags, forbidden wording, programmer wording) and an independent agent review of the rendered pages. No human native-speaker review has taken place; that remains an owner task before launch.
 
-`llms.txt` (optional P1) was **not** added: the brief allows it only once the core has passed, and the core has not yet been accepted on a deployed environment (A20).
+**Data records on existing databases.** The claim register, compatibility rows and guides are `noupdate` records. `migrations/18.0.3.0.0/post-migrate.py` reloads the three data files on upgrade and republishes the two card rows, overwriting editor changes to those records (stated in the changelog). A fresh install needs nothing.
 
-## Changes of 27 October 2026 (owner instructions)
+## Integration decision (unchanged)
 
-* **Reader roles.** Every reader can act as a Thread Border Router and as a router in the Thread mesh, without a separate firmware version. Claim C13 is now published (C14, the shared uplink, follows with its limits kept); readers, compatibility, integrators, the Matter and Thread guide, the comparison table, the readers FAQ and the platform diagram were updated together. Matter controller functions still read "confirmed for each project", and no distance, node count or failover is stated.
-* **Languages.** French, German, Spanish and Ukrainian beside English (see README). Legal pages, archived articles and team biographies stay English with a note.
-* **Certificates and instructions.** Every page's header has an "Instructions" link to the existing instruction page, `/guide-for-usage-and-installation` (spkey.odoo.com today), which is not changed; it opens in the visitor's language. Certifications is in the main menu (Products) and the footer; the Resources page has its own Instructions section with the installation guide, the Admin Panel guide and walkthrough, the mobile app guide and walkthrough, the apps and the certificates; the footer has an Instructions column on every page.
+`spk_website_v2` depends on and extends the AP-428/AP-429 baseline (`spk_website`): `/` keeps the homepage switch, the baseline's Webflow URLs are retained or redirected, `/adminpanel`, `/referral-program` and the instruction site stay with their modules, and `spk_website_v2.enabled = False` hands every URL back to the baseline. To ship, copy the addon into spk-odoo, add it to the deployment and follow that repository's PR rules.
 
 ## Fallbacks in effect
 
-* No range report: no distance anywhere; "coverage depends on the building, placement and radio conditions".
-* Matter controller role: "confirmed for each project" (the owner's instruction covers the Thread roles only).
-* Shared uplink: published as a consequence of the Thread roles, without failover, node or hop figures; the Matter guide topology is labelled as an example.
-* AI Concierge v2: availability-enquiry wording.
-* Certifications: document links with what each document states; no badges.
-* No booking URL configured: no booking link (the option appears only for an HTTPS URL on an allowed host, set in `spk_website_v2.booking_url`).
-* No genuine Admin Panel screens: labelled conceptual diagram and tables; no product screenshots drawn.
-* Marketing consent not implemented: no opt-in checkbox and no analytics loader.
+* No range report: no distance anywhere.
+* Matter controller role: "confirmed for each project".
+* Shared uplink: published with its limits; the Matter guide topology is an example.
+* AI Concierge v2: availability enquiry only.
+* Certifications: document links with what each states; no badges.
+* No booking URL configured: no booking link.
+* No genuine Admin Panel screens: labelled illustration and tables.
+* Marketing consent not implemented: no opt-in checkbox, no analytics loader.
+* Instruction site not installable locally (Enterprise dependency of `smartphonekey`): the Instructions links were verified as links only; they return 404 on the local instance and must be checked on stage.
 
 ## Open items (owner role)
 
-1. Design owner: confirm the long-document reading of Hallmark rule 58 for deep pages, or supply shorter copy (QA D1).
-2. Hardware/firmware: Matter controller role per reader (C13 covers Thread only), uplink loss behaviour (C14), range report (C15), FCC/ISED record check (C20).
-3. Marketing: native-speaker review of the French, German, Spanish and Ukrainian copy (translated in this task, not yet reviewed by a person); a reviewed translation of the legal pages if they should not stay English; a licensed font with Cyrillic for Ukrainian if the system font is not wanted.
-4. Product owner: AI Concierge v2 release status (C17); ChatGPT app description; referral programme keep or retire.
-5. Marketing: archived article review; current team roles; analytics loader and consent decision; font licence for self-hosting.
-6. Operations: who receives website leads (website sales team and salesperson in Website settings).
-7. Engineering: merge into spk-odoo, run its gates and `make test` on Odoo.sh, verify on stage, then the release checklist.
+1. Marketing: a human native-speaker read of French, German, Spanish and Ukrainian (agent-reviewed only); a reviewed translation of the legal pages if they should not stay English.
+2. Product owner / hardware: which reader configurations support card programming (the site says "supported reader configurations"); Matter controller role per reader (C13 covers Thread only); uplink loss behaviour (C14); range report (C15); FCC and ISED record check (C20); whether the exit button is supplied with the reader (the site says "a separate unit; check the package contents").
+3. Product: approved Admin Panel and mobile app screenshots with demo data, to replace the illustration; AI Concierge v2 release status (C17); the ChatGPT app description; the referral programme (keep or retire).
+4. Marketing: archived article review (they predate the register); current team roles; analytics loader and consent decision.
+5. Operations: who receives website leads (website sales team and salesperson in Website settings).
+6. Engineering: merge into spk-odoo, run its gates and `make test` on Odoo.sh, verify on stage (instruction routes 200, hreflang set with preview mode off, fonts served), then the release checklist.

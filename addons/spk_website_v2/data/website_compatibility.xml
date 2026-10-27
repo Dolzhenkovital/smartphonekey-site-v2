@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <!-- Compatibility rows as reviewed on 2026-10-26; the reader Thread roles row
-         follows the owner's instruction of 2026-10-27. Content records: changing a
+         follows the owner's instruction of 2026-10-27, and the two card rows and the
+         NFC card row follow the owner's card-programming clarification of 2026-10-27
+         (claim C05: programming on a SmartphoneKey reader that supports it, no
+         third-party programmers). Content records: changing a
          technical field sends a published row back to review (see the model). The
          last row documents a claim that is not cleared for publication (no range
          figure); it stays off the site until its evidence arrives. -->
@@ -11,32 +14,32 @@
             <field name="category">cards</field>
             <field name="name">MIFARE Classic</field>
             <field name="operation">program</field>
-            <field name="capabilities">Credential programming through the Admin Panel workflow with a compatible SmartphoneKey programming device, including the reader's built-in programmer where available.</field>
-            <field name="limitations">Confirm the card's memory size and credential format before ordering. Reading a card identifier is a different operation from provisioning a credential.</field>
-            <field name="evidence_ref">P05, P06, P07</field>
+            <field name="capabilities">Programmed from the Admin Panel on a SmartphoneKey reader that supports programming.</field>
+            <field name="limitations">Available on supported reader configurations. Confirm the card's memory size and any credential format already on it before ordering. Reading a card's identifier is a different operation from programming it.</field>
+            <field name="evidence_ref">P05, P06, P07, owner-stated clarification 2026-10-27</field>
             <field name="claim_id" ref="claim_c05"/>
             <field name="state">published</field>
-            <field name="verified_at">2026-10-26</field>
+            <field name="verified_at">2026-10-27</field>
         </record>
         <record id="compat_mifare_desfire_ev3" model="spk.website.compatibility">
             <field name="sequence">20</field>
             <field name="category">cards</field>
             <field name="name">MIFARE DESFire EV3</field>
             <field name="operation">program</field>
-            <field name="capabilities">Credential programming through the Admin Panel workflow with a compatible SmartphoneKey programming device, including the reader's built-in programmer where available.</field>
-            <field name="limitations">The documented workflow names DESFire EV3. Other DESFire generations and memory sizes need confirmation before they are planned.</field>
-            <field name="evidence_ref">P05, P06, P07</field>
+            <field name="capabilities">Programmed from the Admin Panel on a SmartphoneKey reader that supports programming.</field>
+            <field name="limitations">Available on supported reader configurations. The documentation names MIFARE DESFire EV3 only; other DESFire generations and memory sizes need confirmation before they are planned.</field>
+            <field name="evidence_ref">P05, P06, P07, owner-stated clarification 2026-10-27</field>
             <field name="public_source_url">https://www.nxp.com/products/MF3DHx3</field>
             <field name="claim_id" ref="claim_c05"/>
             <field name="state">published</field>
-            <field name="verified_at">2026-10-26</field>
+            <field name="verified_at">2026-10-27</field>
         </record>
         <record id="compat_wallet_credentials" model="spk.website.compatibility">
             <field name="sequence">10</field>
             <field name="category">digital</field>
-            <field name="name">Wallet credentials</field>
+            <field name="name">Wallet keys</field>
             <field name="operation">manage</field>
-            <field name="capabilities">Issue and revoke supported wallet credentials for people and doors from the Admin Panel.</field>
+            <field name="capabilities">Issue and revoke Wallet keys (Apple Wallet, Google Wallet) for people and doors from the Admin Panel.</field>
             <field name="limitations">Depends on the phone, its operating system and the account configuration. Do not assume the same behaviour when a phone's battery is low or empty.</field>
             <field name="evidence_ref">P05</field>
             <field name="claim_id" ref="claim_c06"/>
@@ -46,10 +49,10 @@
         <record id="compat_physical_keys" model="spk.website.compatibility">
             <field name="sequence">20</field>
             <field name="category">digital</field>
-            <field name="name">Physical NFC keys</field>
+            <field name="name">NFC cards</field>
             <field name="operation">manage</field>
-            <field name="capabilities">Assign, review and revoke physical NFC keys alongside digital credentials.</field>
-            <field name="limitations">Programming a new card needs a supported card family and programming device.</field>
+            <field name="capabilities">Issue, review and revoke NFC cards in the Admin Panel alongside digital keys.</field>
+            <field name="limitations">A new card is programmed on a SmartphoneKey reader that supports programming, and must be MIFARE Classic or MIFARE DESFire EV3.</field>
             <field name="evidence_ref">P05</field>
             <field name="claim_id" ref="claim_c06"/>
             <field name="state">published</field>

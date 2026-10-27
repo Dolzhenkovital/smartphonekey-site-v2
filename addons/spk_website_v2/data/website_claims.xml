@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <!-- The claim register as reviewed on 2026-10-26. Content records: editors
-         maintain them in the backend, so module updates do not overwrite them. -->
+    <!-- The claim register as reviewed on 2026-10-26; C13 and C14 follow the owner's
+         instruction of 2026-10-27, and C05 the owner's card-programming clarification
+         of 2026-10-27. Content records: editors maintain them in the backend, so
+         module updates do not overwrite them (noupdate): an existing database needs
+         the C05 record updated by hand or with a forced data update. -->
     <data noupdate="1">
         <record id="claim_c01" model="spk.website.claim">
             <field name="code">C01</field>
@@ -52,11 +55,11 @@
             <field name="name">Card programming</field>
             <field name="evidence_level">documented</field>
             <field name="publication">public_scoped</field>
-            <field name="allowed_copy">Program supported MIFARE Classic and MIFARE DESFire EV3 cards with compatible programming hardware and firmware.</field>
-            <field name="limitations">No EV1/EV2 or memory-size inference; built-in programmer where available.</field>
-            <field name="internal_source">P05, P06, P07</field>
+            <field name="allowed_copy">Supported SmartphoneKey reader configurations also let you program MIFARE Classic and MIFARE DESFire EV3 cards. Technical answer (FAQ, MIFARE guide, compatibility page only): Cards are programmed with a SmartphoneKey reader that supports programming; SmartphoneKey does not support third-party card programmers.</field>
+            <field name="limitations">Owner-stated clarification 2026-10-27 (not a new hardware test): SmartphoneKey does not support third-party card-programming devices; programming is an additional capability of supported SmartphoneKey reader configurations. Never imply an external or extra programmer, never lead the home page, the reader proposition or short summaries with it, and do not make the absence of third-party support a headline. Not every reader configuration; no EV1/EV2, memory-size, other-family or credential-format inference. Reading, programming, assigning access and using a card are separate operations.</field>
+            <field name="internal_source">P05, P06, P07, owner-stated clarification 2026-10-27</field>
             <field name="owner_role">hardware_firmware</field>
-            <field name="reviewed_at">2026-10-26</field>
+            <field name="reviewed_at">2026-10-27</field>
         </record>
         <record id="claim_c06" model="spk.website.claim">
             <field name="code">C06</field>

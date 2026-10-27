@@ -2,7 +2,9 @@
 <odoo>
     <!-- Contact: an ordinary form POST to /website/spk/enquiry with Odoo's CSRF
          token; enquiry.js submits the same form and reports the server's answer.
-         The success message appears only once the lead exists. -->
+         The success message appears only once the lead exists. The prefill note
+         shows only when the page opened with enum choices from the site
+         recommendations (``prefilled``, set by controllers.main.contact_defaults). -->
     <template id="page_contact" name="SmartphoneKey 2.0: contact">
         <t t-call="spk_website_v2.layout">
             <t t-set="page_scripts">
@@ -12,15 +14,16 @@
             <t t-set="send_error">We couldn’t send your enquiry. Your details are still here. Please try again or email info@smartphonekey.com.</t>
             <div class="container">
                 <t t-call="spk_website_v2.page_intro">
-                    <t t-set="heading">Tell us what you want to manage.</t>
-                    <t t-set="intro">Planning a building, checking compatibility, exploring a partnership or looking for a walkthrough? Share the context that matters. You do not need to commit to a demo to contact us.</t>
+                    <t t-set="heading">Tell us what you need to solve</t>
+                    <t t-set="intro">Planning access for a building, checking cards or devices, or looking to partner with us? Describe your sites and what you want to change.</t>
                 </t>
+                <p t-if="prefilled and not errors" class="note" data-spk-prefill-note="">Your answers from the site recommendations are filled in below. Change them if you need to.</p>
             </div>
 
             <div class="container contact-layout">
                 <form class="enquiry" action="/website/spk/enquiry" method="post" novalidate="novalidate"
                       data-spk-enquiry="" t-att-data-preview="'1' if preview_mode else None" aria-labelledby="enquiry-title">
-                    <h2 id="enquiry-title" class="visually-hidden">Project enquiry</h2>
+                    <h2 id="enquiry-title" class="visually-hidden">Your enquiry</h2>
                     <div class="error-summary" tabindex="-1" role="alert" data-spk-error-summary="" t-att-hidden="None if errors else 'hidden'">
                         <t t-if="errors">
                             <p class="error-title">
@@ -68,9 +71,15 @@
                                     t-att-selected="form.get('enquiry_type') == choice[0] or None" t-out="choice[1]"/>
                         </select>
                     </div>
+                    <div class="field" t-att-data-invalid="'1' if errors.get('details') else None">
+                        <label for="field-details">Project details</label>
+                        <p class="field-help" id="field-details-help">For example: the buildings and doors involved and what does not work today. Please do not include passwords, access codes or personal information about residents.</p>
+                        <p t-if="errors.get('details')" class="field-error" id="field-details-error" t-out="errors['details']"/>
+                        <textarea id="field-details" name="details" rows="6" maxlength="4000" aria-describedby="field-details-help" t-out="form.get('details') or ''"/>
+                    </div>
 
                     <fieldset class="optional-fields">
-                        <legend>About your project <span class="muted">(optional)</span></legend>
+                        <legend>About your site <span class="muted">(optional)</span></legend>
                         <div class="field-grid">
                             <div class="field" t-att-data-invalid="'1' if errors.get('company') else None">
                                 <label for="field-company">Company</label>
@@ -85,21 +94,21 @@
                                 </select>
                             </div>
                             <div class="field">
-                                <label for="field-sites">Sites</label>
+                                <label for="field-sites">Number of sites</label>
                                 <select id="field-sites" name="sites">
                                     <option value="">Choose one</option>
                                     <option t-foreach="content.SITES" t-as="choice" t-att-value="choice[0]" t-att-selected="form.get('sites') == choice[0] or None" t-out="choice[1]"/>
                                 </select>
                             </div>
                             <div class="field">
-                                <label for="field-doors">Doors</label>
+                                <label for="field-doors">Number of doors</label>
                                 <select id="field-doors" name="doors">
                                     <option value="">Choose one</option>
                                     <option t-foreach="content.DOORS" t-as="choice" t-att-value="choice[0]" t-att-selected="form.get('doors') == choice[0] or None" t-out="choice[1]"/>
                                 </select>
                             </div>
                             <div class="field">
-                                <label for="field-connection">Connection</label>
+                                <label for="field-connection">Connection at the doors</label>
                                 <select id="field-connection" name="connection">
                                     <option value="">Choose one</option>
                                     <option t-foreach="content.CONNECTIONS" t-as="choice" t-att-value="choice[0]" t-att-selected="form.get('connection') == choice[0] or None" t-out="choice[1]"/>
@@ -112,7 +121,7 @@
                             </div>
                         </div>
                         <fieldset class="field">
-                            <legend>What would you like to manage?</legend>
+                            <legend>What are you interested in?</legend>
                             <div class="choices" id="field-interests">
                                 <label t-foreach="content.INTERESTS" t-as="choice" class="choice">
                                     <input type="checkbox" name="interests" t-att-value="choice[0]" t-att-checked="choice[0] in form.get('interests', []) or None"/>
@@ -120,12 +129,6 @@
                                 </label>
                             </div>
                         </fieldset>
-                        <div class="field" t-att-data-invalid="'1' if errors.get('details') else None">
-                            <label for="field-details">Project details</label>
-                            <p class="field-help" id="field-details-help">Please do not include passwords, access codes or personal information about residents.</p>
-                            <p t-if="errors.get('details')" class="field-error" id="field-details-error" t-out="errors['details']"/>
-                            <textarea id="field-details" name="details" rows="6" maxlength="4000" aria-describedby="field-details-help" t-out="form.get('details') or ''"/>
-                        </div>
                         <div class="field" t-att-data-invalid="'1' if errors.get('phone') else None">
                             <label for="field-phone">Phone</label>
                             <p t-if="errors.get('phone')" class="field-error" id="field-phone-error" t-out="errors['phone']"/>
@@ -160,9 +163,9 @@
 
                 <section class="enquiry-success" tabindex="-1" hidden="hidden" data-spk-success="" aria-labelledby="success-title">
                     <h2 id="success-title">Your enquiry has been received.</h2>
-                    <p>Our team will review the details and contact you using the information you provided.</p>
+                    <p>We will review the details and reply using the contact details you gave.</p>
                     <div class="next-actions">
-                        <a href="/platform">Continue exploring</a>
+                        <a href="/platform">Explore the platform</a>
                         <a t-if="booking_url" t-att-href="booking_url" rel="noopener" data-spk-booking="">Choose a time to talk</a>
                     </div>
                 </section>
@@ -171,10 +174,10 @@
                     <h2 id="direct-title">Prefer email?</h2>
                     <p>Write to <a t-attf-href="mailto:#{contact_email}" t-out="contact_email"/>.</p>
                     <h2>What happens next</h2>
-                    <p>Our team reviews each enquiry and replies using the contact details you give. A walkthrough is one option, never a requirement.</p>
+                    <p>We review each enquiry and reply using the contact details you give. If it helps, we then arrange a call or a product walkthrough.</p>
                     <h2>Looking for answers first?</h2>
                     <ul class="plain-list">
-                        <li><a href="/find-your-setup">Find your setup</a></li>
+                        <li><a href="/find-your-setup">Site recommendations</a></li>
                         <li><a href="/compatibility">Check compatibility</a></li>
                         <li><a href="/resources#guides">Read the guides</a></li>
                     </ul>
@@ -186,19 +189,21 @@
     <template id="page_thank_you" name="SmartphoneKey 2.0: enquiry received">
         <t t-call="spk_website_v2.layout">
             <div class="container">
-                <div class="page-intro">
-                    <t t-if="received">
-                        <h1>Your enquiry has been received.</h1>
-                        <p class="lead">Our team will review the details and contact you using the information you provided.</p>
-                    </t>
-                    <t t-else="">
-                        <h1>No enquiry to confirm.</h1>
-                        <p class="lead">This page confirms an enquiry once it has been sent. To reach us, use the contact form or write to <a t-attf-href="mailto:#{contact_email}" t-out="contact_email"/>.</p>
-                    </t>
-                    <div class="next-actions">
-                        <a t-if="received" href="/platform">Continue exploring</a>
-                        <a t-else="" href="/contact">Contact us</a>
-                        <a t-if="received and booking_url" t-att-href="booking_url" rel="noopener">Choose a time to talk</a>
+                <div class="page-opening">
+                    <div class="opening-copy">
+                        <t t-if="received">
+                            <h1>Your enquiry has been received.</h1>
+                            <p class="lead">We will review the details and reply using the contact details you gave.</p>
+                        </t>
+                        <t t-else="">
+                            <h1>No enquiry to confirm</h1>
+                            <p class="lead">This page confirms an enquiry after you send it. To reach us, use the contact form or write to <a t-attf-href="mailto:#{contact_email}" t-out="contact_email"/>.</p>
+                        </t>
+                        <div class="next-actions">
+                            <a t-if="received" href="/platform">Explore the platform</a>
+                            <a t-else="" href="/contact">Go to the contact form</a>
+                            <a t-if="received and booking_url" t-att-href="booking_url" rel="noopener">Choose a time to talk</a>
+                        </div>
                     </div>
                 </div>
             </div>

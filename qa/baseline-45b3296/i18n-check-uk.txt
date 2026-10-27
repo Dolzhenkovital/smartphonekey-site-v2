@@ -1,0 +1,82 @@
+uk: 795 public terms, 795 translated
+BLOCKING third-party programmer wording (C05): Про­г­ра­му­ва­ння іде­н­ти­фі­ка­то­рів доступу через робочий процес в Admin Panel за допомогою сумісного пристрою для про­г­ра­му­ва­ння S
+BLOCKING third-party programmer wording (C05): Програмуйте підтримувані картки MIFARE Classic і MIFARE DESFire EV3 за допомогою сумісного пристрою для про­г­ра­му­ва­ння, зокрема вбудован
+BLOCKING third-party programmer wording (C05): Про­г­ра­му­ва­ння через Admin Panel за допомогою сумісного пристрою для про­г­ра­му­ва­ння, зокрема вбудованого програматора зчитувача, де 
+BLOCKING third-party programmer wording (C05): Прикладіть картку до програматора.
+BLOCKING third-party programmer wording (C05): Задокументовані процеси програмування називають MIFARE Classic і MIFARE DESFire EV3. Сумісний програматор або підтримуваний вбудований прогр
+warning soft hyphen in a short term (heading?): <span class="step-title">Видайте</span><span>під­т­ри­му­ва­ний іде­н­ти­фі­ка­тор доступу</span>
+warning identical to English: <span>SmartphoneKey</span>
+warning no Cyrillic in Ukrainian string: <span>SmartphoneKey</span>
+warning soft hyphen in a short term (heading?): <strong>Зчитування</strong>: зчитувач виявляє картку та її іде­н­ти­фі­ка­тор.
+warning soft hyphen in a short term (heading?): Показник під­т­ри­му­ва­ного датчика температури досягає вибраного порогу
+warning soft hyphen in a short term (heading?): Під­т­ве­р­дже­ння сертифікації Apple ECP2
+warning soft hyphen in a short term (heading?): Призначайте, переглядайте та відкликайте фізичні NFC-ключі поряд із цифровими іде­н­ти­фі­ка­то­рами доступу.
+warning soft hyphen in a short term (heading?): Створюйте сценарії на основі під­т­ри­му­ва­них тригерів, умов і дій.
+warning soft hyphen in a short term (heading?): Чи може один зчитувач забе­з­пе­чу­вати зв'язок для інших зчитувачів?
+warning soft hyphen in a short term (heading?): Канадський перелік радіо­об­ла­д­на­ння
+warning soft hyphen in a short term (heading?): Про­г­ра­му­ва­ння карток
+warning soft hyphen in a short term (heading?): Про­г­ра­му­ва­ння карток залежить від сімейства карток і пристрою для про­г­ра­му­ва­ння.
+warning soft hyphen in a short term (heading?): Сертифікат від­по­від­но­сті RED, Директива 2014/53/ЄС (№ AiTDG-260511001-C01)
+warning soft hyphen in a short term (heading?): Сертифікати та документи про від­по­від­ність.
+warning soft hyphen in a short term (heading?): Оберіть пристрій для про­г­ра­му­ва­ння та тип картки.
+warning soft hyphen in a short term (heading?): Зв'язок, перевірений у зап­ла­но­ва­ному місці встановлення зчитувача
+warning soft hyphen in a short term (heading?): Процеси роботи з іде­н­ти­фі­ка­то­рами доступу.
+warning soft hyphen in a short term (heading?): Іде­н­ти­фі­ка­тори доступу
+warning soft hyphen in a short term (heading?): Бажані іде­н­ти­фі­ка­тори доступу
+warning soft hyphen in a short term (heading?): Цифрові іде­н­ти­фі­ка­тори доступу
+warning soft hyphen in a short term (heading?): Цифрові іде­н­ти­фі­ка­тори доступу.
+warning soft hyphen in a short term (heading?): Обговорити проєкт авто­ма­ти­за­ції
+warning soft hyphen in a short term (heading?): Задо­ку­ме­н­то­вані процеси про­г­ра­му­ва­ння карток
+warning soft hyphen in a short term (heading?): Задо­ку­ме­н­то­ва­ний процес
+warning identical to English: Dongguan Yaxu (AiT) Technology Limited
+warning no Cyrillic in Ukrainian string: Dongguan Yaxu (AiT) Technology Limited
+warning soft hyphen in a short term (heading?): У межах нала­ш­то­ва­ного вечірнього розкладу
+warning soft hyphen in a short term (heading?): Кожен зчитувач є мар­ш­ру­ти­за­то­ром Thread і Border Router.
+warning identical to English: FCC ID 2BNRNSPKRDRLV1
+warning identical to English: FCC ID 2BNRNSPKRDRWV1
+warning soft hyphen in a short term (heading?): Мік­ро­про­г­рама
+warning soft hyphen in a short term (heading?): Чим від­рі­з­ня­ю­ться ролі Matter і Thread
+warning soft hyphen in a short term (heading?): Чим від­рі­з­ня­ю­ться LTE- і Wi-Fi-зчитувачі?
+warning soft hyphen in a short term (heading?): На якій відстані один від одного можна вста­но­в­лю­вати зчитувачі?
+warning soft hyphen in a short term (heading?): Як ви діз­на­ва­ти­ме­теся про зміни назви мережі, пароля чи обладнання.
+warning identical to English: IC 35944-SPKRDRWV1
+warning soft hyphen in a short term (heading?): Реєстрація радіо­об­ла­д­на­ння ISED (Канада)
+warning soft hyphen in a short term (heading?): Іде­н­ти­фі­ка­тор
+warning soft hyphen in a short term (heading?): Упо­ря­д­ко­вуйте інсталяції
+warning soft hyphen in a short term (heading?): Від­ок­ре­м­люйте дозвіл від розмови.
+warning soft hyphen in a short term (heading?): Локальна від­по­від­а­ль­ність.
+warning identical to English: MIFARE Classic
+warning soft hyphen in a short term (heading?): Процеси для MIFARE Classic і DESFire EV3; підтвердьте модель і мік­ро­про­г­раму
+warning identical to English: MIFARE DESFire EV3
+warning soft hyphen in a short term (heading?): Керуйте об'єктами, людьми, іде­н­ти­фі­ка­то­рами доступу та підключеними пристроями.
+warning soft hyphen in a short term (heading?): Керуйте своїми ключами та під­т­ри­му­ва­ним доступом із телефона чи планшета Android.
+warning soft hyphen in a short term (heading?): Обсяг пам'яті та наявний формат іде­н­ти­фі­ка­тора доступу, якщо є
+warning soft hyphen in a short term (heading?): Немає запиту для під­т­ве­р­дже­ння.
+warning soft hyphen in a short term (heading?): Значення не публікується, доки не з'явиться від­т­во­рю­ва­ний звіт про випробування для конкретної моделі.
+warning soft hyphen in a short term (heading?): Опу­б­лі­ко­ва­них записів поки немає. Опишіть свою конфігурацію, і ми її перевіримо.
+warning soft hyphen in a short term (heading?): Інші покоління DESFire та обсяги пам'яті потребують під­т­ве­р­дже­ння
+warning soft hyphen in a short term (heading?): Наші LTE- і Wi-Fi-зчитувачі поєднують зчитування іде­н­ти­фі­ка­то­рів доступу та контролер доступу.
+warning soft hyphen in a short term (heading?): Про­г­ра­му­ва­ння фізичних карток
+warning soft hyphen in a short term (heading?): Про­г­ра­му­ва­ння фізичних карток.
+warning soft hyphen in a short term (heading?): Для про­г­ра­му­ва­ння нової картки потрібні підтримувані сімейство карток і пристрій для про­г­ра­му­ва­ння.
+warning soft hyphen in a short term (heading?): Зчитування, про­г­ра­му­ва­ння та призначення доступу
+warning soft hyphen in a short term (heading?): Перегляньте під­т­ве­р­дже­ння для свого проєкту.
+warning identical to English: Scenario Builder
+warning soft hyphen in a short term (heading?): Сертифікат від­по­від­но­сті Smart Tap 2.1
+warning identical to English: SmartphoneKey
+warning soft hyphen in a short term (heading?): Підтримувані конфігурації додають про­г­ра­му­ва­ння карток і функції підключених пристроїв.
+warning soft hyphen in a short term (heading?): Що кожен контролер може вико­ри­с­то­ву­вати кожну функцію
+warning soft hyphen in a short term (heading?): Під­т­ве­р­дже­ння, щойно зчитувач знову буде онлайн.
+warning soft hyphen in a short term (heading?): Зчитувач повідомив про помилку або під­т­ве­р­дже­ння не надійшло.
+warning soft hyphen in a short term (heading?): Два задо­ку­ме­н­то­вані сімейства карток
+warning identical to English: Thread Border Router
+warning soft hyphen in a short term (heading?): Thread Border Router і мар­ш­ру­ти­за­тор mesh-мережі без окремої мік­ро­про­г­рами
+warning soft hyphen in a short term (heading?): Мар­ш­ру­ти­за­тор Thread
+warning soft hyphen in a short term (heading?): Увімкнути під­т­ри­му­ва­ний світильник
+warning soft hyphen in a short term (heading?): Які фізичні картки можна запро­г­ра­му­вати?
+warning soft hyphen in a short term (heading?): Яку ревізію зчитувача та мік­ро­про­г­раму буде встановлено?
+warning soft hyphen in a short term (heading?): Чому інші покоління та обсяги пам'яті потребують під­т­ве­р­дже­ння
+warning soft hyphen in a short term (heading?): Покриття Wi-Fi у кожному зап­ла­но­ва­ному місці встановлення зчитувача.
+warning identical to English: %(name)s, %(job)s | SmartphoneKey
+warning no Cyrillic in Ukrainian string: %(name)s, %(job)s | SmartphoneKey
+blocking: 5, warnings: 75

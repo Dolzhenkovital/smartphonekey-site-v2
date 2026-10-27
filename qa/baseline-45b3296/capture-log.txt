@@ -1,0 +1,36 @@
+local uk-home 1280x800: {"h1":"Ваш ключ до контролю доступу.","h1px":"92.8px","h1lines":4,"buttonTop":755,"buttonText":"Огляд платформи","docHeight":4929}
+local uk-home 1440x900: {"h1":"Ваш ключ до контролю доступу.","h1px":"96px","h1lines":3,"buttonTop":728,"buttonText":"Огляд платформи","docHeight":4835}
+local uk-home 390x844: {"h1":"Ваш ключ до контролю доступу.","h1px":"44px","h1lines":3,"buttonTop":470,"buttonText":"Огляд платформи","docHeight":6231}
+local uk-readers 1280x800: {"h1":"Зчитувач і контролер. Створені разом.","h1px":"59.52px","h1lines":2,"buttonTop":5204,"buttonText":"Підібрати конфігурацію","docHeight":6269}
+local uk-readers 1440x900: {"h1":"Зчитувач і контролер. Створені разом.","h1px":"64.96px","h1lines":2,"buttonTop":5179,"buttonText":"Підібрати конфігурацію","docHeight":6031}
+local uk-readers 390x844: {"h1":"Зчитувач і контролер. Створені разом.","h1px":"36px","h1lines":3,"buttonTop":6105,"buttonText":"Підібрати конфігурацію","docHeight":7976}
+local en-home 1280x800: {"h1":"Ваш ключ до контролю доступу.","h1px":"92.8px","h1lines":4,"buttonTop":755,"buttonText":"Огляд платформи","docHeight":4929}
+local en-home 1440x900: {"h1":"Ваш ключ до контролю доступу.","h1px":"96px","h1lines":3,"buttonTop":728,"buttonText":"Огляд платформи","docHeight":4835}
+local en-home 390x844: {"h1":"Ваш ключ до контролю доступу.","h1px":"44px","h1lines":3,"buttonTop":470,"buttonText":"Огляд платформи","docHeight":6231}
+local en-readers 1280x800: {"h1":"Зчитувач і контролер. Створені разом.","h1px":"59.52px","h1lines":2,"buttonTop":5204,"buttonText":"Підібрати конфігурацію","docHeight":6269}
+local en-readers 1440x900: {"h1":"Зчитувач і контролер. Створені разом.","h1px":"64.96px","h1lines":2,"buttonTop":5179,"buttonText":"Підібрати конфігурацію","docHeight":6031}
+local en-readers 390x844: {"h1":"Зчитувач і контролер. Створені разом.","h1px":"36px","h1lines":3,"buttonTop":6105,"buttonText":"Підібрати конфігурацію","docHeight":7976}
+local en-platform 1280x800: {"h1":"Об'єднайте керування доступом в одну зрозумілу систему.","h1px":"59.52px","h1lines":4,"buttonTop":5012,"buttonText":"Підібрати конфігурацію","docHeight":6021}
+local en-platform 1440x900: {"h1":"Об'єднайте керування доступом в одну зрозумілу систему.","h1px":"64.96px","h1lines":4,"buttonTop":5019,"buttonText":"Підібрати конфігурацію","docHeight":5871}
+local en-platform 390x844: {"h1":"Об'єднайте керування доступом в одну зрозумілу систему.","h1px":"36px","h1lines":4,"buttonTop":5717,"buttonText":"Підібрати конфігурацію","docHeight":7478}
+local uk-platform 1280x800: {"h1":"Об'єднайте керування доступом в одну зрозумілу систему.","h1px":"59.52px","h1lines":4,"buttonTop":5012,"buttonText":"Підібрати конфігурацію","docHeight":6021}
+local uk-platform 1440x900: {"h1":"Об'єднайте керування доступом в одну зрозумілу систему.","h1px":"64.96px","h1lines":4,"buttonTop":5019,"buttonText":"Підібрати конфігурацію","docHeight":5871}
+local uk-platform 390x844: {"h1":"Об'єднайте керування доступом в одну зрозумілу систему.","h1px":"36px","h1lines":4,"buttonTop":5717,"buttonText":"Підібрати конфігурацію","docHeight":7478}
+pages uk-home 1280x800: {"h1":"Ваш ключ до контролю доступу.","h1px":"92.8px","h1lines":4,"buttonTop":755,"buttonText":"Огляд платформи","docHeight":4929}
+pages uk-home 1440x900: {"h1":"Ваш ключ до контролю доступу.","h1px":"96px","h1lines":3,"buttonTop":728,"buttonText":"Огляд платформи","docHeight":4835}
+pages uk-home 390x844: {"h1":"Ваш ключ до контролю доступу.","h1px":"44px","h1lines":3,"buttonTop":470,"buttonText":"Огляд платформи","docHeight":6231}
+pages uk-readers 1280x800: {"h1":"Зчитувач і контролер. Створені разом.","h1px":"59.52px","h1lines":2,"buttonTop":5204,"buttonText":"Підібрати конфігурацію","docHeight":6269}
+pages uk-readers 1440x900: {"h1":"Зчитувач і контролер. Створені разом.","h1px":"64.96px","h1lines":2,"buttonTop":5179,"buttonText":"Підібрати конфігурацію","docHeight":6031}
+pages uk-readers 390x844: {"h1":"Зчитувач і контролер. Створені разом.","h1px":"36px","h1lines":3,"buttonTop":6105,"buttonText":"Підібрати конфігурацію","docHeight":7976}
+pages en-home 1280x800: {"h1":"Your key to access control.","h1px":"92.8px","h1lines":3,"buttonTop":661,"buttonText":"Explore the platform","docHeight":4684}
+pages en-home 1440x900: {"h1":"Your key to access control.","h1px":"96px","h1lines":3,"buttonTop":713,"buttonText":"Explore the platform","docHeight":4631}
+pages en-home 390x844: {"h1":"Your key to access control.","h1px":"44px","h1lines":2,"buttonTop":398,"buttonText":"Explore the platform","docHeight":5924}
+pages en-readers 1280x800: {"h1":"Reader and controller. Built together.","h1px":"59.52px","h1lines":2,"buttonTop":4959,"buttonText":"Find your setup","docHeight":5870}
+pages en-readers 1440x900: {"h1":"Reader and controller. Built together.","h1px":"64.96px","h1lines":2,"buttonTop":4816,"buttonText":"Find your setup","docHeight":5543}
+pages en-readers 390x844: {"h1":"Reader and controller. Built together.","h1px":"36px","h1lines":2,"buttonTop":5408,"buttonText":"Find your setup","docHeight":7279}
+pages en-platform 1280x800: {"h1":"Bring access management into one clear system.","h1px":"59.52px","h1lines":3,"buttonTop":4758,"buttonText":"Find your setup","docHeight":5669}
+pages en-platform 1440x900: {"h1":"Bring access management into one clear system.","h1px":"64.96px","h1lines":3,"buttonTop":4685,"buttonText":"Find your setup","docHeight":5413}
+pages en-platform 390x844: {"h1":"Bring access management into one clear system.","h1px":"36px","h1lines":3,"buttonTop":5119,"buttonText":"Find your setup","docHeight":6879}
+pages uk-platform 1280x800: {"h1":"Об'єднайте керування доступом в одну зрозумілу систему.","h1px":"59.52px","h1lines":4,"buttonTop":5012,"buttonText":"Підібрати конфігурацію","docHeight":6021}
+pages uk-platform 1440x900: {"h1":"Об'єднайте керування доступом в одну зрозумілу систему.","h1px":"64.96px","h1lines":4,"buttonTop":5019,"buttonText":"Підібрати конфігурацію","docHeight":5871}
+pages uk-platform 390x844: {"h1":"Об'єднайте керування доступом в одну зрозумілу систему.","h1px":"36px","h1lines":4,"buttonTop":5717,"buttonText":"Підібрати конфігурацію","docHeight":7478}

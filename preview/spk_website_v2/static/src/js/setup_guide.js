@@ -42,13 +42,15 @@
         return;
     }
     var result = document.querySelector("[data-spk-setup-result]");
+    // The server renders both states: the empty message (with its own contact link) and the body, one of them hidden.
+    var empty = result.querySelector("[data-spk-result-empty]");
+    var body = result.querySelector("[data-spk-result-body]");
+    var summary = result.querySelector("[data-spk-result-summary]");
     var advice = result.querySelector("[data-spk-result-advice]");
     var items = result.querySelector("[data-spk-result-items]");
-    var linksTitle = result.querySelector("[data-spk-result-links-title]") || result.querySelector(".result-subtitle");
     var links = result.querySelector("[data-spk-result-links]");
     var contact = result.querySelector("[data-spk-result-contact]");
     var reset = form.querySelector("[data-spk-setup-reset]");
-    var emptyAdvice = "Choose an available connection to see your starting point.";
     var single = ["role", "sites", "doors", "connection"];
 
     function selection() {
@@ -109,11 +111,9 @@
     }
 
     function show(chosen) {
+        empty.hidden = !!chosen.connection;
+        body.hidden = !chosen.connection;
         if (!chosen.connection) {
-            advice.textContent = emptyAdvice;
-            items.hidden = true;
-            links.hidden = true;
-            linksTitle.hidden = true;
             return false;
         }
         var texts = [];
@@ -130,6 +130,14 @@
                 });
             }
         });
+        // The summary: one chip per answer, in the order of the form.
+        var answers = Array.prototype.map.call(form.querySelectorAll("input:checked"), function (input) {
+            return input.nextElementSibling ? input.nextElementSibling.textContent.trim() : "";
+        }).filter(Boolean);
+        fill(summary, answers, function (li, text) {
+            li.className = "chip";
+            li.textContent = text;
+        });
         advice.textContent = data.advice[chosen.connection];
         fill(items, texts, function (li, text) { li.textContent = text; });
         fill(links, related, function (li, link) {
@@ -138,9 +146,6 @@
             anchor.href = link[1];
             li.appendChild(anchor);
         });
-        items.hidden = false;
-        links.hidden = false;
-        linksTitle.hidden = false;
         contact.setAttribute("href", contactHref(chosen));
         return true;
     }
@@ -161,6 +166,16 @@
                 interests: (chosen.interests || []).join(","),
             });
         }
+    });
+
+    // "Change answers" (a link to the form) puts the focus on the first answer already given.
+    result.querySelectorAll("a[href='#guide-form-title']").forEach(function (link) {
+        link.addEventListener("click", function () {
+            var first = form.querySelector("input:checked") || form.querySelector("input");
+            if (first) {
+                window.setTimeout(function () { first.focus(); }, 0);
+            }
+        });
     });
 
     reset.addEventListener("click", function (event) {

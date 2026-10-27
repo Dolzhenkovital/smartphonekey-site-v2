@@ -1,0 +1,41 @@
+Unable to find image 'python:3.12-slim' locally
+3.12-slim: Pulling from library/python
+86586d55cc56: Pulling fs layer
+f5b253875fcb: Pulling fs layer
+f2be67225471: Pulling fs layer
+ca30a39e3f58: Pulling fs layer
+86586d55cc56: Download complete
+f5b253875fcb: Download complete
+4fd8f7105b68: Download complete
+37b2e18f1119: Download complete
+ca30a39e3f58: Download complete
+f2be67225471: Download complete
+f2be67225471: Pull complete
+f5b253875fcb: Pull complete
+86586d55cc56: Pull complete
+ca30a39e3f58: Pull complete
+Digest: sha256:12316debbfb86890f6b2d825820612741ba527ad5a44e3902759141d572bfe8f
+Status: Downloaded newer image for python:3.12-slim
+=== pylint-odoo ===
+************* Module spk_website_v2.__manifest__
+spk_website_v2/__manifest__.py:7:4: C8101: One of the following authors must be present in manifest: 'Odoo Community Association (OCA)' (manifest-required-author)
+
+-----------------------------------
+Your code has been rated at 9.99/10
+
+=== oca-checks-odoo-module ===
+Use `<section id="guides" class="section container" ...>` instead
+
+mnt/addons/spk_website_v2/views/resources.xml:53: xml-tag-position The expected attributes order is `<section id="instructions" class="section container" ...>`
+Use `<section id="instructions" class="section container" ...>` instead
+
+mnt/addons/spk_website_v2/views/resources.xml:88: xml-tag-position The expected attributes order is `<section id="insights" class="section container" ...>`
+Use `<section id="insights" class="section container" ...>` instead
+
+mnt/addons/spk_website_v2/views/setup.xml:1: xml-header-wrong XML header expected '<?xml version="1.0" encoding="UTF-8" ?>' but received '<?xml version="1.0" encoding="utf-8"?>'
+
+mnt/addons/spk_website_v2/views/setup.xml:81: xml-tag-position The expected attributes order is `<section id="setup-result" class="setup-result result-card" ...>`
+Use `<section id="setup-result" class="setup-result result-card" ...>` instead
+
+mnt/addons/spk_website_v2/views/solutions.xml:1: xml-header-wrong XML header expected '<?xml version="1.0" encoding="UTF-8" ?>' but received '<?xml version="1.0" encoding="utf-8"?>'
+
