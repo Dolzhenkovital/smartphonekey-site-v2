@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- The platform pages (copy deck: Platform, Access management, Automation,
+         Visitor access). Diagrams are labelled conceptual HTML, not product screens. -->
+
+    <template id="page_platform" name="SmartphoneKey 2.0: platform">
+        <t t-call="spk_website_v2.layout">
+            <div class="container">
+                <t t-call="spk_website_v2.page_intro">
+                    <t t-set="heading">Bring access management into one clear system.</t>
+                    <t t-set="intro">SmartphoneKey connects the work of managing sites, people, credentials and supported devices. The Admin Panel is the place to organise that work; readers and connected devices carry it into the building.</t>
+                </t>
+            </div>
+
+            <section class="section container split" aria-labelledby="site-title">
+                <h2 id="site-title">Start with the site.</h2>
+                <div class="split-copy">
+                    <p>Group the people and devices that belong to a customer installation. Use the site's context to review access and assign local management responsibilities.</p>
+                    <p class="muted">Each site is organised as an Entity in the Admin Panel.</p>
+                </div>
+            </section>
+
+            <section class="section container split" aria-labelledby="lifecycle-title">
+                <h2 id="lifecycle-title">Manage the whole access lifecycle.</h2>
+                <div class="split-copy">
+                    <p>Add a person, assign the required credentials, review activity and change access when their needs change. For a disconnected device, some changes may remain pending until it reconnects.</p>
+                    <ol class="steps">
+                        <li><span class="step-title">Add a person</span><span>to the site they belong to</span></li>
+                        <li><span class="step-title">Assign credentials</span><span>wallet, card or supported temporary access</span></li>
+                        <li><span class="step-title">Review activity</span><span>see what is pending and what is confirmed</span></li>
+                        <li><span class="step-title">Change or revoke</span><span>and follow the delivery status</span></li>
+                    </ol>
+                </div>
+            </section>
+
+            <section class="section container" aria-labelledby="parts-title">
+                <div class="section-head">
+                    <h2 id="parts-title">Connect the physical and the digital.</h2>
+                    <p>SmartphoneKey readers provide the door-side hardware. Supported cards and digital credentials provide ways to enter. Hubs and Matter devices extend the connected-device workflow.</p>
+                </div>
+                <figure class="diagram" aria-labelledby="parts-caption">
+                    <div class="diagram-grid">
+                        <div class="diagram-column">
+                            <p class="diagram-title">Admin Panel</p>
+                            <ul>
+                                <li>Sites</li>
+                                <li>People and responsibilities</li>
+                                <li>Credentials</li>
+                                <li>Activity and alerts</li>
+                            </ul>
+                        </div>
+                        <div class="diagram-column">
+                            <p class="diagram-title">Ways to enter</p>
+                            <ul>
+                                <li>Supported wallet credentials</li>
+                                <li>Physical NFC cards</li>
+                                <li>QR visitor contact</li>
+                            </ul>
+                        </div>
+                        <div class="diagram-column">
+                            <p class="diagram-title">In the building</p>
+                            <ul>
+                                <li>LTE and Wi-Fi readers with an integrated controller</li>
+                                <li>Hubs and supported Matter devices</li>
+                                <li>Locks, power and wiring</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <figcaption id="parts-caption">How the parts relate. A conceptual diagram, not a product screen; the actual deployment depends on its configuration.</figcaption>
+                </figure>
+            </section>
+
+            <section class="section container split" aria-labelledby="result-title">
+                <h2 id="result-title">Keep the result understandable.</h2>
+                <div class="split-copy">
+                    <p>A request being accepted is not the same as a device confirming its action. The interface separates these states so operators can see what still needs attention.</p>
+                    <ul class="plain-list">
+                        <li>Available screens and actions depend on permissions and configured services.</li>
+                        <li>Card programming depends on the card family and the programming device.</li>
+                        <li>Device workflows depend on the capabilities each device reports.</li>
+                    </ul>
+                    <a href="/resources/access-control-when-offline">What happens when a reader goes offline</a>
+                </div>
+            </section>
+
+            <t t-call="spk_website_v2.related_links">
+                <t t-set="related_title">Explore the platform</t>
+                <t t-set="related" t-value="[('Access management', '/platform/access-management'), ('Readers', '/products/readers'), ('Automation', '/platform/automation'), ('Visitor access', '/platform/visitor-access')]"/>
+            </t>
+
+            <t t-call="spk_website_v2.faq">
+                <t t-set="faqs" t-value="[
+                    ('What is SmartphoneKey?', 'SmartphoneKey is an access control management platform. It combines the Admin Panel, supported credentials, SmartphoneKey readers and connected-device workflows to help teams manage access across their sites.'),
+                    ('Is SmartphoneKey only a reader?', 'The readers are part of the system. The platform also provides site, user and credential management, supported device workflows and operational visibility.'),
+                    ('Do I need a demo to learn more?', 'No. Explore the platform, check compatibility and use the setup guide without sharing contact details. Contact the team when you want a project discussion, technical answer, partnership conversation or walkthrough.'),
+                ]"/>
+            </t>
+
+            <t t-call="spk_website_v2.next_step">
+                <t t-set="next_title">What are you managing?</t>
+                <t t-set="next_text">Explore a setup for your site or discuss the details with our team.</t>
+                <t t-set="next_primary" t-value="('Find your setup', '/find-your-setup')"/>
+                <t t-set="next_links" t-value="[('Discuss your project', '/contact?interest=project')]"/>
+            </t>
+        </t>
+    </template>
+
+    <template id="page_access_management" name="SmartphoneKey 2.0: access management">
+        <t t-call="spk_website_v2.layout">
+            <div class="container">
+                <t t-call="spk_website_v2.page_intro">
+                    <t t-set="heading">Manage access as people and responsibilities change.</t>
+                    <t t-set="intro">Organise sites, manage physical and supported digital credentials, and give the right people responsibility for day-to-day operations.</t>
+                </t>
+            </div>
+
+            <section class="section container" aria-labelledby="tasks-title">
+                <h2 id="tasks-title" class="visually-hidden">What you can do</h2>
+                <div class="columns-3">
+                    <div>
+                        <h3>Sites with context.</h3>
+                        <p>Find a customer installation and review its users, keys, locks and related devices. Keep separate buildings organised within the supported site hierarchy.</p>
+                    </div>
+                    <div>
+                        <h3>Responsibilities with scope.</h3>
+                        <p>Give local administrators access to the areas they manage. Screens and actions depend on the person's permissions and subscription configuration.</p>
+                    </div>
+                    <div>
+                        <h3>Credential workflows.</h3>
+                        <p>Issue supported wallet credentials, manage physical cards and use supported temporary-access workflows. When access is no longer needed, revoke it and follow the delivery status.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section container split" aria-labelledby="example-title">
+                <h2 id="example-title">An example: a contractor's visit.</h2>
+                <div class="split-copy">
+                    <p>A contractor needs access to a service area. The administrator selects the correct site and doors, issues the supported credential, and reviews its status. When the work ends, the administrator revokes access and checks the result.</p>
+                    <ol class="steps">
+                        <li><span class="step-title">Select</span><span>the site and the doors</span></li>
+                        <li><span class="step-title">Issue</span><span>the supported credential</span></li>
+                        <li><span class="step-title">Review</span><span>its status</span></li>
+                        <li><span class="step-title">Revoke</span><span>and check the result</span></li>
+                    </ol>
+                </div>
+            </section>
+
+            <section class="section container split" aria-labelledby="evidence-title">
+                <h2 id="evidence-title">Support with evidence.</h2>
+                <div class="split-copy">
+                    <p>Review activity and audit records. Use supported device monitoring to identify connectivity problems and failed operations. Alerts require configuration; they do not replace an agreed support process.</p>
+                </div>
+            </section>
+
+            <section class="section container split" aria-labelledby="offline-title">
+                <h2 id="offline-title">When a reader is offline.</h2>
+                <div class="split-copy">
+                    <p>Some key changes are queued for later delivery. “Pending” means the change has not yet been confirmed on the device. Local credential behaviour depends on the device and configuration.</p>
+                    <p>A revocation made while the reader is offline is not enforced until the reader confirms it.</p>
+                    <a href="/resources/access-control-when-offline">Understand offline behaviour</a>
+                </div>
+            </section>
+
+            <t t-call="spk_website_v2.faq">
+                <t t-set="faqs" t-value="[
+                    ('Can I manage more than one site?', 'The Admin Panel organises customer installations as sites, called Entities, and supports site-scoped management. The available actions depend on account permissions and configured services.'),
+                    ('What happens to a key change while a reader is offline?', 'Some key changes remain pending until the reader reconnects. Check the delivery result; an offline revocation should not be treated as already enforced.'),
+                ]"/>
+            </t>
+
+            <t t-call="spk_website_v2.next_step">
+                <t t-set="next_title">Take the next step.</t>
+                <t t-set="next_text">Read how the Admin Panel works, or bring your sites and doors to a conversation.</t>
+                <t t-set="next_primary" t-value="('Read the Admin Panel guide', '/instructions/admin-guide')"/>
+                <t t-set="next_links" t-value="[('Understand offline behaviour', '/resources/access-control-when-offline'), ('Discuss your project', '/contact?interest=project')]"/>
+            </t>
+        </t>
+    </template>
+
+    <template id="page_automation" name="SmartphoneKey 2.0: automation">
+        <t t-call="spk_website_v2.layout">
+            <div class="container">
+                <t t-call="spk_website_v2.page_intro">
+                    <t t-set="heading">Turn connected devices into practical workflows.</t>
+                    <t t-set="intro">Use the Scenario Builder to combine supported triggers, conditions and actions. Start with a simple rule or build a more detailed workflow from the capabilities your devices report.</t>
+                </t>
+            </div>
+
+            <section class="section container" aria-labelledby="examples-title">
+                <div class="section-head">
+                    <h2 id="examples-title">Four examples.</h2>
+                    <p>Each one is an example of what supported devices can do together, not a promise for every device.</p>
+                </div>
+                <div class="spk-table" role="region" tabindex="0" aria-label="Example scenarios">
+                    <table>
+                        <caption>Example scenarios</caption>
+                        <thead>
+                            <tr><th scope="col">Example</th><th scope="col">When</th><th scope="col">Only if</th><th scope="col">Then</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><th scope="row">Light the entrance</th><td>A compatible contact sensor reports an open door</td><td>During a configured evening schedule</td><td>Turn on a supported light</td></tr>
+                            <tr><th scope="row">Respond to a leak</th><td>A compatible leak sensor reports water</td><td>Always</td><td>Send a close command to a supported water valve. Confirm the device response and retain manual control.</td></tr>
+                            <tr><th scope="row">Adjust the room</th><td>A supported temperature sensor reaches a chosen threshold</td><td>Always</td><td>Change a compatible thermostat's setpoint</td></tr>
+                            <tr><th scope="row">Close the working day</th><td>A schedule</td><td>Supported conditions you choose</td><td>Switch selected lights or sockets. Keep essential equipment outside this rule.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="section container split" aria-labelledby="capabilities-title">
+                <h2 id="capabilities-title">Check the capabilities behind the example.</h2>
+                <div class="split-copy">
+                    <p>A Matter label does not mean every device exposes the same commands. Scenarios depend on the commissioned devices, their reported capabilities and firmware. In the current implementation, each scenario belongs to one hub.</p>
+                    <a href="/compatibility">See compatible device capabilities</a>
+                </div>
+            </section>
+
+            <section class="section container split" aria-labelledby="applied-title">
+                <h2 id="applied-title">See what was applied.</h2>
+                <div class="split-copy">
+                    <p>The management workflow distinguishes changes waiting for the hub from changes the hub has applied or rejected. Editing a scenario does not automatically replace the version already running on the hub.</p>
+                </div>
+            </section>
+
+            <t t-call="spk_website_v2.faq">
+                <t t-set="faqs" t-value="[
+                    ('Does SmartphoneKey work with every Matter device?', 'Compatibility depends on the device type, exposed capabilities, firmware and configuration. Check the functions required by your workflow instead of assuming every Matter device supports them.'),
+                ]"/>
+            </t>
+
+            <t t-call="spk_website_v2.next_step">
+                <t t-set="next_title">Plan your workflows.</t>
+                <t t-set="next_text">Check the devices you have in mind, then talk to us about the workflow.</t>
+                <t t-set="next_primary" t-value="('Check compatibility', '/compatibility')"/>
+                <t t-set="next_links" t-value="[('Understand Matter and Thread', '/resources/matter-thread-access-control'), ('Discuss an automation project', '/contact?interest=automation')]"/>
+            </t>
+        </t>
+    </template>
+
+    <template id="page_visitor_access" name="SmartphoneKey 2.0: visitor access">
+        <t t-call="spk_website_v2.layout">
+            <div class="container">
+                <t t-call="spk_website_v2.page_intro">
+                    <t t-set="heading">Connect visitors with the right person.</t>
+                    <t t-set="intro">With the QR intercom workflow, a visitor scans the code at the entrance and follows the site's configured contact path. Residents and site teams can manage visitor access within their available permissions and services.</t>
+                </t>
+            </div>
+
+            <section class="section container" aria-labelledby="flow-title">
+                <h2 id="flow-title">From the entrance to an answer.</h2>
+                <ol class="steps steps-4">
+                    <li><span class="step-title">Scan</span><span>the QR code at the entrance</span></li>
+                    <li><span class="step-title">Follow</span><span>the guest instructions</span></li>
+                    <li><span class="step-title">Contact</span><span>the resident or available service</span></li>
+                    <li><span class="step-title">Receive</span><span>a clear outcome</span></li>
+                </ol>
+            </section>
+
+            <section class="section container split" aria-labelledby="concierge-title">
+                <h2 id="concierge-title">Explore AI Concierge for your site.</h2>
+                <div class="split-copy">
+                    <p>AI Concierge is designed to help interpret a visitor's request and work with configured access rules. Ask about the version and availability appropriate to your site.</p>
+                    <p class="note">AI Concierge features and rollout status vary by deployment. Confirm availability and the required setup with our team.</p>
+                </div>
+            </section>
+
+            <section class="section container split" aria-labelledby="permission-title">
+                <h2 id="permission-title">Keep permission separate from conversation.</h2>
+                <div class="split-copy">
+                    <p>The v2 design uses AI to interpret the request and server-side rules to decide whether it can proceed. Do not interpret a convincing conversation as a permission grant.</p>
+                    <p>If you cannot complete the guest flow, use the site's provided resident or support contact. The marketing site is not an emergency service or a live door-control interface.</p>
+                </div>
+            </section>
+
+            <t t-call="spk_website_v2.faq">
+                <t t-set="faqs" t-value="[
+                    ('Is AI Concierge available for my building?', 'Ask the team about the version, rollout status and requirements for your site. Availability should be confirmed before it becomes part of your deployment plan.'),
+                ]"/>
+            </t>
+
+            <t t-call="spk_website_v2.next_step">
+                <t t-set="next_title">Plan visitor access.</t>
+                <t t-set="next_text">Read the guidance, then ask about the visitor workflow and AI Concierge availability for your site.</t>
+                <t t-set="next_primary" t-value="('Discuss visitor access', '/contact?interest=visitor')"/>
+                <t t-set="next_links" t-value="[('Read visitor guidance', '/resources#guides')]"/>
+            </t>
+        </t>
+    </template>
+</odoo>

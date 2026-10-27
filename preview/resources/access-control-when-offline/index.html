@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" class="spk-site-v2">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Access Control When a Reader Is Offline | SmartphoneKey</title>
+        <link type="image/x-icon" rel="shortcut icon" href="/smartphonekey-site-v2/spk_website_v2/static/src/img/favicon-32.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+                <meta name="description" content="Understand pending key changes, delivery confirmation and the difference between local access and remote management during an outage.">
+                <meta name="robots" content="noindex, nofollow">
+                <link rel="canonical" href="https://smartphonekey.com/resources/access-control-when-offline">
+                <link rel="apple-touch-icon" href="/smartphonekey-site-v2/spk_website_v2/static/src/img/apple-touch-icon.png">
+                <meta property="og:type" content="article">
+                <meta property="og:site_name" content="SmartphoneKey">
+                <meta property="og:title" content="Access Control When a Reader Is Offline | SmartphoneKey">
+                <meta property="og:description" content="Understand pending key changes, delivery confirmation and the difference between local access and remote management during an outage.">
+                <meta property="og:url" content="https://smartphonekey.com/resources/access-control-when-offline">
+                <meta property="og:image" content="https://smartphonekey.com/spk_website_v2/static/src/img/og-default.png">
+                <meta property="og:image:width" content="1200">
+                <meta property="og:image:height" content="630">
+                <meta property="og:image:alt" content="SmartphoneKey reader beside the SmartphoneKey key logo">
+                <meta name="twitter:card" content="summary_large_image">
+                
+                <link rel="preconnect" href="https://api.fontshare.com" crossorigin="">
+                <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&amp;display=swap">
+                <link type="text/css" rel="stylesheet" href="/smartphonekey-site-v2/assets/site.css">
+                <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://smartphonekey.com/resources/access-control-when-offline#webpage","url":"https://smartphonekey.com/resources/access-control-when-offline","name":"Access Control When a Reader Is Offline | SmartphoneKey","description":"Understand pending key changes, delivery confirmation and the difference between local access and remote management during an outage.","inLanguage":"en","isPartOf":{"@id":"https://smartphonekey.com/#website"},"breadcrumb":{"@id":"https://smartphonekey.com/resources/access-control-when-offline#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://smartphonekey.com/resources/access-control-when-offline#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://smartphonekey.com/"},{"@type":"ListItem","position":2,"name":"Resources","item":"https://smartphonekey.com/resources"},{"@type":"ListItem","position":3,"name":"What happens when a reader goes offline?","item":"https://smartphonekey.com/resources/access-control-when-offline"}]},{"@type":"Article","@id":"https://smartphonekey.com/resources/access-control-when-offline#article","headline":"What happens when a reader goes offline?","description":"Understand pending key changes, delivery confirmation and the difference between local access and remote management during an outage.","datePublished":"2026-10-27","dateModified":"2026-10-27","author":{"@type":"Organization","name":"SmartphoneKey product team","url":"https://smartphonekey.com/about"},"publisher":{"@id":"https://smartphonekey.com/#organization"},"mainEntityOfPage":{"@id":"https://smartphonekey.com/resources/access-control-when-offline#webpage"},"inLanguage":"en"}]}</script>
+                <script defer src="/smartphonekey-site-v2/spk_website_v2/static/src/js/navigation.js?v=18.0.2.0.0"></script>
+                
+            
+    </head>
+    <body class="spk-body">
+        
+            <a class="skip" href="#main">Skip to content</a>
+            <p class="preview-banner" role="note">
+                Test preview of SmartphoneKey website 2.0. This is not the live site, and nothing entered here is sent or stored.
+            </p>
+        <header class="site-header">
+            <div class="container header-inner">
+                <a class="brand" href="/smartphonekey-site-v2/">
+                    <img src="/smartphonekey-site-v2/spk_website_v2/static/src/img/brand-mark.png" width="32" height="32" alt="" loading="lazy">
+                    <span>SmartphoneKey</span>
+                </a>
+                <nav class="desktop-nav" aria-label="Main">
+                    <ul class="menu">
+                        <li>
+                            <details class="menu-group" data-spk-menu="">
+                                <summary>Platform</summary>
+                                <ul class="menu-panel">
+                                    <li>
+                                        <a href="/smartphonekey-site-v2/platform/">Overview</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/platform/access-management/">Access management</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/platform/automation/">Automation</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/platform/visitor-access/">Visitor access</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li><li>
+                            <details class="menu-group" data-spk-menu="">
+                                <summary>Solutions</summary>
+                                <ul class="menu-panel">
+                                    <li>
+                                        <a href="/smartphonekey-site-v2/solutions/property-managers/">Property managers</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/solutions/integrators/">Integrators</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li><li>
+                            <details class="menu-group" data-spk-menu="">
+                                <summary>Products</summary>
+                                <ul class="menu-panel">
+                                    <li>
+                                        <a href="/smartphonekey-site-v2/products/readers/">Readers</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/compatibility/">Compatibility</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li><li>
+                            <details class="menu-group" data-spk-menu="">
+                                <summary>Resources</summary>
+                                <ul class="menu-panel">
+                                    <li>
+                                        <a href="/smartphonekey-site-v2/resources/#guides">Guides</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/resources/#insights">Insights</a>
+                                    </li><li>
+                                        <a href="/smartphonekey-site-v2/security/">Security and trust</a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="https://spkey.odoo.com/adminpanel">Admin Panel</a>
+                    <a href="/smartphonekey-site-v2/find-your-setup/" class="header-action">Find your setup</a>
+                </div>
+                <details class="mobile-nav" data-spk-mobile-menu="">
+                    <summary>Menu</summary>
+                    <nav class="mobile-panel" aria-label="Mobile">
+                        <div class="mobile-group">
+                            <p class="mobile-title">Platform</p>
+                            <ul>
+                                <li>
+                                    <a href="/smartphonekey-site-v2/platform/">Overview</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/platform/access-management/">Access management</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/platform/automation/">Automation</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/platform/visitor-access/">Visitor access</a>
+                                </li>
+                            </ul>
+                        </div><div class="mobile-group">
+                            <p class="mobile-title">Solutions</p>
+                            <ul>
+                                <li>
+                                    <a href="/smartphonekey-site-v2/solutions/property-managers/">Property managers</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/solutions/integrators/">Integrators</a>
+                                </li>
+                            </ul>
+                        </div><div class="mobile-group">
+                            <p class="mobile-title">Products</p>
+                            <ul>
+                                <li>
+                                    <a href="/smartphonekey-site-v2/products/readers/">Readers</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/compatibility/">Compatibility</a>
+                                </li>
+                            </ul>
+                        </div><div class="mobile-group">
+                            <p class="mobile-title">Resources</p>
+                            <ul>
+                                <li>
+                                    <a href="/smartphonekey-site-v2/resources/#guides">Guides</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/resources/#insights">Insights</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/security/">Security and trust</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="mobile-actions">
+                            <li><a href="/smartphonekey-site-v2/find-your-setup/">Find your setup</a></li>
+                            <li><a href="https://spkey.odoo.com/adminpanel">Admin Panel</a></li>
+                        </ul>
+                    </nav>
+                </details>
+            </div>
+        </header>
+            <main id="main" tabindex="-1">
+                
+            <article class="container spk-document" aria-labelledby="article-title">
+                <div class="page-intro">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+                <li>
+                    <a href="/smartphonekey-site-v2/">Home</a>
+                </li><li>
+                    <a href="/smartphonekey-site-v2/resources/">Resources</a>
+                </li><li>
+                    <span aria-current="page">What happens when a reader goes offline?</span>
+                </li>
+            </ol>
+        </nav>
+                    <h1 id="article-title">What happens when a reader goes offline?</h1>
+                    <div class="meta">
+                            <p>By the SmartphoneKey product team</p>
+                            <p>Published 27 October 2026</p>
+                            <p>Product facts checked 26 October 2026</p>
+                    </div>
+                    <p class="lead answer">Separate local access from remote changes. In SmartphoneKey's documented management workflow, some key changes can wait in a queue until the reader reconnects. A pending change is not proof it has reached the reader; local access behaviour depends on its configuration. Check the delivery status before you rely on a change, especially a revocation.</p>
+                </div>
+                <nav class="contents" aria-label="On this page">
+                    <p class="contents-title">On this page</p>
+                    <ul>
+                        <li><a href="#states">Four states of a change</a></li><li><a href="#revocation">What this means for revocation</a></li><li><a href="#checks">What an operator should check</a></li><li><a href="#local">Local access and other services</a></li><li><a href="#recovery">Recovery and support</a></li>
+                    </ul>
+                </nav>
+                <div class="spk-prose"><div>
+                    <h2 id="states">Four states of a change</h2>
+                    <div class="spk-table" role="region" tabindex="0" aria-label="States of a key change"><table>
+                        <caption>States of a key change</caption>
+                        <thead>
+                            <tr><th scope="col">State</th><th scope="col">What it means</th><th scope="col">What to do</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><th scope="row">Requested</th><td>The change was made in the Admin Panel.</td><td>Follow its delivery status.</td></tr>
+                            <tr><th scope="row">Pending delivery</th><td>The change is waiting for the reader to reconnect. It is not on the reader yet.</td><td>Treat the previous access as still possible on that reader.</td></tr>
+                            <tr><th scope="row">Confirmed by the reader</th><td>The reader reported that it applied the change.</td><td>For an unlock, this shows the reader acted. It does not prove a person passed through or the door opened.</td></tr>
+                            <tr><th scope="row">Failed or unconfirmed</th><td>The reader reported an error, or no confirmation arrived.</td><td>Check the reader and its connection, then repeat or escalate.</td></tr>
+                        </tbody>
+                    </table>
+                    </div><p>Not every kind of operation waits in the queue: some need the reader to be online when you make them.</p>
+                    <h2 id="revocation">What this means for revocation</h2>
+                    <p>A revocation made while a reader is offline is pending, not enforced. Until the reader reconnects and confirms the change, the credential may still work on that reader. When access must end at once, restore the reader's connection, watch for the confirmation and follow your site's own procedures in the meantime.</p>
+                    <h2 id="checks">What an operator should check</h2>
+                    <ul>
+                        <li>The reader's connection status.</li>
+                        <li>Pending operations for the person and the doors involved.</li>
+                        <li>The confirmation once the reader is back online.</li>
+                        <li>Device alerts, if you have configured them for your operations.</li>
+                    </ul>
+                    <h2 id="local">Local access and other services</h2>
+                    <p>Whether a credential keeps working locally during an outage depends on the device and its configuration. Other services rely on connectivity in their own ways: the QR intercom, video, AI Concierge and credential provisioning do not share one outage behaviour, so check each one you depend on.</p>
+                    <h2 id="recovery">Recovery and support</h2>
+                    <p>When the reader reconnects, queued changes are delivered and their status updates. If a change stays unconfirmed, contact support with the site and reader details. Please do not send passwords, access codes or credentials by email.</p>
+                </div>
+            </div>
+            </article>
+
+        <nav class="section container related" aria-label="Related pages">
+            <h2 class="related-title">Related pages</h2>
+            <ul class="next-links">
+                <li><a href="/smartphonekey-site-v2/platform/access-management/">Access management</a></li><li><a href="/smartphonekey-site-v2/security/">Security and trust</a></li><li><a href="/smartphonekey-site-v2/products/readers/">Readers</a></li>
+            </ul>
+        </nav>
+
+        <section class="section container next-steps" aria-labelledby="next-title">
+            <h2 id="next-title">Plan your next step.</h2>
+            <p>Work through a planning checklist on your own, or bring your questions to the team.</p>
+            <div class="next-actions">
+                <a href="/smartphonekey-site-v2/find-your-setup/">Find your setup</a><a href="/smartphonekey-site-v2/compatibility/">Check compatibility</a><a href="/smartphonekey-site-v2/contact/?interest=project">Discuss your project</a>
+            </div>
+        </section>
+        
+            </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <p class="footer-name">SmartphoneKey</p>
+                        <p>Your key to access control.</p>
+                        <p class="muted">Manage sites, people, credentials and connected devices.</p>
+                        <p><a href="mailto:info@smartphonekey.com">info@smartphonekey.com</a></p>
+                        <p><a href="https://spkey.odoo.com/adminpanel">Admin Panel</a></p>
+                    </div>
+                    <nav class="footer-nav" aria-label="Footer">
+                        <div>
+                            <p class="footer-title">Platform</p>
+                            <ul>
+                                <li>
+                                    <a href="/smartphonekey-site-v2/platform/">Overview</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/platform/access-management/">Access management</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/platform/automation/">Automation</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/platform/visitor-access/">Visitor access</a>
+                                </li>
+                            </ul>
+                        </div><div>
+                            <p class="footer-title">Solutions and products</p>
+                            <ul>
+                                <li>
+                                    <a href="/smartphonekey-site-v2/solutions/property-managers/">Property managers</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/solutions/integrators/">Integrators</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/products/readers/">Readers</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/compatibility/">Compatibility</a>
+                                </li>
+                            </ul>
+                        </div><div>
+                            <p class="footer-title">Resources</p>
+                            <ul>
+                                <li>
+                                    <a href="/smartphonekey-site-v2/resources/#guides">Guides</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/find-your-setup/">Find your setup</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/security/">Security and trust</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/certifications/">Certifications</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/apps-and-chatbot/">Apps</a>
+                                </li>
+                            </ul>
+                        </div><div>
+                            <p class="footer-title">Company</p>
+                            <ul>
+                                <li>
+                                    <a href="/smartphonekey-site-v2/about/">About</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/contact/">Contact</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/contact/?interest=partner">Become a partner</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/privacy-policy/">Privacy Policy</a>
+                                </li><li>
+                                    <a href="/smartphonekey-site-v2/terms-of-service/">Terms of Service</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </footer>
+        
+    </body>
+</html>

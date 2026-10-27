@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- The Webflow privacy policy and terms of service, text unchanged (an installation list that had slipped into the privacy policy's introduction is left out). Replace only with a reviewed version. -->
+    <template id="page_privacy_policy" name="SmartphoneKey 2.0: Privacy Policy">
+        <t t-call="spk_website_v2.layout">
+            <div class="container spk-document">
+                <t t-call="spk_website_v2.page_intro">
+                    <t t-set="heading">Privacy Policy</t>
+                </t>
+                <div class="spk-prose">
+                    <h2>Introduction</h2>
+                    <p>At SmartphoneKey, we are committed to protecting your privacy. This Privacy Policy outlines how we collect, use, and protect your personal information when you use our website and services.</p>
+                    <h2>Information We Collect</h2>
+                    <p>We may collect the following types of information:</p>
+                    <ul>
+                        <li>
+                            <strong>Personal Information: </strong>Name, email address, phone number, and payment details when you sign up or purchase our products.</li>
+                        <li>
+                            <strong>Usage Data:</strong> Information on how you interact with our website, such as pages visited, time spent, and links clicked.</li>
+                        <li>
+                            <strong>Device Information:</strong> Data about the device you use to access our website, including IP address, browser type, and operating system.</li>
+                        <li>
+                            <strong>Cookies: </strong>Small data files stored on your device to enhance your browsing experience and provide personalized content.</li>
+                    </ul>
+                    <h2>How We Use Your Information</h2>
+                    <p>We use the information we collect for the following purposes:</p>
+                    <ul>
+                        <li>
+                            <strong>To Provide Services: </strong>To process orders, deliver products, and provide customer support.</li>
+                        <li>
+                            <strong>To Improve Our Website:</strong> To analyze user behavior and improve the functionality and content of our website.</li>
+                        <li>
+                            <strong>To Communicate with You:</strong> To send updates, promotional offers, and important notifications regarding your account or purchases.</li>
+                        <li>
+                            <strong>To Ensure Security:</strong> To protect our website and users from fraud, abuse, and other security risks.</li>
+                    </ul>
+                    <h2>Sharing Your Information</h2>
+                    <p>We do not sell or rent your personal information to third parties. However, we may share your information with:</p>
+                    <ul>
+                        <li>
+                            <strong>Service Providers:</strong> Third-party companies that help us operate our website, process payments, and deliver products.</li>
+                        <li>
+                            <strong>Legal Obligations:</strong> If required by law, we may disclose your information to comply with legal processes or protect our rights.</li>
+                    </ul>
+                    <h2>Your Choices</h2>
+                    <p>You have the following rights regarding your personal information:</p>
+                    <ul>
+                        <li>
+                            <strong>Access:</strong> You can request a copy of the personal information we hold about you.</li>
+                        <li>
+                            <strong>Correction: </strong>You can request that we correct any inaccurate or incomplete information.</li>
+                        <li>
+                            <strong>Deletion:</strong> You can request that we delete your personal information, subject to legal obligations.</li>
+                        <li>
+                            <strong>Opt-Out: </strong>You can opt-out of receiving marketing communications from us at any time.</li>
+                    </ul>
+                    <h2>Security</h2>
+                    <p>We implement industry-standard security measures to protect your personal information from unauthorized access, alteration, or disclosure. However, no method of transmission over the internet is completely secure, and we cannot guarantee absolute security.</p>
+                    <h2>Third-Party Links</h2>
+                    <p>Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of these websites. We encourage you to review their privacy policies before providing any personal information.</p>
+                    <h2>Changes to This Policy</h2>
+                    <p>We may update this Privacy Policy from time to time. We will notify you of any significant changes by posting the updated policy on our website. Your continued use of our services after any changes constitutes your acceptance of the revised policy.</p>
+                    <h2>Contact Us</h2>
+                    <p>If you have any questions or concerns about this Privacy Policy, please contact us at <a href="mailto:info@smartphonekey.com">info@smartphonekey.com</a>.</p>
+                    <p>Thank you for trusting SmartphoneKey with your personal information.</p>
+                    <p>Questions about this page: <a href="mailto:info@smartphonekey.com">info@smartphonekey.com</a>.</p>
+                </div>
+            </div>
+        </t>
+    </template>
+    <template id="page_terms_of_service" name="SmartphoneKey 2.0: Terms of Service">
+        <t t-call="spk_website_v2.layout">
+            <div class="container spk-document">
+                <t t-call="spk_website_v2.page_intro">
+                    <t t-set="heading">Terms of Service</t>
+                </t>
+                <div class="spk-prose">
+                    <h2>Acceptance of Terms</h2>
+                    <p>By using the SmartphoneKey's website and services, you agree to comply with and be bound by these Terms of Service. If you do not agree with these terms, please do not use our website or services.</p>
+                    <h2>Use of Services</h2>
+                    <ul>
+                        <li>
+                            <strong>Eligibility: </strong>You must be at least 18 years old to use our services. By using our website, you represent that you meet this age requirement.</li>
+                        <li>
+                            <strong>Account Creation: </strong>To access certain features, you may be required to create an account. You agree to provide accurate and complete information during registration and to update your information as necessary.</li>
+                        <li>
+                            <strong>Account Security:</strong> You are responsible for maintaining the confidentiality of your account login information and for all activities that occur under your account. You agree to notify us immediately of any unauthorized use of your account.</li>
+                    </ul>
+                    <h2>Orders and Payments</h2>
+                    <ul>
+                        <li>
+                            <strong>Pricing: </strong>All prices listed on our website are in United States dollars and are subject to change without notice. We reserve the right to modify or discontinue our products and services at any time.</li>
+                        <li>
+                            <strong>Payment: </strong>Payment is required at the time of purchase. We accept Credit and Debit Cards (Visa, MasterCard, American Express, Discover), PayPal, Apple Pay, Google Pay, and Shopify Pay. By providing your payment information, you authorize us to charge the applicable fees to your payment method.</li>
+                        <li>
+                            <strong>Order Confirmation: </strong>Once your order is placed, you will receive an email confirmation. This email does not constitute acceptance of your order. We reserve the right to cancel or refuse any order at our discretion.</li>
+                    </ul>
+                    <h2>Shipping and Delivery</h2>
+                    <ul>
+                        <li>
+                            <strong>Shipping:</strong> We offer shipping to Canada, USA and Europe. Shipping costs and delivery times vary based on your location and selected shipping method.</li>
+                        <li>
+                            <strong>Delivery:</strong> Estimated delivery times are provided during checkout. While we strive to meet these estimates, we are not responsible for delays caused by shipping carriers or other factors beyond our control.</li>
+                        <li>
+                            <strong>Risk of Loss:</strong> The risk of loss or damage to products passes to you upon delivery to the specified address.</li>
+                    </ul>
+                    <h2>Returns and Refunds</h2>
+                    <ul>
+                        <li>
+                            <strong>Return Policy:</strong> If you are not satisfied with your purchase, you may return the product within 30 days of delivery for a refund or exchange, subject to our Return Policy.</li>
+                        <li>
+                            <strong>Refunds:</strong> Refunds will be issued to the original payment method. Shipping and handling fees are non-refundable.</li>
+                        <li>
+                            <strong>Return Process: </strong>To initiate a return, please contact our customer support team at <a href="mailto:info@smartphonekey.com">info@smartphonekey.com</a>. Returned items must be in their original condition and packaging.</li>
+                    </ul>
+                    <h2>Intellectual Property</h2>
+                    <ul>
+                        <li>
+                            <strong>Ownership:</strong> All content on the SmartphoneKey's website, including text, graphics, logos, and software, is the property of SmartphoneKey or its licensors and is protected by intellectual property laws.</li>
+                        <li>
+                            <strong>License:</strong> You are granted a limited, non-exclusive, non-transferable license to access and use the website and its content for personal, non-commercial purposes. You may not reproduce, distribute, or create derivative works from any content without our prior written consent.</li>
+                    </ul>
+                    <h2>User Conduct</h2>
+                    <p>You agree not to engage in any of the following prohibited activities:</p>
+                    <ul>
+                        <li>
+                            <strong>Unauthorized Access:</strong> Attempting to gain unauthorized access to our website, servers, or other systems.</li>
+                        <li>
+                            <strong>Disruption:</strong> Interfering with the operation of our website or services, including the use of viruses, bots, or other malicious code.</li>
+                        <li>
+                            <strong>Misrepresentation:</strong> Impersonating another person or entity, or falsely representing your affiliation with any person or entity.</li>
+                        <li>
+                            <strong>Violation of Laws:</strong> Engaging in any activity that violates applicable laws or regulations.</li>
+                    </ul>
+                    <h2>Disclaimers and Limitation of Liability</h2>
+                    <ul>
+                        <li>
+                            <strong>No Warranty:</strong> SmartphoneKey provides its website and services "as is" and "as available" without any warranties, express or implied. We do not warrant that our services will be uninterrupted, error-free, or secure.</li>
+                        <li>
+                            <strong>Limitation of Liability:</strong> To the fullest extent permitted by law, SmartphoneKey shall not be liable for any direct, indirect, incidental, consequential, or punitive damages arising from your use of our website or services, even if we have been advised of the possibility of such damages.</li>
+                    </ul>
+                    <h2>Indemnification</h2>
+                    <p>You agree to indemnify, defend, and hold harmless SmartphoneKey, its affiliates, and their respective officers, directors, employees, and agents from any claims, liabilities, damages, and expenses (including reasonable attorneys' fees) arising from your use of our website or services, your violation of these terms, or your infringement of any intellectual property or other rights of any person or entity.</p>
+                    <h2>Modifications to Terms</h2>
+                    <p>We reserve the right to modify these Terms of Service at any time. Any changes will be effective immediately upon posting on our website. Your continued use of our services after the posting of any changes constitutes your acceptance of the modified terms.</p>
+                    <h2>Governing Law</h2>
+                    <p>These Terms of Service shall be governed by and construed in accordance with the laws of Ontario, Canada, without regard to its conflict of law principles. Any disputes arising from or relating to these terms shall be resolved exclusively in the courts of Ontario, Canada.</p>
+                    <h2>Termination</h2>
+                    <p>We reserve the right to terminate or suspend your access to our website and services, without notice, for conduct that we believe violates these Terms of Service or is harmful to other users or our business interests.</p>
+                    <h2>Contact Information</h2>
+                    <p>If you have any questions or concerns about these Terms of Service, please contact us at <a href="mailto:info@smartphonekey.com">info@smartphonekey.com</a>.</p>
+                    <p>Thank you for choosing SmartphoneKey. We appreciate your trust in our services and are committed to providing you with the best access control solutions.</p>
+                    <p>Questions about this page: <a href="mailto:info@smartphonekey.com">info@smartphonekey.com</a>.</p>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>

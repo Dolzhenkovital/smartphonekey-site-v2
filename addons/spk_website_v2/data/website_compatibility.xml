@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Compatibility rows as reviewed on 2026-10-26. Content records: changing a
+         technical field sends a published row back to review (see the model). The
+         last two rows document claims that are not cleared for publication; they
+         stay off the site until their evidence arrives. -->
+    <data noupdate="1">
+        <record id="compat_mifare_classic" model="spk.website.compatibility">
+            <field name="sequence">10</field>
+            <field name="category">cards</field>
+            <field name="name">MIFARE Classic</field>
+            <field name="operation">program</field>
+            <field name="capabilities">Credential programming through the Admin Panel workflow with a compatible SmartphoneKey programming device, including the reader's built-in programmer where available.</field>
+            <field name="limitations">Confirm the card's memory size and credential format before ordering. Reading a card identifier is a different operation from provisioning a credential.</field>
+            <field name="evidence_ref">P05, P06, P07</field>
+            <field name="claim_id" ref="claim_c05"/>
+            <field name="state">published</field>
+            <field name="verified_at">2026-10-26</field>
+        </record>
+        <record id="compat_mifare_desfire_ev3" model="spk.website.compatibility">
+            <field name="sequence">20</field>
+            <field name="category">cards</field>
+            <field name="name">MIFARE DESFire EV3</field>
+            <field name="operation">program</field>
+            <field name="capabilities">Credential programming through the Admin Panel workflow with a compatible SmartphoneKey programming device, including the reader's built-in programmer where available.</field>
+            <field name="limitations">The documented workflow names DESFire EV3. Other DESFire generations and memory sizes need confirmation before they are planned.</field>
+            <field name="evidence_ref">P05, P06, P07</field>
+            <field name="public_source_url">https://www.nxp.com/products/MF3DHx3</field>
+            <field name="claim_id" ref="claim_c05"/>
+            <field name="state">published</field>
+            <field name="verified_at">2026-10-26</field>
+        </record>
+        <record id="compat_wallet_credentials" model="spk.website.compatibility">
+            <field name="sequence">10</field>
+            <field name="category">digital</field>
+            <field name="name">Wallet credentials</field>
+            <field name="operation">manage</field>
+            <field name="capabilities">Issue and revoke supported wallet credentials for people and doors from the Admin Panel.</field>
+            <field name="limitations">Depends on the phone, its operating system and the account configuration. Do not assume the same behaviour when a phone's battery is low or empty.</field>
+            <field name="evidence_ref">P05</field>
+            <field name="claim_id" ref="claim_c06"/>
+            <field name="state">published</field>
+            <field name="verified_at">2026-10-26</field>
+        </record>
+        <record id="compat_physical_keys" model="spk.website.compatibility">
+            <field name="sequence">20</field>
+            <field name="category">digital</field>
+            <field name="name">Physical NFC keys</field>
+            <field name="operation">manage</field>
+            <field name="capabilities">Assign, review and revoke physical NFC keys alongside digital credentials.</field>
+            <field name="limitations">Programming a new card needs a supported card family and programming device.</field>
+            <field name="evidence_ref">P05</field>
+            <field name="claim_id" ref="claim_c06"/>
+            <field name="state">published</field>
+            <field name="verified_at">2026-10-26</field>
+        </record>
+        <record id="compat_matter_capabilities" model="spk.website.compatibility">
+            <field name="sequence">10</field>
+            <field name="category">matter</field>
+            <field name="name">Matter devices, by capability</field>
+            <field name="operation">control</field>
+            <field name="capabilities">Devices that report supported capabilities, such as on/off, contact, temperature, lock or valve, can be commissioned and used in device management and scenarios.</field>
+            <field name="limitations">Available operations depend on what the device reports, its firmware and the configured system. Commissioning a device does not prove every command works. Specific third-party models are listed only after compatibility testing.</field>
+            <field name="evidence_ref">P08, P09</field>
+            <field name="public_source_url">https://csa-iot.org/all-solutions/matter/</field>
+            <field name="claim_id" ref="claim_c10"/>
+            <field name="state">published</field>
+            <field name="verified_at">2026-10-26</field>
+        </record>
+        <record id="compat_scenario_builder" model="spk.website.compatibility">
+            <field name="sequence">20</field>
+            <field name="category">matter</field>
+            <field name="name">Scenario Builder</field>
+            <field name="operation">control</field>
+            <field name="capabilities">Simple and advanced scenarios combine supported triggers, conditions and actions.</field>
+            <field name="limitations">Each current scenario belongs to one hub and its commissioned devices. An edited scenario replaces the version on the hub only once the hub has applied it.</field>
+            <field name="evidence_ref">P08</field>
+            <field name="claim_id" ref="claim_c11"/>
+            <field name="state">published</field>
+            <field name="verified_at">2026-10-26</field>
+        </record>
+        <record id="compat_lte_connection" model="spk.website.compatibility">
+            <field name="sequence">10</field>
+            <field name="category">network</field>
+            <field name="name">LTE reader connection</field>
+            <field name="operation">connect</field>
+            <field name="capabilities">Internet connection over cellular service.</field>
+            <field name="limitations">Needs cellular coverage at the reader position and a suitable SIM and service. No automatic switch to Wi-Fi is implied.</field>
+            <field name="evidence_ref">P01, P17</field>
+            <field name="claim_id" ref="claim_c03"/>
+            <field name="state">published</field>
+            <field name="verified_at">2026-10-26</field>
+        </record>
+        <record id="compat_wifi_connection" model="spk.website.compatibility">
+            <field name="sequence">20</field>
+            <field name="category">network</field>
+            <field name="name">Wi-Fi reader connection</field>
+            <field name="operation">connect</field>
+            <field name="capabilities">Internet connection over the site's Wi-Fi network.</field>
+            <field name="limitations">Needs suitable Wi-Fi coverage at the reader position and the network configuration given in the installation guide.</field>
+            <field name="evidence_ref">P01, P17</field>
+            <field name="claim_id" ref="claim_c03"/>
+            <field name="state">published</field>
+            <field name="verified_at">2026-10-26</field>
+        </record>
+        <record id="compat_hub_connection" model="spk.website.compatibility">
+            <field name="sequence">30</field>
+            <field name="category">network</field>
+            <field name="name">Reader through a Matter hub</field>
+            <field name="operation">connect</field>
+            <field name="capabilities">Supported reader configurations can connect through a Matter hub.</field>
+            <field name="limitations">Depends on the reader model and firmware. This is not a radio-range or failover guarantee.</field>
+            <field name="evidence_ref">P16</field>
+            <field name="claim_id" ref="claim_c12"/>
+            <field name="state">published</field>
+            <field name="verified_at">2026-10-26</field>
+        </record>
+        <record id="compat_reader_thread_roles" model="spk.website.compatibility">
+            <field name="sequence">40</field>
+            <field name="category">network</field>
+            <field name="name">Reader Matter and Thread roles</field>
+            <field name="operation">connect</field>
+            <field name="capabilities">Matter controller or server, Thread router and Thread Border Router functions of the reader.</field>
+            <field name="limitations">Needs a hardware-role matrix per reader revision and firmware before publication.</field>
+            <field name="evidence_ref">P01, P09, S10</field>
+            <field name="claim_id" ref="claim_c13"/>
+            <field name="state">review</field>
+        </record>
+        <record id="compat_reader_link_distance" model="spk.website.compatibility">
+            <field name="sequence">50</field>
+            <field name="category">network</field>
+            <field name="name">Distance between readers</field>
+            <field name="operation">connect</field>
+            <field name="capabilities">Stable link distance between readers.</field>
+            <field name="limitations">No number is published until a reproducible, model-specific test report exists.</field>
+            <field name="evidence_ref">P01</field>
+            <field name="claim_id" ref="claim_c15"/>
+            <field name="state">draft</field>
+        </record>
+    </data>
+</odoo>

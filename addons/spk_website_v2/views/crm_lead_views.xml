@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- The website enquiry's context on the lead form. -->
+    <record id="crm_lead_view_form_spk_website" model="ir.ui.view">
+        <field name="name">crm.lead.form.spk.website.enquiry</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Website enquiry" name="spk_website_enquiry" invisible="not spk_enquiry_type">
+                    <group>
+                        <group>
+                            <field name="spk_enquiry_type"/>
+                            <field name="spk_role"/>
+                            <field name="spk_sites"/>
+                            <field name="spk_doors"/>
+                            <field name="spk_connection"/>
+                            <field name="spk_interests"/>
+                        </group>
+                        <group>
+                            <field name="spk_region"/>
+                            <field name="spk_source_path"/>
+                            <field name="spk_utm_source"/>
+                            <field name="spk_utm_medium"/>
+                            <field name="spk_utm_campaign"/>
+                            <field name="spk_submission_id"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

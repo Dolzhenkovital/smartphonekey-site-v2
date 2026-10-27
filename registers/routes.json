@@ -1,0 +1,347 @@
+{
+  "verified": "2026-10-27, local Odoo 18 test instance (not production)",
+  "routes": [
+    {
+      "path": "/",
+      "template": "spk_website_v2.page_home",
+      "title": "Access Control Management Platform | SmartphoneKey",
+      "description": "Manage sites, people, keys and connected devices with SmartphoneKey. Explore the platform, compare LTE and Wi-Fi readers, and find a setup for your property.",
+      "index": true,
+      "canonical": "https://smartphonekey.com/",
+      "origin": "new",
+      "local_status": 200
+    },
+    {
+      "path": "/platform",
+      "template": "spk_website_v2.page_platform",
+      "title": "Access Control Platform for Sites and People | SmartphoneKey",
+      "description": "Explore how SmartphoneKey connects sites, people, credentials, readers and supported devices in one access management workflow.",
+      "index": true,
+      "canonical": "https://smartphonekey.com/platform",
+      "origin": "new",
+      "local_status": 200
+    },
+    {
+      "path": "/platform/access-management",
+      "template": "spk_website_v2.page_access_management",
+      "title": "Multi-Site Access Management and Credentials | SmartphoneKey",
+      "description": "Organise sites, delegate responsibilities and manage supported credentials with clear activity and pending-operation states.",
+      "index": true,
+      "canonical": "https://smartphonekey.com/platform/access-management",
+      "origin": "new",
+      "local_status": 200
+    },
+    {
+      "path": "/platform/automation",
+      "template": "spk_website_v2.page_automation",
+      "title": "Matter Device Automation for Access Environments | SmartphoneKey",
+      "description": "Explore practical triggers, conditions and actions for supported Matter devices, with clear capability and configuration limits.",
+      "index": true,
+      "canonical": "https://smartphonekey.com/platform/automation",
+      "origin": "new",
+      "local_status": 200
+    },
+    {
+      "path": "/platform/visitor-access",
+      "template": "spk_website_v2.page_visitor_access",
+      "title": "QR Intercom and Visitor Access | SmartphoneKey",
+      "description": "Understand QR visitor contact and ask about AI Concierge availability and configuration for your site.",
+      "index": true,
+      "canonical": "https://smartphonekey.com/platform/visitor-access",
+      "origin": "new",
+      "local_status": 200
+    },
+    {
+      "path": "/solutions/property-managers",
+      "template": "spk_website_v2.page_property_managers",
+      "title": "Access Control for Property Management | SmartphoneKey",
+      "description": "Organise access for residents, staff and contractors across the properties you manage. Explore site and credential workflows.",
+      "index": true,
+      "canonical": "https://smartphonekey.com/solutions/property-managers",
+      "origin": "new",
+      "local_status": 200
+    },
+    {
+      "path": "/solutions/integrators",
+      "template": "spk_website_v2.page_integrators",
+      "title": "Access Control for Installers and Integrators | SmartphoneKey",
+      "description": "Evaluate, install, hand over and support customer access systems with SmartphoneKey. Explore reader options and partner workflows.",
+      "index": true,
+      "canonical": "https://smartphonekey.com/solutions/integrators",
+      "origin": "new",
+      "local_status": 200
+    },
+    {
+      "path": "/products/readers",
+      "template": "spk_website_v2.page_readers",
+      "title": "LTE and Wi-Fi Access Control Readers | SmartphoneKey",
+      "description": "Compare SmartphoneKey LTE and Wi-Fi reader configurations, integrated control, supported card programming and installation requirements.",
+      "index": true,
+      "canonical": "https://smartphonekey.com/products/readers",
+      "origin": "new",
+      "local_status": 200
+    },
+    {
+      "path": "/compatibility",
+      "template": "spk_website_v2.page_compatibility",
+      "title": "Card and Matter Device Compatibility | SmartphoneKey",
+      "description": "Check documented MIFARE Classic and DESFire EV3 programming, Matter capabilities and the configuration details needed for your site.",
+      "index": true,
+      "canonical": "https://smartphonekey.com/compatibility",
+      "origin": "new",
+      "local_status": 200
+    },
+    {
+      "path": "/security",
+      "template": "spk_website_v2.page_security",
+      "title": "Access Control Security and Trust | SmartphoneKey",
+      "description": "Review scoped permissions, operation visibility, installation boundaries and relevant product documentation for your access system.",
+      "index": true,
+      "canonical": "https://smartphonekey.com/security",
+      "origin": "new",
+      "local_status": 200
+    },
+    {
+      "path": "/resources",
+      "template": "spk_website_v2.page_resources",
+      "title": "Access Control Guides and Resources | SmartphoneKey",
+      "description": "Find operating instructions and practical guides to credentials, LTE and Wi-Fi, Matter and Thread, and offline access management.",
+      "index": true,
+      "canonical": "https://smartphonekey.com/resources",
+      "origin": "new",
+      "local_status": 200
+    },
+    {
+      "path": "/find-your-setup",
+      "template": "spk_website_v2.page_setup",
+      "title": "Find an Access Control Setup for Your Site | SmartphoneKey",
+      "description": "Explore an access-control planning checklist for your sites, doors and connection options. View results without submitting contact details.",
+      "index": true,
+      "canonical": "https://smartphonekey.com/find-your-setup",
+      "origin": "new",
+      "local_status": 200
+    },
+    {
+      "path": "/contact",
+      "template": "spk_website_v2.page_contact",
+      "title": "Discuss Your Access Control Project | SmartphoneKey",
+      "description": "Contact SmartphoneKey about project planning, compatibility, integration, partnership or a product walkthrough.",
+      "index": true,
+      "canonical": "https://smartphonekey.com/contact",
+      "origin": "new",
+      "local_status": 200
+    },
+    {
+      "path": "/about",
+      "template": "spk_website_v2.page_about",
+      "title": "About SmartphoneKey | Access Control Management",
+      "description": "Meet the product and team behind SmartphoneKey and explore our approach to managing access.",
+      "index": true,
+      "canonical": "https://smartphonekey.com/about",
+      "origin": "new",
+      "local_status": 200
+    },
+    {
+      "path": "/thank-you",
+      "template": "spk_website_v2.page_thank_you",
+      "title": "Enquiry Received | SmartphoneKey",
+      "description": "Your enquiry has been received.",
+      "index": false,
+      "canonical": "https://smartphonekey.com/thank-you",
+      "origin": "new",
+      "local_status": 200
+    },
+    {
+      "path": "/certifications",
+      "template": "spk_website_v2.page_certifications",
+      "title": "Product Certifications and Documents | SmartphoneKey",
+      "description": "Open the regulatory records and platform documents published for SmartphoneKey readers and check the exact model each one covers.",
+      "index": true,
+      "canonical": "https://smartphonekey.com/certifications",
+      "origin": "retained Webflow URL, 2.0 shell",
+      "local_status": 200
+    },
+    {
+      "path": "/apps-and-chatbot",
+      "template": "spk_website_v2.page_apps",
+      "title": "SmartphoneKey Mobile Apps and ChatGPT App | SmartphoneKey",
+      "description": "Get the SmartphoneKey apps for Android and iPhone, and open the SmartphoneKey app in ChatGPT.",
+      "index": true,
+      "canonical": "https://smartphonekey.com/apps-and-chatbot",
+      "origin": "retained Webflow URL, 2.0 shell",
+      "local_status": 200
+    },
+    {
+      "path": "/privacy-policy",
+      "template": "spk_website_v2.page_privacy_policy",
+      "title": "Privacy Policy | SmartphoneKey",
+      "description": "How SmartphoneKey collects, uses and protects personal information on its website and services.",
+      "index": true,
+      "canonical": "https://smartphonekey.com/privacy-policy",
+      "origin": "retained Webflow URL, 2.0 shell",
+      "local_status": 200
+    },
+    {
+      "path": "/terms-of-service",
+      "template": "spk_website_v2.page_terms_of_service",
+      "title": "Terms of Service | SmartphoneKey",
+      "description": "The terms that apply to the SmartphoneKey website and services.",
+      "index": true,
+      "canonical": "https://smartphonekey.com/terms-of-service",
+      "origin": "retained Webflow URL, 2.0 shell",
+      "local_status": 200
+    },
+    {
+      "path": "/resources/lte-vs-wifi-access-control",
+      "template": "spk_website_v2.page_article (spk.website.resource, kind guide)",
+      "index": true,
+      "canonical": "https://smartphonekey.com/resources/lte-vs-wifi-access-control",
+      "origin": "new",
+      "local_status": 200
+    },
+    {
+      "path": "/resources/mifare-classic-desfire-ev3",
+      "template": "spk_website_v2.page_article (spk.website.resource, kind guide)",
+      "index": true,
+      "canonical": "https://smartphonekey.com/resources/mifare-classic-desfire-ev3",
+      "origin": "new",
+      "local_status": 200
+    },
+    {
+      "path": "/resources/matter-thread-access-control",
+      "template": "spk_website_v2.page_article (spk.website.resource, kind guide)",
+      "index": true,
+      "canonical": "https://smartphonekey.com/resources/matter-thread-access-control",
+      "origin": "new",
+      "local_status": 200
+    },
+    {
+      "path": "/resources/access-control-when-offline",
+      "template": "spk_website_v2.page_article (spk.website.resource, kind guide)",
+      "index": true,
+      "canonical": "https://smartphonekey.com/resources/access-control-when-offline",
+      "origin": "new",
+      "local_status": 200
+    },
+    {
+      "path": "/post/how-smartphonekey-enhances-security-for-your-property",
+      "template": "spk_website_v2.page_article (spk.website.resource, kind post)",
+      "index": true,
+      "canonical": "https://smartphonekey.com/post/how-smartphonekey-enhances-security-for-your-property",
+      "origin": "retained Webflow article, archive note",
+      "local_status": 200
+    },
+    {
+      "path": "/post/matter-standard-the-key-to-a-seamless-smart-home",
+      "template": "spk_website_v2.page_article (spk.website.resource, kind post)",
+      "index": true,
+      "canonical": "https://smartphonekey.com/post/matter-standard-the-key-to-a-seamless-smart-home",
+      "origin": "retained Webflow article, archive note",
+      "local_status": 200
+    },
+    {
+      "path": "/post/smart-home-trends-2025-the-future-of-secure-and-connected-living",
+      "template": "spk_website_v2.page_article (spk.website.resource, kind post)",
+      "index": true,
+      "canonical": "https://smartphonekey.com/post/smart-home-trends-2025-the-future-of-secure-and-connected-living",
+      "origin": "retained Webflow article, archive note",
+      "local_status": 200
+    },
+    {
+      "path": "/post/smartphonekey-official-launch",
+      "template": "spk_website_v2.page_article (spk.website.resource, kind post)",
+      "index": true,
+      "canonical": "https://smartphonekey.com/post/smartphonekey-official-launch",
+      "origin": "retained Webflow article, archive note",
+      "local_status": 200
+    },
+    {
+      "path": "/post/the-future-of-keyless-entry-why-its-time-to-upgrade-to-smartphonekey",
+      "template": "spk_website_v2.page_article (spk.website.resource, kind post)",
+      "index": true,
+      "canonical": "https://smartphonekey.com/post/the-future-of-keyless-entry-why-its-time-to-upgrade-to-smartphonekey",
+      "origin": "retained Webflow article, archive note",
+      "local_status": 200
+    },
+    {
+      "path": "/post/welcome-to-smartphonekey-your-affordable-access-to-a-keyless-future",
+      "template": "spk_website_v2.page_article (spk.website.resource, kind post)",
+      "index": true,
+      "canonical": "https://smartphonekey.com/post/welcome-to-smartphonekey-your-affordable-access-to-a-keyless-future",
+      "origin": "retained Webflow article, archive note",
+      "local_status": 200
+    },
+    {
+      "path": "/team/alex-sydorenko",
+      "template": "spk_website_v2.page_team_member (spk.website.team.member)",
+      "index": true,
+      "canonical": "https://smartphonekey.com/team/alex-sydorenko",
+      "origin": "retained Webflow team page",
+      "local_status": 200
+    },
+    {
+      "path": "/team/denys-merkulov",
+      "template": "spk_website_v2.page_team_member (spk.website.team.member)",
+      "index": true,
+      "canonical": "https://smartphonekey.com/team/denys-merkulov",
+      "origin": "retained Webflow team page",
+      "local_status": 200
+    },
+    {
+      "path": "/team/ioannis-mavridis",
+      "template": "spk_website_v2.page_team_member (spk.website.team.member)",
+      "index": true,
+      "canonical": "https://smartphonekey.com/team/ioannis-mavridis",
+      "origin": "retained Webflow team page",
+      "local_status": 200
+    },
+    {
+      "path": "/team/kate-vasylenko",
+      "template": "spk_website_v2.page_team_member (spk.website.team.member)",
+      "index": true,
+      "canonical": "https://smartphonekey.com/team/kate-vasylenko",
+      "origin": "retained Webflow team page",
+      "local_status": 200
+    },
+    {
+      "path": "/team/kostiantyn-dolzhenko",
+      "template": "spk_website_v2.page_team_member (spk.website.team.member)",
+      "index": true,
+      "canonical": "https://smartphonekey.com/team/kostiantyn-dolzhenko",
+      "origin": "retained Webflow team page",
+      "local_status": 200
+    },
+    {
+      "path": "/team/lana-ostapenko",
+      "template": "spk_website_v2.page_team_member (spk.website.team.member)",
+      "index": true,
+      "canonical": "https://smartphonekey.com/team/lana-ostapenko",
+      "origin": "retained Webflow team page",
+      "local_status": 200
+    },
+    {
+      "path": "/team/oleksii-andrieiev",
+      "template": "spk_website_v2.page_team_member (spk.website.team.member)",
+      "index": true,
+      "canonical": "https://smartphonekey.com/team/oleksii-andrieiev",
+      "origin": "retained Webflow team page",
+      "local_status": 200
+    },
+    {
+      "path": "/team/vadym-sydorenko",
+      "template": "spk_website_v2.page_team_member (spk.website.team.member)",
+      "index": true,
+      "canonical": "https://smartphonekey.com/team/vadym-sydorenko",
+      "origin": "retained Webflow team page",
+      "local_status": 200
+    },
+    {
+      "path": "/team/vitalii-dolzhenko",
+      "template": "spk_website_v2.page_team_member (spk.website.team.member)",
+      "index": true,
+      "canonical": "https://smartphonekey.com/team/vitalii-dolzhenko",
+      "origin": "retained Webflow team page",
+      "local_status": 200
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Contact: an ordinary form POST to /website/spk/enquiry with Odoo's CSRF
+         token; enquiry.js submits the same form and reports the server's answer.
+         The success message appears only once the lead exists. -->
+    <template id="page_contact" name="SmartphoneKey 2.0: contact">
+        <t t-call="spk_website_v2.layout">
+            <t t-set="page_scripts">
+                <script t-if="turnstile_key and not preview_mode" src="https://challenges.cloudflare.com/turnstile/v0/api.js" async="async" defer="defer"/>
+                <script t-attf-src="/spk_website_v2/static/src/js/enquiry.js?v=#{v2_asset_version}" defer="defer"/>
+            </t>
+            <t t-set="send_error">We couldn’t send your enquiry. Your details are still here. Please try again or email info@smartphonekey.com.</t>
+            <div class="container">
+                <t t-call="spk_website_v2.page_intro">
+                    <t t-set="heading">Tell us what you want to manage.</t>
+                    <t t-set="intro">Planning a building, checking compatibility, exploring a partnership or looking for a walkthrough? Share the context that matters. You do not need to commit to a demo to contact us.</t>
+                </t>
+            </div>
+
+            <div class="container contact-layout">
+                <form class="enquiry" action="/website/spk/enquiry" method="post" novalidate="novalidate"
+                      data-spk-enquiry="" t-att-data-preview="'1' if preview_mode else None" t-att-data-send-error="send_error" aria-labelledby="enquiry-title">
+                    <h2 id="enquiry-title" class="visually-hidden">Project enquiry</h2>
+                    <div class="error-summary" tabindex="-1" role="alert" data-spk-error-summary="" t-att-hidden="None if errors else 'hidden'">
+                        <t t-if="errors">
+                            <p class="error-title">
+                                <t t-if="errors.get('form') == 'send'" t-out="send_error"/>
+                                <t t-elif="errors.get('form')" t-out="errors['form']"/>
+                                <t t-else="">Please check the highlighted fields.</t>
+                            </p>
+                            <ul>
+                                <t t-foreach="errors.items()" t-as="error">
+                                    <li t-if="error[0] != 'form'"><a t-attf-href="#field-#{error[0]}" t-out="error[1]"/></li>
+                                </t>
+                            </ul>
+                        </t>
+                    </div>
+
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                    <input type="hidden" name="submission_id" t-att-value="form['submission_id']"/>
+                    <input type="hidden" name="source_path" t-att-value="form['source_path']"/>
+                    <t t-foreach="('utm_source', 'utm_medium', 'utm_campaign')" t-as="utm">
+                        <input t-if="form.get(utm)" type="hidden" t-att-name="utm" t-att-value="form[utm]"/>
+                    </t>
+
+                    <div class="field" t-att-data-invalid="'1' if errors.get('name') else None">
+                        <label for="field-name">Name <span class="required">(required)</span></label>
+                        <p t-if="errors.get('name')" class="field-error" id="field-name-error" t-out="errors['name']"/>
+                        <input id="field-name" name="name" type="text" autocomplete="name" required="required" minlength="2" maxlength="120"
+                               t-att-value="form.get('name')" t-att-aria-invalid="'true' if errors.get('name') else None"
+                               t-att-aria-describedby="'field-name-error' if errors.get('name') else None"/>
+                    </div>
+                    <div class="field" t-att-data-invalid="'1' if errors.get('email') else None">
+                        <label for="field-email">Email <span class="required">(required)</span></label>
+                        <p t-if="errors.get('email')" class="field-error" id="field-email-error" t-out="errors['email']"/>
+                        <input id="field-email" name="email" type="email" autocomplete="email" required="required" maxlength="254"
+                               t-att-value="form.get('email')" t-att-aria-invalid="'true' if errors.get('email') else None"
+                               t-att-aria-describedby="'field-email-error' if errors.get('email') else None"/>
+                    </div>
+                    <div class="field" t-att-data-invalid="'1' if errors.get('enquiry_type') else None">
+                        <label for="field-enquiry_type">What would you like help with? <span class="required">(required)</span></label>
+                        <p t-if="errors.get('enquiry_type')" class="field-error" id="field-enquiry_type-error" t-out="errors['enquiry_type']"/>
+                        <select id="field-enquiry_type" name="enquiry_type" required="required"
+                                t-att-aria-invalid="'true' if errors.get('enquiry_type') else None"
+                                t-att-aria-describedby="'field-enquiry_type-error' if errors.get('enquiry_type') else None">
+                            <option value="">Choose one</option>
+                            <option t-foreach="content.ENQUIRY_TYPES" t-as="choice" t-att-value="choice[0]"
+                                    t-att-selected="form.get('enquiry_type') == choice[0] or None" t-out="choice[1]"/>
+                        </select>
+                    </div>
+
+                    <fieldset class="optional-fields">
+                        <legend>About your project <span class="muted">(optional)</span></legend>
+                        <div class="field-grid">
+                            <div class="field" t-att-data-invalid="'1' if errors.get('company') else None">
+                                <label for="field-company">Company</label>
+                                <p t-if="errors.get('company')" class="field-error" id="field-company-error" t-out="errors['company']"/>
+                                <input id="field-company" name="company" type="text" autocomplete="organization" maxlength="160" t-att-value="form.get('company')"/>
+                            </div>
+                            <div class="field">
+                                <label for="field-role">Role</label>
+                                <select id="field-role" name="role">
+                                    <option value="">Choose one</option>
+                                    <option t-foreach="content.ROLES" t-as="choice" t-att-value="choice[0]" t-att-selected="form.get('role') == choice[0] or None" t-out="choice[1]"/>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label for="field-sites">Sites</label>
+                                <select id="field-sites" name="sites">
+                                    <option value="">Choose one</option>
+                                    <option t-foreach="content.SITES" t-as="choice" t-att-value="choice[0]" t-att-selected="form.get('sites') == choice[0] or None" t-out="choice[1]"/>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label for="field-doors">Doors</label>
+                                <select id="field-doors" name="doors">
+                                    <option value="">Choose one</option>
+                                    <option t-foreach="content.DOORS" t-as="choice" t-att-value="choice[0]" t-att-selected="form.get('doors') == choice[0] or None" t-out="choice[1]"/>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label for="field-connection">Connection</label>
+                                <select id="field-connection" name="connection">
+                                    <option value="">Choose one</option>
+                                    <option t-foreach="content.CONNECTIONS" t-as="choice" t-att-value="choice[0]" t-att-selected="form.get('connection') == choice[0] or None" t-out="choice[1]"/>
+                                </select>
+                            </div>
+                            <div class="field" t-att-data-invalid="'1' if errors.get('region') else None">
+                                <label for="field-region">Country or region</label>
+                                <p t-if="errors.get('region')" class="field-error" id="field-region-error" t-out="errors['region']"/>
+                                <input id="field-region" name="region" type="text" autocomplete="country-name" maxlength="100" t-att-value="form.get('region')"/>
+                            </div>
+                        </div>
+                        <fieldset class="field">
+                            <legend>What would you like to manage?</legend>
+                            <div class="choices" id="field-interests">
+                                <label t-foreach="content.INTERESTS" t-as="choice" class="choice">
+                                    <input type="checkbox" name="interests" t-att-value="choice[0]" t-att-checked="choice[0] in form.get('interests', []) or None"/>
+                                    <span t-out="choice[1]"/>
+                                </label>
+                            </div>
+                        </fieldset>
+                        <div class="field" t-att-data-invalid="'1' if errors.get('details') else None">
+                            <label for="field-details">Project details</label>
+                            <p class="field-help" id="field-details-help">Please do not include passwords, access codes or personal information about residents.</p>
+                            <p t-if="errors.get('details')" class="field-error" id="field-details-error" t-out="errors['details']"/>
+                            <textarea id="field-details" name="details" rows="6" maxlength="4000" aria-describedby="field-details-help" t-out="form.get('details') or ''"/>
+                        </div>
+                        <div class="field" t-att-data-invalid="'1' if errors.get('phone') else None">
+                            <label for="field-phone">Phone</label>
+                            <p t-if="errors.get('phone')" class="field-error" id="field-phone-error" t-out="errors['phone']"/>
+                            <input id="field-phone" name="phone" type="tel" autocomplete="tel" maxlength="40" t-att-value="form.get('phone')"/>
+                        </div>
+                    </fieldset>
+
+                    <div class="hp-field" aria-hidden="true">
+                        <label for="field-check">Leave this field empty</label>
+                        <input id="field-check" type="text" name="spk_website_check" tabindex="-1" autocomplete="off"/>
+                    </div>
+                    <div t-if="turnstile_key and not preview_mode" class="cf-turnstile" t-att-data-sitekey="turnstile_key"
+                         data-response-field-name="turnstile_captcha" data-action="website_form"/>
+
+                    <p class="privacy-note">We’ll use these details to respond to your enquiry. Read our <a href="/privacy-policy">Privacy Policy</a>.</p>
+                    <p t-if="preview_mode" class="note" data-spk-preview-note="">This is a test preview: the form shows its checks, but sending is turned off and nothing is stored.</p>
+                    <div class="form-actions">
+                        <button type="submit" class="button" data-spk-submit="" data-pending-label="Sending…" t-att-disabled="'disabled' if preview_mode else None">Send enquiry</button>
+                    </div>
+                    <p class="form-status" role="status" aria-live="polite" data-spk-status=""/>
+                </form>
+
+                <section class="enquiry-success" tabindex="-1" hidden="hidden" data-spk-success="" aria-labelledby="success-title">
+                    <h2 id="success-title">Your enquiry has been received.</h2>
+                    <p>Our team will review the details and contact you using the information you provided.</p>
+                    <div class="next-actions">
+                        <a href="/platform">Continue exploring</a>
+                        <a t-if="booking_url" t-att-href="booking_url" rel="noopener" data-spk-booking="">Choose a time to talk</a>
+                    </div>
+                </section>
+
+                <aside class="contact-aside" aria-labelledby="direct-title">
+                    <h2 id="direct-title">Prefer email?</h2>
+                    <p>Write to <a t-attf-href="mailto:#{contact_email}" t-out="contact_email"/>.</p>
+                    <h2>What happens next</h2>
+                    <p>Our team reviews each enquiry and replies using the contact details you give. A walkthrough is one option, never a requirement.</p>
+                    <h2>Looking for answers first?</h2>
+                    <ul class="plain-list">
+                        <li><a href="/find-your-setup">Find your setup</a></li>
+                        <li><a href="/compatibility">Check compatibility</a></li>
+                        <li><a href="/resources#guides">Read the guides</a></li>
+                    </ul>
+                </aside>
+            </div>
+        </t>
+    </template>
+
+    <template id="page_thank_you" name="SmartphoneKey 2.0: enquiry received">
+        <t t-call="spk_website_v2.layout">
+            <div class="container">
+                <div class="page-intro">
+                    <t t-if="received">
+                        <h1>Your enquiry has been received.</h1>
+                        <p class="lead">Our team will review the details and contact you using the information you provided.</p>
+                    </t>
+                    <t t-else="">
+                        <h1>No enquiry to confirm.</h1>
+                        <p class="lead">This page confirms an enquiry once it has been sent. To reach us, use the contact form or write to <a t-attf-href="mailto:#{contact_email}" t-out="contact_email"/>.</p>
+                    </t>
+                    <div class="next-actions">
+                        <a t-if="received" href="/platform">Continue exploring</a>
+                        <a t-else="" href="/contact">Contact us</a>
+                        <a t-if="received and booking_url" t-att-href="booking_url" rel="noopener">Choose a time to talk</a>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>

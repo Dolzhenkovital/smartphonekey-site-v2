@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /my
+Disallow: /odoo
+Disallow: /web/login
+Disallow: /web/signup
+Disallow: /web/reset_password
+Disallow: /website/spk/
+Disallow: /spk-website/
+
+Sitemap: http://127.0.0.1:8069/sitemap.xml

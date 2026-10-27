@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Shared pieces. Each is called with its data in t-set variables. -->
+
+    <!-- The LTE / Wi-Fi requirements table: the one source for /products/readers
+         and the LTE vs Wi-Fi guide (rendering.BODY_COMPONENTS). -->
+    <template id="reader_comparison" name="SmartphoneKey 2.0: reader comparison">
+        <div class="spk-table" role="region" tabindex="0" aria-label="LTE and Wi-Fi reader requirements">
+            <table>
+                <caption>LTE and Wi-Fi reader requirements</caption>
+                <thead>
+                    <tr><th scope="col">Requirement</th><th scope="col">LTE reader</th><th scope="col">Wi-Fi reader</th></tr>
+                </thead>
+                <tbody>
+                    <tr><th scope="row">Internet connection</th><td>Cellular coverage and suitable SIM and service</td><td>Suitable Wi-Fi coverage and network configuration</td></tr>
+                    <tr><th scope="row">Site assessment</th><td>Carrier, region, signal and installation position</td><td>Coverage at the reader, access details and network requirements</td></tr>
+                    <tr><th scope="row">Best starting point</th><td>Sites where cellular connectivity fits the deployment</td><td>Sites with suitable managed Wi-Fi available</td></tr>
+                    <tr><th scope="row">Physical installation</th><td>Power and compatible door hardware required</td><td>Power and compatible door hardware required</td></tr>
+                    <tr><th scope="row">Matter and Thread roles</th><td>Confirm model and firmware</td><td>Confirm model and firmware</td></tr>
+                    <tr><th scope="row">Card programming</th><td>Confirm supported model and firmware; MIFARE Classic and DESFire EV3 workflows</td><td>Confirm supported model and firmware; MIFARE Classic and DESFire EV3 workflows</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </template>
+
+    <!-- Questions and answers, always in the page (never loaded on demand).
+         faqs: [(question, answer)] -->
+    <template id="faq" name="SmartphoneKey 2.0: questions">
+        <section class="section container faq" aria-labelledby="faq-title">
+            <h2 id="faq-title">Questions</h2>
+            <div class="faq-list">
+                <div t-foreach="faqs" t-as="faq" class="faq-item">
+                    <h3 t-out="faq[0]"/>
+                    <p t-out="faq[1]"/>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- The closing section of a page: one filled action, the others as links.
+         next_title, next_text, next_primary (label, href), next_links [(label, href)] -->
+    <template id="next_step" name="SmartphoneKey 2.0: next step">
+        <section class="section container next-steps" aria-labelledby="next-title">
+            <h2 id="next-title" t-out="next_title"/>
+            <p t-if="next_text" t-out="next_text"/>
+            <div class="next-actions">
+                <a t-if="next_primary" class="button" t-att-href="next_primary[1]" t-out="next_primary[0]"/>
+                <a t-foreach="next_links" t-as="link" t-att-href="link[1]" t-out="link[0]"/>
+            </div>
+        </section>
+    </template>
+
+    <!-- Related pages as a ruled list. related_title, related [(label, href)] -->
+    <template id="related_links" name="SmartphoneKey 2.0: related pages">
+        <nav class="section container related" t-att-aria-label="related_title">
+            <h2 class="related-title" t-out="related_title"/>
+            <ul class="next-links">
+                <li t-foreach="related" t-as="link"><a t-att-href="link[1]" t-out="link[0]"/></li>
+            </ul>
+        </nav>
+    </template>
+</odoo>

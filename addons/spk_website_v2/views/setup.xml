@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- The ungated setup guide. A GET form: without JavaScript the server renders
+         the result from the enum query; with it, setup_guide.js evaluates the same
+         rules in place. No contact fields until the visitor chooses to discuss. -->
+    <template id="page_setup" name="SmartphoneKey 2.0: find your setup">
+        <t t-call="spk_website_v2.layout">
+            <t t-set="page_scripts">
+                <script type="application/json" id="spk-setup-rules" t-out="setup_rules"/>
+                <script t-attf-src="/spk_website_v2/static/src/js/setup_guide.js?v=#{v2_asset_version}" defer="defer"/>
+            </t>
+            <div class="container">
+                <t t-call="spk_website_v2.page_intro">
+                    <t t-set="heading">Find a setup for your building.</t>
+                    <t t-set="intro">Choose the options that describe your project. You can explore the result without providing contact details. This is a planning guide, not a final hardware design or quotation.</t>
+                </t>
+            </div>
+
+            <div class="container setup-guide">
+                <form class="setup setup-full" action="/find-your-setup" method="get" data-spk-setup-guide="" aria-labelledby="guide-form-title">
+                    <h2 id="guide-form-title" class="visually-hidden">Your project</h2>
+                    <fieldset>
+                        <legend>Your role</legend>
+                        <div class="choices">
+                            <label t-foreach="content.SETUP_ROLES" t-as="choice" class="choice">
+                                <input type="radio" name="role" t-att-value="choice[0]" t-att-checked="selection.get('role') == choice[0] or None"/>
+                                <span t-out="choice[1]"/>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Number of sites</legend>
+                        <div class="choices">
+                            <label t-foreach="content.SITES" t-as="choice" class="choice">
+                                <input type="radio" name="sites" t-att-value="choice[0]" t-att-checked="selection.get('sites') == choice[0] or None"/>
+                                <span t-out="choice[1]"/>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Number of doors</legend>
+                        <div class="choices">
+                            <label t-foreach="content.DOORS" t-as="choice" class="choice">
+                                <input type="radio" name="doors" t-att-value="choice[0]" t-att-checked="selection.get('doors') == choice[0] or None"/>
+                                <span t-out="choice[1]"/>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <fieldset aria-describedby="connection-help">
+                        <legend>Available connection</legend>
+                        <p id="connection-help" class="field-help">Needed for a recommendation. Every other choice is optional.</p>
+                        <div class="choices">
+                            <label t-foreach="content.CONNECTIONS" t-as="choice" class="choice">
+                                <input type="radio" name="connection" t-att-value="choice[0]" t-att-checked="selection.get('connection') == choice[0] or None"/>
+                                <span t-out="choice[1]"/>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>What would you like to manage?</legend>
+                        <div class="choices">
+                            <label t-foreach="content.SETUP_INTERESTS" t-as="choice" class="choice">
+                                <input type="checkbox" name="interests" t-att-value="choice[0]" t-att-checked="choice[0] in selection.get('interests', []) or None"/>
+                                <span t-out="choice[1]"/>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <div class="form-actions">
+                        <button type="submit" class="button">Show my starting point</button>
+                        <a href="/find-your-setup" class="text-link" data-spk-setup-reset="">Start again</a>
+                    </div>
+                </form>
+
+                <section class="setup-result" id="setup-result" aria-labelledby="result-title" tabindex="-1" data-spk-setup-result="">
+                    <h2 id="result-title">Your planning starting point</h2>
+                    <t t-if="result">
+                        <p class="lead" data-spk-result-advice="" t-out="result['advice']"/>
+                        <ul class="checklist" data-spk-result-items="">
+                            <li t-foreach="result['items']" t-as="item" t-out="item"/>
+                        </ul>
+                        <p class="result-subtitle">Read next</p>
+                        <ul class="plain-list" data-spk-result-links="">
+                            <li t-foreach="result['links']" t-as="link"><a t-att-href="link[1]" t-out="link[0]"/></li>
+                        </ul>
+                    </t>
+                    <t t-else="">
+                        <p class="lead" data-spk-result-advice="">Choose an available connection to see your starting point.</p>
+                        <ul class="checklist" data-spk-result-items="" hidden="hidden"/>
+                        <p class="result-subtitle" hidden="hidden" data-spk-result-links-title="">Read next</p>
+                        <ul class="plain-list" data-spk-result-links="" hidden="hidden"/>
+                    </t>
+                    <div class="result-actions">
+                        <a href="/platform">Keep exploring</a>
+                        <a href="/compatibility">Check compatibility</a>
+                        <a t-att-href="result['contact_href'] if result else '/contact?interest=project'" data-spk-result-contact="">Discuss this setup</a>
+                    </div>
+                </section>
+            </div>
+
+            <section class="section container" aria-labelledby="basics-title">
+                <div class="section-head">
+                    <h2 id="basics-title">Connection basics.</h2>
+                    <p>Whichever reader you choose, it needs power, compatible lock hardware and a connection that works at the door.</p>
+                </div>
+                <dl class="workflow workflow-3">
+                    <div>
+                        <dt>Wi-Fi</dt>
+                        <dd>Start by checking Wi-Fi coverage and network requirements at each planned reader location.</dd>
+                    </div>
+                    <div>
+                        <dt>Cellular</dt>
+                        <dd>Discuss LTE coverage, SIM provisioning and the reader model for your installation.</dd>
+                    </div>
+                    <div>
+                        <dt>Both or not sure</dt>
+                        <dd>We’ll help compare connection options and site requirements.</dd>
+                    </div>
+                </dl>
+                <p class="section-note"><a href="/resources/lte-vs-wifi-access-control">LTE or Wi-Fi: what fits your site?</a></p>
+            </section>
+        </t>
+    </template>
+</odoo>

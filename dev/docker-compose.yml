@@ -1,0 +1,27 @@
+# Local test environment for spk_website_v2: Odoo 18 + PostgreSQL with
+# synthetic data only. The AP-428/AP-429 baseline (spk_website) is mounted
+# read-only from an spk-odoo checkout:
+#   SPK_BASELINE_ADDONS=/path/to/spk-odoo/addons docker compose up -d
+name: spk-site-v2
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: odoo
+      POSTGRES_PASSWORD: odoo
+      POSTGRES_DB: postgres
+    volumes:
+      - db:/var/lib/postgresql/data
+  odoo:
+    image: odoo:18.0
+    depends_on: [db]
+    ports:
+      - "127.0.0.1:8069:8069"
+    volumes:
+      - ../addons:/mnt/v2:ro
+      - ${SPK_BASELINE_ADDONS:?set SPK_BASELINE_ADDONS to the spk-odoo addons folder}:/mnt/baseline:ro
+      - ./odoo.conf:/etc/odoo/odoo.conf:ro
+      - filestore:/var/lib/odoo
+volumes:
+  db: {}
+  filestore: {}

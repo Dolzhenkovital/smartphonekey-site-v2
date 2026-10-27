@@ -1,0 +1,312 @@
+{
+  "verified": "2026-10-27, local Odoo 18 test instance (not production)",
+  "scope": "The 34-URL Webflow mirror snapshot. Live-site history (Search Console, backlinks, Webflow redirect settings) was not available and must be added before cutover.",
+  "routes": [
+    {
+      "source": "/",
+      "decision": "retain",
+      "target": "/",
+      "handled_by": "spk_website_v2 (2.0 shell)",
+      "local_status": 200,
+      "local_location": null,
+      "note": null
+    },
+    {
+      "source": "/404",
+      "decision": "not_found",
+      "target": null,
+      "handled_by": "spk_website_v2 (404 page)",
+      "local_status": 404,
+      "local_location": null,
+      "note": null
+    },
+    {
+      "source": "/adminpanel",
+      "decision": "baseline",
+      "target": null,
+      "handled_by": "spk_website (AP-428), unchanged",
+      "local_status": 303,
+      "local_location": "/my",
+      "note": "Existing portal entry kept as configured: the AP-428 handler redirects to /my (the handoff matrix expected /my/spk-portal; verify before cutover)."
+    },
+    {
+      "source": "/apps-and-chatbot",
+      "decision": "retain",
+      "target": "/apps-and-chatbot",
+      "handled_by": "spk_website_v2 (2.0 shell)",
+      "local_status": 200,
+      "local_location": null,
+      "note": null
+    },
+    {
+      "source": "/blog",
+      "decision": "redirect",
+      "target": "/resources",
+      "handled_by": "spk_website_v2 (301)",
+      "local_status": 301,
+      "local_location": "/resources",
+      "note": null
+    },
+    {
+      "source": "/certifications",
+      "decision": "retain",
+      "target": "/certifications",
+      "handled_by": "spk_website_v2 (2.0 shell)",
+      "local_status": 200,
+      "local_location": null,
+      "note": null
+    },
+    {
+      "source": "/contact",
+      "decision": "retain",
+      "target": "/contact",
+      "handled_by": "spk_website_v2 (2.0 shell)",
+      "local_status": 200,
+      "local_location": null,
+      "note": null
+    },
+    {
+      "source": "/facility-services",
+      "decision": "redirect",
+      "target": "/solutions/property-managers",
+      "handled_by": "spk_website_v2 (301)",
+      "local_status": 301,
+      "local_location": "/solutions/property-managers",
+      "note": null
+    },
+    {
+      "source": "/features",
+      "decision": "redirect",
+      "target": "/platform",
+      "handled_by": "spk_website_v2 (301)",
+      "local_status": 301,
+      "local_location": "/platform",
+      "note": null
+    },
+    {
+      "source": "/guide-for-usage-and-installation",
+      "decision": "instruction_site",
+      "target": null,
+      "handled_by": "smartphonekey instruction site, unchanged",
+      "local_status": 404,
+      "local_location": null,
+      "note": "Served by the smartphonekey module; not installable in the local test environment (Enterprise dependency), so not exercised here."
+    },
+    {
+      "source": "/how-it-works",
+      "decision": "redirect",
+      "target": "/platform",
+      "handled_by": "spk_website_v2 (301)",
+      "local_status": 301,
+      "local_location": "/platform",
+      "note": null
+    },
+    {
+      "source": "/intercom-solution",
+      "decision": "redirect",
+      "target": "/platform/visitor-access",
+      "handled_by": "spk_website_v2 (301)",
+      "local_status": 301,
+      "local_location": "/platform/visitor-access",
+      "note": null
+    },
+    {
+      "source": "/privacy-policy",
+      "decision": "retain",
+      "target": "/privacy-policy",
+      "handled_by": "spk_website_v2 (2.0 shell)",
+      "local_status": 200,
+      "local_location": null,
+      "note": null
+    },
+    {
+      "source": "/products/smartphonekey-reader-1",
+      "decision": "redirect",
+      "target": "/products/readers",
+      "handled_by": "spk_website_v2 (301)",
+      "local_status": 301,
+      "local_location": "/products/readers",
+      "note": "Was a 404 on Webflow but linked from three articles; the articles now link to /products/readers directly."
+    },
+    {
+      "source": "/referral-program",
+      "decision": "baseline",
+      "target": null,
+      "handled_by": "spk_website (AP-428), unchanged",
+      "local_status": 200,
+      "local_location": null,
+      "note": "Kept noindex on the AP-428 template; not linked from 2.0 and not republished (it carries prices and claims outside the register). Owner decision: verify the programme or retire the URL with 410."
+    },
+    {
+      "source": "/security-professionals",
+      "decision": "redirect",
+      "target": "/solutions/integrators",
+      "handled_by": "spk_website_v2 (301)",
+      "local_status": 301,
+      "local_location": "/solutions/integrators",
+      "note": null
+    },
+    {
+      "source": "/smart-home-integrators",
+      "decision": "redirect",
+      "target": "/solutions/integrators",
+      "handled_by": "spk_website_v2 (301)",
+      "local_status": 301,
+      "local_location": "/solutions/integrators",
+      "note": null
+    },
+    {
+      "source": "/team",
+      "decision": "redirect",
+      "target": "/about",
+      "handled_by": "spk_website_v2 (301)",
+      "local_status": 301,
+      "local_location": "/about",
+      "note": null
+    },
+    {
+      "source": "/terms-of-service",
+      "decision": "retain",
+      "target": "/terms-of-service",
+      "handled_by": "spk_website_v2 (2.0 shell)",
+      "local_status": 200,
+      "local_location": null,
+      "note": null
+    },
+    {
+      "source": "/post/how-smartphonekey-enhances-security-for-your-property",
+      "decision": "retain",
+      "target": "/post/how-smartphonekey-enhances-security-for-your-property",
+      "handled_by": "spk_website_v2 (2.0 shell)",
+      "local_status": 200,
+      "local_location": null,
+      "note": "Original date and author kept; archive note added."
+    },
+    {
+      "source": "/post/matter-standard-the-key-to-a-seamless-smart-home",
+      "decision": "retain",
+      "target": "/post/matter-standard-the-key-to-a-seamless-smart-home",
+      "handled_by": "spk_website_v2 (2.0 shell)",
+      "local_status": 200,
+      "local_location": null,
+      "note": "Original date and author kept; archive note added."
+    },
+    {
+      "source": "/post/smart-home-trends-2025-the-future-of-secure-and-connected-living",
+      "decision": "retain",
+      "target": "/post/smart-home-trends-2025-the-future-of-secure-and-connected-living",
+      "handled_by": "spk_website_v2 (2.0 shell)",
+      "local_status": 200,
+      "local_location": null,
+      "note": "Original date and author kept; archive note added."
+    },
+    {
+      "source": "/post/smartphonekey-official-launch",
+      "decision": "retain",
+      "target": "/post/smartphonekey-official-launch",
+      "handled_by": "spk_website_v2 (2.0 shell)",
+      "local_status": 200,
+      "local_location": null,
+      "note": "Original date and author kept; archive note added."
+    },
+    {
+      "source": "/post/the-future-of-keyless-entry-why-its-time-to-upgrade-to-smartphonekey",
+      "decision": "retain",
+      "target": "/post/the-future-of-keyless-entry-why-its-time-to-upgrade-to-smartphonekey",
+      "handled_by": "spk_website_v2 (2.0 shell)",
+      "local_status": 200,
+      "local_location": null,
+      "note": "Original date and author kept; archive note added."
+    },
+    {
+      "source": "/post/welcome-to-smartphonekey-your-affordable-access-to-a-keyless-future",
+      "decision": "retain",
+      "target": "/post/welcome-to-smartphonekey-your-affordable-access-to-a-keyless-future",
+      "handled_by": "spk_website_v2 (2.0 shell)",
+      "local_status": 200,
+      "local_location": null,
+      "note": "Original date and author kept; archive note added."
+    },
+    {
+      "source": "/team/alex-sydorenko",
+      "decision": "retain",
+      "target": "/team/alex-sydorenko",
+      "handled_by": "spk_website_v2 (2.0 shell)",
+      "local_status": 200,
+      "local_location": null,
+      "note": "Role as published on Webflow; current-role check pending."
+    },
+    {
+      "source": "/team/denys-merkulov",
+      "decision": "retain",
+      "target": "/team/denys-merkulov",
+      "handled_by": "spk_website_v2 (2.0 shell)",
+      "local_status": 200,
+      "local_location": null,
+      "note": "Role as published on Webflow; current-role check pending."
+    },
+    {
+      "source": "/team/ioannis-mavridis",
+      "decision": "retain",
+      "target": "/team/ioannis-mavridis",
+      "handled_by": "spk_website_v2 (2.0 shell)",
+      "local_status": 200,
+      "local_location": null,
+      "note": "Role as published on Webflow; current-role check pending."
+    },
+    {
+      "source": "/team/kate-vasylenko",
+      "decision": "retain",
+      "target": "/team/kate-vasylenko",
+      "handled_by": "spk_website_v2 (2.0 shell)",
+      "local_status": 200,
+      "local_location": null,
+      "note": "Role as published on Webflow; current-role check pending."
+    },
+    {
+      "source": "/team/kostiantyn-dolzhenko",
+      "decision": "retain",
+      "target": "/team/kostiantyn-dolzhenko",
+      "handled_by": "spk_website_v2 (2.0 shell)",
+      "local_status": 200,
+      "local_location": null,
+      "note": "Role as published on Webflow; current-role check pending."
+    },
+    {
+      "source": "/team/lana-ostapenko",
+      "decision": "retain",
+      "target": "/team/lana-ostapenko",
+      "handled_by": "spk_website_v2 (2.0 shell)",
+      "local_status": 200,
+      "local_location": null,
+      "note": "Role as published on Webflow; current-role check pending."
+    },
+    {
+      "source": "/team/oleksii-andrieiev",
+      "decision": "retain",
+      "target": "/team/oleksii-andrieiev",
+      "handled_by": "spk_website_v2 (2.0 shell)",
+      "local_status": 200,
+      "local_location": null,
+      "note": "Role as published on Webflow; current-role check pending."
+    },
+    {
+      "source": "/team/vadym-sydorenko",
+      "decision": "retain",
+      "target": "/team/vadym-sydorenko",
+      "handled_by": "spk_website_v2 (2.0 shell)",
+      "local_status": 200,
+      "local_location": null,
+      "note": "Role as published on Webflow; current-role check pending."
+    },
+    {
+      "source": "/team/vitalii-dolzhenko",
+      "decision": "retain",
+      "target": "/team/vitalii-dolzhenko",
+      "handled_by": "spk_website_v2 (2.0 shell)",
+      "local_status": 200,
+      "local_location": null,
+      "note": "Role as published on Webflow; current-role check pending."
+    }
+  ]
+}

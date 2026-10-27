@@ -1,0 +1,11 @@
+# A10: 8 concurrent POSTs of one enquiry (same session, CSRF token and submission ID) against the local test server
+submission_id 7b9f083771b44744a0f76744c956d68b
+(200, {'ok': True, 'status': 'created'})
+(200, {'ok': True, 'status': 'duplicate'})
+(200, {'ok': True, 'status': 'duplicate'})
+(200, {'ok': True, 'status': 'duplicate'})
+(200, {'ok': True, 'status': 'duplicate'})
+(200, {'ok': True, 'status': 'duplicate'})
+(200, {'ok': True, 'status': 'duplicate'})
+(200, {'ok': True, 'status': 'duplicate'})
+leads in the database with this submission ID: 1

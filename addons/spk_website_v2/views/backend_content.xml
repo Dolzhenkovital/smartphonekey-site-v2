@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Website > SmartphoneKey content: the claim register, compatibility rows,
+         resources and team pages. Editors change text; publishers publish. -->
+
+    <record id="view_spk_website_claim_list" model="ir.ui.view">
+        <field name="name">spk.website.claim.list</field>
+        <field name="model">spk.website.claim</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="code"/>
+                <field name="name"/>
+                <field name="evidence_level"/>
+                <field name="publication"/>
+                <field name="owner_role"/>
+                <field name="reviewed_at"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_spk_website_claim_form" model="ir.ui.view">
+        <field name="name">spk.website.claim.form</field>
+        <field name="model">spk.website.claim</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="code"/>
+                            <field name="name"/>
+                            <field name="evidence_level"/>
+                            <field name="publication"/>
+                        </group>
+                        <group>
+                            <field name="owner_role"/>
+                            <field name="reviewed_at"/>
+                            <field name="internal_source"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="allowed_copy"/>
+                        <field name="limitations"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_spk_website_compatibility_list" model="ir.ui.view">
+        <field name="name">spk.website.compatibility.list</field>
+        <field name="model">spk.website.compatibility</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="sequence" widget="handle"/>
+                <field name="category"/>
+                <field name="name"/>
+                <field name="operation"/>
+                <field name="claim_id"/>
+                <field name="state"/>
+                <field name="verified_at"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_spk_website_compatibility_form" model="ir.ui.view">
+        <field name="name">spk.website.compatibility.form</field>
+        <field name="model">spk.website.compatibility</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_submit_review" type="object" string="Send to review" invisible="state != 'draft'"/>
+                    <button name="action_publish" type="object" string="Publish" class="btn-primary"
+                            invisible="state not in ('draft', 'review')" groups="spk_website_v2.group_spk_website_publisher"/>
+                    <button name="action_withdraw" type="object" string="Withdraw" invisible="state != 'published'"
+                            groups="spk_website_v2.group_spk_website_publisher"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,review,published"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="category"/>
+                            <field name="name"/>
+                            <field name="operation"/>
+                            <field name="revision"/>
+                            <field name="firmware_scope"/>
+                        </group>
+                        <group>
+                            <field name="claim_id"/>
+                            <field name="verified_at"/>
+                            <field name="public_source_url" widget="url"/>
+                            <field name="evidence_ref"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="capabilities"/>
+                        <field name="limitations"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_spk_website_resource_list" model="ir.ui.view">
+        <field name="name">spk.website.resource.list</field>
+        <field name="model">spk.website.resource</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="sequence" widget="handle"/>
+                <field name="kind"/>
+                <field name="name"/>
+                <field name="category"/>
+                <field name="published_on"/>
+                <field name="reviewed_on"/>
+                <field name="is_published"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_spk_website_resource_form" model="ir.ui.view">
+        <field name="name">spk.website.resource.form</field>
+        <field name="model">spk.website.resource</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="kind"/>
+                            <field name="slug"/>
+                            <field name="name"/>
+                            <field name="category"/>
+                            <field name="author_name"/>
+                        </group>
+                        <group>
+                            <field name="published_on"/>
+                            <field name="modified_on"/>
+                            <field name="reviewed_on"/>
+                            <field name="is_published" groups="spk_website_v2.group_spk_website_publisher"/>
+                        </group>
+                    </group>
+                    <group string="Search and sharing">
+                        <field name="seo_title"/>
+                        <field name="description"/>
+                        <field name="hero_image"/>
+                        <field name="hero_alt"/>
+                    </group>
+                    <group string="Content">
+                        <field name="direct_answer"/>
+                        <field name="related_paths"/>
+                        <field name="source_links"/>
+                    </group>
+                    <field name="body"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_spk_website_team_member_list" model="ir.ui.view">
+        <field name="name">spk.website.team.member.list</field>
+        <field name="model">spk.website.team.member</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="job_title"/>
+                <field name="is_advisor"/>
+                <field name="role_checked_on"/>
+                <field name="is_published"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="action_spk_website_claim" model="ir.actions.act_window">
+        <field name="name">Claim register</field>
+        <field name="res_model">spk.website.claim</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    <record id="action_spk_website_compatibility" model="ir.actions.act_window">
+        <field name="name">Compatibility rows</field>
+        <field name="res_model">spk.website.compatibility</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    <record id="action_spk_website_resource" model="ir.actions.act_window">
+        <field name="name">Resources</field>
+        <field name="res_model">spk.website.resource</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    <record id="action_spk_website_team_member" model="ir.actions.act_window">
+        <field name="name">Team pages</field>
+        <field name="res_model">spk.website.team.member</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="menu_spk_website_content" name="SmartphoneKey content" parent="website.menu_website_configuration"
+              sequence="45" groups="spk_website_v2.group_spk_website_editor"/>
+    <menuitem id="menu_spk_website_resource" action="action_spk_website_resource" parent="menu_spk_website_content" sequence="10"/>
+    <menuitem id="menu_spk_website_compatibility" action="action_spk_website_compatibility" parent="menu_spk_website_content" sequence="20"/>
+    <menuitem id="menu_spk_website_claim" action="action_spk_website_claim" parent="menu_spk_website_content" sequence="30"/>
+    <menuitem id="menu_spk_website_team_member" action="action_spk_website_team_member" parent="menu_spk_website_content" sequence="40"/>
+</odoo>

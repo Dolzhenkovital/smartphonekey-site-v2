@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- The claim register as reviewed on 2026-10-26. Content records: editors
+         maintain them in the backend, so module updates do not overwrite them. -->
+    <data noupdate="1">
+        <record id="claim_c01" model="spk.website.claim">
+            <field name="code">C01</field>
+            <field name="name">Multi-site access management</field>
+            <field name="evidence_level">documented</field>
+            <field name="publication">public_scoped</field>
+            <field name="allowed_copy">Manage sites, people, credentials and connected devices.</field>
+            <field name="limitations">No invented limits or production verification.</field>
+            <field name="internal_source">P05, P10</field>
+            <field name="owner_role">product_engineering</field>
+            <field name="reviewed_at">2026-10-26</field>
+        </record>
+        <record id="claim_c02" model="spk.website.claim">
+            <field name="code">C02</field>
+            <field name="name">Scoped local management</field>
+            <field name="evidence_level">documented</field>
+            <field name="publication">public_scoped</field>
+            <field name="allowed_copy">Assign management responsibilities for the relevant sites.</field>
+            <field name="limitations">Permissions and configured services affect available actions.</field>
+            <field name="internal_source">P05, P10</field>
+            <field name="owner_role">product_engineering</field>
+            <field name="reviewed_at">2026-10-26</field>
+        </record>
+        <record id="claim_c03" model="spk.website.claim">
+            <field name="code">C03</field>
+            <field name="name">LTE and Wi-Fi variants</field>
+            <field name="evidence_level">owner_stated</field>
+            <field name="publication">public_scoped</field>
+            <field name="allowed_copy">Choose LTE or Wi-Fi connectivity according to site requirements.</field>
+            <field name="limitations">Do not assume automatic failover, included SIM, region or SKU.</field>
+            <field name="internal_source">P01, P17</field>
+            <field name="owner_role">hardware_firmware</field>
+            <field name="reviewed_at">2026-10-26</field>
+        </record>
+        <record id="claim_c04" model="spk.website.claim">
+            <field name="code">C04</field>
+            <field name="name">Integrated access controller</field>
+            <field name="evidence_level">owner_stated</field>
+            <field name="publication">public_scoped</field>
+            <field name="allowed_copy">SmartphoneKey readers combine credential reading with an integrated access controller.</field>
+            <field name="limitations">Power, compatible locks and installation wiring still required.</field>
+            <field name="internal_source">P01, P17</field>
+            <field name="owner_role">hardware_firmware</field>
+            <field name="reviewed_at">2026-10-26</field>
+        </record>
+        <record id="claim_c05" model="spk.website.claim">
+            <field name="code">C05</field>
+            <field name="name">Card programming</field>
+            <field name="evidence_level">documented</field>
+            <field name="publication">public_scoped</field>
+            <field name="allowed_copy">Program supported MIFARE Classic and MIFARE DESFire EV3 cards with compatible programming hardware and firmware.</field>
+            <field name="limitations">No EV1/EV2 or memory-size inference; built-in programmer where available.</field>
+            <field name="internal_source">P05, P06, P07</field>
+            <field name="owner_role">hardware_firmware</field>
+            <field name="reviewed_at">2026-10-26</field>
+        </record>
+        <record id="claim_c06" model="spk.website.claim">
+            <field name="code">C06</field>
+            <field name="name">Wallet and physical credentials</field>
+            <field name="evidence_level">documented</field>
+            <field name="publication">public_scoped</field>
+            <field name="allowed_copy">Manage physical NFC cards and supported digital credentials.</field>
+            <field name="limitations">Phone/OS/account limitations; no universal power reserve.</field>
+            <field name="internal_source">P05</field>
+            <field name="owner_role">product_engineering</field>
+            <field name="reviewed_at">2026-10-26</field>
+        </record>
+        <record id="claim_c07" model="spk.website.claim">
+            <field name="code">C07</field>
+            <field name="name">Operational visibility</field>
+            <field name="evidence_level">code_supported</field>
+            <field name="publication">public_scoped</field>
+            <field name="allowed_copy">Distinguish a requested action from a confirmed device response.</field>
+            <field name="limitations">Unlock confirmation is not proof of door-leaf movement or passage.</field>
+            <field name="internal_source">P11</field>
+            <field name="owner_role">product_engineering</field>
+            <field name="reviewed_at">2026-10-26</field>
+        </record>
+        <record id="claim_c08" model="spk.website.claim">
+            <field name="code">C08</field>
+            <field name="name">Offline key queue</field>
+            <field name="evidence_level">code_supported</field>
+            <field name="publication">public_scoped</field>
+            <field name="allowed_copy">Some key changes remain pending until the reader reconnects.</field>
+            <field name="limitations">Pending revocation is not yet enforced; command classes differ.</field>
+            <field name="internal_source">P11</field>
+            <field name="owner_role">product_engineering</field>
+            <field name="reviewed_at">2026-10-26</field>
+        </record>
+        <record id="claim_c09" model="spk.website.claim">
+            <field name="code">C09</field>
+            <field name="name">Camera management</field>
+            <field name="evidence_level">code_supported</field>
+            <field name="publication">public_scoped</field>
+            <field name="allowed_copy">Manage supported cameras according to your configured services.</field>
+            <field name="limitations">No universal ONVIF, archive, AI-analytics or video SLA claim.</field>
+            <field name="internal_source">P05, P12</field>
+            <field name="owner_role">product_engineering</field>
+            <field name="reviewed_at">2026-10-26</field>
+        </record>
+        <record id="claim_c10" model="spk.website.claim">
+            <field name="code">C10</field>
+            <field name="name">Matter capabilities</field>
+            <field name="evidence_level">code_supported</field>
+            <field name="publication">public_scoped</field>
+            <field name="allowed_copy">Work with supported Matter devices and their reported capabilities.</field>
+            <field name="limitations">Capability, firmware and commissioning checks required.</field>
+            <field name="internal_source">P08, P09</field>
+            <field name="owner_role">product_engineering</field>
+            <field name="reviewed_at">2026-10-26</field>
+        </record>
+        <record id="claim_c11" model="spk.website.claim">
+            <field name="code">C11</field>
+            <field name="name">Scenario Builder</field>
+            <field name="evidence_level">code_supported</field>
+            <field name="publication">public_scoped</field>
+            <field name="allowed_copy">Build workflows with supported triggers, conditions and actions.</field>
+            <field name="limitations">Each current scenario belongs to one hub and its commissioned devices.</field>
+            <field name="internal_source">P08</field>
+            <field name="owner_role">product_engineering</field>
+            <field name="reviewed_at">2026-10-26</field>
+        </record>
+        <record id="claim_c12" model="spk.website.claim">
+            <field name="code">C12</field>
+            <field name="name">Hub-mediated reader connection</field>
+            <field name="evidence_level">documented</field>
+            <field name="publication">public_scoped</field>
+            <field name="allowed_copy">Supported reader configurations can connect through a Matter hub.</field>
+            <field name="limitations">Historical evidence; not a generic RF/range or failover guarantee.</field>
+            <field name="internal_source">P16</field>
+            <field name="owner_role">product_engineering</field>
+            <field name="reviewed_at">2026-10-26</field>
+        </record>
+        <record id="claim_c13" model="spk.website.claim">
+            <field name="code">C13</field>
+            <field name="name">Reader Matter/Thread roles</field>
+            <field name="evidence_level">owner_stated</field>
+            <field name="publication">fallback_only</field>
+            <field name="allowed_copy">Discuss supported Matter and Thread roles for your reader revision and firmware.</field>
+            <field name="limitations">Confirm controller/server, commissioner, router and Border Router separately.</field>
+            <field name="internal_source">P01, P09, S10</field>
+            <field name="owner_role">hardware_firmware</field>
+            <field name="reviewed_at">2026-10-26</field>
+        </record>
+        <record id="claim_c14" model="spk.website.claim">
+            <field name="code">C14</field>
+            <field name="name">Shared internet uplink</field>
+            <field name="evidence_level">owner_stated</field>
+            <field name="publication">fallback_only</field>
+            <field name="allowed_copy">A shared network path depends on the installed hardware, firmware and topology.</field>
+            <field name="limitations">Illustrative topology only until verified; no redundancy or unlimited nodes.</field>
+            <field name="internal_source">P01, P16</field>
+            <field name="owner_role">hardware_firmware</field>
+            <field name="reviewed_at">2026-10-26</field>
+        </record>
+        <record id="claim_c15" model="spk.website.claim">
+            <field name="code">C15</field>
+            <field name="name">Up to 80 m link distance</field>
+            <field name="evidence_level">owner_stated</field>
+            <field name="publication">omit_numeric</field>
+            <field name="allowed_copy">Coverage depends on the building, placement and radio conditions.</field>
+            <field name="limitations">No numeric range until reproducible model-specific test conditions are supplied.</field>
+            <field name="internal_source">P01</field>
+            <field name="owner_role">hardware_firmware</field>
+            <field name="reviewed_at">2026-10-26</field>
+        </record>
+        <record id="claim_c16" model="spk.website.claim">
+            <field name="code">C16</field>
+            <field name="name">QR intercom</field>
+            <field name="evidence_level">documented</field>
+            <field name="publication">public_scoped</field>
+            <field name="allowed_copy">Visitors scan an entrance QR code and follow the configured contact workflow.</field>
+            <field name="limitations">No real door calls from the marketing site.</field>
+            <field name="internal_source">P04, P05</field>
+            <field name="owner_role">product_engineering</field>
+            <field name="reviewed_at">2026-10-26</field>
+        </record>
+        <record id="claim_c17" model="spk.website.claim">
+            <field name="code">C17</field>
+            <field name="name">AI Concierge v2</field>
+            <field name="evidence_level">release_gated</field>
+            <field name="publication">availability_enquiry</field>
+            <field name="allowed_copy">Ask about AI Concierge availability and requirements for your site.</field>
+            <field name="limitations">Oct 23 documentation describes staging; no production readiness claim.</field>
+            <field name="internal_source">P13</field>
+            <field name="owner_role">product_engineering</field>
+            <field name="reviewed_at">2026-10-26</field>
+        </record>
+        <record id="claim_c18" model="spk.website.claim">
+            <field name="code">C18</field>
+            <field name="name">Monitoring alerts</field>
+            <field name="evidence_level">code_supported</field>
+            <field name="publication">public_scoped</field>
+            <field name="allowed_copy">Configure supported device alerts for your operations.</field>
+            <field name="limitations">Channel setup and permissions required; no SLA.</field>
+            <field name="internal_source">P12</field>
+            <field name="owner_role">product_engineering</field>
+            <field name="reviewed_at">2026-10-26</field>
+        </record>
+        <record id="claim_c19" model="spk.website.claim">
+            <field name="code">C19</field>
+            <field name="name">Integrations</field>
+            <field name="evidence_level">code_supported</field>
+            <field name="publication">public_scoped</field>
+            <field name="allowed_copy">Discuss your integration requirements with the team.</field>
+            <field name="limitations">No invented public tier, pricing, endpoint or SLA.</field>
+            <field name="internal_source">P05</field>
+            <field name="owner_role">product_engineering</field>
+            <field name="reviewed_at">2026-10-26</field>
+        </record>
+        <record id="claim_c20" model="spk.website.claim">
+            <field name="code">C20</field>
+            <field name="name">Certifications</field>
+            <field name="evidence_level">unverified</field>
+            <field name="publication">document_links_only</field>
+            <field name="allowed_copy">Review the documentation applicable to the exact product model.</field>
+            <field name="limitations">Badge and exact scope require source document review.</field>
+            <field name="internal_source">P18</field>
+            <field name="owner_role">hardware_firmware</field>
+            <field name="reviewed_at">2026-10-26</field>
+        </record>
+    </data>
+</odoo>

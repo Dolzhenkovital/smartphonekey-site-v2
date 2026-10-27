@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- The Webflow team pages, kept at /team/<slug>. Roles as published on the Webflow site; role_checked_on stays empty until each role is confirmed. -->
+    <data noupdate="1">
+        <record id="team_vadym_sydorenko" model="spk.website.team.member">
+            <field name="sequence">10</field>
+            <field name="slug">vadym-sydorenko</field>
+            <field name="name">Vadym Sydorenko</field>
+            <field name="job_title">Founder &amp; CEO</field>
+            <field name="is_advisor" eval="False"/>
+            <field name="linkedin_url">https://www.linkedin.com/in/vadym-sydorenko-0029001a0/</field>
+            <field name="photo">/spk_website_v2/static/src/img/team/vadym-sydorenko.webp</field>
+            <field name="photo_alt">Portrait of Vadym Sydorenko</field>
+            <field name="is_published" eval="True"/>
+            <field name="bio" type="html">
+                <div>
+                    <p>Vadym Sydorenko is the driving force behind SmartphoneKey, leveraging over two decades of experience in the tech and telecom industries. He started his journey as a tech-savvy student, installing internet access in dorms and quickly growing into leadership roles, including CEO of one of Ukraine’s largest ISPs. His passion for technology and problem-solving led him to co-found OMO Systems, where he developed IoT solutions tailored for internet providers.</p>
+                    <p>With a vision to simplify smart access control, Vadym founded SmartphoneKey, focusing on innovative solutions that make property access easy and secure for everyone. He is dedicated to enhancing the quality of life through technology, bringing his expertise in IoT and smart home devices to the forefront of the Fourth Industrial Revolution.</p>
+                </div>
+            </field>
+        </record>
+        <record id="team_alex_sydorenko" model="spk.website.team.member">
+            <field name="sequence">20</field>
+            <field name="slug">alex-sydorenko</field>
+            <field name="name">Alex Sydorenko</field>
+            <field name="job_title">Chief Artificial Intelligence Officer</field>
+            <field name="is_advisor" eval="False"/>
+            <field name="linkedin_url">https://www.linkedin.com/in/sydorenkoalex/</field>
+            <field name="photo">/spk_website_v2/static/src/img/team/alex-sydorenko.webp</field>
+            <field name="photo_alt">Portrait of Alex Sydorenko</field>
+            <field name="is_published" eval="True"/>
+            <field name="bio" type="html">
+                <div>
+                    <p>With over 20 years of experience in software development, Alex Sydorenko is the driving force behind the technological vision at SmartphoneKey. His expertise spans Java development, software architecture, and leading complex tech projects for companies like Luxoft and EPAM Systems. Known for his problem-solving skills and innovative mindset, Alex has a track record of transforming challenges into cutting-edge solutions.</p>
+                    <p>At SmartphoneKey, he focuses on building robust and scalable technologies that redefine access management, ensuring our products stay at the forefront of the IoT landscape.</p>
+                </div>
+            </field>
+        </record>
+        <record id="team_denys_merkulov" model="spk.website.team.member">
+            <field name="sequence">30</field>
+            <field name="slug">denys-merkulov</field>
+            <field name="name">Denys Merkulov</field>
+            <field name="job_title">CTO</field>
+            <field name="is_advisor" eval="False"/>
+            <field name="linkedin_url">https://www.linkedin.com/in/denys-merkulov-347a1119/</field>
+            <field name="photo">/spk_website_v2/static/src/img/team/denys-merkulov.webp</field>
+            <field name="photo_alt">Portrait of Denys Merkulov</field>
+            <field name="is_published" eval="True"/>
+            <field name="bio" type="html">
+                <div>
+                    <p>Denys Merkulov brings extensive expertise in overseeing technical strategies and innovation within the telecom and technology sectors. With a proven track record in leading complex projects and production initiatives from inception through implementation, Denys has successfully established and optimized high-performance production facilities in key markets such as China and Ukraine.</p>
+                    <p>In his role as CTO at SmartphoneKey, Denys drives the technological vision, ensuring the integration of cutting-edge solutions across product development, manufacturing processes, and logistics operations. He is committed to enhancing operational efficiency, scalability, and quality assurance, laying the foundation for sustainable growth and technological excellence. Denys continuously seeks innovative methods to elevate operational performance, solidifying SmartphoneKey's position as a leader in smart access technology.</p>
+                </div>
+            </field>
+        </record>
+        <record id="team_lana_ostapenko" model="spk.website.team.member">
+            <field name="sequence">40</field>
+            <field name="slug">lana-ostapenko</field>
+            <field name="name">Lana Ostapenko</field>
+            <field name="job_title">Financial and Legal Director</field>
+            <field name="is_advisor" eval="False"/>
+            <field name="linkedin_url">https://www.linkedin.com/in/svitlana-ostapenko-17b3a732a/</field>
+            <field name="photo">/spk_website_v2/static/src/img/team/lana-ostapenko.webp</field>
+            <field name="photo_alt">Portrait of Lana Ostapenko</field>
+            <field name="is_published" eval="True"/>
+            <field name="bio" type="html">
+                <div>
+                    <p>Lana Ostapenko brings a wealth of expertise in finance and legal strategy to SmartphoneKey. With a strong background in financial management, compliance, and corporate governance, Lana plays a crucial role in ensuring the company’s financial health and legal integrity. She combines her analytical skills with a deep understanding of the legal landscape, making complex decisions that drive growth while maintaining compliance. </p>
+                    <p>At SmartphoneKey, Lana oversees all financial operations and legal matters, aligning our strategic goals with sound financial practices to support our ambitious vision for the future of access control.</p>
+                </div>
+            </field>
+        </record>
+        <record id="team_vitalii_dolzhenko" model="spk.website.team.member">
+            <field name="sequence">50</field>
+            <field name="slug">vitalii-dolzhenko</field>
+            <field name="name">Vitalii Dolzhenko</field>
+            <field name="job_title">Product Owner</field>
+            <field name="is_advisor" eval="False"/>
+            <field name="linkedin_url">https://www.linkedin.com/in/vitaliydolzhenko/</field>
+            <field name="photo">/spk_website_v2/static/src/img/team/vitalii-dolzhenko.webp</field>
+            <field name="photo_alt">Portrait of Vitalii Dolzhenko</field>
+            <field name="is_published" eval="True"/>
+            <field name="bio" type="html">
+                <div>
+                    <p>Vitalii Dolzhenko combines extensive technical expertise with a deep, practical understanding of AI technologies and IT project management. With a strong background as an IT Project Manager and AI Specialist, Vitalii excels at developing and integrating innovative AI-driven solutions that streamline processes and enhance user experiences. His broad AI expertise has successfully been applied across multiple projects, notably within CRM automation, AI-enhanced customer support, and content generation.</p>
+                    <p>At SmartphoneKey, Vitalii plays a pivotal role in strategic technology integrations, ensuring seamless implementation of advanced AI and IoT solutions. His proficiency in leveraging cutting-edge technologies positions SmartphoneKey at the forefront of smart access control innovation, significantly enhancing security, convenience, and customer satisfaction.</p>
+                </div>
+            </field>
+        </record>
+        <record id="team_oleksii_andrieiev" model="spk.website.team.member">
+            <field name="sequence">60</field>
+            <field name="slug">oleksii-andrieiev</field>
+            <field name="name">Oleksii Andrieiev</field>
+            <field name="job_title">Architect of Embedded and Cloud Solutions</field>
+            <field name="is_advisor" eval="False"/>
+            <field name="linkedin_url">https://www.linkedin.com/in/oleksii-andrieiev-699301129/</field>
+            <field name="photo">/spk_website_v2/static/src/img/team/oleksii-andrieiev.webp</field>
+            <field name="photo_alt">Portrait of Oleksii Andrieiev</field>
+            <field name="is_published" eval="True"/>
+            <field name="bio" type="html">
+                <div>
+                    <p>Oleksii Andrieiev brings over 20 years of expertise in embedded engineering, industrial automation, and enterprise software. He designs and implements integrated systems that securely connect physical devices with cloud infrastructures, enabling applications such as mobile credentials and intelligent access systems.</p>
+                    <p>At Smartphonekey, Oleksii leads the architecture of integrated solutions thatspan embedded firmware, communication interfaces, and scalable cloud services.His work enables secure, real-time interaction between hardware devices and digital platforms—supporting applications such as mobile credentials, digital identity, and intelligent access systems.</p>
+                    <p>Previously, Oleksii held senior roles at Oracle and JFrog, specializing in continuous integration, deployment, and infrastructure automation. He holds a Master’s degree in Process Automation and Remote Device Management and multiple certifications in cloud and DevOps.</p>
+                </div>
+            </field>
+        </record>
+        <record id="team_kate_vasylenko" model="spk.website.team.member">
+            <field name="sequence">70</field>
+            <field name="slug">kate-vasylenko</field>
+            <field name="name">Kate Vasylenko</field>
+            <field name="job_title">CEO of Marketing Agency</field>
+            <field name="is_advisor" eval="True"/>
+            <field name="linkedin_url">https://www.linkedin.com/in/vasylenko/</field>
+            <field name="photo">/spk_website_v2/static/src/img/team/kate-vasylenko.webp</field>
+            <field name="photo_alt">Portrait of Kate Vasylenko</field>
+            <field name="is_published" eval="True"/>
+            <field name="bio" type="html">
+                <div>
+                    <p>Kate Vasylenko serves as an Advisor at SmartphoneKey, bringing over two decades of expertise in digital marketing and strategic growth. As the CEO and Founder of 42DM, a full-service B2B marketing agency, Kate has been instrumental in driving the global success of renowned brands like Payoneer, Microsoft, Visa, Samsung, and Coca-Cola. Her agency specializes in empowering tech companies with innovative go-to-market strategies, advanced MarTech &amp; AI solutions, and scalable growth tactics.</p>
+                    <p>In 2015, Kate founded 42DM to provide tech companies with tailored marketing strategies and a highly skilled team capable of navigating the challenges of the US and international markets. Throughout her career, she has supported over 100 B2B tech companies in North America and Europe, leveraging her expertise in demand generation, ABM, inbound marketing, and marketing operations. Her approach combines traditional consulting with cutting-edge marketing techniques to help businesses achieve significant milestones, including unicorn status, successful exits, and IPOs.</p>
+                    <p>Recognized as a thought leader in the tech marketing space, Kate frequently speaks at major IT conferences and mentors startups, guiding them toward finding product-market fit and scaling globally. Her insights have been featured in Forbes and other leading publications, reflecting her commitment to fostering growth and innovation within the tech industry.</p>
+                </div>
+            </field>
+        </record>
+        <record id="team_ioannis_mavridis" model="spk.website.team.member">
+            <field name="sequence">80</field>
+            <field name="slug">ioannis-mavridis</field>
+            <field name="name">Ioannis Mavridis</field>
+            <field name="job_title">CEO of Telecom Provider</field>
+            <field name="is_advisor" eval="True"/>
+            <field name="linkedin_url">https://www.linkedin.com/in/ioannis-mavridis-070b5b23</field>
+            <field name="photo">/spk_website_v2/static/src/img/team/ioannis-mavridis.webp</field>
+            <field name="photo_alt">Portrait of Ioannis Mavridis</field>
+            <field name="is_published" eval="True"/>
+            <field name="bio" type="html">
+                <div>
+                    <p>Ioannis Mavridis serves as an Advisor at SmartphoneKey, bringing a wealth of experience from the telecommunications sector. As the CEO of Cablenet, a leading telecom provider in Cyprus, Ioannis has been pivotal in advancing telecom infrastructure and driving innovation in the industry. His leadership has guided Cablenet through significant growth, establishing it as a top player in the market known for its high-quality services and technological advancements.</p>
+                    <p>With a career spanning over two decades, Ioannis has been at the forefront of telecom technology, focusing on expanding connectivity solutions and enhancing customer experiences. His expertise includes strategic planning, market expansion, and implementing cutting-edge telecom solutions that meet evolving customer needs.</p>
+                    <p>Ioannis is recognized for his strategic vision and dedication to improving telecommunications services. His insights and leadership continue to shape the future of connectivity in Cyprus and beyond.</p>
+                </div>
+            </field>
+        </record>
+        <record id="team_kostiantyn_dolzhenko" model="spk.website.team.member">
+            <field name="sequence">90</field>
+            <field name="slug">kostiantyn-dolzhenko</field>
+            <field name="name">Kostiantyn Dolzhenko</field>
+            <field name="job_title">CEO of Telecom Provider</field>
+            <field name="is_advisor" eval="True"/>
+            <field name="photo">/spk_website_v2/static/src/img/team/kostiantyn-dolzhenko.webp</field>
+            <field name="photo_alt">Portrait of Kostiantyn Dolzhenko</field>
+            <field name="is_published" eval="True"/>
+            <field name="bio" type="html">
+                <div>
+                    <p>Kostiantyn Dolzhenko serves as an Advisor at SmartphoneKey, bringing a wealth of expertise from the telecom sector. As the CEO of Inalan, a prominent telecom provider in Greece, Kostiantyn has played a crucial role in advancing broadband connectivity and driving technological innovation across the region. Under his leadership, Inalan has become a leading force in providing high-speed internet solutions and fostering digital growth.</p>
+                    <p>With a strong background in telecom management and strategic development, Kostiantyn has overseen numerous initiatives aimed at expanding network infrastructure and enhancing service quality. His career is marked by a commitment to delivering cutting-edge telecom solutions and improving digital access for consumers.</p>
+                    <p>Kostiantyn is recognized for his strategic acumen and dedication to transforming the telecom landscape. His contributions continue to shape the future of connectivity in Greece and beyond, making him a valuable advisor to SmartphoneKey.</p>
+                </div>
+            </field>
+        </record>
+    </data>
+</odoo>

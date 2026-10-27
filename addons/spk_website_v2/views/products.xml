@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Readers and the compatibility centre. Compatibility rows come from
+         spk.website.compatibility (published rows of cleared claims only). -->
+
+    <template id="page_readers" name="SmartphoneKey 2.0: readers">
+        <t t-call="spk_website_v2.layout">
+            <div class="container">
+                <t t-call="spk_website_v2.page_intro">
+                    <t t-set="heading">Reader and controller. Built together.</t>
+                    <t t-set="intro">SmartphoneKey readers combine credential reading with an integrated access controller. LTE and Wi-Fi variants give you connection options for different site conditions.</t>
+                </t>
+            </div>
+
+            <section class="section container reader" aria-labelledby="unit-title">
+                <figure>
+                    <img src="/spk_website_v2/static/src/img/reader-800.webp"
+                         srcset="/spk_website_v2/static/src/img/reader-480.webp 480w, /spk_website_v2/static/src/img/reader-800.webp 800w"
+                         sizes="(max-width: 40rem) 100vw, 50vw" width="800" height="751" decoding="async"
+                         alt="SmartphoneKey reader from the current product image library"/>
+                    <figcaption>Representative product photo. It does not identify a specific LTE or Wi-Fi revision.</figcaption>
+                </figure>
+                <div class="reader-copy">
+                    <h2 id="unit-title">Reading and control in one unit.</h2>
+                    <p>Choose an all-in-one reader and controller as part of the SmartphoneKey platform. The installation still needs appropriate power, compatible locking hardware and the connections specified in the installation guide.</p>
+                    <h3>Program supported physical cards.</h3>
+                    <p>Program supported MIFARE Classic and MIFARE DESFire EV3 cards with a compatible programming device, including the reader's built-in programmer where available. Check the card and firmware configuration before ordering.</p>
+                    <a href="/resources/mifare-classic-desfire-ev3">Which NFC cards can SmartphoneKey program?</a>
+                </div>
+            </section>
+
+            <section class="section container" aria-labelledby="compare-title">
+                <div class="section-head">
+                    <h2 id="compare-title">LTE or Wi-Fi.</h2>
+                    <p>The same platform, two ways to reach it. Start from the connection each door position can support.</p>
+                </div>
+                <t t-call="spk_website_v2.reader_comparison"/>
+            </section>
+
+            <section class="section container split" aria-labelledby="connected-title">
+                <h2 id="connected-title">Plan the connected-device configuration.</h2>
+                <div class="split-copy">
+                    <p>Discuss supported Matter and Thread roles for the reader revision you intend to install. A mesh deployment depends on node roles, placement, power and the available route to the internet.</p>
+                    <p class="note">Coverage depends on the building, placement and radio conditions. We help plan the network for your site.</p>
+                    <a href="/resources/matter-thread-access-control">Matter and Thread for access control</a>
+                </div>
+            </section>
+
+            <section class="section container split" aria-labelledby="install-title">
+                <h2 id="install-title">Installation requirements and documents.</h2>
+                <div class="split-copy">
+                    <ul class="plain-list">
+                        <li>Appropriate power at each door</li>
+                        <li>Compatible locking hardware and any exit devices the door needs</li>
+                        <li>The connections specified in the installation guide</li>
+                        <li>Connectivity checked at the planned reader position</li>
+                    </ul>
+                    <a href="/guide-for-usage-and-installation">View installation guide</a>
+                    <a href="/certifications">Product certifications and documents</a>
+                </div>
+            </section>
+
+            <t t-call="spk_website_v2.faq">
+                <t t-set="faqs" t-value="[
+                    ('How do LTE and Wi-Fi readers differ?', 'They provide different internet connection options. LTE requires suitable cellular service; Wi-Fi requires suitable network coverage and configuration. Confirm the model and installation requirements for your site.'),
+                    ('Can one reader provide connectivity for other readers?', 'Supported hub and reader configurations can use a shared network path. The exact uplink, Thread roles and topology must be confirmed for the installed hardware and firmware. Do not assume every reader is a Border Router or provides failover.'),
+                    ('How far apart can readers be installed?', 'Coverage depends on the radio environment, obstacles, placement and hardware configuration. Plan and verify coverage at the site; a universal distance cannot describe every installation.'),
+                    ('Can I keep existing locks or cameras?', 'Compatibility must be checked against the exact hardware, electrical interface and camera or service requirements. Send model details to the team before assuming an existing installation can be reused.'),
+                ]"/>
+            </t>
+
+            <t t-call="spk_website_v2.next_step">
+                <t t-set="next_title">Choose your reader with confidence.</t>
+                <t t-set="next_text">Check what your site needs, then ask about availability for your installation.</t>
+                <t t-set="next_primary" t-value="('Find your setup', '/find-your-setup')"/>
+                <t t-set="next_links" t-value="[('Check compatibility', '/compatibility'), ('View installation guide', '/guide-for-usage-and-installation'), ('Discuss reader availability', '/contact?interest=project')]"/>
+            </t>
+        </t>
+    </template>
+
+    <!-- One compatibility table. rows: public row dicts; table_label -->
+    <template id="compatibility_table" name="SmartphoneKey 2.0: compatibility table">
+        <div t-if="rows" class="spk-table" role="region" tabindex="0" t-att-aria-label="table_label">
+            <table>
+                <caption t-out="table_label"/>
+                <thead>
+                    <tr>
+                        <th scope="col">Family or model</th>
+                        <th scope="col">Operation</th>
+                        <th scope="col">What it covers</th>
+                        <th scope="col">Conditions and limits</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr t-foreach="rows" t-as="row">
+                        <th scope="row">
+                            <t t-out="row['name']"/>
+                            <span t-if="row['revision']" class="cell-note">Revision <t t-out="row['revision']"/></span>
+                            <span t-if="row['firmware_scope']" class="cell-note">Firmware <t t-out="row['firmware_scope']"/></span>
+                        </th>
+                        <td t-out="row['operation_label']"/>
+                        <td t-out="row['capabilities']"/>
+                        <td>
+                            <t t-out="row['limitations']"/>
+                            <a t-if="row['public_source_url']" class="cell-note" t-att-href="row['public_source_url']" rel="noopener">Manufacturer or standard information</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p t-else="" class="note">No published entries yet. Tell us your configuration and we will check it.</p>
+    </template>
+
+    <template id="page_compatibility" name="SmartphoneKey 2.0: compatibility">
+        <t t-call="spk_website_v2.layout">
+            <div class="container">
+                <t t-call="spk_website_v2.page_intro">
+                    <t t-set="heading">Find the details that fit.</t>
+                    <t t-set="intro">Compatibility depends on the reader revision, firmware, credential format and device capabilities. Use the guidance below to start the check; confirm the configuration for your project before ordering.</t>
+                    <p t-if="reviewed_on" class="meta">Reviewed <t t-out="format_day(reviewed_on)"/></p>
+                </t>
+                <nav class="contents" aria-label="On this page">
+                    <ul>
+                        <li><a href="#cards">Physical card programming</a></li>
+                        <li><a href="#digital">Digital credentials</a></li>
+                        <li><a href="#matter">Matter devices</a></li>
+                        <li><a href="#networks">Networks</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <section class="section container" id="cards" aria-labelledby="cards-title">
+                <div class="section-head">
+                    <h2 id="cards-title">Physical card programming.</h2>
+                    <p>Documented workflows: MIFARE Classic and MIFARE DESFire EV3. A family name is not a guarantee for every memory size, credential format or third-party card. Reading a card identifier and provisioning a credential are different operations.</p>
+                </div>
+                <t t-call="spk_website_v2.compatibility_table">
+                    <t t-set="table_label">Physical card programming</t>
+                    <t t-set="rows" t-value="rows['cards']"/>
+                </t>
+            </section>
+
+            <section class="section container" id="digital" aria-labelledby="digital-title">
+                <div class="section-head">
+                    <h2 id="digital-title">Digital credentials.</h2>
+                    <p>Supported wallet and mobile-access workflows depend on the device, platform and account configuration. Confirm the phone, operating system and credential requirements; do not assume power-reserve behaviour for every phone.</p>
+                </div>
+                <t t-call="spk_website_v2.compatibility_table">
+                    <t t-set="table_label">Digital credentials</t>
+                    <t t-set="rows" t-value="rows['digital']"/>
+                </t>
+            </section>
+
+            <section class="section container" id="matter" aria-labelledby="matter-title">
+                <div class="section-head">
+                    <h2 id="matter-title">Matter devices.</h2>
+                    <p>Support is capability-based. A device may expose on/off, contact, temperature, lock, valve or other capabilities; available operations depend on what it reports and what the configured system supports. Specific third-party models appear only after compatibility testing.</p>
+                </div>
+                <t t-call="spk_website_v2.compatibility_table">
+                    <t t-set="table_label">Matter devices</t>
+                    <t t-set="rows" t-value="rows['matter']"/>
+                </t>
+            </section>
+
+            <section class="section container" id="networks" aria-labelledby="networks-title">
+                <div class="section-head">
+                    <h2 id="networks-title">Networks.</h2>
+                    <p>Thread mesh participation, Border Router functions, Matter control and internet uplink are separate roles. Confirm which roles the proposed hardware and firmware provide.</p>
+                </div>
+                <t t-call="spk_website_v2.compatibility_table">
+                    <t t-set="table_label">Networks</t>
+                    <t t-set="rows" t-value="rows['network']"/>
+                </t>
+                <p class="section-note"><a href="/resources/matter-thread-access-control">How Matter and Thread roles differ</a></p>
+            </section>
+
+            <t t-call="spk_website_v2.faq">
+                <t t-set="faqs" t-value="[
+                    ('Which physical cards can be programmed?', 'The documented workflows support MIFARE Classic and MIFARE DESFire EV3 using compatible programming hardware and firmware. Confirm the exact card variant and credential format before ordering.'),
+                    ('Does SmartphoneKey work with every Matter device?', 'Compatibility depends on the device type, exposed capabilities, firmware and configuration. Check the functions required by your workflow instead of assuming every Matter device supports them.'),
+                ]"/>
+            </t>
+
+            <t t-call="spk_website_v2.next_step">
+                <t t-set="next_title">Need a specific check?</t>
+                <t t-set="next_text">Tell us the reader model, firmware and device or card details. Do not send keys, passwords or credentials through the contact form.</t>
+                <t t-set="next_primary" t-value="('Ask about compatibility', '/contact?interest=compatibility')"/>
+                <t t-set="next_links" t-value="[('Find your setup', '/find-your-setup')]"/>
+            </t>
+        </t>
+    </template>
+</odoo>

@@ -1,0 +1,14 @@
+/features                              301 /platform
+/how-it-works                          301 /platform
+/blog                                  301 /resources
+/team                                  301 /about
+/facility-services                     301 /solutions/property-managers
+/security-professionals                301 /solutions/integrators
+/smart-home-integrators                301 /solutions/integrators
+/intercom-solution                     301 /platform/visitor-access
+/products/smartphonekey-reader-1       301 /products/readers
+/404                                   404 
+/referral-program                      200 
+/adminpanel                            303 /my
+/guide-for-usage-and-installation      404 
+/no-such-page                          404 

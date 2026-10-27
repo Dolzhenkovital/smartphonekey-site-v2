@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- The home page: the seven sections of DESIGN.md, in order, with the copy of
+         design-reference.html. The setup tool is the page's signature: useful
+         guidance before any conversation, no email and no submission. -->
+    <template id="page_home" name="SmartphoneKey 2.0: home">
+        <t t-call="spk_website_v2.layout">
+            <t t-set="page_scripts">
+                <script type="application/json" id="spk-setup-rules" t-out="setup_rules"/>
+                <script t-attf-src="/spk_website_v2/static/src/js/setup_guide.js?v=#{v2_asset_version}" defer="defer"/>
+            </t>
+
+            <section class="container hero" aria-labelledby="hero-title">
+                <div class="intro-copy">
+                    <h1 id="hero-title">Your key to access control.</h1>
+                    <p class="lead">Manage sites, people and connected devices through one access control platform.</p>
+                    <div class="actions">
+                        <a class="button" href="/platform">Explore the platform</a>
+                        <a class="text-link" href="/products/readers">Compare readers</a>
+                    </div>
+                </div>
+                <form class="setup" id="setup" action="/find-your-setup" method="get" aria-labelledby="setup-title" data-spk-home-setup="">
+                    <h2 id="setup-title">Find your setup</h2>
+                    <div>
+                        <label for="site-type">What do you manage?</label>
+                        <select id="site-type" name="site">
+                            <option t-foreach="content.HOME_SITE_CHOICES" t-as="choice" t-att-value="choice[0]" t-out="choice[1]"/>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="connection">Available connection</label>
+                        <select id="connection" name="connection">
+                            <option t-foreach="content.CONNECTIONS" t-as="choice" t-att-value="choice[0]" t-out="choice[1]"/>
+                        </select>
+                    </div>
+                    <output for="site-type connection" id="setup-result" aria-live="polite"><t t-out="content.HOME_CONNECTION_COPY['wifi']"/> <t t-out="content.HOME_SITE_COPY['property']"/></output>
+                    <div class="setup-links">
+                        <button type="submit" class="link-button">Open the full setup guide</button>
+                        <a href="/products/readers">Review reader options</a>
+                    </div>
+                    <noscript><p>For cellular connectivity, review LTE coverage and SIM provisioning. No account is needed to read the options below.</p></noscript>
+                </form>
+            </section>
+
+            <section class="section container" id="platform" aria-labelledby="platform-title">
+                <div class="section-head">
+                    <h2 id="platform-title">Sites, people and permissions.</h2>
+                    <p>Organise each site, assign responsibilities and follow what happens at the door.</p>
+                </div>
+                <dl class="workflow">
+                    <div><dt>Sites</dt><dd>Keep installations organised</dd></div>
+                    <div><dt>People</dt><dd>Delegate local management</dd></div>
+                    <div><dt>Credentials</dt><dd>Issue and revoke access</dd></div>
+                    <div><dt>Activity</dt><dd>See pending and confirmed actions</dd></div>
+                </dl>
+            </section>
+
+            <section class="section container audiences" id="solutions" aria-label="Who it is for">
+                <article>
+                    <h2>Manage your buildings.</h2>
+                    <p>Handle resident changes, contractor access and local responsibilities across your sites.</p>
+                    <a href="/solutions/property-managers">Explore property management</a>
+                </article>
+                <article>
+                    <h2>Deliver your systems.</h2>
+                    <p>Choose a setup, install it, hand it over and support your customer.</p>
+                    <a href="/solutions/integrators">Explore the partner workflow</a>
+                </article>
+            </section>
+
+            <section class="section container reader" id="readers" aria-labelledby="reader-title">
+                <figure>
+                    <img src="/spk_website_v2/static/src/img/reader-800.webp"
+                         srcset="/spk_website_v2/static/src/img/reader-480.webp 480w, /spk_website_v2/static/src/img/reader-800.webp 800w"
+                         sizes="(max-width: 40rem) 100vw, 50vw" width="800" height="751" loading="lazy" decoding="async"
+                         alt="SmartphoneKey reader from the current product image library"/>
+                </figure>
+                <div class="reader-copy">
+                    <h2 id="reader-title">Reader and controller. Built together.</h2>
+                    <p>Our LTE and Wi-Fi readers combine credential reading and an access controller.</p>
+                    <p>Supported configurations add card programming and connected-device functions.</p>
+                    <a href="/products/readers">Compare LTE and Wi-Fi</a>
+                    <a href="/resources/mifare-classic-desfire-ev3">MIFARE Classic and DESFire EV3</a>
+                </div>
+            </section>
+
+            <section class="section automation" id="automation" aria-labelledby="automation-title">
+                <div class="container">
+                    <div class="section-head">
+                        <h2 id="automation-title">Make devices work together.</h2>
+                        <p>Build scenarios around supported triggers, conditions and actions.</p>
+                    </div>
+                    <dl class="scenario-list">
+                        <div><dt>Door contact</dt><dd>Turn on compatible entry lighting</dd></div>
+                        <div><dt>Leak detected</dt><dd>Close a compatible water valve</dd></div>
+                        <div><dt>Closing time</dt><dd>Switch off selected lights or sockets</dd></div>
+                    </dl>
+                    <p class="section-note">Device capabilities and commissioning matter. Current scenarios use one hub and its connected devices.</p>
+                </div>
+            </section>
+
+            <section class="section container next-steps" id="resources" aria-labelledby="next-title">
+                <h2 id="next-title">Choose your next step.</h2>
+                <p>Get the detail you need, then decide what comes next.</p>
+                <div class="next-links">
+                    <a href="/compatibility">Check compatibility</a>
+                    <a href="/resources#guides">Read the guides</a>
+                    <a href="/contact?interest=project">Discuss your project</a>
+                </div>
+            </section>
+        </t>
+    </template>
+</odoo>

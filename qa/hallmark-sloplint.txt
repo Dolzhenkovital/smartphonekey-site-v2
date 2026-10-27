@@ -1,0 +1,143 @@
+render tier: 100 screenshots in .hallmark/shots (local, not committed) (1280x800, 1440x900, 1920x1080 folds; 1440 and 375 full pages)
+http://127.0.0.1:8069/apps-and-chatbot
+  FAIL 58 :1 [1440px] 107 words on one screen (from y=650) | fix: One idea per screen: cut to about 80 words, make the section an object
+  REFLEX 44c :1 [1440px] hero ends at 81px of a 900px screen | fix: Fill the first screen with the visual or the headline, not with copy
+  REFLEX 49b :1 [1024px] link "Access management" wraps to 2 lines (a) | fix: Shorten the label or set nowrap
+  REFLEX 49b :1 [1024px] link "Property managers" wraps to 2 lines (a)
+  REFLEX 77 :1 [1440px] 2 thin sections: div.container (50% wide); "Learn the app." (35% wide, no mass) | fix: Widen the body to ten of twelve columns and give it mass: a visual 300px tall or more, a set of three across, rows, or a statement (layout.md § 4 and § 5)
+  WARN 77 :1 [1440px] 4 sections, hero and footer included | fix: A landing strip, not a page: six to nine sections, five on a thin prompt (layout.md § 3)
+http://127.0.0.1:8069/certifications
+  FAIL 58 :1 [1440px] 151 words on one screen (from y=1450)
+  REFLEX 44c :1 [1440px] hero ends at 81px of a 900px screen
+  REFLEX 49b :1 [320px] link "FCC record" wraps to 2 lines (a)
+  REFLEX 49b :1 [320px] link "Word document" wraps to 2 lines (a)
+  REFLEX 49b :1 [1024px] link "Access management" wraps to 2 lines (a)
+  REFLEX 49b :1 [1024px] link "Property managers" wraps to 2 lines (a)
+  REFLEX 77 :1 [1440px] 2 thin sections: div.container (51% wide); "Assess the installation as a" (60% wide, no mass)
+  WARN F25 :1 [375px] a table opens with 2 columns off-screen (from "Source") | fix: Keep the column that names the row and the one that acts on it in view: restack each row, or pin the first column
+http://127.0.0.1:8069/compatibility
+  FAIL 58 :1 [1440px] 162 words on one screen (from y=1950)
+  REFLEX 44c :1 [1440px] hero ends at 81px of a 900px screen
+  REFLEX 49b :1 [1024px] link "Access management" wraps to 2 lines (a)
+  REFLEX 49b :1 [1024px] link "Property managers" wraps to 2 lines (a)
+  REFLEX 77 :1 [1440px] 3 thin sections: div.container (51% wide); "Questions" (99% wide, no mass); "Need a specific check?" (43% wide…
+  WARN F25 :1 [375px] a table opens with 4 columns off-screen (from "Conditions and limits")
+http://127.0.0.1:8069/contact
+  FAIL 58 :1 [1440px] 96 words on one screen (from y=0)
+  REFLEX 44c :1 [1440px] hero ends at 81px of a 900px screen
+  REFLEX 49b :1 [1024px] link "Access management" wraps to 2 lines (a)
+  REFLEX 49b :1 [1024px] link "Property managers" wraps to 2 lines (a)
+  REFLEX 59 :1 [1440px] smallest gap between sections is 96px (gaps: 96, 185) | fix: 120px or more between sections, by the --section-gap steps
+  REFLEX 77 :1 [1440px] 1 thin section: div.container (50% wide)
+  REFLEX 78 :1 [1440px] section heads render at 25px under a 65px hero head | fix: h2 at --text-section (about 52px at 1440), item titles at --text-title (layout.md § 2)
+  WARN 77 :1 [1440px] 3 sections, hero and footer included
+http://127.0.0.1:8069/find-your-setup
+  FAIL 58 :1 [1440px] 116 words on one screen (from y=1450)
+  REFLEX 44c :1 [1440px] hero ends at 81px of a 900px screen
+  REFLEX 49b :1 [1024px] link "Access management" wraps to 2 lines (a)
+  REFLEX 49b :1 [1024px] link "Property managers" wraps to 2 lines (a)
+  REFLEX 59 :1 [1440px] smallest gap between sections is 96px (gaps: 96, 265, 212)
+  REFLEX 77 :1 [1440px] 1 thin section: div.container (50% wide)
+  WARN 77 :1 [1440px] 4 sections, hero and footer included
+http://127.0.0.1:8069/platform
+  FAIL 58 :1 [1440px] 127 words on one screen (from y=1900)
+  REFLEX 44c :1 [1440px] hero ends at 81px of a 900px screen
+  REFLEX 49b :1 [320px] link "What happens when a reader goes " wraps to 2 lines (a)
+  REFLEX 49b :1 [1024px] link "Access management" wraps to 2 lines (a)
+  REFLEX 49b :1 [1024px] link "Property managers" wraps to 2 lines (a)
+  REFLEX 77 :1 [1440px] 3 thin sections: div.container (47% wide); "Start with the site." (99% wide, no mass); "What are you managing?…
+http://127.0.0.1:8069/platform/access-management
+  FAIL 58 :1 [1440px] 130 words on one screen (from y=650)
+  REFLEX 44c :1 [1440px] hero ends at 81px of a 900px screen
+  REFLEX 49b :1 [1024px] link "Access management" wraps to 2 lines (a)
+  REFLEX 49b :1 [1024px] link "Property managers" wraps to 2 lines (a)
+  REFLEX 77 :1 [1440px] 4 thin sections: div.container (53% wide); "Support with evidence." (99% wide, no mass); "Questions" (99% wide…
+http://127.0.0.1:8069/platform/automation
+  FAIL 58 :1 [1440px] 128 words on one screen (from y=350)
+  REFLEX 44c :1 [1440px] hero ends at 81px of a 900px screen
+  REFLEX 49b :1 [1024px] link "Access management" wraps to 2 lines (a)
+  REFLEX 49b :1 [1024px] link "Property managers" wraps to 2 lines (a)
+  REFLEX 77 :1 [1440px] 5 thin sections: div.container (54% wide); "Check the capabilities behin" (97% wide, no mass); "See what was a…
+http://127.0.0.1:8069/platform/visitor-access
+  FAIL 58 :1 [1440px] 106 words on one screen (from y=1050)
+  REFLEX 44c :1 [1440px] hero ends at 81px of a 900px screen
+  REFLEX 49b :1 [1024px] link "Access management" wraps to 2 lines (a)
+  REFLEX 49b :1 [1024px] link "Property managers" wraps to 2 lines (a)
+  REFLEX 77 :1 [1440px] 5 thin sections: div.container (51% wide); "Explore AI Concierge for you" (100% wide, no mass); "Keep permissi…
+http://127.0.0.1:8069/products/readers
+  FAIL 58 :1 [1440px] 147 words on one screen (from y=3600)
+  REFLEX 44c :1 [1440px] hero ends at 81px of a 900px screen
+  REFLEX 49b :1 [320px] link "Which NFC cards can SmartphoneKe" wraps to 2 lines (a)
+  REFLEX 49b :1 [1024px] link "Access management" wraps to 2 lines (a)
+  REFLEX 49b :1 [1024px] link "Property managers" wraps to 2 lines (a)
+  REFLEX 77 :1 [1440px] 3 thin sections: div.container (52% wide); "Installation requirements an" (80% wide, no mass); "Choose your re…
+http://127.0.0.1:8069/resources
+  FAIL 58 :1 [1440px] 201 words on one screen (from y=850)
+  REFLEX 44c :1 [1440px] hero ends at 81px of a 900px screen
+  REFLEX 49b :1 [320px] link "Email info@smartphonekey.com" wraps to 2 lines (a)
+  REFLEX 49b :1 [1024px] link "Access management" wraps to 2 lines (a)
+  REFLEX 49b :1 [1024px] link "Property managers" wraps to 2 lines (a)
+  REFLEX 77 :1 [1440px] 2 thin sections: div.container (49% wide); "Need help with an installed " (63% wide, no mass)
+http://127.0.0.1:8069/resources/access-control-when-offline
+  FAIL 58 :1 [1440px] 227 words on one screen (from y=1300)
+  REFLEX 44c :1 [1440px] hero ends at 81px of a 900px screen
+  REFLEX 49b :1 [1024px] link "Access management" wraps to 2 lines (a)
+  REFLEX 49b :1 [1024px] link "Property managers" wraps to 2 lines (a)
+  REFLEX 77 :1 [1440px] 1 thin section: "Plan your next step." (45% wide, no mass)
+  REFLEX 79 :1 [1440px] 820px of nothing between the hero's last content (y 80) and the fold | fix: Centre the content in the screen and grow the visual or the head (layout.md § 6); never fill it with copy
+  WARN 77 :1 [1440px] 2 sections, hero and footer included
+http://127.0.0.1:8069/resources/lte-vs-wifi-access-control
+  FAIL 58 :1 [1440px] 252 words on one screen (from y=1700)
+  REFLEX 44c :1 [1440px] hero ends at 81px of a 900px screen
+  REFLEX 49b :1 [1024px] link "Access management" wraps to 2 lines (a)
+  REFLEX 49b :1 [1024px] link "Property managers" wraps to 2 lines (a)
+  REFLEX 77 :1 [1440px] 1 thin section: "Plan your next step." (45% wide, no mass)
+  REFLEX 79 :1 [1440px] 820px of nothing between the hero's last content (y 80) and the fold
+  WARN 77 :1 [1440px] 2 sections, hero and footer included
+http://127.0.0.1:8069/resources/matter-thread-access-control
+  FAIL 58 :1 [1440px] 256 words on one screen (from y=1450)
+  REFLEX 44c :1 [1440px] hero ends at 81px of a 900px screen
+  REFLEX 49b :1 [320px] link "Connectivity Standards Alliance:" wraps to 2 lines (a)
+  REFLEX 49b :1 [1024px] link "Access management" wraps to 2 lines (a)
+  REFLEX 49b :1 [1024px] link "Property managers" wraps to 2 lines (a)
+  REFLEX 77 :1 [1440px] 2 thin sections: "References" (23% wide, no mass); "Plan your next step." (45% wide, no mass)
+  REFLEX 79 :1 [1440px] 820px of nothing between the hero's last content (y 80) and the fold
+  WARN 77 :1 [1440px] 3 sections, hero and footer included
+http://127.0.0.1:8069/resources/mifare-classic-desfire-ev3
+  FAIL 58 :1 [1440px] 189 words on one screen (from y=1250)
+  REFLEX 44c :1 [1440px] hero ends at 81px of a 900px screen
+  REFLEX 49b :1 [320px] link "NXP: MIFARE DESFire EV3 product " wraps to 2 lines (a)
+  REFLEX 49b :1 [1024px] link "Access management" wraps to 2 lines (a)
+  REFLEX 49b :1 [1024px] link "Property managers" wraps to 2 lines (a)
+  REFLEX 77 :1 [1440px] 2 thin sections: "References" (27% wide, no mass); "Plan your next step." (45% wide, no mass)
+  REFLEX 79 :1 [1440px] 820px of nothing between the hero's last content (y 80) and the fold
+  WARN 77 :1 [1440px] 3 sections, hero and footer included
+  WARN F19 :1 [1440px] 4 font weights in running use (400, 500, 600, 700) | fix: Three weights at most, display and body together, picked as extremes
+http://127.0.0.1:8069/security
+  FAIL 58 :1 [1440px] 115 words on one screen (from y=150)
+  REFLEX 44c :1 [1440px] hero ends at 81px of a 900px screen
+  REFLEX 49b :1 [1024px] link "Access management" wraps to 2 lines (a)
+  REFLEX 49b :1 [1024px] link "Property managers" wraps to 2 lines (a)
+  REFLEX 77 :1 [1440px] 3 thin sections: div.container (54% wide); "Procurement questions welcom" (95% wide, no mass); "Review the evi…
+http://127.0.0.1:8069/solutions/integrators
+  FAIL 58 :1 [1440px] 108 words on one screen (from y=650)
+  REFLEX 44c :1 [1440px] hero ends at 81px of a 900px screen
+  REFLEX 49b :1 [1024px] link "Access management" wraps to 2 lines (a)
+  REFLEX 49b :1 [1024px] link "Property managers" wraps to 2 lines (a)
+  REFLEX 77 :1 [1440px] 3 thin sections: div.container (52% wide); "Partner options." (98% wide, no mass); "Work with SmartphoneKey." …
+http://127.0.0.1:8069/solutions/property-managers
+  FAIL 58 :1 [1440px] 134 words on one screen (from y=700)
+  REFLEX 44c :1 [1440px] hero ends at 81px of a 900px screen
+  REFLEX 49b :1 [1024px] link "Access management" wraps to 2 lines (a)
+  REFLEX 49b :1 [1024px] link "Property managers" wraps to 2 lines (a)
+  REFLEX 77 :1 [1440px] 3 thin sections: div.container (51% wide); "Project checklist." (95% wide, no mass); "Start with your portfoli…
+http://127.0.0.1:8069/about
+  REFLEX 44c :1 [1440px] hero ends at 81px of a 900px screen
+  REFLEX 49b :1 [1024px] link "Access management" wraps to 2 lines (a)
+  REFLEX 49b :1 [1024px] link "Property managers" wraps to 2 lines (a)
+  REFLEX 77 :1 [1440px] 2 thin sections: div.container (51% wide); "See what we build." (33% wide, no mass)
+  WARN 77 :1 [1440px] 4 sections, hero and footer included
+http://127.0.0.1:8069/
+  REFLEX 49b :1 [1024px] link "Access management" wraps to 2 lines (a)
+  REFLEX 49b :1 [1024px] link "Property managers" wraps to 2 lines (a)
+sloplint: 18 FAIL, 92 REFLEX, 11 WARN across 0 file(s) and 20 URL(s).

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Editors change wording; publishers decide what reaches the public site. -->
+    <record id="group_spk_website_editor" model="res.groups">
+        <field name="name">SmartphoneKey website: content editor</field>
+        <field name="category_id" ref="base.module_category_website"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+    <record id="group_spk_website_publisher" model="res.groups">
+        <field name="name">SmartphoneKey website: publisher</field>
+        <field name="category_id" ref="base.module_category_website"/>
+        <field name="implied_ids" eval="[(4, ref('group_spk_website_editor'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+    </record>
+</odoo>

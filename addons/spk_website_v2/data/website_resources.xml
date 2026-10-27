@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- The four buyer guides (copy deck 2026-10-27, evidence checked 2026-10-26).
+         Content records: editors maintain them, so module updates leave them alone.
+         A paragraph with class spk-component-reader-comparison is replaced by the
+         shared LTE / Wi-Fi table (views/products.xml), so the table has one source. -->
+    <data noupdate="1">
+        <record id="resource_lte_vs_wifi" model="spk.website.resource">
+            <field name="kind">guide</field>
+            <field name="sequence">10</field>
+            <field name="slug">lte-vs-wifi-access-control</field>
+            <field name="name">LTE or Wi-Fi: what fits your site?</field>
+            <field name="seo_title">LTE vs Wi-Fi Access Control: A Site Checklist | SmartphoneKey</field>
+            <field name="description">Compare cellular and Wi-Fi connection requirements for access control readers, including coverage, network ownership and installation checks.</field>
+            <field name="category">getting_started</field>
+            <field name="direct_answer">LTE and Wi-Fi are connection choices. The right choice depends on coverage at the planned reader location, network ownership and the operating requirements of the site. Start with those constraints before comparing reader variants. Both still need power, compatible lock hardware and a careful installation: the connection only decides how the reader reaches the platform.</field>
+            <field name="related_paths">/products/readers,/find-your-setup,/compatibility</field>
+            <field name="published_on">2026-10-27</field>
+            <field name="reviewed_on">2026-10-26</field>
+            <field name="is_published" eval="True"/>
+            <field name="body" type="html">
+                <div>
+                    <h2 id="compare">Compare the two connections</h2>
+                    <p>The same requirements apply to every SmartphoneKey reader. What changes is the connection each one depends on.</p>
+                    <p class="spk-component-reader-comparison">LTE and Wi-Fi reader comparison.</p>
+                    <h2 id="who-manages">Who manages the connection</h2>
+                    <p>With an LTE reader, the reader relies on a cellular service. Someone has to provide the SIM and service, keep it active and check coverage at the position where the reader will be mounted.</p>
+                    <p>With a Wi-Fi reader, the reader joins the site's own network. The network owner provides the access details, keeps the network configured as the installation guide describes, and tells you before passwords or equipment change.</p>
+                    <h2 id="hardware">Power and lock hardware are still needed</h2>
+                    <p>The connection does not change the physical installation. Each reader still needs appropriate power, compatible locking hardware and the connections specified in the <a href="/guide-for-usage-and-installation">installation and connection guide</a>.</p>
+                    <h2 id="checklist">Checklist before you choose</h2>
+                    <h3>For an LTE reader</h3>
+                    <ul>
+                        <li>Cellular coverage measured at each planned reader position, not just outside the building.</li>
+                        <li>Who supplies the SIM and service, and in which region the reader is installed.</li>
+                        <li>Who renews the service and who is told if it stops.</li>
+                    </ul>
+                    <h3>For a Wi-Fi reader</h3>
+                    <ul>
+                        <li>Wi-Fi coverage at each planned reader position.</li>
+                        <li>Who owns and manages the network, and whether it restricts new devices.</li>
+                        <li>How you will learn about changes to the network name, password or equipment.</li>
+                    </ul>
+                    <h2 id="site-review">When to ask for a site review</h2>
+                    <p>Ask us to review the site when coverage at a reader position is uncertain, when doors are in basements or behind heavy construction, when several buildings share one plan, or when a third party manages the network. Coverage depends on the building, placement and radio conditions, so it is checked on site rather than promised in advance.</p>
+                    <p>Choose the connection that fits the site, then confirm the supported reader configuration.</p>
+                </div>
+            </field>
+        </record>
+
+        <record id="resource_mifare" model="spk.website.resource">
+            <field name="kind">guide</field>
+            <field name="sequence">20</field>
+            <field name="slug">mifare-classic-desfire-ev3</field>
+            <field name="name">Which NFC cards can SmartphoneKey program?</field>
+            <field name="seo_title">MIFARE Classic and DESFire EV3 Programming | SmartphoneKey</field>
+            <field name="description">See the documented physical-card programming workflows and understand why card variants, credential formats and firmware need checking.</field>
+            <field name="category">cards_devices</field>
+            <field name="direct_answer">The documented programming workflows name MIFARE Classic and MIFARE DESFire EV3. A compatible programmer or the supported built-in reader programmer writes the credential through the Admin Panel workflow. Confirm the exact card and firmware configuration before ordering. Other generations, memory sizes and third-party credential formats are not covered by the documented workflow.</field>
+            <field name="related_paths">/compatibility,/products/readers,/platform/access-management</field>
+            <field name="source_links">NXP: MIFARE DESFire EV3 product information | https://www.nxp.com/products/MF3DHx3</field>
+            <field name="published_on">2026-10-27</field>
+            <field name="reviewed_on">2026-10-26</field>
+            <field name="is_published" eval="True"/>
+            <field name="body" type="html">
+                <div>
+                    <h2 id="operations">Reading, programming and assigning access</h2>
+                    <p>Three different things happen to a card, and they are easy to confuse:</p>
+                    <ul>
+                        <li><strong>Reading</strong>: a reader detects the card and its identifier.</li>
+                        <li><strong>Programming</strong>: a supported programming device writes a SmartphoneKey credential to a supported card.</li>
+                        <li><strong>Assigning access</strong>: the Admin Panel links that credential to a person and to the doors they may open.</li>
+                    </ul>
+                    <p>A card that a reader can detect is not automatically a card that SmartphoneKey can program.</p>
+                    <h2 id="families">The two documented card families</h2>
+                    <table>
+                        <caption>Documented card programming workflows</caption>
+                        <thead>
+                            <tr><th scope="col">Card family</th><th scope="col">Documented workflow</th><th scope="col">Check before ordering</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><th scope="row">MIFARE Classic</th><td>Programming through the Admin Panel with a compatible programming device, including the reader's built-in programmer where available</td><td>Memory size and any existing credential format</td></tr>
+                            <tr><th scope="row">MIFARE DESFire EV3</th><td>Programming through the Admin Panel with a compatible programming device, including the reader's built-in programmer where available</td><td>Other DESFire generations and memory sizes need confirmation</td></tr>
+                        </tbody>
+                    </table>
+                    <h2 id="operator-flow">How an operator programs a card</h2>
+                    <ol>
+                        <li>Choose the site, the lock and the person the card is for.</li>
+                        <li>Choose the programming device and the card type.</li>
+                        <li>Tap the card on the programmer.</li>
+                        <li>Check the result in the Admin Panel before handing the card over.</li>
+                    </ol>
+                    <p>The <a href="/instructions/admin-guide">Admin Panel user guide</a> describes each screen of this workflow.</p>
+                    <h2 id="other-cards">Why other generations and sizes need confirmation</h2>
+                    <p>Cards within one family share a common basis, but chip-level compatibility is not evidence that SmartphoneKey's programming workflow supports every generation, memory size or credential format. The same applies to other card types and to cards already carrying another system's credentials.</p>
+                    <p>Before ordering, send us the exact card product, its memory size and any credential format already on it. Please do not send keys or card secrets.</p>
+                </div>
+            </field>
+        </record>
+
+        <record id="resource_matter_thread" model="spk.website.resource">
+            <field name="kind">guide</field>
+            <field name="sequence">30</field>
+            <field name="slug">matter-thread-access-control</field>
+            <field name="name">Matter and Thread for access control.</field>
+            <field name="seo_title">Matter and Thread for Access Control Explained | SmartphoneKey</field>
+            <field name="description">Understand Matter capabilities, Thread mesh and Border Router roles, and the deployment questions behind a connected access system.</field>
+            <field name="category">networks_automation</field>
+            <field name="direct_answer">Matter describes how supported devices communicate their capabilities. Thread provides an IP mesh network. A Thread Border Router connects that mesh to other IP networks. These are different roles, so a deployment should state what each device actually provides. In SmartphoneKey, what a workflow can do depends on the capabilities each commissioned device reports.</field>
+            <field name="related_paths">/platform/automation,/compatibility,/products/readers</field>
+            <field name="source_links">Connectivity Standards Alliance: Matter | https://csa-iot.org/all-solutions/matter/
+OpenThread: Border Router | https://openthread.io/guides/border-router</field>
+            <field name="published_on">2026-10-27</field>
+            <field name="reviewed_on">2026-10-26</field>
+            <field name="is_published" eval="True"/>
+            <field name="body" type="html">
+                <div>
+                    <h2 id="roles">Four roles, often confused</h2>
+                    <table>
+                        <caption>Matter and Thread roles</caption>
+                        <thead>
+                            <tr><th scope="col">Role</th><th scope="col">What it does</th><th scope="col">What it does not prove</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><th scope="row">Matter device</th><td>Exposes capabilities such as on/off, contact or temperature</td><td>That every controller can use every function</td></tr>
+                            <tr><th scope="row">Matter controller</th><td>Commissions devices and sends them commands</td><td>That it forwards Thread traffic</td></tr>
+                            <tr><th scope="row">Thread router</th><td>Forwards traffic inside the Thread mesh</td><td>That the mesh can reach the internet</td></tr>
+                            <tr><th scope="row">Thread Border Router</th><td>Connects the Thread mesh to other IP networks</td><td>That it controls Matter devices</td></tr>
+                        </tbody>
+                    </table>
+                    <h2 id="topology">An example topology</h2>
+                    <p>Example topology. Deployment depends on configuration.</p>
+                    <ol>
+                        <li>The site's internet connection, over Wi-Fi, Ethernet or cellular.</li>
+                        <li>A Thread Border Router, which links the Thread mesh to that IP network.</li>
+                        <li>Thread routers, which pass traffic between devices in the mesh.</li>
+                        <li>Matter devices, such as sensors, lights and valves, each reporting its own capabilities.</li>
+                        <li>A Matter controller, which commissions the devices and runs the configured workflows.</li>
+                    </ol>
+                    <p>Which device provides which role depends on the hardware, its revision and its firmware. Confirm each role for the equipment you plan to install.</p>
+                    <h2 id="capabilities">Capabilities decide what a workflow can do</h2>
+                    <p>A Matter label does not mean every device exposes the same commands. A contact sensor reports open or closed; a light switches on or off; a leak sensor reports water; a valve opens or closes; a thermostat accepts a setpoint. A workflow can only use what the commissioned device reports and what the configured system supports.</p>
+                    <h2 id="one-hub">One hub per scenario</h2>
+                    <p>In the current implementation, each scenario belongs to one hub and its commissioned devices. Plan workflows around the hub that controls the devices they need.</p>
+                    <h2 id="coverage">Coverage and the route to the internet</h2>
+                    <p>A mesh deployment depends on node roles, placement, power and the available route to the internet. Coverage depends on the building, placement and radio conditions, so plan it for the site and verify it after installation. When the route to the internet is lost, remote management waits for it to return; read <a href="/resources/access-control-when-offline">what happens when a reader goes offline</a>.</p>
+                    <h2 id="questions">Questions to settle for your hardware</h2>
+                    <ul>
+                        <li>Which reader revision and firmware will be installed?</li>
+                        <li>Which Matter and Thread roles does each device provide?</li>
+                        <li>Where is the Thread Border Router, and how does the site reach the internet?</li>
+                        <li>Which devices and capabilities does each workflow need, and which hub controls them?</li>
+                    </ul>
+                </div>
+            </field>
+        </record>
+
+        <record id="resource_offline" model="spk.website.resource">
+            <field name="kind">guide</field>
+            <field name="sequence">40</field>
+            <field name="slug">access-control-when-offline</field>
+            <field name="name">What happens when a reader goes offline?</field>
+            <field name="seo_title">Access Control When a Reader Is Offline | SmartphoneKey</field>
+            <field name="description">Understand pending key changes, delivery confirmation and the difference between local access and remote management during an outage.</field>
+            <field name="category">operating</field>
+            <field name="direct_answer">Separate local access from remote changes. In SmartphoneKey's documented management workflow, some key changes can wait in a queue until the reader reconnects. A pending change is not proof it has reached the reader; local access behaviour depends on its configuration. Check the delivery status before you rely on a change, especially a revocation.</field>
+            <field name="related_paths">/platform/access-management,/security,/products/readers</field>
+            <field name="published_on">2026-10-27</field>
+            <field name="reviewed_on">2026-10-26</field>
+            <field name="is_published" eval="True"/>
+            <field name="body" type="html">
+                <div>
+                    <h2 id="states">Four states of a change</h2>
+                    <table>
+                        <caption>States of a key change</caption>
+                        <thead>
+                            <tr><th scope="col">State</th><th scope="col">What it means</th><th scope="col">What to do</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><th scope="row">Requested</th><td>The change was made in the Admin Panel.</td><td>Follow its delivery status.</td></tr>
+                            <tr><th scope="row">Pending delivery</th><td>The change is waiting for the reader to reconnect. It is not on the reader yet.</td><td>Treat the previous access as still possible on that reader.</td></tr>
+                            <tr><th scope="row">Confirmed by the reader</th><td>The reader reported that it applied the change.</td><td>For an unlock, this shows the reader acted. It does not prove a person passed through or the door opened.</td></tr>
+                            <tr><th scope="row">Failed or unconfirmed</th><td>The reader reported an error, or no confirmation arrived.</td><td>Check the reader and its connection, then repeat or escalate.</td></tr>
+                        </tbody>
+                    </table>
+                    <p>Not every kind of operation waits in the queue: some need the reader to be online when you make them.</p>
+                    <h2 id="revocation">What this means for revocation</h2>
+                    <p>A revocation made while a reader is offline is pending, not enforced. Until the reader reconnects and confirms the change, the credential may still work on that reader. When access must end at once, restore the reader's connection, watch for the confirmation and follow your site's own procedures in the meantime.</p>
+                    <h2 id="checks">What an operator should check</h2>
+                    <ul>
+                        <li>The reader's connection status.</li>
+                        <li>Pending operations for the person and the doors involved.</li>
+                        <li>The confirmation once the reader is back online.</li>
+                        <li>Device alerts, if you have configured them for your operations.</li>
+                    </ul>
+                    <h2 id="local">Local access and other services</h2>
+                    <p>Whether a credential keeps working locally during an outage depends on the device and its configuration. Other services rely on connectivity in their own ways: the QR intercom, video, AI Concierge and credential provisioning do not share one outage behaviour, so check each one you depend on.</p>
+                    <h2 id="recovery">Recovery and support</h2>
+                    <p>When the reader reconnects, queued changes are delivered and their status updates. If a change stays unconfirmed, contact support with the site and reader details. Please do not send passwords, access codes or credentials by email.</p>
+                </div>
+            </field>
+        </record>
+    </data>
+</odoo>

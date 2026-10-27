@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_spk_website_claim_editor,spk.website.claim editor,model_spk_website_claim,group_spk_website_editor,1,1,1,0
+access_spk_website_claim_publisher,spk.website.claim publisher,model_spk_website_claim,group_spk_website_publisher,1,1,1,1
+access_spk_website_compatibility_editor,spk.website.compatibility editor,model_spk_website_compatibility,group_spk_website_editor,1,1,1,0
+access_spk_website_compatibility_publisher,spk.website.compatibility publisher,model_spk_website_compatibility,group_spk_website_publisher,1,1,1,1
+access_spk_website_resource_editor,spk.website.resource editor,model_spk_website_resource,group_spk_website_editor,1,1,1,0
+access_spk_website_resource_publisher,spk.website.resource publisher,model_spk_website_resource,group_spk_website_publisher,1,1,1,1
+access_spk_website_team_member_editor,spk.website.team.member editor,model_spk_website_team_member,group_spk_website_editor,1,1,1,0
+access_spk_website_team_member_publisher,spk.website.team.member publisher,model_spk_website_team_member,group_spk_website_publisher,1,1,1,1
+access_spk_website_enquiry_attempt_system,spk.website.enquiry.attempt system,model_spk_website_enquiry_attempt,base.group_system,1,0,0,1
