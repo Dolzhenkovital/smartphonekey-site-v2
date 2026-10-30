@@ -1,6 +1,6 @@
 # Implementation status
 
-Last update: 30 October 2026 (homepage update with the real Admin Panel screenshots, brief `../docs/site-v2/CLAUDE-HOMEPAGE-UPDATE-2026-10-30.md`). State: **ready for review**, local only, not deployed, not committed, not pushed. The addon is at 18.0.4.0.0; the static review copy in `preview/` was regenerated locally from the updated sources (evidence and limits: `qa/homepage-update-2026-10-30.md`). The 27 October revision below remains the base.
+Last update: 30 October 2026 (homepage update with the real Admin Panel screenshots, brief `../docs/site-v2/CLAUDE-HOMEPAGE-UPDATE-2026-10-30.md`). State: **ready for review**. Committed (eed3919) and pushed to `main` on the owner's instruction; the GitHub Pages review copy shows this update (Pages run 41125397562). Odoo stage and production are not deployed. The addon is at 18.0.4.0.0; the static review copy in `preview/` was regenerated from the updated sources (evidence and limits: `qa/homepage-update-2026-10-30.md`). The 27 October revision below remains the base.
 
 ## Update of 30 October 2026
 
@@ -12,7 +12,7 @@ Last update: 30 October 2026 (homepage update with the real Admin Panel screensh
 
 **Localisation.** `.pot` re-exported from the updated database; 93 new public strings translated in the four catalogues (`qa/homepage-update-2026-10-30/translations-2026-10-30.json`, applied with `tools/i18n_apply.py`), checks `blocking: 0`, soft hyphens applied, catalogues reloaded with `--i18n-overwrite`. Independent agent reviews of the four languages: `qa/homepage-update-2026-10-30/review-<lang>.md`. A human native-speaker read is still owed (unchanged owner item).
 
-**Checks run locally.** 49 Odoo tests, 0 failed (`qa/homepage-update-2026-10-30/odoo-tests.txt`), including the new `test_product_screenshots_are_served_and_described` and the extended forbidden-wording list (no "revoke instantly", "handles the rest", "access in seconds"); screenshot matrix in five languages with 0 elements outside the viewport (`qa/homepage-update-2026-10-30/screenshots/`); static export and link check. Nothing deployed: Odoo stage and production, GitHub Pages and DNS were not touched by this update.
+**Checks run locally.** 49 Odoo tests, 0 failed (`qa/homepage-update-2026-10-30/odoo-tests.txt`), including the new `test_product_screenshots_are_served_and_described` and the extended forbidden-wording list (no "revoke instantly", "handles the rest", "access in seconds"); screenshot matrix in five languages with 0 elements outside the viewport (`qa/homepage-update-2026-10-30/screenshots/`); static export and link check. Published: the GitHub Pages review copy only. Odoo stage and production and DNS were not touched.
 
 ## Where the work lives
 
