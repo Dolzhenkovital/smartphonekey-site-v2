@@ -26,8 +26,10 @@
                 <link rel="preload" as="font" type="font/woff2" crossorigin="" href="/smartphonekey-site-v2/spk_website_v2/static/src/fonts/manrope-latin-wght-normal.woff2">
                 <link type="text/css" rel="stylesheet" href="/smartphonekey-site-v2/assets/site.css">
                 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://smartphonekey.com/es/platform/access-management#webpage","url":"https://smartphonekey.com/es/platform/access-management","name":"Gestión de accesos para varios sitios | SmartphoneKey","description":"Añada residentes, personal y contratistas, emita y revoque tarjetas y llaves, asigne administradores del sitio y compruebe que cada cambio llegó al lector.","inLanguage":"es","isPartOf":{"@id":"https://smartphonekey.com/#website"},"breadcrumb":{"@id":"https://smartphonekey.com/es/platform/access-management#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://smartphonekey.com/es/platform/access-management#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://smartphonekey.com/es"},{"@type":"ListItem","position":2,"name":"Plataforma","item":"https://smartphonekey.com/es/platform"},{"@type":"ListItem","position":3,"name":"Gestión de accesos","item":"https://smartphonekey.com/es/platform/access-management"}]}]}</script>
-                <script defer src="/smartphonekey-site-v2/spk_website_v2/static/src/js/navigation.js?v=18.0.3.0.0"></script>
+                <script defer src="/smartphonekey-site-v2/spk_website_v2/static/src/js/navigation.js?v=18.0.4.0.0"></script>
                 
+                <script defer src="/smartphonekey-site-v2/spk_website_v2/static/src/js/expand.js?v=18.0.4.0.0"></script>
+            
             
     </head>
     <body class="spk-body">
@@ -234,15 +236,12 @@
                 
             </div>
             <div class="opening-evidence">
-                        <div class="workflow-illustration">
-                            <p class="illustration-label">Ejemplo: la visita de un contratista</p>
-                            <ol class="steps">
-                                <li><span class="step-title">Elija</span> <span>el sitio y las puertas</span></li>
-                                <li><span class="step-title">Emita</span> <span>una llave o una tarjeta</span></li>
-                                <li><span class="step-title">Compruebe</span> <span>que los lectores lo han confirmado</span></li>
-                                <li><span class="step-title">Revoque</span> <span>cuando termine el trabajo, y compruebe de nuevo</span></li>
-                            </ol>
-                        </div>
+                        <figure class="shot-figure">
+                            <div class="shot">
+                                <img src="/smartphonekey-site-v2/spk_website_v2/static/src/img/product-ui/assign-access-dialog-548.webp" width="548" height="442" loading="eager" fetchpriority="high" decoding="async" alt="Asistente Assign Key en el paso de selección de usuario, con el campo de destinatario vacío">
+                            </div>
+                            <figcaption>Asistente Assign Key del Admin Panel, paso 2 de 3, antes de elegir a una persona. Interfaz en inglés. <a href="/smartphonekey-site-v2/spk_website_v2/static/src/img/product-ui/assign-access-1056.webp" data-spk-expand="" data-spk-expand-alt="Assign Key wizard at the user-selection step, with an empty recipient field, over the Dashboard" data-spk-expand-width="1056" data-spk-expand-height="667">Ver la pantalla completa</a></figcaption>
+                        </figure>
                     </div>
         </div>
             </div>
@@ -265,14 +264,41 @@
                 </div>
             </section>
 
-            <section class="section container stack" aria-labelledby="example-title">
-                <h2 id="example-title">Ejemplo: la visita de un contratista</h2>
-                <p>Un contratista necesita acceso a una sala de servicio. El administrador elige el sitio y las puertas, emite una llave o una tarjeta y comprueba que los lectores lo han confirmado. Cuando termina el trabajo, el administrador revoca el acceso y vuelve a comprobarlo.</p>
+            <section class="section container" aria-labelledby="example-title">
+                <div class="split-evidence">
+                    <div class="split-copy">
+                        <h2 id="example-title">Ejemplo: la visita de un contratista</h2>
+                        <p>Un contratista necesita acceso a una sala de servicio. El administrador elige el sitio y las puertas, emite una llave o una tarjeta y comprueba que los lectores lo han confirmado. Cuando termina el trabajo, el administrador revoca el acceso y vuelve a comprobarlo.</p>
+                        <ol class="steps">
+                            <li><span class="step-title">Elija</span> <span>el sitio y las puertas</span></li>
+                            <li><span class="step-title">Emita</span> <span>una llave o una tarjeta, con un periodo de validez cuando se admita</span></li>
+                            <li><span class="step-title">Compruebe</span> <span>que los lectores lo han confirmado</span></li>
+                            <li><span class="step-title">Revoque</span> <span>cuando termine el trabajo, y compruebe de nuevo</span></li>
+                        </ol>
+                    </div>
+                    <figure class="shot-figure">
+                        <div class="shot">
+                            <img src="/smartphonekey-site-v2/spk_website_v2/static/src/img/product-ui/guest-wallet-key-dialog-548.webp" width="548" height="632" loading="lazy" decoding="async" alt="Formulario de llave en Wallet para invitados con selección de cerradura, fechas de validez y campo de correo del destinatario vacío">
+                        </div>
+                        <figcaption>Formulario Guest Key en modo Wallet Key: selección de cerradura, fechas de validez y campo de destinatario, mostrado antes de enviar nada. Las fechas son los valores predeterminados del formulario en el momento de la captura, no un acceso concedido. Interfaz en inglés. <a href="/smartphonekey-site-v2/spk_website_v2/static/src/img/product-ui/guest-wallet-key-1304.webp" data-spk-expand="" data-spk-expand-alt="Guest Wallet Key form over the Dashboard, with lock selection, validity dates and an empty email-recipient field" data-spk-expand-width="1304" data-spk-expand-height="960">Ver la pantalla completa</a></figcaption>
+                    </figure>
+                </div>
             </section>
 
-            <section class="section container stack" aria-labelledby="evidence-title">
-                <h2 id="evidence-title">Eventos y estado de los dispositivos</h2>
-                <p>Revise los registros de actividad y de auditoría de cada sitio. La monitorización de dispositivos muestra los lectores que han perdido la conexión y las operaciones que han fallado. Puede configurar alertas para eventos de dispositivos compatibles; no sustituyen un proceso de soporte acordado.</p>
+            <section class="section container" aria-labelledby="evidence-title">
+                <div class="split-evidence">
+                    <div class="split-copy">
+                        <h2 id="evidence-title">Eventos y estado de los dispositivos</h2>
+                        <p>Revise los registros de actividad y de auditoría de cada sitio. La monitorización de dispositivos muestra los lectores que han perdido la conexión y las operaciones que han fallado. Puede configurar alertas para eventos de dispositivos compatibles; no sustituyen un proceso de soporte acordado.</p>
+                        <p>Aplicado no es lo mismo que enviado: cada cambio muestra si está pendiente, confirmado por el lector o fallido.</p>
+                    </div>
+                    <figure class="shot-figure">
+                        <div class="shot">
+                            <img src="/smartphonekey-site-v2/spk_website_v2/static/src/img/product-ui/recent-activity-close-up-620.webp" width="620" height="378" loading="lazy" decoding="async" alt="Actividad reciente con eventos de cerradura y de llave en el Admin Panel de SmartphoneKey">
+                        </div>
+                        <figcaption>Actividad reciente en el Dashboard (detalle). Un evento es el registro de lo que notificó el lector, no una prueba de que alguien haya pasado. Interfaz en inglés.</figcaption>
+                    </figure>
+                </div>
             </section>
 
             <section class="section container stack" aria-labelledby="offline-title">
@@ -280,6 +306,22 @@
                 <p>Algunos cambios esperan a que el lector se vuelva a conectar. Pendiente significa que el lector aún no ha confirmado el cambio. Que las llaves y tarjetas sigan funcionando en la puerta durante una interrupción depende del dispositivo y de su configuración.</p>
                 <p>Una revocación realizada mientras el lector está sin conexión no surte efecto en ese lector hasta que confirma el cambio.</p>
                 <a href="/smartphonekey-site-v2/es/resources/access-control-when-offline/">¿Qué ocurre cuando un lector se queda sin conexión?</a>
+            </section>
+
+            <section class="section container" aria-labelledby="assistant-title">
+                <div class="split-evidence is-centred">
+                    <div class="split-copy">
+                        <h2 id="assistant-title">Ayuda dentro del Admin Panel</h2>
+                        <p>Obtenga ayuda en el Admin Panel con el AI Assistant integrado. Las acciones disponibles dependen de sus permisos y de la configuración del sitio.</p>
+                        <p class="muted">El AI Assistant forma parte del Admin Panel. No es la app SmartphoneKey en ChatGPT ni el AI Concierge para visitantes.</p>
+                    </div>
+                    <figure class="shot-figure">
+                        <div class="assistant-panel">
+                            <img src="/smartphonekey-site-v2/spk_website_v2/static/src/img/product-ui/ai-assistant-detail-422.webp" width="422" height="567" loading="lazy" decoding="async" alt="AI Assistant integrado de SmartphoneKey con su mensaje de bienvenida y el campo de mensaje">
+                        </div>
+                        <figcaption>El panel del AI Assistant al abrirse, interfaz en inglés, antes de enviar ningún mensaje. <a href="/smartphonekey-site-v2/spk_website_v2/static/src/img/product-ui/ai-assistant-context-2370.webp" data-spk-expand="" data-spk-expand-alt="SmartphoneKey Dashboard with the AI Assistant open beside the access overview" data-spk-expand-width="2370" data-spk-expand-height="1098">Verlo junto al Dashboard</a></figcaption>
+                    </figure>
+                </div>
             </section>
 
         <section class="section container faq" aria-labelledby="faq-title">

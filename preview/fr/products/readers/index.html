@@ -26,7 +26,7 @@
                 <link rel="preload" as="font" type="font/woff2" crossorigin="" href="/smartphonekey-site-v2/spk_website_v2/static/src/fonts/manrope-latin-wght-normal.woff2">
                 <link type="text/css" rel="stylesheet" href="/smartphonekey-site-v2/assets/site.css">
                 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://smartphonekey.com/fr/products/readers#webpage","url":"https://smartphonekey.com/fr/products/readers","name":"Lecteurs de contrôle d’accès LTE et Wi-Fi | SmartphoneKey","description":"Les lecteurs SmartphoneKey intègrent un contrôleur d’accès. Comparez les versions LTE et Wi-Fi et voyez ce dont l’installation a aussi besoin.","inLanguage":"fr","isPartOf":{"@id":"https://smartphonekey.com/#website"},"breadcrumb":{"@id":"https://smartphonekey.com/fr/products/readers#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://smartphonekey.com/fr/products/readers#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://smartphonekey.com/fr"},{"@type":"ListItem","position":2,"name":"Lecteurs","item":"https://smartphonekey.com/fr/products/readers"}]}]}</script>
-                <script defer src="/smartphonekey-site-v2/spk_website_v2/static/src/js/navigation.js?v=18.0.3.0.0"></script>
+                <script defer src="/smartphonekey-site-v2/spk_website_v2/static/src/js/navigation.js?v=18.0.4.0.0"></script>
                 
             
     </head>
@@ -285,7 +285,19 @@
                 <h2 id="connected-title">Chaque lecteur est un routeur Thread et un Border Router</h2>
                 <div class="split-copy">
                     <p>Chaque lecteur SmartphoneKey peut faire office de Thread Border Router et de routeur dans le réseau maillé Thread. Aucun de ces rôles ne demande une version de firmware distincte : les lecteurs d’un site peuvent donc former un seul réseau maillé et le relier à votre réseau IP.</p>
-                    <p>La couverture du réseau maillé et le chemin vers Internet dépendent toujours de l’emplacement, de l’alimentation et du bâtiment. Les fonctions de contrôleur Matter sont confirmées pour chaque projet.</p>
+                    <p class="benefit">Une conception sans fil adaptée peut réduire le câblage de communication entre les lecteurs : les lecteurs du réseau maillé Thread peuvent accéder à Internet par un lecteur qui dispose d’une connexion LTE ou Wi-Fi.</p>
+                    <div class="connection-panel">
+        <div class="connection-example">
+            <p class="illustration-label">Exemple de schéma de connexion</p>
+            <ol class="connection-nodes" role="list">
+                <li class="is-uplink"><span class="node-name">Lecteur de l’entrée principale</span> <span class="node-note">LTE ou Wi-Fi, relié à Internet</span></li>
+                <li><span class="node-name">Lecteur de la porte latérale</span> <span class="node-note">Réseau maillé Thread</span></li>
+                <li><span class="node-name">Lecteur du local à vélos</span> <span class="node-note">Réseau maillé Thread</span></li>
+            </ol>
+            <p class="photo-caption">Un exemple, pas une spécification. La couverture, le nombre de lecteurs et le chemin vers Internet dépendent de l’installation.</p>
+        </div>
+                    </div>
+                    <p>La couverture du réseau maillé et le chemin vers Internet dépendent toujours de l’emplacement, de l’alimentation et du bâtiment. Le nombre de lecteurs partageant une connexion, et ce qui se passe si elle tombe, dépendent de l’installation ; cela n’implique pas de basculement automatique. Les fonctions de contrôleur Matter sont confirmées pour chaque projet.</p>
                     <p class="note">La couverture dépend du bâtiment, de l’emplacement et des conditions radio. Nous vous aidons à planifier le réseau de votre site.</p>
                     <a href="/smartphonekey-site-v2/fr/resources/matter-thread-access-control/">Matter et Thread pour le contrôle d’accès</a>
                 </div>

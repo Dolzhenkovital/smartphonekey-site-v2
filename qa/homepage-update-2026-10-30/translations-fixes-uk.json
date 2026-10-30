@@ -1,0 +1,54 @@
+{
+  "Mesh coverage and the route to the internet still depend on placement, power and the building. How many readers share one connection, and what happens if it drops, depend on the installation; automatic failover is not implied. Matter controller functions are confirmed for each project.": {
+    "uk": "Покриття mesh-мережі та шлях до інтернету все одно залежать від розташування, живлення та будівлі. Скільки зчитувачів ділять одне підключення і що станеться, якщо воно зникне, залежить від конкретного об’єкта та монтажу; це не означає автоматичного перемикання на резерв. Функції контролера Matter підтверджуються для кожного проєкту."
+  },
+  "Visitors scan the entrance QR code to reach a resident or the site team.": {
+    "uk": "Відвідувачі сканують QR-код біля входу, щоб зв’язатися з мешканцем або персоналом об’єкта."
+  },
+  "Guest Key form in Wallet Key mode: validity dates and the recipient field, shown before anything is sent. English interface.": {
+    "uk": "Форма Guest Key у режимі Wallet Key: дати дії та поле одержувача; знімок зроблено до надсилання. Інтерфейс англійською."
+  },
+  "Guest Key form in Wallet Key mode: lock selection, validity dates and the recipient field, shown before anything is sent. The dates are the form's defaults at capture time, not a completed grant. English interface.": {
+    "uk": "Форма Guest Key у режимі Wallet Key: вибір замка, дати дії та поле одержувача; знімок зроблено до надсилання. Дати — типові значення форми на момент знімка, а не наданий доступ. Інтерфейс англійською."
+  },
+  "AI Concierge is the visitor-facing service. It is separate from the AI Assistant inside the Admin Panel and from the SmartphoneKey app in ChatGPT.": {
+    "uk": "AI Concierge — це сервіс для відвідувачів, окремий від AI Assistant в Admin Panel і від застосунку SmartphoneKey у ChatGPT."
+  },
+  "Sending a change is not the same as a reader applying it. The Admin Panel shows whether each change is pending, confirmed by the reader or failed, and which readers are online, offline or not connected. A revocation waiting for an offline reader is not yet in effect there.": {
+    "uk": "Надіслана зміна ще не означає, що зчитувач її застосував. Admin Panel показує стан кожної зміни — очікує, підтверджена зчитувачем чи не вдалася — і які зчитувачі онлайн, офлайн чи не підключені. Скасування, що очікує на зчитувач без зв’язку, на ньому ще не діє."
+  },
+  "Reader and access controller in one device. LTE, Wi-Fi or supported Thread connectivity.": {
+    "uk": "Зчитувач і контролер доступу в одному пристрої. Підключення LTE, Wi-Fi або Thread, де підтримується."
+  },
+  "Combine readers with a built-in access controller and LTE, Wi-Fi or supported Thread connectivity.": {
+    "uk": "Поєднуйте зчитувачі з вбудованим контролером доступу та підключенням LTE, Wi-Fi або Thread, де це підтримується."
+  },
+  "Choose connectivity to suit the building. SmartphoneKey readers can use LTE or Wi-Fi, and can participate in a Thread mesh with a connected reader providing internet access.": {
+    "uk": "Обирайте підключення залежно від будівлі. Зчитувачі SmartphoneKey можуть працювати через LTE або Wi-Fi, а також входити до mesh-мережі Thread, у якій доступ до інтернету надає підключений зчитувач."
+  },
+  "Installer or integrator?": {"uk": "Ви монтажник чи інтегратор?"},
+  "Give residents, staff and contractors access to the doors they need. Manage Wallet keys and cards, update permissions and see device activity in SmartphoneKey.": {
+    "uk": "Надавайте мешканцям, персоналу та підрядникам доступ до потрібних дверей. Керуйте ключами у Wallet і картками, змінюйте права доступу та переглядайте події пристроїв у SmartphoneKey."
+  },
+  "Close-up of the SmartphoneKey Admin Panel Dashboard: the Give Access button, summary cards and recent activity": {
+    "uk": "Фрагмент Dashboard в Admin Panel SmartphoneKey: кнопка Give Access, підсумкові картки та останні події"
+  },
+  "SmartphoneKey Admin Panel showing access actions, device and key summaries, and recent activity": {
+    "uk": "Admin Panel SmartphoneKey: дії з доступом, зведення пристроїв і ключів та останні події"
+  },
+  "The AI Assistant panel as it opens, English interface, before any message is sent.": {
+    "uk": "Панель AI Assistant одразу після відкриття, ще без повідомлень. Інтерфейс англійською."
+  },
+  "Power, compatible lock hardware and local wiring are still required. Network layout and coverage depend on the installation.": {
+    "uk": "Живлення, сумісний замок і локальна проводка все одно потрібні. Схема мережі та покриття залежать від конкретного об’єкта та монтажу."
+  },
+  "An installer connects the reader, power and compatible lock hardware, then configures the connection.": {
+    "uk": "Монтажник підключає зчитувач, живлення та сумісний замок, а потім налаштовує підключення."
+  },
+  "Devices page in the Admin Panel with its filters: online, offline, not connected. Interface evidence of monitoring, not a network layout. English interface.": {
+    "uk": "Сторінка Devices в Admin Panel із фільтрами: онлайн, офлайн, не підключено. Знімок інтерфейсу моніторингу, а не схема мережі. Інтерфейс англійською."
+  },
+  "Ask us to review the site when coverage at a reader position is uncertain, when doors are in basements or behind heavy construction, when several buildings are planned together, or when a third party manages the network. Coverage depends on the building, placement and radio conditions, so it is checked on site rather than promised in advance.": {
+    "uk": "Попросіть нас оглянути об’єкт, якщо покриття в місці встановлення зчитувача непевне, якщо двері розташовані в підвалі або за масивними конструкціями, якщо разом плануються кілька будівель або якщо мережею керує стороння організація. Покриття залежить від будівлі, розташування та радіоумов, тому його перевіряють на місці, а не обіцяють заздалегідь."
+  }
+}

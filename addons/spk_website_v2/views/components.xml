@@ -47,6 +47,22 @@
         </section>
     </template>
 
+    <!-- A labelled example of how readers can share a connection (claims C13, C14): one
+         reader with LTE or Wi-Fi reaches the internet, the others join it over the Thread
+         mesh. An example, never a specification: no distance, node count or failover. Used
+         on the home page and the readers page. -->
+    <template id="connection_example" name="SmartphoneKey 2.0: connection example">
+        <div class="connection-example">
+            <p class="illustration-label">Example connection layout</p>
+            <ol class="connection-nodes" role="list">
+                <li class="is-uplink"><span class="node-name">Reader at the main entrance</span> <span class="node-note">LTE or Wi-Fi, connected to the internet</span></li>
+                <li><span class="node-name">Reader at the side door</span> <span class="node-note">Thread mesh</span></li>
+                <li><span class="node-name">Reader at the bike store</span> <span class="node-note">Thread mesh</span></li>
+            </ol>
+            <p class="photo-caption">An example, not a specification. Coverage, the number of readers and the route to the internet depend on the installation.</p>
+        </div>
+    </template>
+
     <!-- Related pages as a ruled list. related_title is set in the body; the
          rest of the body is the <li> items. -->
     <template id="related_links" name="SmartphoneKey 2.0: related pages">

@@ -1,0 +1,71 @@
+{
+  "A suitable wireless design can reduce communication cabling between readers: readers on the Thread mesh can reach the internet through a reader that has an LTE or Wi-Fi connection.": {
+    "fr": "Une conception sans fil adaptée peut réduire le câblage de communication entre les lecteurs : les lecteurs du réseau maillé Thread peuvent accéder à Internet par un lecteur qui dispose d’une connexion LTE ou Wi-Fi."
+  },
+  "Applied is not the same as sent: each change shows whether it is pending, confirmed by the reader or failed.": {
+    "fr": "Envoyer n’est pas appliquer : chaque modification indique si elle est en attente, confirmée par le lecteur ou en échec."
+  },
+  "Ask us to review the site when coverage at a reader position is uncertain, when doors are in basements or behind heavy construction, when several buildings are planned together, or when a third party manages the network. Coverage depends on the building, placement and radio conditions, so it is checked on site rather than promised in advance.": {
+    "fr": "Demandez-nous d’examiner le site lorsque la couverture à l’emplacement d’un lecteur est incertaine, lorsque des portes se trouvent en sous-sol ou derrière des structures épaisses, lorsque plusieurs bâtiments sont planifiés ensemble, ou lorsqu’un tiers gère le réseau. La couverture dépend du bâtiment, de l’emplacement et des conditions radio : elle est vérifiée sur place plutôt que promise à l’avance."
+  },
+  "Close-up of the SmartphoneKey Admin Panel Dashboard: the Give Access button, summary cards and recent activity": {
+    "fr": "Gros plan du tableau de bord de l’Admin Panel SmartphoneKey : bouton Give Access, cartes de synthèse et activité récente"
+  },
+  "Devices page in the Admin Panel with its filters: online, offline, not connected. Interface evidence of monitoring, not a network layout. English interface.": {
+    "fr": "Page Devices de l’Admin Panel avec ses filtres : en ligne, hors ligne, non connecté. Une capture de l’interface de supervision, pas un schéma du réseau. Interface en anglais."
+  },
+  "Example: the status of one change": {"fr": "Exemple : l’état d’une modification"},
+  "Guest Key form in Wallet Key mode: lock selection, validity dates and the recipient field, shown before anything is sent. The dates are the form's defaults at capture time, not a completed grant. English interface.": {
+    "fr": "Formulaire Guest Key en mode Wallet Key : choix de la serrure, dates de validité et champ destinataire, affiché avant tout envoi. Les dates sont les valeurs par défaut du formulaire au moment de la capture, pas un accès accordé. Interface en anglais."
+  },
+  "Guest Key form in Wallet Key mode: validity dates and the recipient field, shown before anything is sent. English interface.": {
+    "fr": "Formulaire Guest Key en mode Wallet Key : dates de validité et champ destinataire, affiché avant tout envoi. Interface en anglais."
+  },
+  "Installer or integrator?": {"fr": "Installateur ou intégrateur ?"},
+  "Mesh coverage and the route to the internet still depend on placement, power and the building. How many readers share one connection, and what happens if it drops, depend on the installation; automatic failover is not implied. Matter controller functions are confirmed for each project.": {
+    "fr": "La couverture du réseau maillé et le chemin vers Internet dépendent toujours de l’emplacement, de l’alimentation et du bâtiment. Le nombre de lecteurs partageant une connexion, et ce qui se passe si elle tombe, dépendent de l’installation ; cela n’implique pas de basculement automatique. Les fonctions de contrôleur Matter sont confirmées pour chaque projet."
+  },
+  "Manage access to one or many buildings: add residents, issue Wallet keys and cards, update permissions and see device activity and reader status in SmartphoneKey.": {
+    "fr": "Gérez les accès d’un ou de plusieurs bâtiments : résidents, clés Wallet et cartes, autorisations, activité des appareils et état des lecteurs, dans SmartphoneKey."
+  },
+  "<span class=\"step-title\">Issue</span> <span>a key or card, with a validity period where supported</span>": {
+    "fr": "<span class=\"step-title\">Délivrer</span> <span>une clé ou une carte, avec une période de validité lorsque c’est pris en charge</span>"
+  },
+  "Issue and revoke Wallet keys (Apple Wallet, Google Wallet) for people and doors from the Admin Panel.": {
+    "fr": "Délivrez et révoquez des clés Wallet (Apple Wallet, Google Wallet) pour des personnes et des portes depuis l’Admin Panel."
+  },
+  "The key holder uses a supported Wallet key or NFC card at an authorised door.": {
+    "fr": "Le titulaire de clé présente une clé Wallet prise en charge ou une carte NFC à une porte autorisée."
+  },
+  "<span class=\"flow-name\">Wallet key</span> <span class=\"flow-note\">Apple Wallet or Google Wallet on a supported phone</span>": {
+    "fr": "<span class=\"flow-name\">Clé Wallet</span> <span class=\"flow-note\">Apple Wallet ou Google Wallet sur un téléphone pris en charge</span>"
+  },
+  "Offer Apple Wallet and Google Wallet keys on supported devices, alongside physical NFC cards.": {
+    "fr": "Proposez des clés Apple Wallet et Google Wallet sur les appareils pris en charge, en plus des cartes NFC physiques."
+  },
+  "An installer connects the reader, power and compatible lock hardware, then configures the connection.": {
+    "fr": "Un installateur raccorde le lecteur, l’alimentation et un dispositif de verrouillage compatible, puis configure la connexion."
+  },
+  "Power, compatible lock hardware and local wiring are still required. Network layout and coverage depend on the installation.": {
+    "fr": "L’alimentation, un dispositif de verrouillage compatible et le câblage local restent nécessaires. L’architecture du réseau et la couverture dépendent de l’installation."
+  },
+  "Combine readers with a built-in access controller and LTE, Wi-Fi or supported Thread connectivity.": {
+    "fr": "Combinez des lecteurs à contrôleur d’accès intégré avec une connexion LTE, Wi-Fi ou Thread prise en charge."
+  },
+  "Set a validity period for supported guest access.": {
+    "fr": "Définissez une période de validité pour l’accès invité, lorsque c’est pris en charge."
+  },
+  "Admin Panel Dashboard, English interface (close-up). The figures are interface values from a test account, not customer metrics.": {
+    "fr": "Tableau de bord de l’Admin Panel, interface en anglais (gros plan). Les chiffres sont ceux affichés pour un compte de test, pas des indicateurs clients."
+  },
+  "Admin Panel Dashboard, English interface. The figures are interface values from a test account, not customer metrics.": {
+    "fr": "Tableau de bord de l’Admin Panel, interface en anglais. Les chiffres sont ceux affichés pour un compte de test, pas des indicateurs clients."
+  },
+  "Guest Wallet Key form with lock selection, validity dates and an empty email-recipient field": {
+    "fr": "Formulaire de clé Wallet pour invité avec choix de la serrure, dates de validité et champ d’adresse e-mail du destinataire vide"
+  },
+  "Explore the platform, check your installation requirements or discuss your project with our team.": {
+    "fr": "Découvrez la plateforme, vérifiez les prérequis de votre installation ou parlez de votre projet avec notre équipe."
+  },
+  "A reader and access controller in one device": {"fr": "Lecteur et contrôleur d’accès dans un seul appareil"}
+}

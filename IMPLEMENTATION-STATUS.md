@@ -1,6 +1,18 @@
 # Implementation status
 
-Last update: 27 October 2026 (revision after the owner's assessment "different but not better"). State: **ready for review**, local only, not deployed. The addon is at 18.0.3.0.0; the GitHub Pages review copy is regenerated from the updated sources in this working tree (see QA-REPORT.md for what was checked and how).
+Last update: 30 October 2026 (homepage update with the real Admin Panel screenshots, brief `../docs/site-v2/CLAUDE-HOMEPAGE-UPDATE-2026-10-30.md`). State: **ready for review**, local only, not deployed, not committed, not pushed. The addon is at 18.0.4.0.0; the static review copy in `preview/` was regenerated locally from the updated sources (evidence and limits: `qa/homepage-update-2026-10-30.md`). The 27 October revision below remains the base.
+
+## Update of 30 October 2026
+
+**Evidence.** Seven authentic Admin Panel screenshots (v1.113.1, English interface, captured in the owner's browser; `../docs/site-v2/assets/product-ui-2026-10-30/`, manifest beside them) replace the 27 October statement that no real Admin Panel screen exists. Derivatives (scaled and cropped only, `tools/product_ui_images.py`) live in `addons/spk_website_v2/static/src/img/product-ui/`. Claim C21 (Admin Panel AI Assistant) was added to the register as `code_supported` with the observation and its limits written into the record; allowed sentence: "Get help in the Admin Panel with the built-in AI Assistant. Available actions depend on your permissions and site configuration." The assistant, the ChatGPT app and AI Concierge stay three separate things on every page.
+
+**Design.** The changed blocks were designed in Claude Design (canvas link, artboard sources, exported previews and the A/B decision in `../docs/site-v2/design/2026-10-30/`); `DESIGN.md` carries the revision. Direction A (platform screen with a smaller reader) was selected and carried through the whole page, the phone view and the platform opening.
+
+**Pages.** Home rewritten and recomposed (`views/home.xml`): hero with the Dashboard and the reader, three benefits, installation-to-entry journey, everyday situations, the AI Assistant, the reader with an example connection layout, capabilities, closing actions; the compact recommendations tool left the page. Platform opening (Dashboard close-up) and monitoring section (Devices filters), access-management page (Assign Key, Guest Key, recent activity, AI Assistant), readers page (shared connection example and limits), visitor-access page (AI Concierge is separate from the AI Assistant). Expanded view of screenshots: `static/src/js/expand.js` (modal dialog, keyboard, focus return; plain image link without JavaScript).
+
+**Localisation.** `.pot` re-exported from the updated database; 93 new public strings translated in the four catalogues (`qa/homepage-update-2026-10-30/translations-2026-10-30.json`, applied with `tools/i18n_apply.py`), checks `blocking: 0`, soft hyphens applied, catalogues reloaded with `--i18n-overwrite`. Independent agent reviews of the four languages: `qa/homepage-update-2026-10-30/review-<lang>.md`. A human native-speaker read is still owed (unchanged owner item).
+
+**Checks run locally.** 49 Odoo tests, 0 failed (`qa/homepage-update-2026-10-30/odoo-tests.txt`), including the new `test_product_screenshots_are_served_and_described` and the extended forbidden-wording list (no "revoke instantly", "handles the rest", "access in seconds"); screenshot matrix in five languages with 0 elements outside the viewport (`qa/homepage-update-2026-10-30/screenshots/`); static export and link check. Nothing deployed: Odoo stage and production, GitHub Pages and DNS were not touched by this update.
 
 ## Where the work lives
 

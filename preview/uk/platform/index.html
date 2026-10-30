@@ -27,8 +27,10 @@
                 <link rel="preload" as="font" type="font/woff2" crossorigin="" href="/smartphonekey-site-v2/spk_website_v2/static/src/fonts/manrope-cyrillic-wght-normal.woff2">
                 <link type="text/css" rel="stylesheet" href="/smartphonekey-site-v2/assets/site.css">
                 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://smartphonekey.com/uk/platform#webpage","url":"https://smartphonekey.com/uk/platform","name":"Як працює платформа керування доступом | SmartphoneKey","description":"Як працює SmartphoneKey: Admin Panel для об’єктів і доступу, цифрові ключі й картки, зчитувачі з вбудованим контролером, події та стан пристроїв.","inLanguage":"uk","isPartOf":{"@id":"https://smartphonekey.com/#website"},"breadcrumb":{"@id":"https://smartphonekey.com/uk/platform#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://smartphonekey.com/uk/platform#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Головна","item":"https://smartphonekey.com/uk"},{"@type":"ListItem","position":2,"name":"Платформа","item":"https://smartphonekey.com/uk/platform"}]}]}</script>
-                <script defer src="/smartphonekey-site-v2/spk_website_v2/static/src/js/navigation.js?v=18.0.3.0.0"></script>
+                <script defer src="/smartphonekey-site-v2/spk_website_v2/static/src/js/navigation.js?v=18.0.4.0.0"></script>
                 
+                <script defer src="/smartphonekey-site-v2/spk_website_v2/static/src/js/expand.js?v=18.0.4.0.0"></script>
+            
             
     </head>
     <body class="spk-body">
@@ -233,28 +235,11 @@
                 
             </div>
             <div class="opening-evidence">
-                        <figure class="workflow-figure">
-                            <div class="workflow-illustration">
-                                <p class="illustration-label">Приклад: надання доступу</p>
-                                <ol class="flow-steps" role="list">
-                                    <li class="flow-step">
-                                        <p class="flow-title">Об’єкт</p>
-                                        <p class="flow-text">Приклад: житловий будинок із двома дверима</p>
-                                    </li>
-                                    <li class="flow-step">
-                                        <p class="flow-title">Надайте доступ</p>
-                                        <p class="flow-text">Мешканець: картка та цифровий ключ до головного входу й велокімнати</p>
-                                    </li>
-                                    <li class="flow-step">
-                                        <p class="flow-title">Перевірте стан</p>
-                                        <ul class="status-rows" role="list">
-                                            <li class="status-row"><span>Головний вхід</span><span class="chip is-confirmed">Підтверджено</span></li>
-                                            <li class="status-row"><span>Велокімната <span class="row-note">· зчитувач без зв’язку</span></span><span class="chip is-pending">Очікує</span></li>
-                                        </ul>
-                                    </li>
-                                </ol>
+                        <figure class="shot-figure">
+                            <div class="shot">
+                                <img src="/smartphonekey-site-v2/spk_website_v2/static/src/img/product-ui/admin-dashboard-close-up-936.webp" width="936" height="840" loading="eager" fetchpriority="high" decoding="async" alt="Фрагмент Dashboard в Admin Panel SmartphoneKey: кнопка Give Access, підсумкові картки та останні події">
                             </div>
-                            <figcaption>Ілюстрація з прикладами назв, а не екран продукту</figcaption>
+                            <figcaption>Dashboard в Admin Panel, інтерфейс англійською (фрагмент). Цифри — значення інтерфейсу тестового облікового запису, а не показники клієнтів. <a href="/smartphonekey-site-v2/spk_website_v2/static/src/img/product-ui/admin-dashboard-2133.webp" data-spk-expand="" data-spk-expand-alt="SmartphoneKey Admin Panel showing access actions, device and key summaries, and recent activity" data-spk-expand-width="2133" data-spk-expand-height="900">Переглянути повний Dashboard</a></figcaption>
                         </figure>
                     </div>
         </div>
@@ -317,14 +302,36 @@
                 </figure>
             </section>
 
-            <section class="section container stack" aria-labelledby="result-title">
-                <h2 id="result-title">Як дізнатися, що зміна дійшла до дверей</h2>
-                <p>Надіслати зміну ще не означає, що зчитувач її застосував. Admin Panel показує стан кожної зміни: очікує, підтверджена зчитувачем або не вдалася. Скасування, що чекає на зчитувач без зв’язку, на ньому ще не діє.</p>
-                <ul class="plain-list">
-                    <li>Що кожен бачить і може робити, залежить від його прав і послуг у вашому обліковому записі.</li>
-                    <li>Сценарії можуть використовувати лише можливості, про які повідомляє кожен пристрій.</li>
-                </ul>
-                <a href="/smartphonekey-site-v2/uk/resources/access-control-when-offline/">Що відбувається, коли зчитувач втрачає зв’язок?</a>
+            <section class="section container" aria-labelledby="result-title">
+                <div class="split-evidence">
+                    <div class="split-copy">
+                        <h2 id="result-title">Як дізнатися, що зміна дійшла до дверей</h2>
+                        <p>Надіслана зміна ще не означає, що зчитувач її застосував. Admin Panel показує стан кожної зміни — очікує, підтверджена зчитувачем чи не вдалася — і які зчитувачі онлайн, офлайн чи не підключені. Скасування, що очікує на зчитувач без зв’язку, на ньому ще не діє.</p>
+                        <ul class="plain-list">
+                            <li>Що кожен бачить і може робити, залежить від його прав і послуг у вашому обліковому записі.</li>
+                            <li>Сценарії можуть використовувати лише можливості, про які повідомляє кожен пристрій.</li>
+                        </ul>
+                        <a href="/smartphonekey-site-v2/uk/resources/access-control-when-offline/">Що відбувається, коли зчитувач втрачає зв’язок?</a>
+                    </div>
+                    <div class="evidence-stack">
+                        <figure class="shot-figure">
+                            <div class="shot">
+                                <img src="/smartphonekey-site-v2/spk_website_v2/static/src/img/product-ui/device-status-close-up-1404.webp" width="1404" height="272" loading="lazy" decoding="async" alt="Огляд пристроїв із фільтрами для зчитувачів онлайн, офлайн і не підключених">
+                            </div>
+                            <figcaption>Сторінка Devices в Admin Panel із фільтрами: онлайн, офлайн, не підключено. Знімок інтерфейсу моніторингу, а не схема мережі. Інтерфейс англійською.</figcaption>
+                        </figure>
+                        <figure class="workflow-figure">
+                            <div class="workflow-illustration">
+                                <p class="illustration-label">Приклад: стан однієї зміни</p>
+                                <ul class="status-rows" role="list">
+                                    <li class="status-row"><span>Головний вхід</span><span class="chip is-confirmed">Підтверджено</span></li>
+                                    <li class="status-row"><span>Велокімната <span class="row-note">· зчитувач без зв’язку</span></span><span class="chip is-pending">Очікує</span></li>
+                                </ul>
+                            </div>
+                            <figcaption>Ілюстрація з прикладами назв, а не екран продукту</figcaption>
+                        </figure>
+                    </div>
+                </div>
             </section>
 
             <section class="section container" aria-labelledby="extras-title">

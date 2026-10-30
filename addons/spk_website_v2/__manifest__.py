@@ -1,6 +1,6 @@
 {
     'name': 'SmartphoneKey Website 2.0',
-    'version': '18.0.3.0.0',
+    'version': '18.0.4.0.0',
     'summary': 'smartphonekey.com 2.0: the access control management platform site, '
                'setup guide, compatibility centre and CRM enquiries',
     'category': 'Website/Website',

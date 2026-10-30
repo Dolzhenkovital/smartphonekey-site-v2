@@ -1,0 +1,56 @@
+ Container spk-site-v2-db-1 Running 
+ Container spk-site-v2-odoo-run-8bb82a55d327 Creating 
+ Container spk-site-v2-odoo-run-8bb82a55d327 Created 
+2026-10-30 20:01:54,112 1 INFO ? odoo: Odoo version 18.0-20260409 
+2026-10-30 20:01:54,112 1 INFO ? odoo: Using configuration file at /etc/odoo/odoo.conf 
+2026-10-30 20:01:54,113 1 INFO ? odoo: addons paths: ['/usr/lib/python3/dist-packages/odoo/addons', '/var/lib/odoo/.local/share/Odoo/addons/18.0', '/mnt/v2', '/mnt/baseline'] 
+2026-10-30 20:01:54,113 1 INFO ? odoo: database: odoo@db:5432 
+Warn: Can't find .pfb for face 'Courier'
+2026-10-30 20:01:54,372 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-10-30 20:01:54,437 1 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltoimage binary at /usr/local/bin/wkhtmltoimage 
+2026-10-30 20:01:54,803 1 INFO spk_v2 odoo.modules.loading: loading 1 modules... 
+2026-10-30 20:01:54,809 1 INFO spk_v2 odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-10-30 20:01:54,836 1 INFO spk_v2 odoo.modules.loading: updating modules list 
+2026-10-30 20:01:54,838 1 INFO spk_v2 odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-10-30 20:01:56,585 1 INFO spk_v2 odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['SmartphoneKey Website 2.0'] to user __system__ #1 via n/a 
+2026-10-30 20:01:56,585 1 INFO spk_v2 odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['SmartphoneKey Website 2.0'] to user __system__ #1 via n/a 
+2026-10-30 20:01:57,459 1 INFO spk_v2 odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user __system__ #1 via n/a 
+2026-10-30 20:01:57,515 1 INFO spk_v2 odoo.modules.loading: loading 51 modules... 
+2026-10-30 20:01:58,388 1 INFO spk_v2 odoo.modules.loading: Loading module spk_website_v2 (51/51) 
+2026-10-30 20:01:58,756 1 INFO spk_v2 odoo.modules.registry: module spk_website_v2: creating or updating database tables 
+2026-10-30 20:01:58,911 1 INFO spk_v2 odoo.modules.loading: loading spk_website_v2/security/spk_website_v2_security.xml 
+2026-10-30 20:01:59,383 1 INFO spk_v2 odoo.modules.loading: loading spk_website_v2/security/ir.model.access.csv 
+2026-10-30 20:02:00,797 1 INFO spk_v2 odoo.modules.loading: loading spk_website_v2/data/website_claims.xml 
+2026-10-30 20:02:00,824 1 INFO spk_v2 odoo.modules.loading: loading spk_website_v2/data/website_compatibility.xml 
+2026-10-30 20:02:00,844 1 INFO spk_v2 odoo.modules.loading: loading spk_website_v2/data/website_resources.xml 
+2026-10-30 20:02:00,858 1 INFO spk_v2 odoo.modules.loading: loading spk_website_v2/data/website_posts.xml 
+2026-10-30 20:02:00,875 1 INFO spk_v2 odoo.modules.loading: loading spk_website_v2/data/website_team.xml 
+2026-10-30 20:02:00,891 1 INFO spk_v2 odoo.modules.loading: loading spk_website_v2/views/layout.xml 
+2026-10-30 20:02:00,940 1 INFO spk_v2 odoo.modules.loading: loading spk_website_v2/views/components.xml 
+2026-10-30 20:02:00,976 1 INFO spk_v2 odoo.modules.loading: loading spk_website_v2/views/home.xml 
+2026-10-30 20:02:00,997 1 INFO spk_v2 odoo.modules.loading: loading spk_website_v2/views/platform.xml 
+2026-10-30 20:02:01,038 1 INFO spk_v2 odoo.modules.loading: loading spk_website_v2/views/solutions.xml 
+2026-10-30 20:02:01,060 1 INFO spk_v2 odoo.modules.loading: loading spk_website_v2/views/products.xml 
+2026-10-30 20:02:01,091 1 INFO spk_v2 odoo.modules.loading: loading spk_website_v2/views/resources.xml 
+2026-10-30 20:02:01,115 1 INFO spk_v2 odoo.modules.loading: loading spk_website_v2/views/setup.xml 
+2026-10-30 20:02:01,133 1 INFO spk_v2 odoo.modules.loading: loading spk_website_v2/views/contact.xml 
+2026-10-30 20:02:01,159 1 INFO spk_v2 odoo.modules.loading: loading spk_website_v2/views/company.xml 
+2026-10-30 20:02:01,205 1 INFO spk_v2 odoo.modules.loading: loading spk_website_v2/views/legal_pages.xml 
+2026-10-30 20:02:01,230 1 INFO spk_v2 odoo.modules.loading: loading spk_website_v2/views/backend_content.xml 
+2026-10-30 20:02:01,330 1 INFO spk_v2 odoo.modules.loading: loading spk_website_v2/views/crm_lead_views.xml 
+2026-10-30 20:02:01,381 1 INFO spk_v2 odoo.addons.base.models.ir_module: module spk_website_v2: loading translation file /mnt/v2/spk_website_v2/i18n/fr.po for language fr_FR 
+2026-10-30 20:02:01,386 1 INFO spk_v2 odoo.tools.translate: loading base translation file /mnt/v2/spk_website_v2/i18n/fr.po for language fr_FR 
+2026-10-30 20:02:01,545 1 INFO spk_v2 odoo.addons.base.models.ir_module: module spk_website_v2: loading translation file /mnt/v2/spk_website_v2/i18n/de.po for language de_DE 
+2026-10-30 20:02:01,551 1 INFO spk_v2 odoo.tools.translate: loading base translation file /mnt/v2/spk_website_v2/i18n/de.po for language de_DE 
+2026-10-30 20:02:01,706 1 INFO spk_v2 odoo.addons.base.models.ir_module: module spk_website_v2: loading translation file /mnt/v2/spk_website_v2/i18n/es.po for language es_ES 
+2026-10-30 20:02:01,712 1 INFO spk_v2 odoo.tools.translate: loading base translation file /mnt/v2/spk_website_v2/i18n/es.po for language es_ES 
+2026-10-30 20:02:01,878 1 INFO spk_v2 odoo.addons.base.models.ir_module: module spk_website_v2: loading translation file /mnt/v2/spk_website_v2/i18n/uk.po for language uk_UA 
+2026-10-30 20:02:01,884 1 INFO spk_v2 odoo.tools.translate: loading base translation file /mnt/v2/spk_website_v2/i18n/uk.po for language uk_UA 
+2026-10-30 20:02:02,487 1 INFO spk_v2 odoo.modules.loading: Module spk_website_v2 loaded in 4.10s, 735 queries (+735 other) 
+2026-10-30 20:02:02,487 1 INFO spk_v2 odoo.modules.loading: 51 modules loaded in 4.97s, 735 queries (+735 extra) 
+2026-10-30 20:02:03,291 1 INFO spk_v2 odoo.modules.loading: Modules loaded. 
+2026-10-30 20:02:03,297 1 INFO spk_v2 odoo.modules.registry: Registry changed, signaling through the database 
+2026-10-30 20:02:03,298 1 INFO spk_v2 odoo.modules.registry: Registry loaded in 8.541s 
+2026-10-30 20:02:03,298 1 INFO spk_v2 odoo.service.server: Initiating shutdown 
+2026-10-30 20:02:03,298 1 INFO spk_v2 odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-10-30 20:02:03,299 1 INFO spk_v2 odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  

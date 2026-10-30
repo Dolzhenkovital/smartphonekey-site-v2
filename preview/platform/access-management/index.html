@@ -26,8 +26,10 @@
                 <link rel="preload" as="font" type="font/woff2" crossorigin="" href="/smartphonekey-site-v2/spk_website_v2/static/src/fonts/manrope-latin-wght-normal.woff2">
                 <link type="text/css" rel="stylesheet" href="/smartphonekey-site-v2/assets/site.css">
                 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://smartphonekey.com/platform/access-management#webpage","url":"https://smartphonekey.com/platform/access-management","name":"Access Management for Multiple Sites | SmartphoneKey","description":"Add residents, staff and contractors, issue and revoke cards and digital keys, assign site administrators and check that each change reached the reader.","inLanguage":"en","isPartOf":{"@id":"https://smartphonekey.com/#website"},"breadcrumb":{"@id":"https://smartphonekey.com/platform/access-management#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://smartphonekey.com/platform/access-management#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://smartphonekey.com/"},{"@type":"ListItem","position":2,"name":"Platform","item":"https://smartphonekey.com/platform"},{"@type":"ListItem","position":3,"name":"Access management","item":"https://smartphonekey.com/platform/access-management"}]}]}</script>
-                <script defer src="/smartphonekey-site-v2/spk_website_v2/static/src/js/navigation.js?v=18.0.3.0.0"></script>
+                <script defer src="/smartphonekey-site-v2/spk_website_v2/static/src/js/navigation.js?v=18.0.4.0.0"></script>
                 
+                <script defer src="/smartphonekey-site-v2/spk_website_v2/static/src/js/expand.js?v=18.0.4.0.0"></script>
+            
             
     </head>
     <body class="spk-body">
@@ -234,15 +236,12 @@
                 
             </div>
             <div class="opening-evidence">
-                        <div class="workflow-illustration">
-                            <p class="illustration-label">Example: a contractor's visit</p>
-                            <ol class="steps">
-                                <li><span class="step-title">Choose</span> <span>the site and the doors</span></li>
-                                <li><span class="step-title">Issue</span> <span>a key or card</span></li>
-                                <li><span class="step-title">Check</span> <span>that the readers confirmed it</span></li>
-                                <li><span class="step-title">Revoke</span> <span>when the work ends, and check again</span></li>
-                            </ol>
-                        </div>
+                        <figure class="shot-figure">
+                            <div class="shot">
+                                <img src="/smartphonekey-site-v2/spk_website_v2/static/src/img/product-ui/assign-access-dialog-548.webp" width="548" height="442" loading="eager" fetchpriority="high" decoding="async" alt="Assign Key wizard at the user-selection step, with an empty recipient field">
+                            </div>
+                            <figcaption>Assign Key wizard in the Admin Panel, step 2 of 3, before a person is chosen. English interface. <a href="/smartphonekey-site-v2/spk_website_v2/static/src/img/product-ui/assign-access-1056.webp" data-spk-expand="" data-spk-expand-alt="Assign Key wizard at the user-selection step, with an empty recipient field, over the Dashboard" data-spk-expand-width="1056" data-spk-expand-height="667">View the full screen</a></figcaption>
+                        </figure>
                     </div>
         </div>
             </div>
@@ -265,14 +264,41 @@
                 </div>
             </section>
 
-            <section class="section container stack" aria-labelledby="example-title">
-                <h2 id="example-title">Example: a contractor's visit</h2>
-                <p>A contractor needs access to a service room. The administrator chooses the site and the doors, issues a key or card, and checks that the readers have confirmed it. When the work ends, the administrator revokes the access and checks again.</p>
+            <section class="section container" aria-labelledby="example-title">
+                <div class="split-evidence">
+                    <div class="split-copy">
+                        <h2 id="example-title">Example: a contractor's visit</h2>
+                        <p>A contractor needs access to a service room. The administrator chooses the site and the doors, issues a key or card, and checks that the readers have confirmed it. When the work ends, the administrator revokes the access and checks again.</p>
+                        <ol class="steps">
+                            <li><span class="step-title">Choose</span> <span>the site and the doors</span></li>
+                            <li><span class="step-title">Issue</span> <span>a key or card, with a validity period where supported</span></li>
+                            <li><span class="step-title">Check</span> <span>that the readers confirmed it</span></li>
+                            <li><span class="step-title">Revoke</span> <span>when the work ends, and check again</span></li>
+                        </ol>
+                    </div>
+                    <figure class="shot-figure">
+                        <div class="shot">
+                            <img src="/smartphonekey-site-v2/spk_website_v2/static/src/img/product-ui/guest-wallet-key-dialog-548.webp" width="548" height="632" loading="lazy" decoding="async" alt="Guest Wallet Key form with lock selection, validity dates and an empty email-recipient field">
+                        </div>
+                        <figcaption>Guest Key form in Wallet Key mode: lock selection, validity dates and the recipient field, shown before anything is sent. The dates are the form's defaults at capture time, not a completed grant. English interface. <a href="/smartphonekey-site-v2/spk_website_v2/static/src/img/product-ui/guest-wallet-key-1304.webp" data-spk-expand="" data-spk-expand-alt="Guest Wallet Key form over the Dashboard, with lock selection, validity dates and an empty email-recipient field" data-spk-expand-width="1304" data-spk-expand-height="960">View the full screen</a></figcaption>
+                    </figure>
+                </div>
             </section>
 
-            <section class="section container stack" aria-labelledby="evidence-title">
-                <h2 id="evidence-title">Events and device status</h2>
-                <p>Review activity and audit records for each site. Device monitoring shows readers that have lost their connection and operations that failed. You can configure alerts for supported device events; they do not replace an agreed support process.</p>
+            <section class="section container" aria-labelledby="evidence-title">
+                <div class="split-evidence">
+                    <div class="split-copy">
+                        <h2 id="evidence-title">Events and device status</h2>
+                        <p>Review activity and audit records for each site. Device monitoring shows readers that have lost their connection and operations that failed. You can configure alerts for supported device events; they do not replace an agreed support process.</p>
+                        <p>Applied is not the same as sent: each change shows whether it is pending, confirmed by the reader or failed.</p>
+                    </div>
+                    <figure class="shot-figure">
+                        <div class="shot">
+                            <img src="/smartphonekey-site-v2/spk_website_v2/static/src/img/product-ui/recent-activity-close-up-620.webp" width="620" height="378" loading="lazy" decoding="async" alt="Recent activity showing lock and key events in the SmartphoneKey Admin Panel">
+                        </div>
+                        <figcaption>Recent activity in the Dashboard (close-up). An event is a record of what the reader reported, not proof that a person passed through. English interface.</figcaption>
+                    </figure>
+                </div>
             </section>
 
             <section class="section container stack" aria-labelledby="offline-title">
@@ -280,6 +306,22 @@
                 <p>Some changes wait until the reader reconnects. Pending means the reader has not confirmed the change yet. Whether keys and cards keep working at the door during an outage depends on the device and its configuration.</p>
                 <p>A revocation made while the reader is offline is not in effect on that reader until it confirms the change.</p>
                 <a href="/smartphonekey-site-v2/resources/access-control-when-offline/">What happens when a reader goes offline?</a>
+            </section>
+
+            <section class="section container" aria-labelledby="assistant-title">
+                <div class="split-evidence is-centred">
+                    <div class="split-copy">
+                        <h2 id="assistant-title">Help inside the Admin Panel</h2>
+                        <p>Get help in the Admin Panel with the built-in AI Assistant. Available actions depend on your permissions and site configuration.</p>
+                        <p class="muted">The AI Assistant is part of the Admin Panel. It is not the SmartphoneKey app in ChatGPT, and not the visitor-facing AI Concierge.</p>
+                    </div>
+                    <figure class="shot-figure">
+                        <div class="assistant-panel">
+                            <img src="/smartphonekey-site-v2/spk_website_v2/static/src/img/product-ui/ai-assistant-detail-422.webp" width="422" height="567" loading="lazy" decoding="async" alt="Built-in SmartphoneKey AI Assistant with its welcome message and message field">
+                        </div>
+                        <figcaption>The AI Assistant panel as it opens, English interface, before any message is sent. <a href="/smartphonekey-site-v2/spk_website_v2/static/src/img/product-ui/ai-assistant-context-2370.webp" data-spk-expand="" data-spk-expand-alt="SmartphoneKey Dashboard with the AI Assistant open beside the access overview" data-spk-expand-width="2370" data-spk-expand-height="1098">See it beside the Dashboard</a></figcaption>
+                    </figure>
+                </div>
             </section>
 
         <section class="section container faq" aria-labelledby="faq-title">

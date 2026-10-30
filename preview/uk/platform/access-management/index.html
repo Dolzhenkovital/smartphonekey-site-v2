@@ -27,8 +27,10 @@
                 <link rel="preload" as="font" type="font/woff2" crossorigin="" href="/smartphonekey-site-v2/spk_website_v2/static/src/fonts/manrope-cyrillic-wght-normal.woff2">
                 <link type="text/css" rel="stylesheet" href="/smartphonekey-site-v2/assets/site.css">
                 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://smartphonekey.com/uk/platform/access-management#webpage","url":"https://smartphonekey.com/uk/platform/access-management","name":"Керування доступом на кількох об’єктах | SmartphoneKey","description":"Додавайте мешканців, персонал і підрядників, видавайте й скасовуйте картки та цифрові ключі, призначайте адміністраторів і перевіряйте застосування змін.","inLanguage":"uk","isPartOf":{"@id":"https://smartphonekey.com/#website"},"breadcrumb":{"@id":"https://smartphonekey.com/uk/platform/access-management#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://smartphonekey.com/uk/platform/access-management#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Головна","item":"https://smartphonekey.com/uk"},{"@type":"ListItem","position":2,"name":"Платформа","item":"https://smartphonekey.com/uk/platform"},{"@type":"ListItem","position":3,"name":"Керування доступом","item":"https://smartphonekey.com/uk/platform/access-management"}]}]}</script>
-                <script defer src="/smartphonekey-site-v2/spk_website_v2/static/src/js/navigation.js?v=18.0.3.0.0"></script>
+                <script defer src="/smartphonekey-site-v2/spk_website_v2/static/src/js/navigation.js?v=18.0.4.0.0"></script>
                 
+                <script defer src="/smartphonekey-site-v2/spk_website_v2/static/src/js/expand.js?v=18.0.4.0.0"></script>
+            
             
     </head>
     <body class="spk-body">
@@ -235,15 +237,12 @@
                 
             </div>
             <div class="opening-evidence">
-                        <div class="workflow-illustration">
-                            <p class="illustration-label">Приклад: візит підрядника</p>
-                            <ol class="steps">
-                                <li><span class="step-title">Оберіть</span> <span>об’єкт і двері</span></li>
-                                <li><span class="step-title">Видайте</span> <span>ключ або картку</span></li>
-                                <li><span class="step-title">Перевірте</span> <span>що зчитувачі це підтвердили</span></li>
-                                <li><span class="step-title">Скасуйте</span> <span>коли роботу завершено, і знову перевірте</span></li>
-                            </ol>
-                        </div>
+                        <figure class="shot-figure">
+                            <div class="shot">
+                                <img src="/smartphonekey-site-v2/spk_website_v2/static/src/img/product-ui/assign-access-dialog-548.webp" width="548" height="442" loading="eager" fetchpriority="high" decoding="async" alt="Майстер Assign Key на кроці вибору користувача з порожнім полем одержувача">
+                            </div>
+                            <figcaption>Майстер Assign Key в Admin Panel, крок 2 з 3, до вибору людини. Інтерфейс англійською. <a href="/smartphonekey-site-v2/spk_website_v2/static/src/img/product-ui/assign-access-1056.webp" data-spk-expand="" data-spk-expand-alt="Assign Key wizard at the user-selection step, with an empty recipient field, over the Dashboard" data-spk-expand-width="1056" data-spk-expand-height="667">Переглянути весь екран</a></figcaption>
+                        </figure>
                     </div>
         </div>
             </div>
@@ -266,14 +265,41 @@
                 </div>
             </section>
 
-            <section class="section container stack" aria-labelledby="example-title">
-                <h2 id="example-title">Приклад: візит підрядника</h2>
-                <p>Підрядникові потрібен доступ до технічного приміщення. Адміністратор обирає об’єкт і двері, видає ключ або картку та перевіряє, що зчитувачі це підтвердили. Коли роботу завершено, адміністратор скасовує доступ і знову перевіряє.</p>
+            <section class="section container" aria-labelledby="example-title">
+                <div class="split-evidence">
+                    <div class="split-copy">
+                        <h2 id="example-title">Приклад: візит підрядника</h2>
+                        <p>Підрядникові потрібен доступ до технічного приміщення. Адміністратор обирає об’єкт і двері, видає ключ або картку та перевіряє, що зчитувачі це підтвердили. Коли роботу завершено, адміністратор скасовує доступ і знову перевіряє.</p>
+                        <ol class="steps">
+                            <li><span class="step-title">Оберіть</span> <span>об’єкт і двері</span></li>
+                            <li><span class="step-title">Видайте</span> <span>ключ або картку, з терміном дії там, де це підтримується</span></li>
+                            <li><span class="step-title">Перевірте</span> <span>що зчитувачі це підтвердили</span></li>
+                            <li><span class="step-title">Скасуйте</span> <span>коли роботу завершено, і знову перевірте</span></li>
+                        </ol>
+                    </div>
+                    <figure class="shot-figure">
+                        <div class="shot">
+                            <img src="/smartphonekey-site-v2/spk_website_v2/static/src/img/product-ui/guest-wallet-key-dialog-548.webp" width="548" height="632" loading="lazy" decoding="async" alt="Форма гостьового ключа Wallet із вибором замка, датами дії та порожнім полем електронної пошти одержувача">
+                        </div>
+                        <figcaption>Форма Guest Key у режимі Wallet Key: вибір замка, дати дії та поле одержувача; знімок зроблено до надсилання. Дати — типові значення форми на момент знімка, а не наданий доступ. Інтерфейс англійською. <a href="/smartphonekey-site-v2/spk_website_v2/static/src/img/product-ui/guest-wallet-key-1304.webp" data-spk-expand="" data-spk-expand-alt="Guest Wallet Key form over the Dashboard, with lock selection, validity dates and an empty email-recipient field" data-spk-expand-width="1304" data-spk-expand-height="960">Переглянути весь екран</a></figcaption>
+                    </figure>
+                </div>
             </section>
 
-            <section class="section container stack" aria-labelledby="evidence-title">
-                <h2 id="evidence-title">Події та стан пристроїв</h2>
-                <p>Переглядайте журнал дій і аудиту кожного об’єкта. Моніторинг пристроїв показує зчитувачі, які втратили зв’язок, і операції, що не вдалися. Ви можете налаштувати сповіщення про події підтримуваних пристроїв, але вони не замінюють узгодженого процесу підтримки.</p>
+            <section class="section container" aria-labelledby="evidence-title">
+                <div class="split-evidence">
+                    <div class="split-copy">
+                        <h2 id="evidence-title">Події та стан пристроїв</h2>
+                        <p>Переглядайте журнал дій і аудиту кожного об’єкта. Моніторинг пристроїв показує зчитувачі, які втратили зв’язок, і операції, що не вдалися. Ви можете налаштувати сповіщення про події підтримуваних пристроїв, але вони не замінюють узгодженого процесу підтримки.</p>
+                        <p>Надіслано — ще не застосовано: для кожної зміни видно, чи вона очікує, підтверджена зчитувачем або не вдалася.</p>
+                    </div>
+                    <figure class="shot-figure">
+                        <div class="shot">
+                            <img src="/smartphonekey-site-v2/spk_website_v2/static/src/img/product-ui/recent-activity-close-up-620.webp" width="620" height="378" loading="lazy" decoding="async" alt="Останні події із записами про замки та ключі в Admin Panel SmartphoneKey">
+                        </div>
+                        <figcaption>Останні події в Dashboard (фрагмент). Подія — це запис про те, що повідомив зчитувач, а не доказ, що людина пройшла. Інтерфейс англійською.</figcaption>
+                    </figure>
+                </div>
             </section>
 
             <section class="section container stack" aria-labelledby="offline-title">
@@ -281,6 +307,22 @@
                 <p>Деякі зміни чекають, доки зчитувач знову вийде на зв’язок. Стан «очікує» означає, що зчитувач ще не підтвердив зміну. Чи працюватимуть ключі й картки біля дверей під час збою зв’язку, залежить від пристрою та його конфігурації.</p>
                 <p>Скасування, зроблене, поки зчитувач без зв’язку, набуде чинності на ньому лише після того, як він підтвердить зміну.</p>
                 <a href="/smartphonekey-site-v2/uk/resources/access-control-when-offline/">Що відбувається, коли зчитувач втрачає зв’язок?</a>
+            </section>
+
+            <section class="section container" aria-labelledby="assistant-title">
+                <div class="split-evidence is-centred">
+                    <div class="split-copy">
+                        <h2 id="assistant-title">Допомога всередині Admin Panel</h2>
+                        <p>Отримуйте допомогу в Admin Panel від вбудованого AI Assistant. Доступні дії залежать від ваших прав і налаштувань об’єкта.</p>
+                        <p class="muted">AI Assistant — частина Admin Panel. Це не застосунок SmartphoneKey у ChatGPT і не AI Concierge для відвідувачів.</p>
+                    </div>
+                    <figure class="shot-figure">
+                        <div class="assistant-panel">
+                            <img src="/smartphonekey-site-v2/spk_website_v2/static/src/img/product-ui/ai-assistant-detail-422.webp" width="422" height="567" loading="lazy" decoding="async" alt="Вбудований AI Assistant SmartphoneKey із привітанням і полем для повідомлення">
+                        </div>
+                        <figcaption>Панель AI Assistant одразу після відкриття, ще без повідомлень. Інтерфейс англійською. <a href="/smartphonekey-site-v2/spk_website_v2/static/src/img/product-ui/ai-assistant-context-2370.webp" data-spk-expand="" data-spk-expand-alt="SmartphoneKey Dashboard with the AI Assistant open beside the access overview" data-spk-expand-width="2370" data-spk-expand-height="1098">Переглянути поруч із Dashboard</a></figcaption>
+                    </figure>
+                </div>
             </section>
 
         <section class="section container faq" aria-labelledby="faq-title">

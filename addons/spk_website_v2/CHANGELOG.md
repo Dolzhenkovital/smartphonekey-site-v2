@@ -1,5 +1,15 @@
 # Changelog
 
+## [4.0.0] - 2026-10-30
+
+Module version 18.0.4.0.0. The home page is recomposed around real Admin Panel screenshots captured on 30 October 2026, and the platform, access-management and readers pages gain targeted changes.
+
+- The home page opens with the Admin Panel Dashboard beside the reader, then three benefits, the path from installation to entry (with the Assign Key wizard), everyday situations (with the Guest Key form and recent activity), the built-in AI Assistant, the reader with an example connection layout, additional capabilities and the closing actions. The compact recommendations tool left the home page; `/find-your-setup` still accepts its `site` parameter.
+- The platform page opens with the Dashboard close-up and shows the Devices-page filters; the access-management page shows the Assign Key wizard, the Guest Key form, recent activity and the AI Assistant; the readers page explains the shared connection with an example layout. The visitor-access page states that AI Concierge is separate from the Admin Panel AI Assistant and the ChatGPT app.
+- Screenshots open in an expanded view (`expand.js`): a modal dialog with a close button, Escape and focus return; without JavaScript the link opens the image.
+- New claim C21 (Admin Panel AI Assistant, UI-observed on 30 October 2026, stored as code-supported) in the claim register; new records in a `noupdate` file are created on upgrade, existing records are left alone.
+- Four translation catalogues extended with the 93 new strings; the English interface of the screenshots is kept in every language.
+
 ## [3.0.0] - 2026-10-27
 
 Module version 18.0.3.0.0. The site has a new visual design: the Manrope typeface (self-hosted, one face for every language), a cool light page with a single teal for actions, links and evidence, a header with a row for existing users (Instructions, Admin Panel) and the language menu above the main navigation, a mobile menu that groups the same destinations, a quieter footer, and the shared page patterns the revised pages are built from (product panel, system strip, task sequence, comparison row, audience paths, capabilities list, workflow illustration, recommendation result). Page content follows in the same release.

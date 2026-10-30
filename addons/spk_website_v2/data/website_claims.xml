@@ -2,7 +2,8 @@
 <odoo>
     <!-- The claim register as reviewed on 2026-10-26; C13 and C14 follow the owner's
          instruction of 2026-10-27, and C05 the owner's card-programming clarification
-         of 2026-10-27. Content records: editors maintain them in the backend, so
+         of 2026-10-27, and C21 the Admin Panel AI Assistant observed in the owner's
+         browser on 2026-10-30. Content records: editors maintain them in the backend, so
          module updates do not overwrite them (noupdate): an existing database needs
          the C05 record updated by hand or with a forced data update. -->
     <data noupdate="1">
@@ -225,6 +226,17 @@
             <field name="internal_source">P18</field>
             <field name="owner_role">hardware_firmware</field>
             <field name="reviewed_at">2026-10-26</field>
+        </record>
+        <record id="claim_c21" model="spk.website.claim">
+            <field name="code">C21</field>
+            <field name="name">Admin Panel AI Assistant</field>
+            <field name="evidence_level">code_supported</field>
+            <field name="publication">public_scoped</field>
+            <field name="allowed_copy">Get help in the Admin Panel with the built-in AI Assistant. Available actions depend on your permissions and site configuration.</field>
+            <field name="limitations">UI-observed on 2026-10-30 in the owner's browser on the production host (Admin Panel v1.113.1, English interface): the assistant panel, its greeting and message field exist. No prompt was submitted, so no command, result, delivery time, permission enforcement or physical door operation is evidenced. Recorded as code_supported, the nearest level in the register (a deployed interface was observed, not product documentation): no "handles the rest", no example commands with results, no claim that any action the greeting mentions (locks, lights, scenarios, temporary keys, guest Wallet Keys) succeeds. Distinct from the SmartphoneKey app in ChatGPT and from the visitor-facing AI Concierge (C17); a screenshot of one is not evidence for the others. The greeting in the screenshot is shown unedited.</field>
+            <field name="internal_source">UI-observed 2026-10-30 (docs/site-v2/assets/product-ui-2026-10-30: 02-ai-assistant-detail.jpg, 02-ai-assistant.jpg)</field>
+            <field name="owner_role">product_engineering</field>
+            <field name="reviewed_at">2026-10-30</field>
         </record>
     </data>
 </odoo>

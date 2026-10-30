@@ -26,8 +26,10 @@
                 <link rel="preload" as="font" type="font/woff2" crossorigin="" href="/smartphonekey-site-v2/spk_website_v2/static/src/fonts/manrope-latin-wght-normal.woff2">
                 <link type="text/css" rel="stylesheet" href="/smartphonekey-site-v2/assets/site.css">
                 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://smartphonekey.com/fr/platform#webpage","url":"https://smartphonekey.com/fr/platform","name":"Plateforme de gestion des accès : fonctionnement | SmartphoneKey","description":"SmartphoneKey en bref : l’Admin Panel pour les sites et les accès, clés numériques et cartes, lecteurs à contrôleur intégré, événements et état des appareils.","inLanguage":"fr","isPartOf":{"@id":"https://smartphonekey.com/#website"},"breadcrumb":{"@id":"https://smartphonekey.com/fr/platform#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://smartphonekey.com/fr/platform#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://smartphonekey.com/fr"},{"@type":"ListItem","position":2,"name":"Plateforme","item":"https://smartphonekey.com/fr/platform"}]}]}</script>
-                <script defer src="/smartphonekey-site-v2/spk_website_v2/static/src/js/navigation.js?v=18.0.3.0.0"></script>
+                <script defer src="/smartphonekey-site-v2/spk_website_v2/static/src/js/navigation.js?v=18.0.4.0.0"></script>
                 
+                <script defer src="/smartphonekey-site-v2/spk_website_v2/static/src/js/expand.js?v=18.0.4.0.0"></script>
+            
             
     </head>
     <body class="spk-body">
@@ -232,28 +234,11 @@
                 
             </div>
             <div class="opening-evidence">
-                        <figure class="workflow-figure">
-                            <div class="workflow-illustration">
-                                <p class="illustration-label">Exemple : donner l’accès</p>
-                                <ol class="flow-steps" role="list">
-                                    <li class="flow-step">
-                                        <p class="flow-title">Site</p>
-                                        <p class="flow-text">Exemple d’immeuble résidentiel avec deux portes</p>
-                                    </li>
-                                    <li class="flow-step">
-                                        <p class="flow-title">Donner l’accès</p>
-                                        <p class="flow-text">Résident : carte et clé numérique pour l’entrée principale et le local à vélos</p>
-                                    </li>
-                                    <li class="flow-step">
-                                        <p class="flow-title">Vérifier l’état</p>
-                                        <ul class="status-rows" role="list">
-                                            <li class="status-row"><span>Entrée principale</span><span class="chip is-confirmed">Confirmée</span></li>
-                                            <li class="status-row"><span>Local à vélos <span class="row-note">· lecteur hors ligne</span></span><span class="chip is-pending">En attente</span></li>
-                                        </ul>
-                                    </li>
-                                </ol>
+                        <figure class="shot-figure">
+                            <div class="shot">
+                                <img src="/smartphonekey-site-v2/spk_website_v2/static/src/img/product-ui/admin-dashboard-close-up-936.webp" width="936" height="840" loading="eager" fetchpriority="high" decoding="async" alt="Gros plan du tableau de bord de l’Admin Panel SmartphoneKey : bouton Give Access, cartes de synthèse et activité récente">
                             </div>
-                            <figcaption>Illustration avec des noms d’exemple, pas un écran du produit</figcaption>
+                            <figcaption>Tableau de bord de l’Admin Panel, interface en anglais (gros plan). Les chiffres sont ceux affichés pour un compte de test, pas des indicateurs clients. <a href="/smartphonekey-site-v2/spk_website_v2/static/src/img/product-ui/admin-dashboard-2133.webp" data-spk-expand="" data-spk-expand-alt="SmartphoneKey Admin Panel showing access actions, device and key summaries, and recent activity" data-spk-expand-width="2133" data-spk-expand-height="900">Voir le tableau de bord complet</a></figcaption>
                         </figure>
                     </div>
         </div>
@@ -316,14 +301,36 @@
                 </figure>
             </section>
 
-            <section class="section container stack" aria-labelledby="result-title">
-                <h2 id="result-title">Sachez quand une modification a atteint la porte</h2>
-                <p>Envoyer une modification ne signifie pas qu’un lecteur l’a appliquée. L’Admin Panel indique si chaque modification est en attente, confirmée par le lecteur ou en échec. Une révocation qui attend un lecteur hors ligne n’est pas encore effective sur ce lecteur.</p>
-                <ul class="plain-list">
-                    <li>Ce que chaque personne peut voir et faire dépend de ses droits et des services de votre compte.</li>
-                    <li>Un scénario ne peut utiliser que les fonctions que chaque appareil déclare.</li>
-                </ul>
-                <a href="/smartphonekey-site-v2/fr/resources/access-control-when-offline/">Que se passe-t-il lorsqu’un lecteur est hors ligne ?</a>
+            <section class="section container" aria-labelledby="result-title">
+                <div class="split-evidence">
+                    <div class="split-copy">
+                        <h2 id="result-title">Sachez quand une modification a atteint la porte</h2>
+                        <p>Envoyer une modification n’est pas la même chose que la voir appliquée par un lecteur. L’Admin Panel indique si chaque modification est en attente, confirmée par le lecteur ou en échec, et quels lecteurs sont en ligne, hors ligne ou non connectés. Une révocation en attente sur un lecteur hors ligne n’y est pas encore effective.</p>
+                        <ul class="plain-list">
+                            <li>Ce que chaque personne peut voir et faire dépend de ses droits et des services de votre compte.</li>
+                            <li>Un scénario ne peut utiliser que les fonctions que chaque appareil déclare.</li>
+                        </ul>
+                        <a href="/smartphonekey-site-v2/fr/resources/access-control-when-offline/">Que se passe-t-il lorsqu’un lecteur est hors ligne ?</a>
+                    </div>
+                    <div class="evidence-stack">
+                        <figure class="shot-figure">
+                            <div class="shot">
+                                <img src="/smartphonekey-site-v2/spk_website_v2/static/src/img/product-ui/device-status-close-up-1404.webp" width="1404" height="272" loading="lazy" decoding="async" alt="Vue des appareils avec filtres pour les lecteurs en ligne, hors ligne et non connectés">
+                            </div>
+                            <figcaption>Page Devices de l’Admin Panel avec ses filtres : en ligne, hors ligne, non connecté. Une capture de l’interface de supervision, pas un schéma du réseau. Interface en anglais.</figcaption>
+                        </figure>
+                        <figure class="workflow-figure">
+                            <div class="workflow-illustration">
+                                <p class="illustration-label">Exemple : l’état d’une modification</p>
+                                <ul class="status-rows" role="list">
+                                    <li class="status-row"><span>Entrée principale</span><span class="chip is-confirmed">Confirmée</span></li>
+                                    <li class="status-row"><span>Local à vélos <span class="row-note">· lecteur hors ligne</span></span><span class="chip is-pending">En attente</span></li>
+                                </ul>
+                            </div>
+                            <figcaption>Illustration avec des noms d’exemple, pas un écran du produit</figcaption>
+                        </figure>
+                    </div>
+                </div>
             </section>
 
             <section class="section container" aria-labelledby="extras-title">

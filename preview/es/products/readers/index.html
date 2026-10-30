@@ -26,7 +26,7 @@
                 <link rel="preload" as="font" type="font/woff2" crossorigin="" href="/smartphonekey-site-v2/spk_website_v2/static/src/fonts/manrope-latin-wght-normal.woff2">
                 <link type="text/css" rel="stylesheet" href="/smartphonekey-site-v2/assets/site.css">
                 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://smartphonekey.com/es/products/readers#webpage","url":"https://smartphonekey.com/es/products/readers","name":"Lectores de control de accesos LTE y Wi-Fi | SmartphoneKey","description":"Los lectores SmartphoneKey llevan un controlador de acceso integrado. Compare las versiones LTE y Wi-Fi y vea qué más necesita la instalación.","inLanguage":"es","isPartOf":{"@id":"https://smartphonekey.com/#website"},"breadcrumb":{"@id":"https://smartphonekey.com/es/products/readers#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://smartphonekey.com/es/products/readers#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://smartphonekey.com/es"},{"@type":"ListItem","position":2,"name":"Lectores","item":"https://smartphonekey.com/es/products/readers"}]}]}</script>
-                <script defer src="/smartphonekey-site-v2/spk_website_v2/static/src/js/navigation.js?v=18.0.3.0.0"></script>
+                <script defer src="/smartphonekey-site-v2/spk_website_v2/static/src/js/navigation.js?v=18.0.4.0.0"></script>
                 
             
     </head>
@@ -285,7 +285,19 @@
                 <h2 id="connected-title">Cada lector es router Thread y Border Router</h2>
                 <div class="split-copy">
                     <p>Cada lector SmartphoneKey puede actuar como Thread Border Router y como router de la malla Thread. Ninguno de los dos roles necesita una versión de firmware distinta, así que los lectores de un sitio pueden formar una sola malla y conectarla a su red IP.</p>
-                    <p>La cobertura de la malla y la ruta a internet siguen dependiendo de la ubicación, la alimentación y el edificio. Las funciones de controlador Matter se confirman para cada proyecto.</p>
+                    <p class="benefit">Un diseño inalámbrico adecuado puede reducir el cableado de comunicación entre lectores: los lectores de la malla Thread pueden acceder a internet a través de un lector con conexión LTE o Wi-Fi.</p>
+                    <div class="connection-panel">
+        <div class="connection-example">
+            <p class="illustration-label">Ejemplo de esquema de conexión</p>
+            <ol class="connection-nodes" role="list">
+                <li class="is-uplink"><span class="node-name">Lector de la entrada principal</span> <span class="node-note">LTE o Wi-Fi, conectado a internet</span></li>
+                <li><span class="node-name">Lector de la puerta lateral</span> <span class="node-note">Malla Thread</span></li>
+                <li><span class="node-name">Lector del cuarto de bicicletas</span> <span class="node-note">Malla Thread</span></li>
+            </ol>
+            <p class="photo-caption">Un ejemplo, no una especificación. La cobertura, el número de lectores y la ruta a internet dependen de la instalación.</p>
+        </div>
+                    </div>
+                    <p>La cobertura de la malla y la ruta a internet siguen dependiendo de la ubicación, la alimentación y el edificio. Cuántos lectores comparten una conexión, y qué ocurre si se cae, dependen de la instalación; no se presupone una conmutación automática por error. Las funciones de controlador Matter se confirman para cada proyecto.</p>
                     <p class="note">La cobertura depende del edificio, la ubicación y las condiciones de radio. Le ayudamos a planificar la red para su sitio.</p>
                     <a href="/smartphonekey-site-v2/es/resources/matter-thread-access-control/">Matter y Thread para el control de accesos</a>
                 </div>

@@ -1,0 +1,27 @@
+pages: 190, redirects: 10, assets: 49
+checked 215 pages and 262 URLs
+external links (not fetched):
+   https://apps.apple.com/ca/app/smartphonekey/id6736495951
+   https://chatgpt.com/apps/smartphonekey/asdk_app_69e95d545bb48191985e5873db121d5b
+   https://csa-iot.org/all-solutions/matter/
+   https://fccid.io/2BNRNSPKRDRLV1
+   https://fccid.io/2BNRNSPKRDRWV1
+   https://openthread.io/guides/border-router
+   https://play.google.com/store/apps/details
+   https://spkey.odoo.com/adminpanel
+   https://spkey.odoo.com/guide-for-usage-and-installation
+   https://spkey.odoo.com/instructions/admin-guide
+   https://spkey.odoo.com/instructions/admin-panel
+   https://spkey.odoo.com/instructions/mobile-app
+   https://spkey.odoo.com/instructions/mobile-app-guide
+   https://www.linkedin.com/in/denys-merkulov-347a1119/
+   https://www.linkedin.com/in/ioannis-mavridis-070b5b23
+   https://www.linkedin.com/in/oleksii-andrieiev-699301129/
+   https://www.linkedin.com/in/svitlana-ostapenko-17b3a732a/
+   https://www.linkedin.com/in/sydorenkoalex/
+   https://www.linkedin.com/in/vadym-sydorenko-0029001a0/
+   https://www.linkedin.com/in/vasylenko/
+   https://www.linkedin.com/in/vitaliydolzhenko/
+   https://www.nxp.com/products/MF3DHx3
+   https://www.youtube.com/watch
+no problems

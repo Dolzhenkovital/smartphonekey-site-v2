@@ -26,7 +26,7 @@
                 <link rel="preload" as="font" type="font/woff2" crossorigin="" href="/smartphonekey-site-v2/spk_website_v2/static/src/fonts/manrope-latin-wght-normal.woff2">
                 <link type="text/css" rel="stylesheet" href="/smartphonekey-site-v2/assets/site.css">
                 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://smartphonekey.com/products/readers#webpage","url":"https://smartphonekey.com/products/readers","name":"LTE and Wi-Fi Access Control Readers | SmartphoneKey","description":"SmartphoneKey readers have a built-in access controller. Compare the LTE and Wi-Fi versions and see what else the installation needs.","inLanguage":"en","isPartOf":{"@id":"https://smartphonekey.com/#website"},"breadcrumb":{"@id":"https://smartphonekey.com/products/readers#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://smartphonekey.com/products/readers#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://smartphonekey.com/"},{"@type":"ListItem","position":2,"name":"Readers","item":"https://smartphonekey.com/products/readers"}]}]}</script>
-                <script defer src="/smartphonekey-site-v2/spk_website_v2/static/src/js/navigation.js?v=18.0.3.0.0"></script>
+                <script defer src="/smartphonekey-site-v2/spk_website_v2/static/src/js/navigation.js?v=18.0.4.0.0"></script>
                 
             
     </head>
@@ -285,7 +285,19 @@
                 <h2 id="connected-title">Every reader is a Thread router and Border Router</h2>
                 <div class="split-copy">
                     <p>Each SmartphoneKey reader can act as a Thread Border Router and as a router in the Thread mesh. Neither role needs a separate firmware version, so the readers on a site can form one mesh and connect it to your IP network.</p>
-                    <p>Mesh coverage and the route to the internet still depend on placement, power and the building. Matter controller functions are confirmed for each project.</p>
+                    <p class="benefit">A suitable wireless design can reduce communication cabling between readers: readers on the Thread mesh can reach the internet through a reader that has an LTE or Wi-Fi connection.</p>
+                    <div class="connection-panel">
+        <div class="connection-example">
+            <p class="illustration-label">Example connection layout</p>
+            <ol class="connection-nodes" role="list">
+                <li class="is-uplink"><span class="node-name">Reader at the main entrance</span> <span class="node-note">LTE or Wi-Fi, connected to the internet</span></li>
+                <li><span class="node-name">Reader at the side door</span> <span class="node-note">Thread mesh</span></li>
+                <li><span class="node-name">Reader at the bike store</span> <span class="node-note">Thread mesh</span></li>
+            </ol>
+            <p class="photo-caption">An example, not a specification. Coverage, the number of readers and the route to the internet depend on the installation.</p>
+        </div>
+                    </div>
+                    <p>Mesh coverage and the route to the internet still depend on placement, power and the building. How many readers share one connection, and what happens if it drops, depend on the installation; automatic failover is not implied. Matter controller functions are confirmed for each project.</p>
                     <p class="note">Coverage depends on the building, placement and radio conditions. We help plan the network for your site.</p>
                     <a href="/smartphonekey-site-v2/resources/matter-thread-access-control/">Matter and Thread for access control</a>
                 </div>

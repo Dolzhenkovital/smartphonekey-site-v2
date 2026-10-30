@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SmartphoneKey Website 2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-27 17:21+0000\n"
-"PO-Revision-Date: 2026-10-27 17:21+0000\n"
+"POT-Creation-Date: 2026-10-30 20:05+0000\n"
+"PO-Revision-Date: 2026-10-30 20:05+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -148,6 +148,32 @@ msgid "<option value=\"\">Choose one</option>"
 msgstr ""
 
 #. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid "<span class=\"flow-name\">Authorised door</span>"
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid ""
+"<span class=\"flow-name\">NFC card</span> <span class=\"flow-note\">a "
+"physical card</span>"
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid ""
+"<span class=\"flow-name\">SmartphoneKey reader</span> <span class=\"flow-"
+"note\">checks the key or card</span>"
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid ""
+"<span class=\"flow-name\">Wallet key</span> <span class=\"flow-note\">Apple "
+"Wallet or Google Wallet on a supported phone</span>"
+msgstr ""
+
+#. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_resources
 msgid "<span class=\"muted\">A guided tour of the Admin Panel.</span>"
 msgstr ""
@@ -210,6 +236,27 @@ msgid ""
 msgstr ""
 
 #. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.connection_example
+msgid ""
+"<span class=\"node-name\">Reader at the bike store</span> <span "
+"class=\"node-note\">Thread mesh</span>"
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.connection_example
+msgid ""
+"<span class=\"node-name\">Reader at the main entrance</span> <span "
+"class=\"node-note\">LTE or Wi-Fi, connected to the internet</span>"
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.connection_example
+msgid ""
+"<span class=\"node-name\">Reader at the side door</span> <span class=\"node-"
+"note\">Thread mesh</span>"
+msgstr ""
+
+#. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_platform
 msgid ""
 "<span class=\"step-title\">Add a person</span> <span>to the site they belong"
@@ -252,7 +299,9 @@ msgstr ""
 
 #. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_access_management
-msgid "<span class=\"step-title\">Issue</span> <span>a key or card</span>"
+msgid ""
+"<span class=\"step-title\">Issue</span> <span>a key or card, with a validity"
+" period where supported</span>"
 msgstr ""
 
 #. module: spk_website_v2
@@ -982,12 +1031,6 @@ msgid ""
 msgstr ""
 
 #. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid ""
-"A change for an offline reader stays pending until the reader confirms it."
-msgstr ""
-
-#. module: spk_website_v2
 #. odoo-python
 #: code:addons/spk_website_v2/models/website_claim.py:0
 msgid ""
@@ -1010,19 +1053,17 @@ msgid "A compatible leak sensor reports water"
 msgstr ""
 
 #. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid "A contractor is visiting"
+msgstr ""
+
+#. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_access_management
 msgid ""
 "A contractor needs access to a service room. The administrator chooses the "
 "site and the doors, issues a key or card, and checks that the readers have "
 "confirmed it. When the work ends, the administrator revokes the access and "
 "checks again."
-msgstr ""
-
-#. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid ""
-"A digital key in Apple Wallet or Google Wallet. The person holds a supported"
-" phone to the reader."
 msgstr ""
 
 #. module: spk_website_v2
@@ -1092,8 +1133,12 @@ msgstr ""
 
 #. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid ""
-"A physical card for people who prefer one or do not use a phone to enter."
+msgid "A new resident moves in"
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid "A reader and access controller in one device"
 msgstr ""
 
 #. module: spk_website_v2
@@ -1124,13 +1169,6 @@ msgid ""
 msgstr ""
 
 #. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid ""
-"A revocation that is waiting for an offline reader is not yet in effect on "
-"that reader."
-msgstr ""
-
-#. module: spk_website_v2
 #: model_terms:spk.website.resource,body:spk_website_v2.post_matter_standard_the_key_to_a_seamless_smart_home
 msgid "A seamless experience across all smart devices"
 msgstr ""
@@ -1144,6 +1182,20 @@ msgstr ""
 #. odoo-python
 #: code:addons/spk_website_v2/models/website_resource.py:0
 msgid "A slug uses lowercase letters, digits and single hyphens."
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid ""
+"A suitable wireless design can reduce communication cabling between readers."
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_readers
+msgid ""
+"A suitable wireless design can reduce communication cabling between readers:"
+" readers on the Thread mesh can reach the internet through a reader that has"
+" an LTE or Wi-Fi connection."
 msgstr ""
 
 #. module: spk_website_v2
@@ -1194,6 +1246,13 @@ msgstr ""
 #. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_visitor_access
 msgid ""
+"AI Concierge is the visitor-facing service. It is separate from the AI "
+"Assistant inside the Admin Panel and from the SmartphoneKey app in ChatGPT."
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_visitor_access
+msgid ""
 "AI Concierge uses AI to understand the request. Access rules on the server "
 "decide whether it can go ahead, so a persuasive conversation does not grant "
 "access."
@@ -1238,7 +1297,7 @@ msgstr ""
 
 #. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid "Access management platform for buildings"
+msgid "Access management for buildings"
 msgstr ""
 
 #. module: spk_website_v2
@@ -1248,17 +1307,7 @@ msgstr ""
 
 #. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid "Activity and audit records for each site."
-msgstr ""
-
-#. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid "Add a resident"
-msgstr ""
-
-#. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid "Add or remove doors as a person's needs change."
+msgid "Access that changes with your building"
 msgstr ""
 
 #. module: spk_website_v2
@@ -1266,6 +1315,11 @@ msgstr ""
 msgid ""
 "Add people to a site, give them a card or digital key, change or revoke "
 "their access, and check that each reader has applied the change."
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid "Add people, choose their doors and update access across your sites."
 msgstr ""
 
 #. module: spk_website_v2
@@ -1284,16 +1338,16 @@ msgid ""
 msgstr ""
 
 #. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid "Add the capabilities your site needs"
+msgstr ""
+
+#. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_property_managers
 msgid ""
 "Add the new resident to their site and issue a Wallet key or NFC card. At "
 "move-out, revoke it and check that each reader has applied the change; a "
 "revocation waiting for an offline reader is not yet in effect there."
-msgstr ""
-
-#. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid "Add what your site needs"
 msgstr ""
 
 #. module: spk_website_v2
@@ -1315,11 +1369,24 @@ msgstr ""
 #. odoo-python
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.footer
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.header
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_platform
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_resources
 #: code:addons/spk_website_v2/site_content.py:0
 msgid "Admin Panel"
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_platform
+msgid ""
+"Admin Panel Dashboard, English interface (close-up). The figures are "
+"interface values from a test account, not customer metrics."
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid ""
+"Admin Panel Dashboard, English interface. The figures are interface values "
+"from a test account, not customer metrics."
 msgstr ""
 
 #. module: spk_website_v2
@@ -1361,14 +1428,8 @@ msgid "Advisor"
 msgstr ""
 
 #. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_platform
 msgid "Alerts"
-msgstr ""
-
-#. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid "All instructions"
 msgstr ""
 
 #. module: spk_website_v2
@@ -1378,13 +1439,37 @@ msgstr ""
 
 #. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.header
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
 msgid "Already using SmartphoneKey?"
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid ""
+"An administrator selects the doors and assigns access to the right person."
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid "An employee needs another door"
 msgstr ""
 
 #. module: spk_website_v2
 #: model_terms:spk.website.resource,body:spk_website_v2.resource_matter_thread
 msgid "An example topology"
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.connection_example
+msgid ""
+"An example, not a specification. Coverage, the number of readers and the "
+"route to the internet depend on the installation."
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid ""
+"An installer connects the reader, power and compatible lock hardware, then "
+"configures the connection."
 msgstr ""
 
 #. module: spk_website_v2
@@ -1404,6 +1489,18 @@ msgstr ""
 #. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_certifications
 msgid "Apple ECP2 certification confirmation"
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid "Apple Wallet"
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_access_management
+msgid ""
+"Applied is not the same as sent: each change shows whether it is pending, "
+"confirmed by the reader or failed."
 msgstr ""
 
 #. module: spk_website_v2
@@ -1494,7 +1591,7 @@ msgstr ""
 msgid ""
 "Ask us to review the site when coverage at a reader position is uncertain, "
 "when doors are in basements or behind heavy construction, when several "
-"buildings share one plan, or when a third party manages the network. "
+"buildings are planned together, or when a third party manages the network. "
 "Coverage depends on the building, placement and radio conditions, so it is "
 "checked on site rather than promised in advance."
 msgstr ""
@@ -1529,8 +1626,30 @@ msgid "Assess the whole installation"
 msgstr ""
 
 #. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_access_management
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid "Assign a site administrator"
+msgid ""
+"Assign Key wizard at the user-selection step, with an empty recipient field"
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_access_management
+msgid ""
+"Assign Key wizard in the Admin Panel, step 2 of 3, before a person is "
+"chosen. English interface."
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid ""
+"Assign Key wizard, step 2 of 3, before a person is chosen. English "
+"interface."
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid ""
+"Assign a card or supported digital key for their doors and shared areas."
 msgstr ""
 
 #. module: spk_website_v2
@@ -1644,13 +1763,7 @@ msgid ""
 msgstr ""
 
 #. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid "Available with supported readers, devices and services."
-msgstr ""
-
-#. module: spk_website_v2
 #. odoo-python
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_integrators
 #: code:addons/spk_website_v2/site_content.py:0
 msgid "Become a partner"
@@ -1699,6 +1812,13 @@ msgid "Breadcrumb"
 msgstr ""
 
 #. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid ""
+"Bring supported services and devices into the same platform, according to "
+"your site's configuration."
+msgstr ""
+
+#. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_property_managers
 msgid ""
 "Bring these details to the site recommendations or to a conversation with "
@@ -1710,6 +1830,14 @@ msgstr ""
 #: model:ir.model.fields.selection,name:spk_website_v2.selection__crm_lead__spk_role__owner
 #: code:addons/spk_website_v2/site_content.py:0
 msgid "Building owner"
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_access_management
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid ""
+"Built-in SmartphoneKey AI Assistant with its welcome message and message "
+"field"
 msgstr ""
 
 #. module: spk_website_v2
@@ -1754,7 +1882,6 @@ msgstr ""
 #. module: spk_website_v2
 #. odoo-python
 #: model:ir.model.fields.selection,name:spk_website_v2.selection__spk_website_compatibility__category__cameras
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_platform
 #: code:addons/spk_website_v2/site_content.py:0
 msgid "Cameras"
@@ -1813,21 +1940,20 @@ msgid "Card and device compatibility"
 msgstr ""
 
 #. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid "Card and digital key reading, and the access controller."
-msgstr ""
-
-#. module: spk_website_v2
 #: model_terms:spk.website.resource,body:spk_website_v2.resource_mifare
 msgid "Card family"
 msgstr ""
 
 #. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_compatibility
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_platform
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_readers
 msgid "Card programming"
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid "Card programming on supported readers"
 msgstr ""
 
 #. module: spk_website_v2
@@ -1927,13 +2053,15 @@ msgid "Change a compatible thermostat's setpoint"
 msgstr ""
 
 #. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid "Change access"
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_setup
+msgid "Change answers"
 msgstr ""
 
 #. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_setup
-msgid "Change answers"
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid ""
+"Changes for an offline reader remain pending until it reconnects and applies"
+" them."
 msgstr ""
 
 #. module: spk_website_v2
@@ -1983,11 +2111,6 @@ msgstr ""
 msgid ""
 "Check door hardware, power, Wi-Fi or cellular coverage at each door, the "
 "cards or digital keys the customer wants and any connected devices."
-msgstr ""
-
-#. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_platform
-msgid "Check status"
 msgstr ""
 
 #. module: spk_website_v2
@@ -2058,6 +2181,14 @@ msgid ""
 msgstr ""
 
 #. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid ""
+"Choose connectivity to suit the building. SmartphoneKey readers can use LTE "
+"or Wi-Fi, and can participate in a Thread mesh with a connected reader "
+"providing internet access."
+msgstr ""
+
+#. module: spk_website_v2
 #: model_terms:spk.website.resource,body:spk_website_v2.resource_mifare
 msgid "Choose the card type: MIFARE Classic or MIFARE DESFire EV3."
 msgstr ""
@@ -2084,11 +2215,6 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_contact
 #: code:addons/spk_website_v2/site_content.py:0
 msgid "Choose what you would like help with."
-msgstr ""
-
-#. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid "Choose your answers, then select See full recommendations."
 msgstr ""
 
 #. module: spk_website_v2
@@ -2133,6 +2259,13 @@ msgid "Close the working day"
 msgstr ""
 
 #. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_platform
+msgid ""
+"Close-up of the SmartphoneKey Admin Panel Dashboard: the Give Access button,"
+" summary cards and recent activity"
+msgstr ""
+
+#. module: spk_website_v2
 #: model_terms:spk.website.resource,body:spk_website_v2.post_smart_home_trends_2025_the_future_of_secure_and_connected_living
 msgid ""
 "Co-living arrangements, rental properties, and multi-unit buildings require "
@@ -2149,6 +2282,13 @@ msgstr ""
 #. module: spk_website_v2
 #: model:ir.model.fields.selection,name:spk_website_v2.selection__spk_website_claim__evidence_level__code_supported
 msgid "Code-supported"
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid ""
+"Combine readers with a built-in access controller and LTE, Wi-Fi or "
+"supported Thread connectivity."
 msgstr ""
 
 #. module: spk_website_v2
@@ -2181,10 +2321,8 @@ msgid "Compare LTE and Wi-Fi"
 msgstr ""
 
 #. module: spk_website_v2
-#. odoo-python
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-#: code:addons/spk_website_v2/site_content.py:0
-msgid "Compare LTE and Wi-Fi readers"
+msgid "Compare reader connections"
 msgstr ""
 
 #. module: spk_website_v2
@@ -2217,11 +2355,6 @@ msgstr ""
 #. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_automation
 msgid "Conditions you choose"
-msgstr ""
-
-#. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid "Configure alerts for supported device events."
 msgstr ""
 
 #. module: spk_website_v2
@@ -2258,7 +2391,6 @@ msgstr ""
 
 #. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_contact
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_setup
 msgid "Connection at the doors"
 msgstr ""
@@ -2401,8 +2533,22 @@ msgid "Device alerts, if you have configured them."
 msgstr ""
 
 #. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_platform
+msgid ""
+"Device overview with filters for online, offline and not-connected readers"
+msgstr ""
+
+#. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_security
 msgid "Devices and networks"
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_platform
+msgid ""
+"Devices page in the Admin Panel with its filters: online, offline, not "
+"connected. Interface evidence of monitoring, not a network layout. English "
+"interface."
 msgstr ""
 
 #. module: spk_website_v2
@@ -2656,12 +2802,6 @@ msgid "Encrypted digital keys that cannot be copied"
 msgstr ""
 
 #. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid ""
-"End access when the job is done and check that each reader has applied it."
-msgstr ""
-
-#. module: spk_website_v2
 #: model_terms:spk.website.resource,body:spk_website_v2.post_matter_standard_the_key_to_a_seamless_smart_home
 msgid "Energy-efficient operation, making smart homes greener"
 msgstr ""
@@ -2672,6 +2812,11 @@ msgid "Ensure long-term support for your smart home investments"
 msgstr ""
 
 #. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid "Enter"
+msgstr ""
+
+#. module: spk_website_v2
 #. odoo-python
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_contact
 #: code:addons/spk_website_v2/site_content.py:0
@@ -2679,15 +2824,15 @@ msgid "Enter a valid email address."
 msgstr ""
 
 #. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid "Enter with a Wallet key or card"
+msgstr ""
+
+#. module: spk_website_v2
 #. odoo-python
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_contact
 #: code:addons/spk_website_v2/site_content.py:0
 msgid "Enter your name, between 2 and 120 characters."
-msgstr ""
-
-#. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid "Events"
 msgstr ""
 
 #. module: spk_website_v2
@@ -2761,8 +2906,8 @@ msgid "Example"
 msgstr ""
 
 #. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_platform
-msgid "Example residential building with two doors"
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.connection_example
+msgid "Example connection layout"
 msgstr ""
 
 #. module: spk_website_v2
@@ -2787,7 +2932,7 @@ msgstr ""
 
 #. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_platform
-msgid "Example: granting access"
+msgid "Example: the status of one change"
 msgstr ""
 
 #. module: spk_website_v2
@@ -2821,6 +2966,11 @@ msgid "Experience the Future of Keyless Access with SmartphoneKey"
 msgstr ""
 
 #. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid "Explore access management"
+msgstr ""
+
+#. module: spk_website_v2
 #: model:spk.website.resource,description:spk_website_v2.post_the_future_of_keyless_entry_why_its_time_to_upgrade_to_smartphonekey
 msgid ""
 "Explore the future of keyless entry with SmartphoneKey’s secure and "
@@ -2835,6 +2985,13 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_thank_you
 #: code:addons/spk_website_v2/site_content.py:0
 msgid "Explore the platform"
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid ""
+"Explore the platform, check your installation requirements or discuss your "
+"project with our team."
 msgstr ""
 
 #. module: spk_website_v2
@@ -2992,30 +3149,11 @@ msgid ""
 msgstr ""
 
 #. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid ""
-"For example, when a leak sensor reports water, close a compatible valve. "
-"Each scenario runs on one hub and its commissioned devices."
-msgstr ""
-
-#. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_contact
 msgid ""
 "For example: the buildings and doors involved and what does not work today. "
 "Please do not include passwords, access codes or personal information about "
 "residents."
-msgstr ""
-
-#. module: spk_website_v2
-#. odoo-python
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-#: code:addons/spk_website_v2/site_content.py:0
-msgid "For installers and integrators"
-msgstr ""
-
-#. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid "For property teams"
 msgstr ""
 
 #. module: spk_website_v2
@@ -3057,6 +3195,11 @@ msgid "From assessment to support"
 msgstr ""
 
 #. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid "From installation to everyday access"
+msgstr ""
+
+#. module: spk_website_v2
 #: model_terms:spk.website.resource,body:spk_website_v2.resource_mifare
 msgid ""
 "From the Admin Panel, on a SmartphoneKey reader that supports programming"
@@ -3075,6 +3218,14 @@ msgstr ""
 #. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_visitor_access
 msgid "Get"
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_access_management
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid ""
+"Get help in the Admin Panel with the built-in AI Assistant. Available "
+"actions depend on your permissions and site configuration."
 msgstr ""
 
 #. module: spk_website_v2
@@ -3117,11 +3268,6 @@ msgid ""
 msgstr ""
 
 #. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid "Give a new resident a card or digital key for the doors they use."
-msgstr ""
-
-#. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_property_managers
 msgid ""
 "Give access when a resident moves in and revoke it when they move out. Give "
@@ -3133,7 +3279,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
 msgid ""
 "Give residents, staff and contractors access to the doors they need. Manage "
-"cards and digital keys, review events and check reader status in "
+"Wallet keys and cards, update permissions and see device activity in "
 "SmartphoneKey."
 msgstr ""
 
@@ -3159,6 +3305,11 @@ msgid ""
 msgstr ""
 
 #. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid "Google Wallet"
+msgstr ""
+
+#. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_certifications
 msgid "Google Wallet Passes Support, 22 May 2025"
 msgstr ""
@@ -3169,8 +3320,31 @@ msgid "Governing Law"
 msgstr ""
 
 #. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_platform
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
 msgid "Grant access"
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_access_management
+msgid ""
+"Guest Key form in Wallet Key mode: lock selection, validity dates and the "
+"recipient field, shown before anything is sent. The dates are the form's "
+"defaults at capture time, not a completed grant. English interface."
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid ""
+"Guest Key form in Wallet Key mode: validity dates and the recipient field, "
+"shown before anything is sent. English interface."
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_access_management
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid ""
+"Guest Wallet Key form with lock selection, validity dates and an empty "
+"email-recipient field"
 msgstr ""
 
 #. module: spk_website_v2
@@ -3209,11 +3383,6 @@ msgid "Hand over"
 msgstr ""
 
 #. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid "Handle everyday access changes"
-msgstr ""
-
-#. module: spk_website_v2
 #: model:ir.model.fields.selection,name:spk_website_v2.selection__spk_website_claim__owner_role__hardware_firmware
 msgid "Hardware and firmware"
 msgstr ""
@@ -3224,6 +3393,12 @@ msgid ""
 "Hardware models SPK_AC_LTE_EU_V1.0, SPK_AC_LTE_US_V1.0 and SPK_AC_WIFI_V1.0 "
 "with application software 02.02.00, approved for value-added services only, "
 "not payment."
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_access_management
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid "Help inside the Admin Panel"
 msgstr ""
 
 #. module: spk_website_v2
@@ -3271,11 +3446,6 @@ msgstr ""
 #. module: spk_website_v2
 #: model_terms:spk.website.resource,body:spk_website_v2.post_welcome_to_smartphonekey_your_affordable_access_to_a_keyless_future
 msgid "How SmartphoneKey Works"
-msgstr ""
-
-#. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid "How SmartphoneKey fits together"
 msgstr ""
 
 #. module: spk_website_v2
@@ -3327,18 +3497,13 @@ msgid "How far apart can readers be installed?"
 msgstr ""
 
 #. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid "How installers work with SmartphoneKey"
-msgstr ""
-
-#. module: spk_website_v2
 #: model_terms:spk.website.resource,body:spk_website_v2.resource_mifare
 msgid "How it is programmed"
 msgstr ""
 
 #. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid "How property teams use SmartphoneKey"
+msgid "How partners work with SmartphoneKey"
 msgstr ""
 
 #. module: spk_website_v2
@@ -3549,11 +3714,6 @@ msgid ""
 msgstr ""
 
 #. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid "Included in the device"
-msgstr ""
-
-#. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_terms_of_service
 msgid "Indemnification"
 msgstr ""
@@ -3569,6 +3729,7 @@ msgid "Insights"
 msgstr ""
 
 #. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_integrators
 msgid "Install"
 msgstr ""
@@ -3600,6 +3761,11 @@ msgstr ""
 #: model:ir.model.fields.selection,name:spk_website_v2.selection__crm_lead__spk_role__integrator
 #: code:addons/spk_website_v2/site_content.py:0
 msgid "Installer or integrator"
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid "Installer or integrator?"
 msgstr ""
 
 #. module: spk_website_v2
@@ -3708,8 +3874,8 @@ msgstr ""
 #. module: spk_website_v2
 #: model:spk.website.compatibility,capabilities:spk_website_v2.compat_wallet_credentials
 msgid ""
-"Issue and revoke supported wallet credentials for people and doors from the "
-"Admin Panel."
+"Issue and revoke Wallet keys (Apple Wallet, Google Wallet) for people and "
+"doors from the Admin Panel."
 msgstr ""
 
 #. module: spk_website_v2
@@ -3812,11 +3978,6 @@ msgid "Keys and cards"
 msgstr ""
 
 #. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid "Keys, cards and visitors"
-msgstr ""
-
-#. module: spk_website_v2
 #: model:ir.model.fields,field_description:spk_website_v2.field_spk_website_resource__kind
 msgid "Kind"
 msgstr ""
@@ -3873,11 +4034,6 @@ msgstr ""
 #. module: spk_website_v2
 #: model:spk.website.resource,seo_title:spk_website_v2.resource_lte_vs_wifi
 msgid "LTE or Wi-Fi Reader? A Site Checklist | SmartphoneKey"
-msgstr ""
-
-#. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid "LTE or Wi-Fi, according to the connection available there."
 msgstr ""
 
 #. module: spk_website_v2
@@ -3973,11 +4129,6 @@ msgid ""
 msgstr ""
 
 #. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid "Let a local administrator manage access for their own building."
-msgstr ""
-
-#. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_visitor_access
 msgid "Let visitors reach the right person"
 msgstr ""
@@ -4037,6 +4188,11 @@ msgid "MIFARE Classic and MIFARE DESFire EV3 Cards | SmartphoneKey"
 msgstr ""
 
 #. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid "MIFARE Classic and MIFARE DESFire EV3 cards."
+msgstr ""
+
+#. module: spk_website_v2
 #: model:spk.website.compatibility,name:spk_website_v2.compat_mifare_desfire_ev3
 #: model_terms:spk.website.resource,body:spk_website_v2.resource_mifare
 msgid "MIFARE DESFire EV3"
@@ -4045,12 +4201,6 @@ msgstr ""
 #. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.header
 msgid "Main"
-msgstr ""
-
-#. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid ""
-"Make the change in the Admin Panel and check that the reader has applied it."
 msgstr ""
 
 #. module: spk_website_v2
@@ -4066,6 +4216,11 @@ msgid "Manage access across your properties in one place"
 msgstr ""
 
 #. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid "Manage access centrally"
+msgstr ""
+
+#. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.footer
 msgid "Manage access, digital keys, cards and readers across your sites."
 msgstr ""
@@ -4077,9 +4232,7 @@ msgstr ""
 
 #. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid ""
-"Manage supported cameras alongside access, according to your configured "
-"services."
+msgid "Manage supported cameras and configure alerts for device events."
 msgstr ""
 
 #. module: spk_website_v2
@@ -4233,8 +4386,9 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_readers
 msgid ""
 "Mesh coverage and the route to the internet still depend on placement, power"
-" and the building. Matter controller functions are confirmed for each "
-"project."
+" and the building. How many readers share one connection, and what happens "
+"if it drops, depend on the installation; automatic failover is not implied. "
+"Matter controller functions are confirmed for each project."
 msgstr ""
 
 #. module: spk_website_v2
@@ -4283,18 +4437,12 @@ msgstr ""
 
 #. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid ""
-"Move-ins and move-outs, staff and contractor access, site administrators and"
-" an overview of every building."
-msgstr ""
-
-#. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
 msgid "NFC card"
 msgstr ""
 
 #. module: spk_website_v2
 #. odoo-python
+#: model:spk.website.compatibility,name:spk_website_v2.compat_physical_keys
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_platform
 #: code:addons/spk_website_v2/site_content.py:0
 msgid "NFC cards"
@@ -4440,6 +4588,13 @@ msgstr ""
 #. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_property_managers
 msgid "Number of sites, and doors at each site"
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid ""
+"Offer Apple Wallet and Google Wallet keys on supported devices, alongside "
+"physical NFC cards."
 msgstr ""
 
 #. module: spk_website_v2
@@ -4654,11 +4809,6 @@ msgid "Pending delivery"
 msgstr ""
 
 #. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid "Pending, confirmed by the reader or failed."
-msgstr ""
-
-#. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_access_management
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_platform
 msgid "People and their access"
@@ -4685,13 +4835,13 @@ msgid "Photo description"
 msgstr ""
 
 #. module: spk_website_v2
-#: model:spk.website.compatibility,name:spk_website_v2.compat_physical_keys
-msgid "Physical NFC keys"
+#: model:ir.model.fields.selection,name:spk_website_v2.selection__spk_website_compatibility__category__cards
+msgid "Physical card programming"
 msgstr ""
 
 #. module: spk_website_v2
-#: model:ir.model.fields.selection,name:spk_website_v2.selection__spk_website_compatibility__category__cards
-msgid "Physical card programming"
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid "Plan access for your property"
 msgstr ""
 
 #. module: spk_website_v2
@@ -4715,13 +4865,17 @@ msgid "Plan scenarios for your site"
 msgstr ""
 
 #. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid "Plan the connection for each door"
+msgstr ""
+
+#. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_visitor_access
 msgid "Plan visitor access for your entrances"
 msgstr ""
 
 #. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_article
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
 msgid "Plan your installation"
 msgstr ""
 
@@ -4802,8 +4956,8 @@ msgstr ""
 #. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
 msgid ""
-"Power, compatible lock hardware and wiring as described in the installation "
-"guide."
+"Power, compatible lock hardware and local wiring are still required. Network"
+" layout and coverage depend on the installation."
 msgstr ""
 
 #. module: spk_website_v2
@@ -4998,24 +5152,15 @@ msgid "Reader Thread roles"
 msgstr ""
 
 #. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_readers
 msgid "Reader and access controller in one device"
 msgstr ""
 
 #. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid "Reader and access controller in one device, on LTE or Wi-Fi"
-msgstr ""
-
-#. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid "Reader at the door"
-msgstr ""
-
-#. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid "Reader connection"
+msgid ""
+"Reader and access controller in one device. LTE, Wi-Fi or supported Thread "
+"connectivity."
 msgstr ""
 
 #. module: spk_website_v2
@@ -5068,6 +5213,28 @@ msgid "Real-Life Use Cases for Keyless Entry"
 msgstr ""
 
 #. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_access_management
+msgid ""
+"Recent activity in the Dashboard (close-up). An event is a record of what "
+"the reader reported, not proof that a person passed through. English "
+"interface."
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid ""
+"Recent activity in the Dashboard. An event is a record, not proof that a "
+"person passed through."
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_access_management
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid ""
+"Recent activity showing lock and key events in the SmartphoneKey Admin Panel"
+msgstr ""
+
+#. module: spk_website_v2
 #: model_terms:spk.website.team.member,bio:spk_website_v2.team_kate_vasylenko
 msgid ""
 "Recognized as a thought leader in the tech marketing space, Kate frequently "
@@ -5083,7 +5250,6 @@ msgid "Recommendation"
 msgstr ""
 
 #. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_setup
 msgid "Recommendations for your site"
 msgstr ""
@@ -5153,19 +5319,6 @@ msgid "Resident, staff and contractor groups, and the doors each group needs"
 msgstr ""
 
 #. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_platform
-msgid "Resident: card and digital key for Main entrance and Bike store"
-msgstr ""
-
-#. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid ""
-"Residents and staff enter with a Wallet key or an NFC card. Visitors use the"
-" entrance QR code to reach someone. Key holders manage their keys in the "
-"SmartphoneKey app."
-msgstr ""
-
-#. module: spk_website_v2
 #. odoo-python
 #: model:ir.actions.act_window,name:spk_website_v2.action_spk_website_resource
 #: model:ir.ui.menu,name:spk_website_v2.menu_spk_website_resource
@@ -5219,7 +5372,8 @@ msgstr ""
 
 #. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid "Revoke a contractor's access"
+msgid ""
+"Revoke their access and check that the readers have applied the change."
 msgstr ""
 
 #. module: spk_website_v2
@@ -5231,6 +5385,11 @@ msgstr ""
 #. module: spk_website_v2
 #: model:ir.model.fields,field_description:spk_website_v2.field_spk_website_team_member__role_checked_on
 msgid "Role confirmed on"
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid "Rules for supported Matter devices, each on one hub."
 msgstr ""
 
 #. module: spk_website_v2
@@ -5313,7 +5472,12 @@ msgstr ""
 
 #. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid "See full recommendations"
+msgid "See how the platform works"
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_access_management
+msgid "See it beside the Dashboard"
 msgstr ""
 
 #. module: spk_website_v2
@@ -5324,11 +5488,6 @@ msgstr ""
 #. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_access_management
 msgid "See the Admin Panel step by step"
-msgstr ""
-
-#. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid "See what happened and what needs attention"
 msgstr ""
 
 #. module: spk_website_v2
@@ -5350,8 +5509,9 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_platform
 msgid ""
 "Sending a change is not the same as a reader applying it. The Admin Panel "
-"shows whether each change is pending, confirmed by the reader or failed. A "
-"revocation waiting for an offline reader is not yet in effect there."
+"shows whether each change is pending, confirmed by the reader or failed, and"
+" which readers are online, offline or not connected. A revocation waiting "
+"for an offline reader is not yet in effect there."
 msgstr ""
 
 #. module: spk_website_v2
@@ -5364,6 +5524,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:spk_website_v2.field_spk_website_resource__sequence
 #: model:ir.model.fields,field_description:spk_website_v2.field_spk_website_team_member__sequence
 msgid "Sequence"
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid "Set a validity period for supported guest access."
 msgstr ""
 
 #. module: spk_website_v2
@@ -5413,11 +5578,6 @@ msgid ""
 msgstr ""
 
 #. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid "Sign in to the Admin Panel, read the instructions or get the app."
-msgstr ""
-
-#. module: spk_website_v2
 #: model:spk.website.compatibility,capabilities:spk_website_v2.compat_scenario_builder
 msgid ""
 "Simple and advanced scenarios combine supported triggers, conditions and "
@@ -5427,11 +5587,6 @@ msgstr ""
 #. module: spk_website_v2
 #: model_terms:spk.website.resource,body:spk_website_v2.post_matter_standard_the_key_to_a_seamless_smart_home
 msgid "Simpler Setup and Faster Connections"
-msgstr ""
-
-#. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_platform
-msgid "Site"
 msgstr ""
 
 #. module: spk_website_v2
@@ -5463,11 +5618,6 @@ msgstr ""
 #. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_platform
 msgid "Sites are called Entities in the Admin Panel."
-msgstr ""
-
-#. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid "Sites, people and their access; events and device status"
 msgstr ""
 
 #. module: spk_website_v2
@@ -5518,6 +5668,13 @@ msgid "SmartphoneKey (company document), 14 April 2025"
 msgstr ""
 
 #. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid ""
+"SmartphoneKey Admin Panel showing access actions, device and key summaries, "
+"and recent activity"
+msgstr ""
+
+#. module: spk_website_v2
 #: model:spk.website.resource,name:spk_website_v2.post_smartphonekey_official_launch
 msgid "SmartphoneKey Official Launch"
 msgstr ""
@@ -5547,18 +5704,12 @@ msgid ""
 msgstr ""
 
 #. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid "SmartphoneKey app"
-msgstr ""
-
-#. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_platform
 msgid "SmartphoneKey app for key holders"
 msgstr ""
 
 #. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_apps
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_resources
 msgid "SmartphoneKey apps"
 msgstr ""
@@ -5679,10 +5830,20 @@ msgid "SmartphoneKey reader"
 msgstr ""
 
 #. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid "SmartphoneKey reader with backplate"
+msgstr ""
+
+#. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_readers
 msgid ""
 "SmartphoneKey reader with backplate. Product image from the installation "
 "guide; it does not show whether it is the LTE or the Wi-Fi version."
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid "SmartphoneKey reader, product image from the installation guide."
 msgstr ""
 
 #. module: spk_website_v2
@@ -5807,6 +5968,11 @@ msgid ""
 msgstr ""
 
 #. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid "Someone leaves"
+msgstr ""
+
+#. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_certifications
 msgid "Source"
 msgstr ""
@@ -5857,11 +6023,6 @@ msgstr ""
 msgid ""
 "States that the SmartphoneKey Reader completed Apple ECP2 certification for "
 "Apple Wallet (product plan 820066-810568)."
-msgstr ""
-
-#. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid "Status of each change"
 msgstr ""
 
 #. module: spk_website_v2
@@ -5922,7 +6083,6 @@ msgid ""
 msgstr ""
 
 #. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_platform
 msgid ""
 "Supported SmartphoneKey reader configurations also let you program MIFARE "
@@ -5963,6 +6123,11 @@ msgstr ""
 msgid ""
 "Supported SmartphoneKey reader configurations program MIFARE Classic and "
 "MIFARE DESFire EV3 cards. How it works and what to check before ordering."
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid "Supported cameras and alerts"
 msgstr ""
 
 #. module: spk_website_v2
@@ -6105,6 +6270,21 @@ msgid ""
 msgstr ""
 
 #. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_access_management
+msgid ""
+"The AI Assistant is part of the Admin Panel. It is not the SmartphoneKey app"
+" in ChatGPT, and not the visitor-facing AI Concierge."
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_access_management
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid ""
+"The AI Assistant panel as it opens, English interface, before any message is"
+" sent."
+msgstr ""
+
+#. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_platform
 msgid ""
 "The Admin Panel is where you manage access. Readers at the doors apply it. "
@@ -6197,6 +6377,13 @@ msgid ""
 "The installation and connection guide covers package contents, wiring, "
 "network setup and specifications. Certifications and conformity documents "
 "name the models they apply to."
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid ""
+"The key holder uses a supported Wallet key or NFC card at an authorised "
+"door."
 msgstr ""
 
 #. module: spk_website_v2
@@ -6505,6 +6692,11 @@ msgid "Unverified"
 msgstr ""
 
 #. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid "Update their permissions as responsibilities change."
+msgstr ""
+
+#. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_article
 msgid "Updated"
 msgstr ""
@@ -6583,15 +6775,35 @@ msgstr ""
 
 #. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid "View larger"
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_platform
+msgid "View the full Dashboard"
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_access_management
+msgid "View the full screen"
+msgstr ""
+
+#. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_platform
 msgid "Visitor QR code"
 msgstr ""
 
 #. module: spk_website_v2
 #. odoo-python
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_platform
 #: code:addons/spk_website_v2/site_content.py:0
 msgid "Visitor access"
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid "Visitor contact"
 msgstr ""
 
 #. module: spk_website_v2
@@ -6602,8 +6814,7 @@ msgstr ""
 #. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
 msgid ""
-"Visitors scan the code at the entrance to contact a resident or the site "
-"team."
+"Visitors scan the entrance QR code to reach a resident or the site team."
 msgstr ""
 
 #. module: spk_website_v2
@@ -6619,13 +6830,10 @@ msgid ""
 msgstr ""
 
 #. module: spk_website_v2
+#. odoo-python
 #: model:spk.website.compatibility,name:spk_website_v2.compat_wallet_credentials
-msgid "Wallet credentials"
-msgstr ""
-
-#. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid "Wallet key"
+#: code:addons/spk_website_v2/site_content.py:0
+msgid "Wallet keys"
 msgstr ""
 
 #. module: spk_website_v2
@@ -6642,11 +6850,6 @@ msgid ""
 msgstr ""
 
 #. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid "Wallet keys, NFC cards and the visitor QR code"
-msgstr ""
-
-#. module: spk_website_v2
 #: model_terms:spk.website.resource,body:spk_website_v2.post_smartphonekey_official_launch
 msgid "Watch the video on YouTube"
 msgstr ""
@@ -6655,6 +6858,11 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_platform
 msgid "Ways to enter"
+msgstr ""
+
+#. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid "Ways to enter, not a product screen."
 msgstr ""
 
 #. module: spk_website_v2
@@ -6842,6 +7050,11 @@ msgid ""
 msgstr ""
 
 #. module: spk_website_v2
+#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
+msgid "What SmartphoneKey gives you"
+msgstr ""
+
+#. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_automation
 msgid "What a scenario can use"
 msgstr ""
@@ -6865,11 +7078,6 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.reader_comparison
 #: model_terms:spk.website.resource,body:spk_website_v2.resource_lte_vs_wifi
 msgid "What differs"
-msgstr ""
-
-#. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid "What do you manage?"
 msgstr ""
 
 #. module: spk_website_v2
@@ -6962,13 +7170,6 @@ msgid "What makes up the system"
 msgstr ""
 
 #. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid ""
-"What the installation needs, commissioning, handover to the customer and "
-"support afterwards."
-msgstr ""
-
-#. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_readers
 msgid "What the reader does"
 msgstr ""
@@ -7045,13 +7246,6 @@ msgid "When to ask for a site review"
 msgstr ""
 
 #. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid ""
-"Where key holders manage their keys, on Android and iPhone. Entry at the "
-"door uses a Wallet key or a card."
-msgstr ""
-
-#. module: spk_website_v2
 #: model_terms:spk.website.resource,body:spk_website_v2.resource_offline
 msgid ""
 "Whether keys and cards keep working at the door during an outage depends on "
@@ -7110,11 +7304,6 @@ msgid ""
 msgstr ""
 
 #. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid "Which readers are connected and which need attention."
-msgstr ""
-
-#. module: spk_website_v2
 #: model_terms:spk.website.resource,body:spk_website_v2.resource_matter_thread
 msgid ""
 "Which readers will connect the mesh to the internet, and which other devices"
@@ -7131,11 +7320,6 @@ msgstr ""
 #. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_property_managers
 msgid "Who issues and revokes access day to day, and who handles support"
-msgstr ""
-
-#. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid "Who it is for"
 msgstr ""
 
 #. module: spk_website_v2
@@ -7463,11 +7647,6 @@ msgid ""
 msgstr ""
 
 #. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid "You choose for each door"
-msgstr ""
-
-#. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.page_privacy_policy
 msgid "You have the following rights regarding your personal information:"
 msgstr ""
@@ -7475,11 +7654,6 @@ msgstr ""
 #. module: spk_website_v2
 #: model_terms:ir.ui.view,arch_db:spk_website_v2.reader_comparison
 msgid "You provide"
-msgstr ""
-
-#. module: spk_website_v2
-#: model_terms:ir.ui.view,arch_db:spk_website_v2.page_home
-msgid "You provide at the door"
 msgstr ""
 
 #. module: spk_website_v2
@@ -7610,8 +7784,9 @@ msgstr ""
 #. odoo-python
 #: code:addons/spk_website_v2/site_content.py:0
 msgid ""
-"Manage access to one or many buildings: add residents, issue cards and "
-"digital keys, revoke access and check events and reader status in one place."
+"Manage access to one or many buildings: add residents, issue Wallet keys and"
+" cards, update permissions and see device activity and reader status in "
+"SmartphoneKey."
 msgstr ""
 
 #. module: spk_website_v2
@@ -7940,12 +8115,6 @@ msgstr ""
 #. module: spk_website_v2
 #. odoo-python
 #: code:addons/spk_website_v2/site_content.py:0
-msgid "Wallet keys"
-msgstr ""
-
-#. module: spk_website_v2
-#. odoo-python
-#: code:addons/spk_website_v2/site_content.py:0
 msgid "One property"
 msgstr ""
 
@@ -8088,6 +8257,12 @@ msgstr ""
 #. module: spk_website_v2
 #. odoo-python
 #: code:addons/spk_website_v2/site_content.py:0
+msgid "Compare LTE and Wi-Fi readers"
+msgstr ""
+
+#. module: spk_website_v2
+#. odoo-python
+#: code:addons/spk_website_v2/site_content.py:0
 msgid "Managing access across sites"
 msgstr ""
 
@@ -8095,6 +8270,12 @@ msgstr ""
 #. odoo-python
 #: code:addons/spk_website_v2/site_content.py:0
 msgid "Access control for property teams"
+msgstr ""
+
+#. module: spk_website_v2
+#. odoo-python
+#: code:addons/spk_website_v2/site_content.py:0
+msgid "For installers and integrators"
 msgstr ""
 
 #. module: spk_website_v2

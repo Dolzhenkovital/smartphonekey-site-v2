@@ -1,0 +1,365 @@
+{
+  "<span class=\"flow-name\">Authorised door</span>": {
+    "fr": "<span class=\"flow-name\">Porte autorisée</span>",
+    "de": "<span class=\"flow-name\">Freigegebene Tür</span>",
+    "es": "<span class=\"flow-name\">Puerta autorizada</span>",
+    "uk": "<span class=\"flow-name\">Дозволені двері</span>"
+  },
+  "<span class=\"flow-name\">NFC card</span> <span class=\"flow-note\">a physical card</span>": {
+    "fr": "<span class=\"flow-name\">Carte NFC</span> <span class=\"flow-note\">une carte physique</span>",
+    "de": "<span class=\"flow-name\">NFC-Karte</span> <span class=\"flow-note\">eine physische Karte</span>",
+    "es": "<span class=\"flow-name\">Tarjeta NFC</span> <span class=\"flow-note\">una tarjeta física</span>",
+    "uk": "<span class=\"flow-name\">NFC-картка</span> <span class=\"flow-note\">фізична картка</span>"
+  },
+  "<span class=\"flow-name\">SmartphoneKey reader</span> <span class=\"flow-note\">checks the key or card</span>": {
+    "fr": "<span class=\"flow-name\">Lecteur SmartphoneKey</span> <span class=\"flow-note\">vérifie la clé ou la carte</span>",
+    "de": "<span class=\"flow-name\">SmartphoneKey-Leser</span> <span class=\"flow-note\">prüft Schlüssel oder Karte</span>",
+    "es": "<span class=\"flow-name\">Lector SmartphoneKey</span> <span class=\"flow-note\">comprueba la llave o la tarjeta</span>",
+    "uk": "<span class=\"flow-name\">Зчитувач SmartphoneKey</span> <span class=\"flow-note\">перевіряє ключ або картку</span>"
+  },
+  "<span class=\"flow-name\">Wallet key</span> <span class=\"flow-note\">Apple Wallet or Google Wallet on a supported phone</span>": {
+    "fr": "<span class=\"flow-name\">Clé Wallet</span> <span class=\"flow-note\">Apple Wallet ou Google Wallet sur un téléphone compatible</span>",
+    "de": "<span class=\"flow-name\">Wallet-Schlüssel</span> <span class=\"flow-note\">Apple Wallet oder Google Wallet auf einem unterstützten Smartphone</span>",
+    "es": "<span class=\"flow-name\">Llave en Wallet</span> <span class=\"flow-note\">Apple Wallet o Google Wallet en un teléfono compatible</span>",
+    "uk": "<span class=\"flow-name\">Ключ у Wallet</span> <span class=\"flow-note\">Apple Wallet або Google Wallet на підтримуваному телефоні</span>"
+  },
+  "<span class=\"node-name\">Reader at the bike store</span> <span class=\"node-note\">Thread mesh</span>": {
+    "fr": "<span class=\"node-name\">Lecteur du local à vélos</span> <span class=\"node-note\">Réseau maillé Thread</span>",
+    "de": "<span class=\"node-name\">Leser am Fahrradraum</span> <span class=\"node-note\">Thread-Mesh</span>",
+    "es": "<span class=\"node-name\">Lector del cuarto de bicicletas</span> <span class=\"node-note\">Malla Thread</span>",
+    "uk": "<span class=\"node-name\">Зчитувач у велокімнаті</span> <span class=\"node-note\">Mesh-мережа Thread</span>"
+  },
+  "<span class=\"node-name\">Reader at the main entrance</span> <span class=\"node-note\">LTE or Wi-Fi, connected to the internet</span>": {
+    "fr": "<span class=\"node-name\">Lecteur de l’entrée principale</span> <span class=\"node-note\">LTE ou Wi-Fi, relié à Internet</span>",
+    "de": "<span class=\"node-name\">Leser am Haupteingang</span> <span class=\"node-note\">LTE oder Wi-Fi, mit dem Internet verbunden</span>",
+    "es": "<span class=\"node-name\">Lector de la entrada principal</span> <span class=\"node-note\">LTE o Wi-Fi, conectado a Internet</span>",
+    "uk": "<span class=\"node-name\">Зчитувач на головному вході</span> <span class=\"node-note\">LTE або Wi-Fi, з доступом до інтернету</span>"
+  },
+  "<span class=\"node-name\">Reader at the side door</span> <span class=\"node-note\">Thread mesh</span>": {
+    "fr": "<span class=\"node-name\">Lecteur de la porte latérale</span> <span class=\"node-note\">Réseau maillé Thread</span>",
+    "de": "<span class=\"node-name\">Leser an der Seitentür</span> <span class=\"node-note\">Thread-Mesh</span>",
+    "es": "<span class=\"node-name\">Lector de la puerta lateral</span> <span class=\"node-note\">Malla Thread</span>",
+    "uk": "<span class=\"node-name\">Зчитувач на бічних дверях</span> <span class=\"node-note\">Mesh-мережа Thread</span>"
+  },
+  "<span class=\"step-title\">Issue</span> <span>a key or card, with a validity period where supported</span>": {
+    "fr": "<span class=\"step-title\">Émettre</span> <span>une clé ou une carte, avec une période de validité quand c’est pris en charge</span>",
+    "de": "<span class=\"step-title\">Ausgeben</span> <span>einen Schlüssel oder eine Karte, mit Gültigkeitszeitraum, wo das unterstützt wird</span>",
+    "es": "<span class=\"step-title\">Emita</span> <span>una llave o una tarjeta, con un periodo de validez cuando se admita</span>",
+    "uk": "<span class=\"step-title\">Видайте</span> <span>ключ або картку, з терміном дії там, де це підтримується</span>"
+  },
+  "A contractor is visiting": {"fr": "Un prestataire intervient", "de": "Ein Dienstleister kommt", "es": "Viene un contratista", "uk": "Приходить підрядник"},
+  "A new resident moves in": {"fr": "Un nouveau résident emménage", "de": "Ein neuer Bewohner zieht ein", "es": "Un nuevo residente se muda", "uk": "Заселяється новий мешканець"},
+  "A reader and access controller in one device": {"fr": "Un lecteur et un contrôleur d’accès dans un seul appareil", "de": "Leser und Zutrittscontroller in einem Gerät", "es": "Un lector y un controlador de acceso en un solo dispositivo", "uk": "Зчитувач і контролер доступу в одному пристрої"},
+  "A suitable wireless design can reduce communication cabling between readers.": {
+    "fr": "Une conception sans fil adaptée peut réduire le câblage de communication entre les lecteurs.",
+    "de": "Eine geeignete Funkplanung kann die Kommunikationsverkabelung zwischen den Lesern verringern.",
+    "es": "Un diseño inalámbrico adecuado puede reducir el cableado de comunicación entre lectores.",
+    "uk": "Продумана бездротова схема може зменшити кількість кабелів зв’язку між зчитувачами."
+  },
+  "A suitable wireless design can reduce communication cabling between readers: readers on the Thread mesh can reach the internet through a reader that has an LTE or Wi-Fi connection.": {
+    "fr": "Une conception sans fil adaptée peut réduire le câblage de communication entre les lecteurs : les lecteurs du réseau maillé Thread peuvent accéder à Internet par un lecteur qui dispose d’une connexion LTE ou Wi-Fi.",
+    "de": "Eine geeignete Funkplanung kann die Kommunikationsverkabelung zwischen den Lesern verringern: Leser im Thread-Mesh können das Internet über einen Leser mit LTE- oder Wi-Fi-Verbindung erreichen.",
+    "es": "Un diseño inalámbrico adecuado puede reducir el cableado de comunicación entre lectores: los lectores de la malla Thread pueden acceder a Internet a través de un lector con conexión LTE o Wi-Fi.",
+    "uk": "Продумана бездротова схема може зменшити кількість кабелів зв’язку між зчитувачами: зчитувачі в mesh-мережі Thread можуть виходити в інтернет через зчитувач із підключенням LTE або Wi-Fi."
+  },
+  "Access management for buildings": {"fr": "Gestion des accès pour les bâtiments", "de": "Zutrittsverwaltung für Gebäude", "es": "Gestión de accesos para edificios", "uk": "Керування доступом у будівлях"},
+  "Access that changes with your building": {"fr": "Des accès qui évoluent avec votre bâtiment", "de": "Zutritt, der sich mit Ihrem Gebäude ändert", "es": "Accesos que cambian con su edificio", "uk": "Доступ, що змінюється разом із будівлею"},
+  "Add people, choose their doors and update access across your sites.": {
+    "fr": "Ajoutez des personnes, choisissez leurs portes et mettez les accès à jour sur tous vos sites.",
+    "de": "Fügen Sie Personen hinzu, wählen Sie ihre Türen und aktualisieren Sie den Zutritt an allen Ihren Standorten.",
+    "es": "Añada personas, elija sus puertas y actualice los accesos en todos sus sitios.",
+    "uk": "Додавайте людей, обирайте для них двері та змінюйте доступ на всіх своїх об’єктах."
+  },
+  "Add the capabilities your site needs": {"fr": "Ajoutez les fonctions dont votre site a besoin", "de": "Ergänzen Sie, was Ihr Standort braucht", "es": "Añada las funciones que necesita su sitio", "uk": "Додайте можливості, потрібні вашому об’єкту"},
+  "Admin Panel Dashboard, English interface (close-up). The figures are interface values from a test account, not customer metrics.": {
+    "fr": "Tableau de bord de l’Admin Panel, interface en anglais (gros plan). Les chiffres sont des valeurs d’interface d’un compte de test, pas des indicateurs clients.",
+    "de": "Dashboard des Admin Panel, englische Oberfläche (Ausschnitt). Die Zahlen sind Oberflächenwerte eines Testkontos, keine Kundenkennzahlen.",
+    "es": "Panel Dashboard del Admin Panel, interfaz en inglés (detalle). Las cifras son valores de la interfaz de una cuenta de prueba, no métricas de clientes.",
+    "uk": "Dashboard в Admin Panel, інтерфейс англійською (фрагмент). Цифри — значення інтерфейсу тестового облікового запису, а не показники клієнтів."
+  },
+  "Admin Panel Dashboard, English interface. The figures are interface values from a test account, not customer metrics.": {
+    "fr": "Tableau de bord de l’Admin Panel, interface en anglais. Les chiffres sont des valeurs d’interface d’un compte de test, pas des indicateurs clients.",
+    "de": "Dashboard des Admin Panel, englische Oberfläche. Die Zahlen sind Oberflächenwerte eines Testkontos, keine Kundenkennzahlen.",
+    "es": "Panel Dashboard del Admin Panel, interfaz en inglés. Las cifras son valores de la interfaz de una cuenta de prueba, no métricas de clientes.",
+    "uk": "Dashboard в Admin Panel, інтерфейс англійською. Цифри — значення інтерфейсу тестового облікового запису, а не показники клієнтів."
+  },
+  "An administrator selects the doors and assigns access to the right person.": {
+    "fr": "Un administrateur sélectionne les portes et attribue l’accès à la bonne personne.",
+    "de": "Ein Administrator wählt die Türen aus und weist der richtigen Person den Zutritt zu.",
+    "es": "Un administrador selecciona las puertas y asigna el acceso a la persona correcta.",
+    "uk": "Адміністратор обирає двері та надає доступ потрібній людині."
+  },
+  "An employee needs another door": {"fr": "Un employé a besoin d’une porte de plus", "de": "Ein Mitarbeiter braucht eine weitere Tür", "es": "Un empleado necesita otra puerta", "uk": "Працівникові потрібні ще одні двері"},
+  "An example, not a specification. Coverage, the number of readers and the route to the internet depend on the installation.": {
+    "fr": "Un exemple, pas une spécification. La couverture, le nombre de lecteurs et le chemin vers Internet dépendent de l’installation.",
+    "de": "Ein Beispiel, keine Spezifikation. Abdeckung, Anzahl der Leser und der Weg ins Internet hängen von der Installation ab.",
+    "es": "Un ejemplo, no una especificación. La cobertura, el número de lectores y la ruta hacia Internet dependen de la instalación.",
+    "uk": "Це приклад, а не специфікація. Покриття, кількість зчитувачів і шлях до інтернету залежать від конкретного об’єкта та монтажу."
+  },
+  "An installer connects the reader, power and compatible lock hardware, then configures the connection.": {
+    "fr": "Un installateur raccorde le lecteur, l’alimentation et une serrure compatible, puis configure la connexion.",
+    "de": "Ein Errichter schließt Leser, Stromversorgung und kompatible Schlosstechnik an und richtet dann die Verbindung ein.",
+    "es": "Un instalador conecta el lector, la alimentación y la cerradura compatible y, después, configura la conexión.",
+    "uk": "Монтажник підключає зчитувач, живлення та сумісний замок, а потім налаштовує з’єднання."
+  },
+  "Apple Wallet": {"fr": "Apple Wallet", "de": "Apple Wallet", "es": "Apple Wallet", "uk": "Apple Wallet"},
+  "Google Wallet": {"fr": "Google Wallet", "de": "Google Wallet", "es": "Google Wallet", "uk": "Google Wallet"},
+  "Applied is not the same as sent: each change shows whether it is pending, confirmed by the reader or failed.": {
+    "fr": "Appliqué n’est pas envoyé : chaque modification indique si elle est en attente, confirmée par le lecteur ou en échec.",
+    "de": "Angewendet ist nicht gleich gesendet: Jede Änderung zeigt, ob sie aussteht, vom Leser bestätigt wurde oder fehlgeschlagen ist.",
+    "es": "Aplicado no es lo mismo que enviado: cada cambio muestra si está pendiente, confirmado por el lector o fallido.",
+    "uk": "Надіслано — ще не застосовано: для кожної зміни видно, чи вона очікує, підтверджена зчитувачем або не вдалася."
+  },
+  "Ask us to review the site when coverage at a reader position is uncertain, when doors are in basements or behind heavy construction, when several buildings are planned together, or when a third party manages the network. Coverage depends on the building, placement and radio conditions, so it is checked on site rather than promised in advance.": {
+    "fr": "Demandez-nous d’examiner le site lorsque la couverture à l’emplacement d’un lecteur est incertaine, lorsque des portes se trouvent en sous-sol ou derrière des structures épaisses, lorsque plusieurs bâtiments sont planifiés ensemble, ou lorsqu’un tiers gère le réseau. La couverture dépend du bâtiment, de l’emplacement et des conditions radio : elle est vérifiée sur place plutôt que promise à l’avance.",
+    "de": "Bitten Sie uns um eine Standortprüfung, wenn die Abdeckung an einer Leserposition unsicher ist, wenn Türen im Keller oder hinter massiver Bausubstanz liegen, wenn mehrere Gebäude gemeinsam geplant werden oder wenn ein Dritter das Netzwerk betreut. Die Abdeckung hängt vom Gebäude, von der Platzierung und von den Funkbedingungen ab; sie wird vor Ort geprüft und nicht im Voraus zugesagt.",
+    "es": "Pídanos que revisemos el sitio cuando la cobertura en la posición de un lector sea incierta, cuando haya puertas en sótanos o tras construcciones pesadas, cuando se planifiquen varios edificios a la vez o cuando un tercero gestione la red. La cobertura depende del edificio, de la ubicación y de las condiciones de radio, así que se comprueba en el sitio en lugar de prometerse de antemano.",
+    "uk": "Попросіть нас оглянути об’єкт, якщо покриття в місці встановлення зчитувача непевне, якщо двері розташовані в підвалі або за масивними конструкціями, якщо разом плануються кілька будівель або якщо мережею керує стороння компанія. Покриття залежить від будівлі, розташування та радіоумов, тому його перевіряють на місці, а не обіцяють заздалегідь."
+  },
+  "Assign Key wizard at the user-selection step, with an empty recipient field": {
+    "fr": "Assistant Assign Key à l’étape de sélection de l’utilisateur, avec un champ destinataire vide",
+    "de": "Assistent „Assign Key“ im Schritt der Benutzerauswahl, mit leerem Empfängerfeld",
+    "es": "Asistente Assign Key en el paso de selección de usuario, con el campo de destinatario vacío",
+    "uk": "Майстер Assign Key на кроці вибору користувача з порожнім полем одержувача"
+  },
+  "Assign Key wizard in the Admin Panel, step 2 of 3, before a person is chosen. English interface.": {
+    "fr": "Assistant Assign Key de l’Admin Panel, étape 2 sur 3, avant le choix d’une personne. Interface en anglais.",
+    "de": "Assistent „Assign Key“ im Admin Panel, Schritt 2 von 3, bevor eine Person gewählt wurde. Englische Oberfläche.",
+    "es": "Asistente Assign Key del Admin Panel, paso 2 de 3, antes de elegir a una persona. Interfaz en inglés.",
+    "uk": "Майстер Assign Key в Admin Panel, крок 2 з 3, до вибору людини. Інтерфейс англійською."
+  },
+  "Assign Key wizard, step 2 of 3, before a person is chosen. English interface.": {
+    "fr": "Assistant Assign Key, étape 2 sur 3, avant le choix d’une personne. Interface en anglais.",
+    "de": "Assistent „Assign Key“, Schritt 2 von 3, bevor eine Person gewählt wurde. Englische Oberfläche.",
+    "es": "Asistente Assign Key, paso 2 de 3, antes de elegir a una persona. Interfaz en inglés.",
+    "uk": "Майстер Assign Key, крок 2 з 3, до вибору людини. Інтерфейс англійською."
+  },
+  "Assign a card or supported digital key for their doors and shared areas.": {
+    "fr": "Attribuez une carte ou une clé numérique prise en charge pour ses portes et les espaces communs.",
+    "de": "Weisen Sie eine Karte oder einen unterstützten digitalen Schlüssel für seine Türen und die Gemeinschaftsbereiche zu.",
+    "es": "Asigne una tarjeta o una llave digital compatible para sus puertas y las zonas comunes.",
+    "uk": "Видайте картку або підтримуваний цифровий ключ для його дверей і спільних зон."
+  },
+  "Bring supported services and devices into the same platform, according to your site's configuration.": {
+    "fr": "Réunissez les services et appareils pris en charge sur la même plateforme, selon la configuration de votre site.",
+    "de": "Holen Sie unterstützte Dienste und Geräte auf dieselbe Plattform, je nach Konfiguration Ihres Standorts.",
+    "es": "Reúna los servicios y dispositivos compatibles en la misma plataforma, según la configuración de su sitio.",
+    "uk": "Об’єднуйте підтримувані сервіси та пристрої на одній платформі відповідно до налаштувань вашого об’єкта."
+  },
+  "Built-in SmartphoneKey AI Assistant with its welcome message and message field": {
+    "fr": "AI Assistant intégré de SmartphoneKey avec son message d’accueil et son champ de saisie",
+    "de": "Integrierter SmartphoneKey AI Assistant mit Begrüßungstext und Eingabefeld",
+    "es": "AI Assistant integrado de SmartphoneKey con su mensaje de bienvenida y el campo de mensaje",
+    "uk": "Вбудований AI Assistant SmartphoneKey із привітанням і полем для повідомлення"
+  },
+  "Card programming on supported readers": {"fr": "Programmation de cartes sur les lecteurs pris en charge", "de": "Karten programmieren mit unterstützten Lesern", "es": "Programación de tarjetas en lectores compatibles", "uk": "Програмування карток на підтримуваних зчитувачах"},
+  "Changes for an offline reader remain pending until it reconnects and applies them.": {
+    "fr": "Les modifications destinées à un lecteur hors ligne restent en attente jusqu’à ce qu’il se reconnecte et les applique.",
+    "de": "Änderungen für einen Leser, der offline ist, bleiben ausstehend, bis er wieder verbunden ist und sie anwendet.",
+    "es": "Los cambios para un lector sin conexión quedan pendientes hasta que se reconecta y los aplica.",
+    "uk": "Зміни для зчитувача без зв’язку залишаються в очікуванні, доки він не відновить з’єднання і не застосує їх."
+  },
+  "Choose connectivity to suit the building. SmartphoneKey readers can use LTE or Wi-Fi, and can participate in a Thread mesh with a connected reader providing internet access.": {
+    "fr": "Choisissez la connexion adaptée au bâtiment. Les lecteurs SmartphoneKey peuvent utiliser le LTE ou le Wi-Fi, et participer à un réseau maillé Thread où un lecteur connecté fournit l’accès à Internet.",
+    "de": "Wählen Sie die Verbindung passend zum Gebäude. SmartphoneKey-Leser können LTE oder Wi-Fi nutzen und an einem Thread-Mesh teilnehmen, in dem ein verbundener Leser den Internetzugang bereitstellt.",
+    "es": "Elija la conectividad que mejor se adapte al edificio. Los lectores SmartphoneKey pueden usar LTE o Wi-Fi y participar en una malla Thread en la que un lector conectado proporciona el acceso a Internet.",
+    "uk": "Обирайте підключення під будівлю. Зчитувачі SmartphoneKey можуть працювати через LTE або Wi-Fi, а також входити до mesh-мережі Thread, у якій доступ до інтернету надає підключений зчитувач."
+  },
+  "Close-up of the SmartphoneKey Admin Panel Dashboard: the Give Access button, summary cards and recent activity": {
+    "fr": "Gros plan du tableau de bord de l’Admin Panel SmartphoneKey : bouton Give Access, cartes de synthèse et activité récente",
+    "de": "Ausschnitt des Dashboards im SmartphoneKey Admin Panel: Schaltfläche „Give Access“, Übersichtskarten und letzte Aktivitäten",
+    "es": "Detalle del panel Dashboard del Admin Panel de SmartphoneKey: botón Give Access, tarjetas de resumen y actividad reciente",
+    "uk": "Фрагмент Dashboard в Admin Panel SmartphoneKey: кнопка Give Access, картки зведення та останні події"
+  },
+  "Combine readers with a built-in access controller and LTE, Wi-Fi or supported Thread connectivity.": {
+    "fr": "Associez des lecteurs à contrôleur d’accès intégré et une connexion LTE, Wi-Fi ou Thread prise en charge.",
+    "de": "Kombinieren Sie Leser mit integriertem Zutrittscontroller mit LTE, Wi-Fi oder unterstützter Thread-Anbindung.",
+    "es": "Combine lectores con controlador de acceso integrado y conectividad LTE, Wi-Fi o Thread compatible.",
+    "uk": "Поєднуйте зчитувачі з вбудованим контролером доступу та підключенням LTE, Wi-Fi або підтримуваним Thread."
+  },
+  "Compare reader connections": {"fr": "Comparer les connexions des lecteurs", "de": "Leserverbindungen vergleichen", "es": "Comparar las conexiones de los lectores", "uk": "Порівняти підключення зчитувачів"},
+  "Device overview with filters for online, offline and not-connected readers": {
+    "fr": "Vue des appareils avec filtres pour les lecteurs en ligne, hors ligne et non connectés",
+    "de": "Geräteübersicht mit Filtern für Leser online, offline und nicht verbunden",
+    "es": "Vista de dispositivos con filtros para lectores en línea, sin conexión y no conectados",
+    "uk": "Огляд пристроїв із фільтрами для зчитувачів онлайн, офлайн і не підключених"
+  },
+  "Devices page in the Admin Panel with its filters: online, offline, not connected. Interface evidence of monitoring, not a network layout. English interface.": {
+    "fr": "Page Devices de l’Admin Panel avec ses filtres : en ligne, hors ligne, non connecté. Une preuve d’interface de la supervision, pas un schéma de réseau. Interface en anglais.",
+    "de": "Seite „Devices“ im Admin Panel mit ihren Filtern: online, offline, nicht verbunden. Oberflächennachweis der Überwachung, kein Netzwerkplan. Englische Oberfläche.",
+    "es": "Página Devices del Admin Panel con sus filtros: en línea, sin conexión, no conectado. Evidencia de la interfaz de supervisión, no un esquema de red. Interfaz en inglés.",
+    "uk": "Сторінка Devices в Admin Panel із фільтрами: онлайн, офлайн, не підключено. Це вигляд інтерфейсу моніторингу, а не схема мережі. Інтерфейс англійською."
+  },
+  "Enter": {"fr": "Entrer", "de": "Eintreten", "es": "Entrar", "uk": "Вхід"},
+  "Enter with a Wallet key or card": {"fr": "Entrez avec une clé Wallet ou une carte", "de": "Eintreten mit Wallet-Schlüssel oder Karte", "es": "Entre con una llave en Wallet o una tarjeta", "uk": "Вхід за ключем у Wallet або карткою"},
+  "Example connection layout": {"fr": "Exemple de schéma de connexion", "de": "Beispiel für eine Verbindungsanordnung", "es": "Ejemplo de esquema de conexión", "uk": "Приклад схеми підключення"},
+  "Example: the status of one change": {"fr": "Exemple : l’état d’une modification", "de": "Beispiel: der Status einer Änderung", "es": "Ejemplo: el estado de un cambio", "uk": "Приклад: стан однієї зміни"},
+  "Explore access management": {"fr": "Découvrir la gestion des accès", "de": "Zutrittsverwaltung entdecken", "es": "Explorar la gestión de accesos", "uk": "Докладніше про керування доступом"},
+  "Explore the platform, check your installation requirements or discuss your project with our team.": {
+    "fr": "Découvrez la plateforme, vérifiez les exigences de votre installation ou parlez de votre projet avec notre équipe.",
+    "de": "Entdecken Sie die Plattform, prüfen Sie die Anforderungen Ihrer Anlage oder besprechen Sie Ihr Projekt mit unserem Team.",
+    "es": "Explore la plataforma, compruebe los requisitos de su instalación o hable de su proyecto con nuestro equipo.",
+    "uk": "Ознайомтеся з платформою, перевірте вимоги до монтажу або обговоріть свій проєкт із нашою командою."
+  },
+  "From installation to everyday access": {"fr": "De l’installation à l’accès au quotidien", "de": "Von der Installation zum täglichen Zutritt", "es": "De la instalación al acceso diario", "uk": "Від монтажу до щоденного доступу"},
+  "Get help in the Admin Panel with the built-in AI Assistant. Available actions depend on your permissions and site configuration.": {
+    "fr": "Obtenez de l’aide dans l’Admin Panel grâce à l’AI Assistant intégré. Les actions disponibles dépendent de vos autorisations et de la configuration du site.",
+    "de": "Holen Sie sich im Admin Panel Hilfe vom integrierten AI Assistant. Die verfügbaren Aktionen hängen von Ihren Berechtigungen und der Konfiguration des Standorts ab.",
+    "es": "Obtenga ayuda en el Admin Panel con el AI Assistant integrado. Las acciones disponibles dependen de sus permisos y de la configuración del sitio.",
+    "uk": "Отримуйте допомогу в Admin Panel від вбудованого AI Assistant. Доступні дії залежать від ваших прав і налаштувань об’єкта."
+  },
+  "Give residents, staff and contractors access to the doors they need. Manage Wallet keys and cards, update permissions and see device activity in SmartphoneKey.": {
+    "fr": "Donnez aux résidents, au personnel et aux prestataires l’accès aux portes dont ils ont besoin. Gérez les clés Wallet et les cartes, mettez les autorisations à jour et suivez l’activité des appareils dans SmartphoneKey.",
+    "de": "Geben Sie Bewohnern, Personal und Dienstleistern Zutritt zu den Türen, die sie brauchen. Verwalten Sie Wallet-Schlüssel und Karten, aktualisieren Sie Berechtigungen und sehen Sie die Geräteaktivität in SmartphoneKey.",
+    "es": "Dé a residentes, personal y contratistas acceso a las puertas que necesitan. Gestione llaves en Wallet y tarjetas, actualice permisos y vea la actividad de los dispositivos en SmartphoneKey.",
+    "uk": "Надавайте мешканцям, персоналу та підрядникам доступ до потрібних дверей. Керуйте ключами у Wallet і картками, змінюйте права та переглядайте події пристроїв у SmartphoneKey."
+  },
+  "Guest Key form in Wallet Key mode: lock selection, validity dates and the recipient field, shown before anything is sent. The dates are the form's defaults at capture time, not a completed grant. English interface.": {
+    "fr": "Formulaire Guest Key en mode Wallet Key : choix de la serrure, dates de validité et champ destinataire, affiché avant tout envoi. Les dates sont les valeurs par défaut du formulaire au moment de la capture, pas un accès accordé. Interface en anglais.",
+    "de": "Formular „Guest Key“ im Modus „Wallet Key“: Schlossauswahl, Gültigkeitsdaten und Empfängerfeld, gezeigt, bevor etwas gesendet wird. Die Daten sind die Vorgabewerte des Formulars zum Aufnahmezeitpunkt, keine erteilte Freigabe. Englische Oberfläche.",
+    "es": "Formulario Guest Key en modo Wallet Key: selección de cerradura, fechas de validez y campo de destinatario, mostrado antes de enviar nada. Las fechas son los valores predeterminados del formulario en el momento de la captura, no un acceso concedido. Interfaz en inglés.",
+    "uk": "Форма Guest Key в режимі Wallet Key: вибір замка, дати дії та поле одержувача, показані до будь-якого надсилання. Дати — стандартні значення форми на момент знімка, а не наданий доступ. Інтерфейс англійською."
+  },
+  "Guest Key form in Wallet Key mode: validity dates and the recipient field, shown before anything is sent. English interface.": {
+    "fr": "Formulaire Guest Key en mode Wallet Key : dates de validité et champ destinataire, affiché avant tout envoi. Interface en anglais.",
+    "de": "Formular „Guest Key“ im Modus „Wallet Key“: Gültigkeitsdaten und Empfängerfeld, gezeigt, bevor etwas gesendet wird. Englische Oberfläche.",
+    "es": "Formulario Guest Key en modo Wallet Key: fechas de validez y campo de destinatario, mostrado antes de enviar nada. Interfaz en inglés.",
+    "uk": "Форма Guest Key в режимі Wallet Key: дати дії та поле одержувача, показані до будь-якого надсилання. Інтерфейс англійською."
+  },
+  "Guest Wallet Key form with lock selection, validity dates and an empty email-recipient field": {
+    "fr": "Formulaire de clé Wallet pour invité avec choix de la serrure, dates de validité et champ d’e-mail destinataire vide",
+    "de": "Formular für einen Gast-Wallet-Schlüssel mit Schlossauswahl, Gültigkeitsdaten und leerem E-Mail-Empfängerfeld",
+    "es": "Formulario de llave Wallet para invitados con selección de cerradura, fechas de validez y campo de correo del destinatario vacío",
+    "uk": "Форма гостьового ключа Wallet із вибором замка, датами дії та порожнім полем електронної пошти одержувача"
+  },
+  "Help inside the Admin Panel": {"fr": "De l’aide dans l’Admin Panel", "de": "Hilfe direkt im Admin Panel", "es": "Ayuda dentro del Admin Panel", "uk": "Допомога всередині Admin Panel"},
+  "How partners work with SmartphoneKey": {"fr": "Comment les partenaires travaillent avec SmartphoneKey", "de": "So arbeiten Partner mit SmartphoneKey", "es": "Cómo trabajan los socios con SmartphoneKey", "uk": "Як партнери працюють зі SmartphoneKey"},
+  "Installer or integrator?": {"fr": "Installateur ou intégrateur ?", "de": "Errichter oder Integrator?", "es": "¿Instalador o integrador?", "uk": "Ви монтажник або інтегратор?"},
+  "Issue and revoke Wallet keys (Apple Wallet, Google Wallet) for people and doors from the Admin Panel.": {
+    "fr": "Émettez et révoquez des clés Wallet (Apple Wallet, Google Wallet) pour des personnes et des portes depuis l’Admin Panel.",
+    "de": "Wallet-Schlüssel (Apple Wallet, Google Wallet) für Personen und Türen im Admin Panel ausgeben und widerrufen.",
+    "es": "Emita y revoque llaves en Wallet (Apple Wallet, Google Wallet) para personas y puertas desde el Admin Panel.",
+    "uk": "Видавайте та скасовуйте ключі у Wallet (Apple Wallet, Google Wallet) для людей і дверей в Admin Panel."
+  },
+  "MIFARE Classic and MIFARE DESFire EV3 cards.": {"fr": "Cartes MIFARE Classic et MIFARE DESFire EV3.", "de": "Karten vom Typ MIFARE Classic und MIFARE DESFire EV3.", "es": "Tarjetas MIFARE Classic y MIFARE DESFire EV3.", "uk": "Картки MIFARE Classic і MIFARE DESFire EV3."},
+  "Manage access centrally": {"fr": "Gérez les accès de manière centralisée", "de": "Zutritt zentral verwalten", "es": "Gestione los accesos de forma centralizada", "uk": "Керуйте доступом централізовано"},
+  "Manage supported cameras and configure alerts for device events.": {
+    "fr": "Gérez les caméras prises en charge et configurez des alertes pour les événements des appareils.",
+    "de": "Verwalten Sie unterstützte Kameras und richten Sie Benachrichtigungen für Geräteereignisse ein.",
+    "es": "Gestione cámaras compatibles y configure alertas para eventos de los dispositivos.",
+    "uk": "Керуйте підтримуваними камерами та налаштовуйте сповіщення про події пристроїв."
+  },
+  "Mesh coverage and the route to the internet still depend on placement, power and the building. How many readers share one connection, and what happens if it drops, depend on the installation; automatic failover is not implied. Matter controller functions are confirmed for each project.": {
+    "fr": "La couverture du réseau maillé et le chemin vers Internet dépendent toujours de l’emplacement, de l’alimentation et du bâtiment. Le nombre de lecteurs partageant une connexion, et ce qui se passe si elle tombe, dépendent de l’installation ; aucun basculement automatique n’est sous-entendu. Les fonctions de contrôleur Matter sont confirmées pour chaque projet.",
+    "de": "Mesh-Abdeckung und der Weg ins Internet hängen weiterhin von Platzierung, Stromversorgung und Gebäude ab. Wie viele Leser sich eine Verbindung teilen und was bei deren Ausfall geschieht, hängt von der Installation ab; ein automatisches Failover ist nicht impliziert. Matter-Controller-Funktionen werden für jedes Projekt bestätigt.",
+    "es": "La cobertura de la malla y la ruta hacia Internet siguen dependiendo de la ubicación, la alimentación y el edificio. Cuántos lectores comparten una conexión, y qué ocurre si se cae, depende de la instalación; no se da por supuesta una conmutación automática. Las funciones de controlador Matter se confirman para cada proyecto.",
+    "uk": "Покриття mesh-мережі та шлях до інтернету, як і раніше, залежать від розташування, живлення та будівлі. Скільки зчитувачів ділять одне підключення і що станеться, якщо воно зникне, залежить від конкретного монтажу; автоматичне перемикання не мається на увазі. Функції контролера Matter підтверджуються для кожного проєкту."
+  },
+  "Offer Apple Wallet and Google Wallet keys on supported devices, alongside physical NFC cards.": {
+    "fr": "Proposez des clés Apple Wallet et Google Wallet sur les appareils compatibles, en plus des cartes NFC physiques.",
+    "de": "Bieten Sie Schlüssel für Apple Wallet und Google Wallet auf unterstützten Geräten an, neben physischen NFC-Karten.",
+    "es": "Ofrezca llaves de Apple Wallet y Google Wallet en dispositivos compatibles, junto con tarjetas NFC físicas.",
+    "uk": "Пропонуйте ключі Apple Wallet і Google Wallet на підтримуваних пристроях поряд із фізичними NFC-картками."
+  },
+  "Plan access for your property": {"fr": "Planifiez les accès de votre bâtiment", "de": "Zutritt für Ihre Immobilie planen", "es": "Planifique los accesos de su inmueble", "uk": "Сплануйте доступ для свого об’єкта"},
+  "Plan the connection for each door": {"fr": "Choisissez la connexion de chaque porte", "de": "Die Verbindung für jede Tür planen", "es": "Planifique la conexión de cada puerta", "uk": "Сплануйте підключення для кожних дверей"},
+  "Power, compatible lock hardware and local wiring are still required. Network layout and coverage depend on the installation.": {
+    "fr": "L’alimentation, une serrure compatible et le câblage local restent nécessaires. L’architecture du réseau et la couverture dépendent de l’installation.",
+    "de": "Stromversorgung, kompatible Schlosstechnik und lokale Verkabelung sind weiterhin nötig. Netzaufbau und Abdeckung hängen von der Installation ab.",
+    "es": "Siguen siendo necesarios la alimentación, una cerradura compatible y el cableado local. La estructura de la red y la cobertura dependen de la instalación.",
+    "uk": "Живлення, сумісний замок і локальна проводка все одно потрібні. Схема мережі та покриття залежать від конкретного монтажу."
+  },
+  "Reader and access controller in one device. LTE, Wi-Fi or supported Thread connectivity.": {
+    "fr": "Lecteur et contrôleur d’accès dans un seul appareil. Connexion LTE, Wi-Fi ou Thread prise en charge.",
+    "de": "Leser und Zutrittscontroller in einem Gerät. LTE, Wi-Fi oder unterstützte Thread-Anbindung.",
+    "es": "Lector y controlador de acceso en un solo dispositivo. Conectividad LTE, Wi-Fi o Thread compatible.",
+    "uk": "Зчитувач і контролер доступу в одному пристрої. Підключення LTE, Wi-Fi або підтримуване Thread."
+  },
+  "Recent activity in the Dashboard (close-up). An event is a record of what the reader reported, not proof that a person passed through. English interface.": {
+    "fr": "Activité récente dans le tableau de bord (gros plan). Un événement est l’enregistrement de ce que le lecteur a signalé, pas la preuve qu’une personne est passée. Interface en anglais.",
+    "de": "Letzte Aktivitäten im Dashboard (Ausschnitt). Ein Ereignis ist der Eintrag dessen, was der Leser gemeldet hat, kein Nachweis, dass eine Person durchgegangen ist. Englische Oberfläche.",
+    "es": "Actividad reciente en el panel Dashboard (detalle). Un evento es el registro de lo que informó el lector, no una prueba de que alguien haya pasado. Interfaz en inglés.",
+    "uk": "Останні події в Dashboard (фрагмент). Подія — це запис про те, що повідомив зчитувач, а не доказ, що людина пройшла. Інтерфейс англійською."
+  },
+  "Recent activity in the Dashboard. An event is a record, not proof that a person passed through.": {
+    "fr": "Activité récente dans le tableau de bord. Un événement est un enregistrement, pas la preuve qu’une personne est passée.",
+    "de": "Letzte Aktivitäten im Dashboard. Ein Ereignis ist ein Eintrag, kein Nachweis, dass eine Person durchgegangen ist.",
+    "es": "Actividad reciente en el panel Dashboard. Un evento es un registro, no una prueba de que alguien haya pasado.",
+    "uk": "Останні події в Dashboard. Подія — це запис, а не доказ, що людина пройшла."
+  },
+  "Recent activity showing lock and key events in the SmartphoneKey Admin Panel": {
+    "fr": "Activité récente montrant des événements de serrure et de clé dans l’Admin Panel SmartphoneKey",
+    "de": "Letzte Aktivitäten mit Schloss- und Schlüsselereignissen im SmartphoneKey Admin Panel",
+    "es": "Actividad reciente con eventos de cerradura y de llave en el Admin Panel de SmartphoneKey",
+    "uk": "Останні події із записами про замки та ключі в Admin Panel SmartphoneKey"
+  },
+  "Revoke their access and check that the readers have applied the change.": {
+    "fr": "Révoquez son accès et vérifiez que les lecteurs ont appliqué la modification.",
+    "de": "Widerrufen Sie den Zutritt und prüfen Sie, ob die Leser die Änderung übernommen haben.",
+    "es": "Revoque su acceso y compruebe que los lectores han aplicado el cambio.",
+    "uk": "Скасуйте доступ і перевірте, що зчитувачі застосували зміну."
+  },
+  "Rules for supported Matter devices, each on one hub.": {"fr": "Des règles pour les appareils Matter pris en charge, chacune sur un seul hub.", "de": "Regeln für unterstützte Matter-Geräte, jeweils auf einem Hub.", "es": "Reglas para dispositivos Matter compatibles, cada una en un solo hub.", "uk": "Правила для підтримуваних пристроїв Matter, кожне на одному хабі."},
+  "See how the platform works": {"fr": "Voir comment fonctionne la plateforme", "de": "So funktioniert die Plattform", "es": "Ver cómo funciona la plataforma", "uk": "Як працює платформа"},
+  "See it beside the Dashboard": {"fr": "Le voir à côté du tableau de bord", "de": "Neben dem Dashboard ansehen", "es": "Verlo junto al panel Dashboard", "uk": "Переглянути поруч із Dashboard"},
+  "Sending a change is not the same as a reader applying it. The Admin Panel shows whether each change is pending, confirmed by the reader or failed, and which readers are online, offline or not connected. A revocation waiting for an offline reader is not yet in effect there.": {
+    "fr": "Envoyer une modification n’est pas la même chose que la voir appliquée par un lecteur. L’Admin Panel indique si chaque modification est en attente, confirmée par le lecteur ou en échec, et quels lecteurs sont en ligne, hors ligne ou non connectés. Une révocation en attente sur un lecteur hors ligne n’y est pas encore effective.",
+    "de": "Eine Änderung zu senden ist nicht dasselbe, wie sie von einem Leser anwenden zu lassen. Das Admin Panel zeigt, ob jede Änderung aussteht, vom Leser bestätigt wurde oder fehlgeschlagen ist, und welche Leser online, offline oder nicht verbunden sind. Ein Widerruf, der auf einen Leser offline wartet, ist dort noch nicht wirksam.",
+    "es": "Enviar un cambio no es lo mismo que un lector lo aplique. El Admin Panel muestra si cada cambio está pendiente, confirmado por el lector o fallido, y qué lectores están en línea, sin conexión o no conectados. Una revocación que espera a un lector sin conexión aún no está en vigor en ese lector.",
+    "uk": "Надіслати зміну — не те саме, що зчитувач її застосував. Admin Panel показує, чи кожна зміна очікує, підтверджена зчитувачем або не вдалася, а також які зчитувачі онлайн, офлайн чи не підключені. Скасування, що очікує на зчитувач без зв’язку, на ньому ще не діє."
+  },
+  "Set a validity period for supported guest access.": {"fr": "Définissez une période de validité pour l’accès invité pris en charge.", "de": "Legen Sie für unterstützten Gastzutritt einen Gültigkeitszeitraum fest.", "es": "Defina un periodo de validez para el acceso de invitados compatible.", "uk": "Задайте термін дії для гостьового доступу там, де він підтримується."},
+  "SmartphoneKey Admin Panel showing access actions, device and key summaries, and recent activity": {
+    "fr": "Admin Panel SmartphoneKey avec les actions d’accès, les synthèses des appareils et des clés, et l’activité récente",
+    "de": "SmartphoneKey Admin Panel mit Zutrittsaktionen, Übersichten zu Geräten und Schlüsseln und letzten Aktivitäten",
+    "es": "Admin Panel de SmartphoneKey con acciones de acceso, resúmenes de dispositivos y llaves, y actividad reciente",
+    "uk": "Admin Panel SmartphoneKey з діями доступу, зведеннями пристроїв і ключів та останніми подіями"
+  },
+  "SmartphoneKey reader with backplate": {"fr": "Lecteur SmartphoneKey avec plaque arrière", "de": "SmartphoneKey-Leser mit Rückplatte", "es": "Lector SmartphoneKey con placa trasera", "uk": "Зчитувач SmartphoneKey із монтажною пластиною"},
+  "SmartphoneKey reader, product image from the installation guide.": {"fr": "Lecteur SmartphoneKey, image produit tirée du guide d’installation.", "de": "SmartphoneKey-Leser, Produktbild aus der Installationsanleitung.", "es": "Lector SmartphoneKey, imagen del producto de la guía de instalación.", "uk": "Зчитувач SmartphoneKey, зображення з інструкції з монтажу."},
+  "Someone leaves": {"fr": "Quelqu’un part", "de": "Jemand zieht aus oder scheidet aus", "es": "Alguien se va", "uk": "Хтось виїжджає або звільняється"},
+  "Supported cameras and alerts": {"fr": "Caméras prises en charge et alertes", "de": "Unterstützte Kameras und Benachrichtigungen", "es": "Cámaras compatibles y alertas", "uk": "Підтримувані камери та сповіщення"},
+  "The AI Assistant is part of the Admin Panel. It is not the SmartphoneKey app in ChatGPT, and not the visitor-facing AI Concierge.": {
+    "fr": "L’AI Assistant fait partie de l’Admin Panel. Ce n’est ni l’application SmartphoneKey dans ChatGPT, ni l’AI Concierge destiné aux visiteurs.",
+    "de": "Der AI Assistant ist Teil des Admin Panel. Er ist weder die SmartphoneKey-App in ChatGPT noch der AI Concierge für Besucher.",
+    "es": "El AI Assistant forma parte del Admin Panel. No es la app SmartphoneKey en ChatGPT ni el AI Concierge para visitantes.",
+    "uk": "AI Assistant — частина Admin Panel. Це не застосунок SmartphoneKey у ChatGPT і не AI Concierge для відвідувачів."
+  },
+  "The AI Assistant panel as it opens, English interface, before any message is sent.": {
+    "fr": "Le panneau de l’AI Assistant à l’ouverture, interface en anglais, avant l’envoi de tout message.",
+    "de": "Das Fenster des AI Assistant beim Öffnen, englische Oberfläche, bevor eine Nachricht gesendet wird.",
+    "es": "El panel del AI Assistant al abrirse, interfaz en inglés, antes de enviar ningún mensaje.",
+    "uk": "Панель AI Assistant одразу після відкриття, інтерфейс англійською, до надсилання будь-якого повідомлення."
+  },
+  "The key holder uses a supported Wallet key or NFC card at an authorised door.": {
+    "fr": "Le détenteur de la clé utilise une clé Wallet prise en charge ou une carte NFC à une porte autorisée.",
+    "de": "Der Schlüsselinhaber nutzt an einer freigegebenen Tür einen unterstützten Wallet-Schlüssel oder eine NFC-Karte.",
+    "es": "El titular de la llave usa una llave en Wallet compatible o una tarjeta NFC en una puerta autorizada.",
+    "uk": "Власник ключа підносить підтримуваний ключ у Wallet або NFC-картку до дозволених дверей."
+  },
+  "Update their permissions as responsibilities change.": {"fr": "Mettez ses autorisations à jour quand ses responsabilités changent.", "de": "Passen Sie die Berechtigungen an, wenn sich die Aufgaben ändern.", "es": "Actualice sus permisos cuando cambien sus responsabilidades.", "uk": "Змінюйте права доступу, коли змінюються обов’язки."},
+  "View larger": {"fr": "Agrandir", "de": "Vergrößern", "es": "Ampliar", "uk": "Збільшити"},
+  "View the full Dashboard": {"fr": "Voir le tableau de bord complet", "de": "Das ganze Dashboard ansehen", "es": "Ver el panel Dashboard completo", "uk": "Переглянути повний Dashboard"},
+  "View the full screen": {"fr": "Voir l’écran complet", "de": "Den ganzen Bildschirm ansehen", "es": "Ver la pantalla completa", "uk": "Переглянути весь екран"},
+  "Visitor contact": {"fr": "Contact des visiteurs", "de": "Besucherkontakt", "es": "Contacto de visitantes", "uk": "Зв’язок для відвідувачів"},
+  "Visitors scan the entrance QR code to reach a resident or the site team.": {
+    "fr": "Les visiteurs scannent le code QR de l’entrée pour joindre un résident ou l’équipe du site.",
+    "de": "Besucher scannen den QR-Code am Eingang, um einen Bewohner oder das Standortteam zu erreichen.",
+    "es": "Los visitantes escanean el código QR de la entrada para contactar con un residente o con el equipo del sitio.",
+    "uk": "Відвідувачі сканують QR-код на вході, щоб зв’язатися з мешканцем або командою об’єкта."
+  },
+  "Ways to enter, not a product screen.": {"fr": "Les façons d’entrer, pas un écran du produit.", "de": "Wege hinein, keine Produktansicht.", "es": "Formas de entrar; no es una pantalla del producto.", "uk": "Способи входу, а не екран продукту."},
+  "AI Concierge is the visitor-facing service. It is separate from the AI Assistant inside the Admin Panel and from the SmartphoneKey app in ChatGPT.": {
+    "fr": "AI Concierge est le service destiné aux visiteurs. Il est distinct de l’AI Assistant intégré à l’Admin Panel et de l’application SmartphoneKey dans ChatGPT.",
+    "de": "AI Concierge ist der Dienst für Besucher. Er ist getrennt vom AI Assistant im Admin Panel und von der SmartphoneKey-App in ChatGPT.",
+    "es": "AI Concierge es el servicio para visitantes. Es distinto del AI Assistant dentro del Admin Panel y de la app SmartphoneKey en ChatGPT.",
+    "uk": "AI Concierge — це сервіс для відвідувачів. Він окремий від AI Assistant в Admin Panel і від застосунку SmartphoneKey у ChatGPT."
+  },
+  "What SmartphoneKey gives you": {"fr": "Ce que SmartphoneKey vous apporte", "de": "Was SmartphoneKey Ihnen bietet", "es": "Lo que SmartphoneKey le ofrece", "uk": "Що дає SmartphoneKey"},
+  "Manage access to one or many buildings: add residents, issue Wallet keys and cards, update permissions and see device activity and reader status in SmartphoneKey.": {
+    "fr": "Gérez les accès d’un ou de plusieurs bâtiments : résidents, clés Wallet et cartes, autorisations, activité des appareils et état des lecteurs, dans SmartphoneKey.",
+    "de": "Zutritt zu einem oder vielen Gebäuden verwalten: Bewohner, Wallet-Schlüssel und Karten, Berechtigungen, Geräteaktivität und Leserstatus in SmartphoneKey.",
+    "es": "Gestione el acceso a uno o varios edificios: residentes, llaves en Wallet y tarjetas, permisos, actividad de dispositivos y estado de los lectores en SmartphoneKey.",
+    "uk": "Керуйте доступом до однієї чи багатьох будівель: мешканці, ключі у Wallet і картки, права доступу, події пристроїв і стан зчитувачів у SmartphoneKey."
+  }
+}

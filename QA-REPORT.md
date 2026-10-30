@@ -1,5 +1,7 @@
 # QA report: SmartphoneKey website 2.0, revision of 27 October 2026
 
+> **Later update:** the homepage update of 30 October 2026 (real Admin Panel screenshots, Claude Design, claim C21) has its own report with its own evidence: [`qa/homepage-update-2026-10-30.md`](qa/homepage-update-2026-10-30.md). The measurements below describe the 27 October revision.
+
 Environment checked: a **local Odoo 18 test instance** in Docker (`odoo:18.0`, build 18.0-20260409, PostgreSQL 16) with `spk_website_v2` 18.0.3.0.0 installed fresh on the AP-429 `spk_website` baseline, synthetic data only, `spk_website_v2.preview_mode=True` (40 px banner on every capture), plus the static review copy exported from it. **Production, the Odoo.sh stage and smartphonekey.com were not changed.** The regenerated `preview/` folder was committed (d48be4d) and, on the owner's instruction, pushed; the GitHub Pages workflow published it as the noindex review copy. "Pass" means passed in that local environment.
 
 Evidence: `qa/odoo-tests.txt` (48 tests), `qa/lint.txt`, `qa/i18n-check-<lang>.txt`, `qa/static-export.txt`, `qa/screenshots/` (131 captures with `capture-log.txt` / `capture-log.json`), `qa/baseline-45b3296/` (the previous version, with measurements), `qa/inventory-2026-10-27.md`, `qa/review-en-2026-10-27.md` (independent English review, 41 findings), `qa/review-locales-2026-10-27.md` (independent review of the four translations), `qa/stage3a/`, `qa/stage3b/`, `qa/stage4-locales/` (interim captures).

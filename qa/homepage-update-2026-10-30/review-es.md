@@ -1,0 +1,45 @@
+# Spanish (es) editorial review, homepage update of 30 October 2026
+
+**Summary.** The 93 new Spanish strings are faithful to the English: every limitation survives, product names are exact, nothing forbidden appears, the "usted" address is consistent and every caption whose English says "English interface" says "Interfaz en inglés". What remains is wording and consistency: an ambiguous "se muda", three calques, the clumsy "Panel Dashboard del Admin Panel", "socios" where the catalogue says "colaborar", capital "Internet" against the catalogue's "internet", and one JSON/.po mismatch ("Emitir" vs the rendered "Emita").
+
+**Counts.** Reviewed 93 · Blocking 0 · Should-fix 10 · Minor 8
+
+**Checked.** `translations-2026-10-30.json` ("es" only) against `GLOSSARY.md`, `LOCALE-BRIEF.md` and the existing `es.po` (1,321 entries); rendered `/es`, `/es/platform`, `/es/platform/access-management`, `/es/products/readers`, `/es/platform/visitor-access` (server HTML, visible text, alt and captions). Home H1 is the existing "Gestione el acceso a sus inmuebles en un solo lugar" (51 characters, within budget). All new H2s are 28–42 characters except the one listed under S9. The string "Pídanos que revisemos el sitio…" is in the LTE-vs-Wi-Fi guide body, not on the five pages, and was reviewed from the JSON only. JSON vs `es.po`: 93/93 msgids present, one msgstr differs (S10).
+
+Forbidden-content check (all 93): no distance figure, no DESFire generation other than EV3, no memory size, no "cualquier dispositivo Matter", no "ilimitado", no "disponible ya" for AI Concierge, failover only as the negative statement, no prices, no demo, no "programador", no "al instante", no "se encarga del resto". Product names: SmartphoneKey, Admin Panel, Apple Wallet, Google Wallet, MIFARE Classic, MIFARE DESFire EV3, Matter, Thread, LTE, Wi-Fi, ChatGPT, AI Concierge, AI Assistant all exact.
+
+## Blocking
+
+None.
+
+## Should-fix
+
+| # | English msgid (shortened) | Current Spanish | Proposed Spanish | Reason |
+|---|---|---|---|---|
+| S1 | A new resident moves in | Un nuevo residente se muda | Llega un nuevo residente | "se muda" means "moves house" and can read as leaving (next card is "Alguien se va"); the catalogue renders move-in as "llegada" / "al llegar un residente". Keeps the short parallel form of "Viene un contratista". |
+| S2 | Set a validity period for supported guest access. | Defina un periodo de validez para el acceso de invitados compatible. | Defina un periodo de validez para el acceso de invitados, cuando se admita. | "compatible" on "acceso" is unnatural; the catalogue renders "where supported" for access as "cuando se admita" / "donde se admita". Limitation kept. |
+| S3 | Sending a change is not the same as a reader applying it. … not yet in effect there. | Enviar un cambio no es lo mismo que un lector lo aplique. … aún no está en vigor en ese lector. | Enviar un cambio no significa que el lector lo haya aplicado. … todavía no surte efecto en ese lector. | "no es lo mismo que + subjuntivo" is ungrammatical; the same page (/platform/access-management FAQ) already says "no surte efecto en ese lector". |
+| S4 | Devices page … Interface evidence of monitoring, not a network layout. | … Evidencia de la interfaz de supervisión, no un esquema de red. | … Muestra la monitorización de dispositivos en la interfaz, no un esquema de red. | "Evidencia de la interfaz de supervisión" is a calque; the catalogue's term is "monitorización de dispositivos" (/platform/access-management). |
+| S5 | Ask us to review the site … behind heavy construction … checked on site rather than promised in advance. | … tras construcciones pesadas … se comprueba en el sitio en lugar de prometerse de antemano. | … tras estructuras gruesas … se comprueba in situ y no se promete de antemano. | "construcciones pesadas" is a calque; "en el sitio" collides with the term "sitio" (managed site). The catalogue renders "on site" as "in situ" (4 places). |
+| S6 | Admin Panel Dashboard, English interface (close-up). / Admin Panel Dashboard, English interface. | Panel Dashboard del Admin Panel, interfaz en inglés (detalle). / … interfaz en inglés. | Dashboard del Admin Panel, interfaz en inglés (detalle). / Dashboard del Admin Panel, interfaz en inglés. | "Panel … Panel" repetition reads clumsily; Dashboard is the English UI label and may stand alone (as uk does). See M8 for the other "panel Dashboard" strings. |
+| S7 | Guest Wallet Key form with lock selection … (alt) | Formulario de llave Wallet para invitados con selección de cerradura, fechas de validez y campo de correo del destinatario vacío | Formulario de llave en Wallet para invitados con selección de cerradura, fechas de validez y campo de correo del destinatario vacío | One term, one translation: the site says "llave en Wallet" everywhere else (brief, catalogue, the caption under this image). |
+| S8 | How partners work with SmartphoneKey | Cómo trabajan los socios con SmartphoneKey | Cómo colaborar con SmartphoneKey | "socios" suggests co-owners or members; the catalogue renders partner/partnership as "Colabore con nosotros" / "colaboración" / "colaborar con nosotros". |
+| S9 | A reader and access controller in one device (home H2) | Un lector y un controlador de acceso en un solo dispositivo | Lector y controlador de acceso en un solo dispositivo | 59 characters, three lines on a phone; the shorter form is already the /products/readers H1 and the home product-card line. |
+| S10 | Issue a key or card, with a validity period where supported (step) | JSON: `Emitir` … cuando se admite (es.po and the rendered page: `Emita` … cuando se admite) | `Emita` … con un periodo de validez cuando se admita | The JSON still carries the infinitive "Emitir" while the .po/page has "Emita" (usted imperative, like "Elija / Compruebe / Revoque"); align the JSON. "cuando se admita" matches the catalogue's subjunctive form in the sibling step on /platform. |
+
+## Minor
+
+| # | English msgid (shortened) | Current Spanish | Proposed Spanish | Reason |
+|---|---|---|---|---|
+| M1 | Reader at the main entrance … connected to the internet; … reach the internet …; An example … route to the internet; Mesh coverage and the route to the internet …; Choose connectivity … providing internet access | "conectado a Internet", "acceder a Internet", "la ruta hacia Internet" (×2), "el acceso a Internet" | "conectado a internet", "acceder a internet", "la ruta a internet" (×2), "el acceso a internet" | The catalogue writes lowercase "internet" in 33 places and "la ruta a internet" for the same English; /products/readers now mixes "Internet" (4) and "internet" (1) on one page. |
+| M2 | Manage access centrally; Add people, choose their doors and update access across your sites. | Gestione los accesos de forma centralizada; … actualice los accesos en todos sus sitios. | Gestione el acceso de forma centralizada; … actualice el acceso en todos sus sitios. | Directly under the H1 "Gestione el acceso a sus inmuebles…"; singular "el acceso" is the catalogue's form for the permission ("gestión de accesos" stays plural as the category). |
+| M3 | An administrator selects the doors and assigns access to the right person. | … a la persona correcta. | … a la persona adecuada. | "right person" is "persona adecuada" on /platform/visitor-access. |
+| M4 | Recent activity in the Dashboard (close-up). An event is a record of what the reader reported … | … el registro de lo que informó el lector … | … el registro de lo que notificó el lector … | The catalogue's verb for "report" (reader, devices) is "notificar" throughout. |
+| M5 | Power, compatible lock hardware and local wiring … Network layout and coverage depend on the installation. | La estructura de la red y la cobertura dependen de la instalación. | El esquema de red y la cobertura dependen de la instalación. | "network layout" is "esquema de red" in the Devices caption; one term, one translation. |
+| M6 | Mesh coverage … depend on the installation; automatic failover is not implied. | … depende de la instalación; no se da por supuesta una conmutación automática. | … dependen de la instalación; no se presupone una conmutación automática por error. | Two subjects ("Cuántos lectores … y qué ocurre …") take "dependen", as in the FAQ on the same page; "failover" is "conmutación por error" in the catalogue (readers FAQ, compatibility). Negative statement kept. |
+| M7 | Visitor contact (card title) | Contacto de visitantes | Contacto para visitantes | "de visitantes" can read as the visitors' contact details; "para visitantes" is the pattern of "Código QR para visitantes". |
+| M8 | Close-up of the … Dashboard (alt); Recent activity in the Dashboard (×2); See it beside the Dashboard; View the full Dashboard | "panel Dashboard" in all five | "Dashboard" (drop "panel") | Only if S6 is applied, so that Dashboard is rendered one way across the pages. |
+
+## Notes for the English (not fixed here)
+
+- None of the new English strings is wrong or ambiguous for Spanish; "An employee needs another door" is rendered "empleado" because the source says employee, while the glossary term is staff ("personal").

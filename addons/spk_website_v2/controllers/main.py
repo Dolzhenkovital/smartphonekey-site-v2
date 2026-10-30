@@ -89,8 +89,7 @@ class SpkWebsiteV2Home(SpkWebsiteHome):
         if not is_v2_enabled(request.env) or not is_homepage_enabled(request.env) \
                 or (homepage_url and homepage_url != "/"):
             return super().index(**kw)
-        url_code, t = _lang()
-        return render_page("/", setup_rules=json_for_script(setup_guide.rules_for_script(t, url_code)))
+        return render_page("/")
 
     @http.route()
     def robots(self, **kwargs):

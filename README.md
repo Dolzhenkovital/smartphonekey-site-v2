@@ -10,7 +10,7 @@ The smartphonekey.com redesign as an Odoo 18 addon: an **access control manageme
 |---|---|
 | `addons/spk_website_v2` | The addon. Depends on `spk_website` (the AP-428 Webflow port with the AP-429 homepage switch) from the SmartphoneKey Odoo repository, and on `website_crm` |
 | `dev/` | Local test environment: Odoo 18 and PostgreSQL in Docker |
-| `tools/` | Content import from the Webflow export, static export and link check, concurrency check, screenshots |
+| `tools/` | Content import from the Webflow export, static export and link check, concurrency check, screenshots, translation build/apply/check tools, and `product_ui_images.py` (the scaled and cropped WebP derivatives of the real Admin Panel screenshots in `static/src/img/product-ui/`) |
 | `registers/` | Routes, the 34 Webflow URLs and what each now answers, where each product claim is used |
 | `qa/`, `QA-REPORT.md` | Test, lint and browser evidence against acceptance criteria A01–A23 |
 | `IMPLEMENTATION-STATUS.md` | Decisions, integration points, fallbacks in effect, open items |

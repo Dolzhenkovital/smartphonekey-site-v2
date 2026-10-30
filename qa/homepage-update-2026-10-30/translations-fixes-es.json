@@ -1,0 +1,60 @@
+{
+  "A new resident moves in": {"es": "Llega un nuevo residente"},
+  "Set a validity period for supported guest access.": {"es": "Defina un periodo de validez para el acceso de invitados, cuando se admita."},
+  "Sending a change is not the same as a reader applying it. The Admin Panel shows whether each change is pending, confirmed by the reader or failed, and which readers are online, offline or not connected. A revocation waiting for an offline reader is not yet in effect there.": {
+    "es": "Enviar un cambio no significa que el lector lo haya aplicado. El Admin Panel muestra si cada cambio está pendiente, confirmado por el lector o fallido, y qué lectores están en línea, sin conexión o no conectados. Una revocación que espera a un lector sin conexión todavía no surte efecto en ese lector."
+  },
+  "Devices page in the Admin Panel with its filters: online, offline, not connected. Interface evidence of monitoring, not a network layout. English interface.": {
+    "es": "Página Devices del Admin Panel con sus filtros: en línea, sin conexión, no conectado. Muestra la monitorización de dispositivos en la interfaz, no un esquema de red. Interfaz en inglés."
+  },
+  "Ask us to review the site when coverage at a reader position is uncertain, when doors are in basements or behind heavy construction, when several buildings are planned together, or when a third party manages the network. Coverage depends on the building, placement and radio conditions, so it is checked on site rather than promised in advance.": {
+    "es": "Pídanos que revisemos el sitio cuando la cobertura en la posición de un lector sea incierta, cuando haya puertas en sótanos o tras estructuras gruesas, cuando se planifiquen varios edificios a la vez o cuando un tercero gestione la red. La cobertura depende del edificio, de la ubicación y de las condiciones de radio, así que se comprueba in situ y no se promete de antemano."
+  },
+  "Admin Panel Dashboard, English interface (close-up). The figures are interface values from a test account, not customer metrics.": {
+    "es": "Dashboard del Admin Panel, interfaz en inglés (detalle). Las cifras son valores de la interfaz de una cuenta de prueba, no métricas de clientes."
+  },
+  "Admin Panel Dashboard, English interface. The figures are interface values from a test account, not customer metrics.": {
+    "es": "Dashboard del Admin Panel, interfaz en inglés. Las cifras son valores de la interfaz de una cuenta de prueba, no métricas de clientes."
+  },
+  "Guest Wallet Key form with lock selection, validity dates and an empty email-recipient field": {
+    "es": "Formulario de llave en Wallet para invitados con selección de cerradura, fechas de validez y campo de correo del destinatario vacío"
+  },
+  "How partners work with SmartphoneKey": {"es": "Cómo colaborar con SmartphoneKey"},
+  "A reader and access controller in one device": {"es": "Lector y controlador de acceso en un solo dispositivo"},
+  "<span class=\"step-title\">Issue</span> <span>a key or card, with a validity period where supported</span>": {
+    "es": "<span class=\"step-title\">Emita</span> <span>una llave o una tarjeta, con un periodo de validez cuando se admita</span>"
+  },
+  "<span class=\"node-name\">Reader at the main entrance</span> <span class=\"node-note\">LTE or Wi-Fi, connected to the internet</span>": {
+    "es": "<span class=\"node-name\">Lector de la entrada principal</span> <span class=\"node-note\">LTE o Wi-Fi, conectado a internet</span>"
+  },
+  "A suitable wireless design can reduce communication cabling between readers: readers on the Thread mesh can reach the internet through a reader that has an LTE or Wi-Fi connection.": {
+    "es": "Un diseño inalámbrico adecuado puede reducir el cableado de comunicación entre lectores: los lectores de la malla Thread pueden acceder a internet a través de un lector con conexión LTE o Wi-Fi."
+  },
+  "An example, not a specification. Coverage, the number of readers and the route to the internet depend on the installation.": {
+    "es": "Un ejemplo, no una especificación. La cobertura, el número de lectores y la ruta a internet dependen de la instalación."
+  },
+  "Mesh coverage and the route to the internet still depend on placement, power and the building. How many readers share one connection, and what happens if it drops, depend on the installation; automatic failover is not implied. Matter controller functions are confirmed for each project.": {
+    "es": "La cobertura de la malla y la ruta a internet siguen dependiendo de la ubicación, la alimentación y el edificio. Cuántos lectores comparten una conexión, y qué ocurre si se cae, dependen de la instalación; no se presupone una conmutación automática por error. Las funciones de controlador Matter se confirman para cada proyecto."
+  },
+  "Choose connectivity to suit the building. SmartphoneKey readers can use LTE or Wi-Fi, and can participate in a Thread mesh with a connected reader providing internet access.": {
+    "es": "Elija la conectividad que mejor se adapte al edificio. Los lectores SmartphoneKey pueden usar LTE o Wi-Fi y participar en una malla Thread en la que un lector conectado proporciona el acceso a internet."
+  },
+  "Manage access centrally": {"es": "Gestione el acceso de forma centralizada"},
+  "Add people, choose their doors and update access across your sites.": {"es": "Añada personas, elija sus puertas y actualice el acceso en todos sus sitios."},
+  "An administrator selects the doors and assigns access to the right person.": {"es": "Un administrador selecciona las puertas y asigna el acceso a la persona adecuada."},
+  "Recent activity in the Dashboard (close-up). An event is a record of what the reader reported, not proof that a person passed through. English interface.": {
+    "es": "Actividad reciente en el Dashboard (detalle). Un evento es el registro de lo que notificó el lector, no una prueba de que alguien haya pasado. Interfaz en inglés."
+  },
+  "Recent activity in the Dashboard. An event is a record, not proof that a person passed through.": {
+    "es": "Actividad reciente en el Dashboard. Un evento es un registro, no una prueba de que alguien haya pasado."
+  },
+  "Power, compatible lock hardware and local wiring are still required. Network layout and coverage depend on the installation.": {
+    "es": "Siguen siendo necesarios la alimentación, una cerradura compatible y el cableado local. El esquema de red y la cobertura dependen de la instalación."
+  },
+  "Visitor contact": {"es": "Contacto para visitantes"},
+  "Close-up of the SmartphoneKey Admin Panel Dashboard: the Give Access button, summary cards and recent activity": {
+    "es": "Detalle del Dashboard del Admin Panel de SmartphoneKey: botón Give Access, tarjetas de resumen y actividad reciente"
+  },
+  "See it beside the Dashboard": {"es": "Verlo junto al Dashboard"},
+  "View the full Dashboard": {"es": "Ver el Dashboard completo"}
+}

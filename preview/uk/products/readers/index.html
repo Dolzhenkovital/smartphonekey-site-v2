@@ -27,7 +27,7 @@
                 <link rel="preload" as="font" type="font/woff2" crossorigin="" href="/smartphonekey-site-v2/spk_website_v2/static/src/fonts/manrope-cyrillic-wght-normal.woff2">
                 <link type="text/css" rel="stylesheet" href="/smartphonekey-site-v2/assets/site.css">
                 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://smartphonekey.com/uk/products/readers#webpage","url":"https://smartphonekey.com/uk/products/readers","name":"LTE- і Wi-Fi-зчитувачі для контролю доступу | SmartphoneKey","description":"Зчитувачі SmartphoneKey мають вбудований контролер доступу. Порівняйте версії LTE і Wi-Fi та дізнайтеся, що ще потрібно для монтажу.","inLanguage":"uk","isPartOf":{"@id":"https://smartphonekey.com/#website"},"breadcrumb":{"@id":"https://smartphonekey.com/uk/products/readers#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://smartphonekey.com/uk/products/readers#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Головна","item":"https://smartphonekey.com/uk"},{"@type":"ListItem","position":2,"name":"Зчитувачі","item":"https://smartphonekey.com/uk/products/readers"}]}]}</script>
-                <script defer src="/smartphonekey-site-v2/spk_website_v2/static/src/js/navigation.js?v=18.0.3.0.0"></script>
+                <script defer src="/smartphonekey-site-v2/spk_website_v2/static/src/js/navigation.js?v=18.0.4.0.0"></script>
                 
             
     </head>
@@ -286,7 +286,19 @@
                 <h2 id="connected-title">Кожен зчитувач — маршрутизатор Thread і Border Router</h2>
                 <div class="split-copy">
                     <p>Кожен зчитувач SmartphoneKey може працювати як Thread Border Router і як маршрутизатор у mesh-мережі Thread. Для жодної з цих ролей не потрібна окрема версія мікропрограми, тож зчитувачі на об’єкті можуть утворити одну mesh-мережу та з’єднати її з вашою IP-мережею.</p>
-                    <p>Водночас покриття mesh-мережі та маршрут до інтернету залежать від розміщення, живлення та будівлі. Функції контролера Matter підтверджують для кожного проєкту.</p>
+                    <p class="benefit">Продумана бездротова схема може зменшити кількість кабелів зв’язку між зчитувачами: зчитувачі в mesh-мережі Thread можуть виходити в інтернет через зчитувач із підключенням LTE або Wi-Fi.</p>
+                    <div class="connection-panel">
+        <div class="connection-example">
+            <p class="illustration-label">Приклад схеми підключення</p>
+            <ol class="connection-nodes" role="list">
+                <li class="is-uplink"><span class="node-name">Зчитувач на головному вході</span> <span class="node-note">LTE або Wi-Fi, з доступом до інтернету</span></li>
+                <li><span class="node-name">Зчитувач на бічних дверях</span> <span class="node-note">Mesh-мережа Thread</span></li>
+                <li><span class="node-name">Зчитувач у велокімнаті</span> <span class="node-note">Mesh-мережа Thread</span></li>
+            </ol>
+            <p class="photo-caption">Це приклад, а не специфікація. Покриття, кількість зчитувачів і шлях до інтернету залежать від конкретного об’єкта та монтажу.</p>
+        </div>
+                    </div>
+                    <p>Покриття mesh-мережі та шлях до інтернету все одно залежать від розташування, живлення та будівлі. Скільки зчитувачів ділять одне підключення і що станеться, якщо воно зникне, залежить від конкретного об’єкта та монтажу; це не означає автоматичного перемикання на резерв. Функції контролера Matter підтверджуються для кожного проєкту.</p>
                     <p class="note">Покриття залежить від будівлі, розміщення та радіоумов. Ми допомагаємо спланувати мережу для вашого об’єкта.</p>
                     <a href="/smartphonekey-site-v2/uk/resources/matter-thread-access-control/">Matter і Thread для контролю доступу</a>
                 </div>

@@ -1,0 +1,73 @@
+{
+  "Access management for buildings": {"de": "Zutrittsmanagement für Gebäude"},
+  "Explore access management": {"de": "Zutrittsmanagement entdecken"},
+  "Give residents, staff and contractors access to the doors they need. Manage Wallet keys and cards, update permissions and see device activity in SmartphoneKey.": {
+    "de": "Geben Sie Bewohnern, Mitarbeitenden und Dienstleistern Zutritt zu den Türen, die sie brauchen. Verwalten Sie Wallet-Schlüssel und Karten, aktualisieren Sie Berechtigungen und sehen Sie die Geräteaktivität in SmartphoneKey."
+  },
+  "Visitors scan the entrance QR code to reach a resident or the site team.": {
+    "de": "Besucher scannen den QR-Code am Eingang, um einen Bewohner oder das Team vor Ort zu erreichen."
+  },
+  "Revoke their access and check that the readers have applied the change.": {
+    "de": "Entziehen Sie den Zutritt und prüfen Sie, ob die Leser die Änderung übernommen haben."
+  },
+  "Issue and revoke Wallet keys (Apple Wallet, Google Wallet) for people and doors from the Admin Panel.": {
+    "de": "Wallet-Schlüssel (Apple Wallet, Google Wallet) für Personen und Türen im Admin Panel ausstellen und entziehen."
+  },
+  "<span class=\"step-title\">Issue</span> <span>a key or card, with a validity period where supported</span>": {
+    "de": "<span class=\"step-title\">Ausstellen</span> <span>einen Schlüssel oder eine Karte, mit Gültigkeitszeitraum, wo das unterstützt wird</span>"
+  },
+  "Sending a change is not the same as a reader applying it. The Admin Panel shows whether each change is pending, confirmed by the reader or failed, and which readers are online, offline or not connected. A revocation waiting for an offline reader is not yet in effect there.": {
+    "de": "Eine Änderung zu senden heißt nicht, dass der Leser sie schon übernommen hat. Das Admin Panel zeigt für jede Änderung, ob sie aussteht, vom Leser bestätigt wurde oder fehlgeschlagen ist, und welche Leser online, offline oder nicht verbunden sind. Steht ein Zutrittsentzug für einen Leser noch aus, weil dieser offline ist, gilt er dort noch nicht."
+  },
+  "Combine readers with a built-in access controller and LTE, Wi-Fi or supported Thread connectivity.": {
+    "de": "Kombinieren Sie Leser mit integriertem Zutrittscontroller und LTE, Wi-Fi oder unterstützter Thread-Anbindung."
+  },
+  "Mesh coverage and the route to the internet still depend on placement, power and the building. How many readers share one connection, and what happens if it drops, depend on the installation; automatic failover is not implied. Matter controller functions are confirmed for each project.": {
+    "de": "Mesh-Abdeckung und der Weg ins Internet hängen weiterhin von Platzierung, Stromversorgung und Gebäude ab. Wie viele Leser sich eine Verbindung teilen und was bei deren Ausfall geschieht, hängt von der Installation ab; das bedeutet kein automatisches Failover. Matter-Controller-Funktionen werden für jedes Projekt bestätigt."
+  },
+  "Admin Panel Dashboard, English interface (close-up). The figures are interface values from a test account, not customer metrics.": {
+    "de": "Dashboard im Admin Panel, englische Oberfläche (Ausschnitt). Die Zahlen sind Anzeigewerte eines Testkontos, keine Kundenkennzahlen."
+  },
+  "Admin Panel Dashboard, English interface. The figures are interface values from a test account, not customer metrics.": {
+    "de": "Dashboard im Admin Panel, englische Oberfläche. Die Zahlen sind Anzeigewerte eines Testkontos, keine Kundenkennzahlen."
+  },
+  "Devices page in the Admin Panel with its filters: online, offline, not connected. Interface evidence of monitoring, not a network layout. English interface.": {
+    "de": "Seite „Devices“ im Admin Panel mit ihren Filtern: online, offline, nicht verbunden. Zeigt die Überwachung in der Oberfläche; kein Netzwerkplan. Englische Oberfläche."
+  },
+  "Device overview with filters for online, offline and not-connected readers": {
+    "de": "Geräteübersicht mit Filtern für Leser, die online, offline oder nicht verbunden sind"
+  },
+  "Guest Key form in Wallet Key mode: lock selection, validity dates and the recipient field, shown before anything is sent. The dates are the form's defaults at capture time, not a completed grant. English interface.": {
+    "de": "Formular „Guest Key“ im Modus „Wallet Key“: Schlossauswahl, Gültigkeitszeitraum und Empfängerfeld, gezeigt, bevor etwas gesendet wird. Die Datumsangaben sind die Vorgabewerte des Formulars zum Zeitpunkt der Aufnahme, kein bereits erteilter Zutritt. Englische Oberfläche."
+  },
+  "Guest Key form in Wallet Key mode: validity dates and the recipient field, shown before anything is sent. English interface.": {
+    "de": "Formular „Guest Key“ im Modus „Wallet Key“: Gültigkeitszeitraum und Empfängerfeld, gezeigt, bevor etwas gesendet wird. Englische Oberfläche."
+  },
+  "Guest Wallet Key form with lock selection, validity dates and an empty email-recipient field": {
+    "de": "Formular für einen Gast-Wallet-Schlüssel mit Schlossauswahl, Gültigkeitszeitraum und leerem E-Mail-Empfängerfeld"
+  },
+  "Recent activity in the Dashboard (close-up). An event is a record of what the reader reported, not proof that a person passed through. English interface.": {
+    "de": "Letzte Aktivitäten im Dashboard (Ausschnitt). Ein Ereignis ist ein Eintrag darüber, was der Leser gemeldet hat, kein Nachweis, dass eine Person die Tür passiert hat. Englische Oberfläche."
+  },
+  "Recent activity in the Dashboard. An event is a record, not proof that a person passed through.": {
+    "de": "Letzte Aktivitäten im Dashboard. Ein Ereignis ist ein Eintrag, kein Nachweis, dass eine Person die Tür passiert hat."
+  },
+  "Changes for an offline reader remain pending until it reconnects and applies them.": {
+    "de": "Änderungen für einen Leser, der offline ist, bleiben ausstehend, bis er wieder verbunden ist und sie übernimmt."
+  },
+  "Applied is not the same as sent: each change shows whether it is pending, confirmed by the reader or failed.": {
+    "de": "Übernommen ist nicht gleich gesendet: Jede Änderung zeigt, ob sie aussteht, vom Leser bestätigt wurde oder fehlgeschlagen ist."
+  },
+  "Ways to enter, not a product screen.": {"de": "Zutrittswege, keine Produktansicht."},
+  "Example connection layout": {"de": "Beispiel für die Anbindung der Leser"},
+  "View the full screen": {"de": "Die ganze Ansicht öffnen"},
+  "Power, compatible lock hardware and local wiring are still required. Network layout and coverage depend on the installation.": {
+    "de": "Stromversorgung, kompatible Schlosstechnik und lokale Verkabelung sind weiterhin nötig. Netzwerkaufbau und Abdeckung hängen von der Installation ab."
+  },
+  "Offer Apple Wallet and Google Wallet keys on supported devices, alongside physical NFC cards.": {
+    "de": "Bieten Sie neben physischen NFC-Karten Schlüssel für Apple Wallet und Google Wallet auf unterstützten Geräten an."
+  },
+  "Manage access to one or many buildings: add residents, issue Wallet keys and cards, update permissions and see device activity and reader status in SmartphoneKey.": {
+    "de": "Zutritt zu einem oder mehreren Gebäuden verwalten: Bewohner, Wallet-Schlüssel und Karten, Berechtigungen, Geräteaktivität und Leserstatus in SmartphoneKey."
+  }
+}

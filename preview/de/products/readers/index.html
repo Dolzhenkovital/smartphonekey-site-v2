@@ -26,7 +26,7 @@
                 <link rel="preload" as="font" type="font/woff2" crossorigin="" href="/smartphonekey-site-v2/spk_website_v2/static/src/fonts/manrope-latin-wght-normal.woff2">
                 <link type="text/css" rel="stylesheet" href="/smartphonekey-site-v2/assets/site.css">
                 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://smartphonekey.com/de/products/readers#webpage","url":"https://smartphonekey.com/de/products/readers","name":"LTE- und Wi-Fi-Leser für die Zutrittskontrolle | SmartphoneKey","description":"SmartphoneKey-Leser haben einen integrierten Zutrittscontroller. Vergleichen Sie LTE- und Wi-Fi-Version und sehen Sie, was die Anlage sonst braucht.","inLanguage":"de","isPartOf":{"@id":"https://smartphonekey.com/#website"},"breadcrumb":{"@id":"https://smartphonekey.com/de/products/readers#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://smartphonekey.com/de/products/readers#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Startseite","item":"https://smartphonekey.com/de"},{"@type":"ListItem","position":2,"name":"Leser","item":"https://smartphonekey.com/de/products/readers"}]}]}</script>
-                <script defer src="/smartphonekey-site-v2/spk_website_v2/static/src/js/navigation.js?v=18.0.3.0.0"></script>
+                <script defer src="/smartphonekey-site-v2/spk_website_v2/static/src/js/navigation.js?v=18.0.4.0.0"></script>
                 
             
     </head>
@@ -285,7 +285,19 @@
                 <h2 id="connected-title">Jeder Leser ist Thread-Router und Border Router</h2>
                 <div class="split-copy">
                     <p>Jeder SmartphoneKey-Leser kann als Thread Border Router und als Router im Thread-Mesh arbeiten. Für keine der beiden Rollen ist eine eigene Firmware-Version nötig; die Leser an einem Standort können daher ein gemeinsames Mesh bilden und es mit Ihrem IP-Netzwerk verbinden.</p>
-                    <p>Mesh-Abdeckung und Weg ins Internet hängen weiterhin von Platzierung, Stromversorgung und Gebäude ab. Matter-Controller-Funktionen werden für jedes Projekt bestätigt.</p>
+                    <p class="benefit">Eine geeignete Funkplanung kann die Kom­mu­ni­ka­ti­ons­ver­ka­be­lung zwischen den Lesern verringern: Leser im Thread-Mesh können das Internet über einen Leser mit LTE- oder Wi-Fi-Verbindung erreichen.</p>
+                    <div class="connection-panel">
+        <div class="connection-example">
+            <p class="illustration-label">Beispiel für die Anbindung der Leser</p>
+            <ol class="connection-nodes" role="list">
+                <li class="is-uplink"><span class="node-name">Leser am Haupteingang</span> <span class="node-note">LTE oder Wi-Fi, mit dem Internet verbunden</span></li>
+                <li><span class="node-name">Leser an der Seitentür</span> <span class="node-note">Thread-Mesh</span></li>
+                <li><span class="node-name">Leser am Fahrradraum</span> <span class="node-note">Thread-Mesh</span></li>
+            </ol>
+            <p class="photo-caption">Ein Beispiel, keine Spezifikation. Abdeckung, Anzahl der Leser und der Weg ins Internet hängen von der Installation ab.</p>
+        </div>
+                    </div>
+                    <p>Mesh-Abdeckung und der Weg ins Internet hängen weiterhin von Platzierung, Stromversorgung und Gebäude ab. Wie viele Leser sich eine Verbindung teilen und was bei deren Ausfall geschieht, hängt von der Installation ab; das bedeutet kein automatisches Failover. Matter-Controller-Funktionen werden für jedes Projekt bestätigt.</p>
                     <p class="note">Die Abdeckung hängt vom Gebäude, der Platzierung und den Funkbedingungen ab. Wir helfen bei der Planung des Netzwerks für Ihren Standort.</p>
                     <a href="/smartphonekey-site-v2/de/resources/matter-thread-access-control/">Matter und Thread für die Zutrittskontrolle</a>
                 </div>

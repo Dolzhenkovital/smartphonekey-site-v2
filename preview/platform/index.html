@@ -26,8 +26,10 @@
                 <link rel="preload" as="font" type="font/woff2" crossorigin="" href="/smartphonekey-site-v2/spk_website_v2/static/src/fonts/manrope-latin-wght-normal.woff2">
                 <link type="text/css" rel="stylesheet" href="/smartphonekey-site-v2/assets/site.css">
                 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://smartphonekey.com/platform#webpage","url":"https://smartphonekey.com/platform","name":"How the Access Management Platform Works | SmartphoneKey","description":"How SmartphoneKey works: the Admin Panel for sites and access, digital keys and cards, readers with a built-in controller, and event and device status.","inLanguage":"en","isPartOf":{"@id":"https://smartphonekey.com/#website"},"breadcrumb":{"@id":"https://smartphonekey.com/platform#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://smartphonekey.com/platform#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://smartphonekey.com/"},{"@type":"ListItem","position":2,"name":"Platform","item":"https://smartphonekey.com/platform"}]}]}</script>
-                <script defer src="/smartphonekey-site-v2/spk_website_v2/static/src/js/navigation.js?v=18.0.3.0.0"></script>
+                <script defer src="/smartphonekey-site-v2/spk_website_v2/static/src/js/navigation.js?v=18.0.4.0.0"></script>
                 
+                <script defer src="/smartphonekey-site-v2/spk_website_v2/static/src/js/expand.js?v=18.0.4.0.0"></script>
+            
             
     </head>
     <body class="spk-body">
@@ -232,28 +234,11 @@
                 
             </div>
             <div class="opening-evidence">
-                        <figure class="workflow-figure">
-                            <div class="workflow-illustration">
-                                <p class="illustration-label">Example: granting access</p>
-                                <ol class="flow-steps" role="list">
-                                    <li class="flow-step">
-                                        <p class="flow-title">Site</p>
-                                        <p class="flow-text">Example residential building with two doors</p>
-                                    </li>
-                                    <li class="flow-step">
-                                        <p class="flow-title">Grant access</p>
-                                        <p class="flow-text">Resident: card and digital key for Main entrance and Bike store</p>
-                                    </li>
-                                    <li class="flow-step">
-                                        <p class="flow-title">Check status</p>
-                                        <ul class="status-rows" role="list">
-                                            <li class="status-row"><span>Main entrance</span><span class="chip is-confirmed">Confirmed</span></li>
-                                            <li class="status-row"><span>Bike store <span class="row-note">· reader offline</span></span><span class="chip is-pending">Pending</span></li>
-                                        </ul>
-                                    </li>
-                                </ol>
+                        <figure class="shot-figure">
+                            <div class="shot">
+                                <img src="/smartphonekey-site-v2/spk_website_v2/static/src/img/product-ui/admin-dashboard-close-up-936.webp" width="936" height="840" loading="eager" fetchpriority="high" decoding="async" alt="Close-up of the SmartphoneKey Admin Panel Dashboard: the Give Access button, summary cards and recent activity">
                             </div>
-                            <figcaption>Illustration with example names, not a product screen</figcaption>
+                            <figcaption>Admin Panel Dashboard, English interface (close-up). The figures are interface values from a test account, not customer metrics. <a href="/smartphonekey-site-v2/spk_website_v2/static/src/img/product-ui/admin-dashboard-2133.webp" data-spk-expand="" data-spk-expand-alt="SmartphoneKey Admin Panel showing access actions, device and key summaries, and recent activity" data-spk-expand-width="2133" data-spk-expand-height="900">View the full Dashboard</a></figcaption>
                         </figure>
                     </div>
         </div>
@@ -316,14 +301,36 @@
                 </figure>
             </section>
 
-            <section class="section container stack" aria-labelledby="result-title">
-                <h2 id="result-title">Know when a change has reached the door</h2>
-                <p>Sending a change is not the same as a reader applying it. The Admin Panel shows whether each change is pending, confirmed by the reader or failed. A revocation waiting for an offline reader is not yet in effect there.</p>
-                <ul class="plain-list">
-                    <li>What each person can see and do depends on their permissions and the services on your account.</li>
-                    <li>Scenarios can use only the capabilities each device reports.</li>
-                </ul>
-                <a href="/smartphonekey-site-v2/resources/access-control-when-offline/">What happens when a reader goes offline?</a>
+            <section class="section container" aria-labelledby="result-title">
+                <div class="split-evidence">
+                    <div class="split-copy">
+                        <h2 id="result-title">Know when a change has reached the door</h2>
+                        <p>Sending a change is not the same as a reader applying it. The Admin Panel shows whether each change is pending, confirmed by the reader or failed, and which readers are online, offline or not connected. A revocation waiting for an offline reader is not yet in effect there.</p>
+                        <ul class="plain-list">
+                            <li>What each person can see and do depends on their permissions and the services on your account.</li>
+                            <li>Scenarios can use only the capabilities each device reports.</li>
+                        </ul>
+                        <a href="/smartphonekey-site-v2/resources/access-control-when-offline/">What happens when a reader goes offline?</a>
+                    </div>
+                    <div class="evidence-stack">
+                        <figure class="shot-figure">
+                            <div class="shot">
+                                <img src="/smartphonekey-site-v2/spk_website_v2/static/src/img/product-ui/device-status-close-up-1404.webp" width="1404" height="272" loading="lazy" decoding="async" alt="Device overview with filters for online, offline and not-connected readers">
+                            </div>
+                            <figcaption>Devices page in the Admin Panel with its filters: online, offline, not connected. Interface evidence of monitoring, not a network layout. English interface.</figcaption>
+                        </figure>
+                        <figure class="workflow-figure">
+                            <div class="workflow-illustration">
+                                <p class="illustration-label">Example: the status of one change</p>
+                                <ul class="status-rows" role="list">
+                                    <li class="status-row"><span>Main entrance</span><span class="chip is-confirmed">Confirmed</span></li>
+                                    <li class="status-row"><span>Bike store <span class="row-note">· reader offline</span></span><span class="chip is-pending">Pending</span></li>
+                                </ul>
+                            </div>
+                            <figcaption>Illustration with example names, not a product screen</figcaption>
+                        </figure>
+                    </div>
+                </div>
             </section>
 
             <section class="section container" aria-labelledby="extras-title">

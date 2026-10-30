@@ -25,9 +25,10 @@ OG_IMAGE = {"path": "/spk_website_v2/static/src/img/og-default.png", "width": 12
             "alt": "SmartphoneKey reader with a QR code labelled Scan to call, beside the SmartphoneKey logo"}
 LOGO_PATH = "/spk_website_v2/static/src/img/brand-mark.png"
 
-# The date the 2.0 copy was settled; product evidence was checked a day earlier.
-EDITORIAL_DATE = "2026-10-27"
-EVIDENCE_DATE = "2026-10-26"
+# The date the current copy was settled (home page update with the real Admin
+# Panel screenshots); the screenshots were captured the same day.
+EDITORIAL_DATE = "2026-10-30"
+EVIDENCE_DATE = "2026-10-30"
 
 # --- Routes -------------------------------------------------------------------
 # path -> template, metadata and breadcrumb trail. ``kind`` picks the
@@ -36,8 +37,8 @@ ROUTES = {
     "/": {
         "template": "spk_website_v2.page_home",
         "title": "Access Management Platform for Properties | SmartphoneKey",
-        "description": "Manage access to one or many buildings: add residents, issue cards and digital keys, revoke "
-                       "access and check events and reader status in one place.",
+        "description": "Manage access to one or many buildings: add residents, issue Wallet keys and cards, update "
+                       "permissions and see device activity and reader status in SmartphoneKey.",
         "label": "Home",
         "kind": "home",
         "crumbs": (),
@@ -440,7 +441,9 @@ SETUP_RULES = (
              "hub and the devices commissioned to it.",
      "links": ("automation", "matter")},
 )
-# The compact tool in the home hero: two choices, frozen copy from the design reference.
+# The compact tool that the home page carried until 30 October 2026. Kept for the
+# ``site`` parameter of /find-your-setup (links and bookmarks that still send it);
+# the home page now links to the full recommendations page instead.
 HOME_SITE_CHOICES = (
     ("property", "One property"),
     ("portfolio", "Several sites"),

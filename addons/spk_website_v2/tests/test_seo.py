@@ -25,6 +25,10 @@ FORBIDDEN = (
     (re.compile(r"(?<!no )automatic failover(?! is not)", re.I), "failover"),
     (re.compile(r"\$\s?\d|€\s?\d|£\s?\d|\bprice\b", re.I), "a price"),
     (re.compile(r"book a demo|request a demo", re.I), "a demo funnel"),
+    # Brief of 30 October 2026: no instant revocation, no unconditional assistant promise, no unmeasured savings.
+    (re.compile(r"revoke[sd]? (access |their access )?instantly|instant revocation", re.I), "instant revocation"),
+    (re.compile(r"handles the rest|just ask\.", re.I), "an unconditional assistant promise"),
+    (re.compile(r"access in seconds|less training|faster management", re.I), "an unmeasured saving"),
 )
 
 

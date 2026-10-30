@@ -46,6 +46,34 @@ async function shoot(name, path, { width, height, scale = 1, js = true, motion =
     await page.evaluate(() => document.fonts && document.fonts.ready);
     await new Promise((resolve) => setTimeout(resolve, 600));
     if (before) await before(page);
+    if (full && !js) {
+      // Without JavaScript page.evaluate is unavailable: walk the page with the mouse wheel instead.
+      const pageHeight = (await page.$eval('html', (el) => el.scrollHeight).catch(() => 0)) || 20000;
+      for (let y = 0; y < pageHeight; y += height - 100) {
+        await page.mouse.wheel({ deltaY: height - 100 });
+        await new Promise((resolve) => setTimeout(resolve, 80));
+      }
+      await page.mouse.wheel({ deltaY: -pageHeight - height });
+      await new Promise((resolve) => setTimeout(resolve, 600));
+    } else if (full) {
+      // Full-page captures: the product screenshots below the fold are lazy, so walk the page once,
+      // wait until every image has loaded, then return to the top before the capture.
+      await page.evaluate(async () => {
+        const step = Math.max(400, window.innerHeight - 100);
+        for (let y = 0; y < document.documentElement.scrollHeight; y += step) {
+          window.scrollTo(0, y);
+          await new Promise((resolve) => setTimeout(resolve, 80));
+        }
+        const pending = [...document.images].filter((img) => !img.complete).map((img) => new Promise((resolve) => {
+          img.addEventListener('load', resolve, { once: true });
+          img.addEventListener('error', resolve, { once: true });
+        }));
+        // Never wait longer than a few seconds: an image that never settles must not block the capture.
+        await Promise.race([Promise.all(pending), new Promise((resolve) => setTimeout(resolve, 4000))]);
+        window.scrollTo(0, 0);
+      });
+      await new Promise((resolve) => setTimeout(resolve, 300));
+    }
     const info = await page.evaluate(() => {
       const width = document.documentElement.clientWidth;
       const overflow = [...document.querySelectorAll('body *')].filter((element) => {

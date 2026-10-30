@@ -59,7 +59,11 @@
                 <h2 id="connected-title">Every reader is a Thread router and Border Router</h2>
                 <div class="split-copy">
                     <p>Each SmartphoneKey reader can act as a Thread Border Router and as a router in the Thread mesh. Neither role needs a separate firmware version, so the readers on a site can form one mesh and connect it to your IP network.</p>
-                    <p>Mesh coverage and the route to the internet still depend on placement, power and the building. Matter controller functions are confirmed for each project.</p>
+                    <p class="benefit">A suitable wireless design can reduce communication cabling between readers: readers on the Thread mesh can reach the internet through a reader that has an LTE or Wi-Fi connection.</p>
+                    <div class="connection-panel">
+                        <t t-call="spk_website_v2.connection_example"/>
+                    </div>
+                    <p>Mesh coverage and the route to the internet still depend on placement, power and the building. How many readers share one connection, and what happens if it drops, depend on the installation; automatic failover is not implied. Matter controller functions are confirmed for each project.</p>
                     <p class="note">Coverage depends on the building, placement and radio conditions. We help plan the network for your site.</p>
                     <a href="/resources/matter-thread-access-control">Matter and Thread for access control</a>
                 </div>

@@ -46,7 +46,9 @@ class TestRoutes(SiteCase):
     def test_content_is_server_rendered(self):
         """A03: the answers are in the HTML, not built by a script."""
         expectations = {
-            "/": ["Your key to access control.", "Wi-Fi reader, if every door has reliable Wi-Fi coverage."],
+            "/": ["Your key to access control.", "Manage access across your properties in one place",
+                  "Get help in the Admin Panel with the built-in AI Assistant.",
+                  "Changes for an offline reader remain pending until it reconnects and applies them."],
             "/platform": ["SmartphoneKey is an access management platform."],
             "/products/readers": ["LTE reader", "Wi-Fi reader", "A SIM and cellular service for each reader"],
             "/resources/lte-vs-wifi-access-control": ["LTE reader", "Choose the connection that fits the site"],
@@ -60,6 +62,32 @@ class TestRoutes(SiteCase):
             for phrase in phrases:
                 self.assertIn(phrase, text, "%s is missing %r" % (path, phrase))
             self.assertTrue(doc.xpath("//nav[@aria-label='Main']//a[@href='/platform']"))
+
+    def test_product_screenshots_are_served_and_described(self):
+        """The real Admin Panel captures of 30 October 2026: every product image a page shows exists,
+        has alt text, and its expanded view points at an existing full-size file."""
+        # Home: Dashboard, Assign Key, Guest Key, Recent activity, AI Assistant (the phone close-up is a <source>).
+        pages = {"/": 5, "/platform": 2, "/platform/access-management": 4, "/products/readers": 0}
+        for path, minimum in pages.items():
+            _response, doc = self.page(path)
+            images = doc.xpath("//main//img[contains(@src, '/img/product-ui/')]")
+            self.assertGreaterEqual(len(images), minimum, "%s shows too few product screenshots" % path)
+            for image in images + doc.xpath("//main//source[contains(@srcset, '/img/product-ui/')]"):
+                for src in (image.get("src") or image.get("srcset")).split(","):
+                    self.assertEqual(self.get(src.split()[0]).status_code, 200, src)
+                if image.tag == "img":
+                    self.assertTrue(image.get("alt"), image.get("src"))
+                    self.assertTrue(image.get("width") and image.get("height"), image.get("src"))
+            for link in doc.xpath("//main//a[@data-spk-expand]"):
+                self.assertEqual(self.get(link.get("href")).status_code, 200, link.get("href"))
+                self.assertTrue(link.get("data-spk-expand-alt"))
+        # The home page's largest image is the eager one; every other product image is lazy.
+        _response, doc = self.page("/")
+        eager = doc.xpath("//main//img[@fetchpriority='high']")
+        self.assertEqual(len(eager), 1)
+        self.assertIn("admin-dashboard", eager[0].get("src"))
+        for image in doc.xpath("//main//img[contains(@src, '/img/product-ui/')][not(@fetchpriority)]"):
+            self.assertEqual(image.get("loading"), "lazy", image.get("src"))
 
     def test_setup_result_without_javascript(self):
         _response, doc = self.page("/find-your-setup?role=integrator&sites=eleven_plus&connection=cellular"
